@@ -179,7 +179,6 @@ let
     rtorrent
     rsync
     calibre
-    tealdeer
     localsend
     obs-studio
     audacity
@@ -218,7 +217,6 @@ let
     inputs.zen-browser.packages."${system}".default
     bitwarden-desktop
     ungoogled-chromium
-    wiki-tui
   ];
 in
 rustTools
