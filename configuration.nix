@@ -182,6 +182,7 @@ gparted
 # gaming
 steam
 # office
+apostrophe
 clipman
 obsidian
 evolution
