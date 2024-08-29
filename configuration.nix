@@ -200,6 +200,7 @@ ticktick
 prusa-slicer
 gimp
 vlc
+mpv
 # socials
 yt-dlp
 tuir
