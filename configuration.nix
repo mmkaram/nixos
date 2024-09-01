@@ -32,7 +32,7 @@
   networking.networkmanager.enable = true;
 
   # Set your time zone.
-  time.timeZone = "America/Los_Angeles";
+  time.timeZone = "Canada/Eastern";
   # services.automatic-timezoned.enable = true;
 
   # Select internationalisation properties.
@@ -180,6 +180,7 @@ vscode
 zed-editor
 neovim
 drawio
+distrobox
 # formatting
 ntfs3g
 dosfstools
