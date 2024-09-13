@@ -160,6 +160,7 @@ ffmpeg
 libGL
 libGLU
 # prog general
+racket
 zip
 kitty
 lazygit
@@ -181,6 +182,9 @@ zed-editor
 neovim
 drawio
 distrobox
+# tex
+texliveTeTeX
+texmaker
 # formatting
 ntfs3g
 dosfstools
@@ -188,6 +192,7 @@ gparted
 # gaming
 steam
 # office
+xournalpp
 kanata
 apostrophe
 clipman
@@ -221,6 +226,7 @@ git
 microsoft-edge
 spotify
 discord
+slack
 element-desktop
 	wget
         micro
@@ -280,6 +286,19 @@ home-manager = {
 fonts.packages = with pkgs; [
 	(nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" ]; })
 ];
+
+
+# Auto optimization - delete old builds
+# nix = {
+#   settings.auto-optimize-store = true;
+#   gc = {
+#     automatic = true;
+#     dates = "weekly";
+#     options = "--delete-older-than 7d";
+#   };
+# };
+
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;

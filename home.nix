@@ -94,6 +94,15 @@
     settings = { ignorecase = true; };
     extraConfig = ''
       set mouse=a
+
+      set number
+      set relativenumber
+
+      " Macros for commenting and uncommenting lines
+      let @v = "I#<Esc>j"
+      let @c = "I//<Esc>j"
+      let @f = "^xj"
+      let @d = "^xxj"
     '';
   };
 
@@ -150,6 +159,17 @@ extraConfig = ''
 
     -- Keybindings for Mason UI
     vim.api.nvim_set_keymap('n', '<leader>m', '<cmd>Mason<cr>', { noremap = true, silent = true })
+
+
+    set number
+    set relativenumber
+
+    " Macros for commenting and uncommenting lines
+    let @v = "I#<Esc>j"
+    let @c = "I//<Esc>j"
+    let @f = "^xj"
+    let @d = "^xxj"
+
   EOF
 '';
 };
