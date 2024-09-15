@@ -153,12 +153,8 @@ hotspot
 python3
 python311Packages.pyenchant
 python311Packages.numpy
-stdenv.cc.cc.lib
 python311Packages.matplotlib
-libglibutil
 ffmpeg
-libGL
-libGLU
 # prog general
 racket
 zip
@@ -195,14 +191,12 @@ steam
 xournalpp
 kanata
 apostrophe
-clipman
 obsidian
-evolution
-evolution-ews
 zotero
 ranger
+# clipboard
+clipman
 wl-clipboard
-ticktick
 # art
 prusa-slicer
 gimp
@@ -210,8 +204,8 @@ vlc
 mpv
 # socials
 yt-dlp
-tuir
 # other/misc
+file # how is this not default?
 autojump
 screenfetch
 fastfetch
@@ -234,8 +228,6 @@ element-desktop
 
 feh
 tmux
-epr
-
 # games
 bastet
 ninvaders
@@ -246,7 +238,6 @@ hunspell
 hunspellDicts.uk_UA
 hunspellDicts.th_TH
 # gnome
-gnomeExtensions.hibernate-status-button
 ];
 
 
