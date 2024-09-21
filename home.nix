@@ -174,16 +174,6 @@ extraConfig = ''
 '';
 };
 
-
-  programs.tmux = {
-    enable = true;
-    extraConfig = ''
-      set -g prefix C-x
-      unbind C-z
-      bind C-x send-prefix
-    '';
-  };
-
   programs.spotify-player = {
     enable = true;
     settings = { 

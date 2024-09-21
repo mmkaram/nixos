@@ -141,7 +141,6 @@ rustc
 rustfmt
 rust-analyzer
 cargo
-clippy
 du-dust
 libgcc
 clang
@@ -156,6 +155,7 @@ python311Packages.numpy
 python311Packages.matplotlib
 ffmpeg
 # prog general
+tree # directory tree listing
 racket
 zip
 kitty
@@ -196,7 +196,10 @@ zotero
 ranger
 # clipboard
 clipman
+clippy
 wl-clipboard
+# brightness
+brightnessctl
 # art
 prusa-slicer
 gimp
@@ -206,6 +209,8 @@ mpv
 yt-dlp
 # other/misc
 file # how is this not default?
+# gnomeExtensions.tray-icons-reloaded
+gnomeExtensions.appindicator
 autojump
 screenfetch
 fastfetch
