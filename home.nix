@@ -69,6 +69,11 @@
     };
   };
 
+#  programs.tmux = {
+#    enable = true;
+#    # prefix = "C-f";
+#  };
+
   programs.ranger = {
     enable = true;
     mappings = { 
