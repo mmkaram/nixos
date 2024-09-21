@@ -257,28 +257,26 @@ home-manager = {
 	};
 };
 
-  services.kanata = {
-    # enable = true;
-    keyboards.default = {
-      config = ''
-		(defsrc
-		  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
-		  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
-		  caps a    s    d    f    g    h    j    k    l    ;    '    ret
-		  lsft z    x    c    v    b    n    m    ,    .    /    rsft
-		  lctl lmet lalt           spc            ralt prtsc rctl
-		)
-		(deflayer qwerty
-		  grv  1    2    3    4    5    6    7    8    9    0    -    =    caps
-		  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
-		  bspc a    s    d    f    g    h    j    k    l    ;    '    ret
-		  lsft z    x    c    v    b    n    m    ,    .    /    rsft
-		  lctl lmet lalt           spc            ralt prtsc rctl
-		)
-      '';
-    };
+services.kanata = {
+  keyboards.default = {
+    config = ''
+      (defsrc
+        grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+        tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+        caps a    s    d    f    g    h    j    k    l    ;    '    ret
+        lsft z    x    c    v    b    n    m    ,    .    /    rsft
+        lctl lmet lalt           spc            ralt prtsc rctl
+      )
+	(deflayermap (base-layer)
+  		caps bspc
+  		bspc caps
+  		ralt C-b
+	)
+    '';
   };
+};
 
+# fonts
 fonts.packages = with pkgs; [
 	(nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" ]; })
 ];
