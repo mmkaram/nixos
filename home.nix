@@ -42,6 +42,7 @@
       ff="fastfetch";
       n="nvim";
       sn="sudo nvim";
+      map="telnet mapscii.me";
 
       hibernate="systemctl hibernate";
     };
@@ -62,6 +63,7 @@
     enable = true;
     shellIntegration.enableBashIntegration = true;
     theme = "Dracula";
+    font.name = "FiraCode Nerd Font Mono, Medium";
     keybindings = {
       "f11" = "toggle_fullscreen";
       "ctrl+shift+left" = "previous_window";
@@ -90,6 +92,22 @@
       safe.directory = "/etc/nixos";
       push.autoSetupRemote = true;
     };
+  };
+
+  programs.ssh = {
+    enable = true;
+    extraConfig = '' 
+Host hfcs
+    HostName hfcs.csclub.uwaterloo.ca
+    User mkaram
+Host corn-syrup
+    HostName corn-syrup.csclub.uwaterloo.ca
+    User mkaram
+Host real1
+    HostName 172.19.134.37
+    ProxyJump corn-syrup
+    User ubuntu
+    '';
   };
 
   programs.vim = {

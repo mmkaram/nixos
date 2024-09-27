@@ -98,6 +98,13 @@
       zoom-us
     ];
   };
+  users.users.testuser = {
+    isNormalUser = true;
+    home = "/home/testuser";
+    shell = pkgs.bash; # You can also set this to another shell like pkgs.zsh
+    description = "testuser";
+    extraGroups = [ "wheel" ]; # Optional, add sudo access by adding to "wheel" group
+  };
 
 
 ## Text editing
@@ -155,6 +162,7 @@ python311Packages.numpy
 python311Packages.matplotlib
 ffmpeg
 # prog general
+qemu
 tree # directory tree listing
 racket
 zip
@@ -208,6 +216,8 @@ mpv
 # socials
 yt-dlp
 # other/misc
+beets
+unzip
 file # how is this not default?
 # gnomeExtensions.tray-icons-reloaded
 gnomeExtensions.appindicator
@@ -216,13 +226,14 @@ screenfetch
 fastfetch
 calibre
 qbittorrent
-whois
+inetutils
 cmatrix
 fzf
 atuin
 zsh
 git
 microsoft-edge
+jellyfin-media-player
 spotify
 discord
 slack
