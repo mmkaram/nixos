@@ -29,7 +29,7 @@
 
 	nix-rebuild="sudo nixos-rebuild switch --flake /etc/nixos#default";
         nix-update="cd /etc/nixos && sudo nix flake update";
-        nix-delete-builds="sudo nix-collect-garbage --delete-older-than";
+        nix-delete-builds="sudo nix-collect-garbage"; #--delete-older-than
 
       # TODO:
       # jump doesn't work because sourcing?
@@ -62,7 +62,7 @@
   programs.kitty = {
     enable = true;
     shellIntegration.enableBashIntegration = true;
-    theme = "Dracula";
+    themeFile = "Dracula";
     font.name = "FiraCode Nerd Font Mono, Medium";
     keybindings = {
       "f11" = "toggle_fullscreen";
@@ -105,6 +105,10 @@ Host corn-syrup
     User mkaram
 Host real1
     HostName 172.19.134.37
+    ProxyJump corn-syrup
+    User ubuntu
+Host PerfTest2
+    HostName 172.19.134.117
     ProxyJump corn-syrup
     User ubuntu
     '';
