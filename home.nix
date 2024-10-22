@@ -37,7 +37,7 @@
       cls="clear";
       r="ranger";
       py="python3";
-      el="eza -al";
+      el="eza --git-repos -h -l -all";
       sp="spotify_player";
       ff="fastfetch";
       n="nvim";
@@ -50,6 +50,8 @@
       export PROG="/home/dd0k/prog"
       export NIX="/etc/nixos"
       # alias f="nvim $(fzf -m --preview="bat --color=always {}")"
+      # This doesn't work (direnv breaking history bash)
+      # eval "$(direnv hook bash)"
       '';
   };
 
@@ -147,11 +149,10 @@ programs.neovim = {
     cmp-path
     cmp-cmdline
     cmp-cmdline-history
-
-    {
-      plugin = tokyonight-nvim;
-      config = "colorscheme tokyonight-night";
-    }
+   {
+     plugin = tokyonight-nvim;
+     config = "colorscheme tokyonight-night";
+   }
   ];
 extraConfig = ''
   lua << EOF

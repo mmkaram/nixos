@@ -58,6 +58,7 @@
   # Enable the XFCE Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
+  programs.sway.enable = true;
 
   # Configure keymap in X11
   services.xserver = {
@@ -162,6 +163,7 @@ python311Packages.numpy
 python311Packages.matplotlib
 ffmpeg
 # prog general
+direnv
 qemu
 tree # directory tree listing
 racket
@@ -198,7 +200,7 @@ steam
 # office
 xournalpp
 kanata
-apostrophe
+# apostrophe
 obsidian
 zotero
 ranger
@@ -216,15 +218,13 @@ mpv
 # socials
 yt-dlp
 # other/misc
+# llm.withPlugins(["llm-gpt4all"])
 beets
 unzip
 file # how is this not default?
-# gnomeExtensions.tray-icons-reloaded
-gnomeExtensions.appindicator
 autojump
 screenfetch
 fastfetch
-calibre
 qbittorrent
 inetutils
 cmatrix
@@ -254,6 +254,7 @@ hunspell
 hunspellDicts.uk_UA
 hunspellDicts.th_TH
 # gnome
+gnomeExtensions.appindicator
 ];
 
 
@@ -325,6 +326,14 @@ fonts.packages = with pkgs; [
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
+
+  # Enable direnv for auto running nix-shell
+  programs.direnv.enable = false;
+
+  boot.kernel.sysctl = {
+    "kernel.perf_event_mlock_kb" = 16 * 1024;  # Set to 16MB
+  };
+
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
