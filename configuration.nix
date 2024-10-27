@@ -59,6 +59,8 @@
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
   programs.sway.enable = true;
+  # bright and vol
+  programs.light.enable = true;
 
   # Configure keymap in X11
   services.xserver = {
@@ -93,7 +95,7 @@
   users.users.dd0k = {
     isNormalUser = true;
     description = "dD0k";
-    extraGroups = [ "networkmanager" "wheel" "docker" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" "video" ];
     packages = with pkgs; [
       firefox
       zoom-us
@@ -136,6 +138,7 @@ nixpkgs.config.permittedInsecurePackages = [
   # $ nix search wget
 	nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; [
+    pulseaudio
   vim
 spotify-player
       	# vim_configurable 
@@ -163,6 +166,7 @@ python311Packages.numpy
 python311Packages.matplotlib
 ffmpeg
 # prog general
+ripgrep
 direnv
 qemu
 tree # directory tree listing
@@ -233,15 +237,14 @@ atuin
 zsh
 git
 microsoft-edge
+# arc-browser
 jellyfin-media-player
 spotify
 discord
 slack
 element-desktop
-	wget
-        micro
-
-
+wget
+micro
 feh
 tmux
 # games
@@ -255,6 +258,9 @@ hunspellDicts.uk_UA
 hunspellDicts.th_TH
 # gnome
 gnomeExtensions.appindicator
+# Messing around
+wiki-tui
+ncspot
 ];
 
 
