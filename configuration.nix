@@ -166,6 +166,7 @@ python311Packages.numpy
 python311Packages.matplotlib
 ffmpeg
 # prog general
+calibre
 ripgrep
 direnv
 qemu
@@ -190,7 +191,7 @@ gh
 vscode
 zed-editor
 neovim
-drawio
+# drawio
 distrobox
 # tex
 texliveTeTeX

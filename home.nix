@@ -44,8 +44,8 @@
         # "Mod4+F"="exec 'ranger'";
 
         # vol
-        "Alt+Shift+Equal" = "exec 'pactl set-sink-volume @DEFAULT_SINK@ +5%'";
-        "Alt+Shift+Minus" = "exec 'pactl set-sink-volume @DEFAULT_SINK@ -5%'";
+        "Alt+Shift+Equal" = "exec pactl set-sink-volume @DEFAULT_SINK@ +5%";
+        "Alt+Shift+Minus" = "exec pactl set-sink-volume @DEFAULT_SINK@ -5%";
         "XF86AudioMute" = "exec 'pactl set-sink-mute @DEFAULT_SINK@ toggle'";
         "Alt+Down" = "exec 'playerctl play-pause'";
         "XF86AudioPlay" = "exec 'playerctl play-pause'";
@@ -257,71 +257,56 @@ Host PerfTest2
     '';
   };
 
-programs.neovim = {
+  programs.neovim =
+  let 
+    toLua = str: "lua << EOF\n${str}\nEOF\n";
+    toLuaFile = file: "lua << EOF\n${builtins.readFile file}\nEOF\n";
+  in
+  {
   enable = true;
+
   plugins = with pkgs.vimPlugins; [
-    mason-nvim
-    mason-lspconfig-nvim
-    nvim-lspconfig
+
+    {
+      plugin = tokyonight-nvim;
+      config = "colorscheme tokyonight";
+    }
+
+
+    nvim-lspconfig # uhh, lsp stuff
+
+    {
+      plugin = comment-nvim;
+      config = toLua "require(\"Comment\").setup()";
+    }
+
+    lazydev-nvim # no clue, some lua thing
+
+    {
+      # LSP Server installer that works with lspconfig
+      plugin = mason-nvim;
+      config = toLua "require(\"mason\").setup()";
+    }
+    nvim-cmp # completion engine
     telescope-nvim
-    plenary-nvim  # Required dependency for Telescope
-    nvim-cmp
-    cmp-nvim-lsp
-    cmp-buffer
-    cmp-path
-    cmp-cmdline
-    cmp-cmdline-history
-   {
-     plugin = tokyonight-nvim;
-     config = "colorscheme tokyonight-night";
-   }
+
+    (nvim-treesitter.withPlugins (p: [
+      p.tree-sitter-nix
+      p.tree-sitter-python
+      p.tree-sitter-bash
+      p.tree-sitter-lua
+      p.tree-sitter-json
+      p.tree-sitter-rust
+    ]))
+
+    vim-nix
   ];
-extraConfig = ''
-  lua << EOF
-    -- Setup Mason
-    require('mason').setup({
-      ui = {
-        icons = {
-          package_installed = "✓",
-          package_pending = "➜",
-          package_uninstalled = "✗"
-        },
-        border = "rounded",
-      },
-    })
-
-    -- Setup Mason-LSPConfig
-    require('mason-lspconfig').setup({
-      -- List your desired LSPs here
-      ensure_installed = {}, 
-      automatic_installation = true,
-    })
-
-    -- Setup Telescope
-    local telescope = require('telescope')
-    telescope.setup{}
-
-    -- Keybindings for Telescope
-    vim.api.nvim_set_keymap('n', '<leader>ff', '<cmd>Telescope find_files<cr>', { noremap = true, silent = true })
-    vim.api.nvim_set_keymap('n', '<leader>fg', '<cmd>Telescope live_grep<cr>', { noremap = true, silent = true })
-    vim.api.nvim_set_keymap('n', '<leader>fb', '<cmd>Telescope buffers<cr>', { noremap = true, silent = true })
-    vim.api.nvim_set_keymap('n', '<leader>fh', '<cmd>Telescope help_tags<cr>', { noremap = true, silent = true })
-
-    -- Keybindings for Mason UI
-    vim.api.nvim_set_keymap('n', '<leader>m', '<cmd>Mason<cr>', { noremap = true, silent = true })
-
-
-    set number
-    set relativenumber
-
-    " Macros for commenting and uncommenting lines
-    let @v = "I#<Esc>j"
-    let @c = "I//<Esc>j"
-    let @f = "^xj"
-    let @d = "^xxj"
-
-  EOF
-'';
+  viAlias = true;
+  vimAlias = true;
+  vimdiffAlias = true;
+#  extraLuaConfig = ''
+#    -- ${builtins.readFile ./nvim/options.lua}
+#  '';
 };
 
   programs.spotify-player = {
