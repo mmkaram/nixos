@@ -1,5 +1,6 @@
-        "Mod4+Shift+d" = "exec ${pkgs.dmenu}/bin/dmenu_path | ${pkgs.dmenu}/bin/dmenu | ${pkgs.findutils}/
-bin/xargs swaymsg exec --";
+{ pkgs }:
+	{
+        # "Mod4+Shift+d" = "exec ${pkgs.dmenu}/bin/dmenu_path | ${pkgs.dmenu}/bin/dmenu | ${pkgs.findutils} bin/xargs swaymsg exec --";
         "Mod4+d"="exec 'wofi --show drun'";
         "Mod4+Return" = "exec kitty tmux";
         "Mod4+Shift+Return" = "exec kgx";
@@ -75,18 +76,10 @@ bin/xargs swaymsg exec --";
         "Mod4+l" = "focus right";
         "Mod4+minus" = "scratchpad show";
         "Mod4+r" = "mode resize";
-        "Mod4+h" = "focus left";
-        "Mod4+j" = "focus down";
-        "Mod4+k" = "focus up";
-        "Mod4+l" = "focus right";
-        "Mod4+minus" = "scratchpad show";
-        "Mod4+r" = "mode resize";
         "Mod4+s" = "layout stacking";
         "Mod4+space" = "focus mode_toggle";
         "Mod4+v" = "splitv";
         "Mod4+w" = "layout tabbed";
         "Mod4+Ctrl+Left" = "workspace prev";
         "Mod4+Ctrl+Right" = "workspace next";
-
-
-
+}

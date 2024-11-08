@@ -1,4 +1,4 @@
-# Edit this configuration file to define what should be installed on
+#Error executing  vim.on_key Lua callback: vim/_editor.lua:0: Error executing 'on_key' with ns_ids '10' Edit this configuration file to define what should be installed on
 # your system. Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
@@ -144,10 +144,8 @@ spotify-player
       	# vim_configurable 
 # My stuff
 # Rust
-# run: rustup deafult stable 
 lldb
 linuxPackages_latest.perf
-rustup
 rustc
 rustfmt
 rust-analyzer
@@ -155,6 +153,9 @@ cargo
 du-dust
 libgcc
 clang
+# lua
+lua
+lua-language-server
 # performance
 btop
 htop
