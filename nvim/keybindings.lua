@@ -26,6 +26,21 @@ function M.setup()
     vim.api.nvim_set_keymap('n', ']d', '<cmd>lua vim.diagnostic.goto_next({ float =  { border = "single" }})<CR>', opts)
     vim.api.nvim_set_keymap('n', '<Leader>q', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
 
+    -- splitting
+
+	  -- Horizontal split
+	  vim.api.nvim_set_keymap('n', '<Leader>sh', ':split<CR>', { noremap = true, silent = true })
+
+	  -- Vertical split
+	  vim.api.nvim_set_keymap('n', '<Leader>sv', ':vsplit<CR>', { noremap = true, silent = true })
+
+	  -- New horizontal split
+	  vim.api.nvim_set_keymap('n', '<Leader>nh', ':new<CR>', { noremap = true, silent = true })
+
+	  -- New vertical split
+	  vim.api.nvim_set_keymap('n', '<Leader>nv', ':vnew<CR>', { noremap = true, silent = true })
+
+
     -- Set up nvim-cmp
     local cmp = require('cmp')
     cmp.setup({

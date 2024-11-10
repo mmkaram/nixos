@@ -6,12 +6,11 @@ function merge(a, b)
     end
 end
 
--- Import and set up keybindings
--- local on_attach = require('keybindings')
--- on_attach.setup()
 
 local settings = {
+
     rust_analyzer = {
+	    cmd = {"rust-analyzer"},
         settings = {
             ["rust-analyzer"] = {
                 cargo = {loadOutDirsFromCheck = true, features = 'full'},
@@ -57,7 +56,6 @@ for server, config in pairs(settings) do
     }
     merge(setup_obj, config)
     nvim_lsp[server].setup(setup_obj)
-    nvim_lsp[server].setup(config)
 end
 
 -- Set up nvim-cmp

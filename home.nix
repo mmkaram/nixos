@@ -43,6 +43,53 @@
   };
 
 
+  programs.zsh = {
+    enable = true;
+    shellAliases = {
+      gc="git commit -a -m";
+      gP="git push";
+      gp="git pull";
+      ga="git add .";
+      gitgraph="git log --online --graph --decorate -all";
+      lgit="lazygit";
+      ghd="gh-dash";
+      ldoc="lazydocker";
+      t="tmux";
+      icat="kitten icat";
+      salah="bash ~/prog/salah";
+
+      tetris="bastet";
+      space_invaders="nivaders";
+      snake="nsnake";
+
+	nix-rebuild="sudo nixos-rebuild switch --flake /etc/nixos#default";
+        nix-update="cd /etc/nixos && sudo nix flake update";
+        nix-delete-older-than="sudo nix-collect-garbage --delete-older-than ";
+        nix-delete="sudo nix-collect-garbage --delete-old"; #--delete-older-than
+
+      # TODO:
+      # jump doesn't work because sourcing?
+      jump="autojump";
+      cls="clear";
+      r="ranger";
+      py="python3";
+      el="eza --git-repos -h -l -all";
+      sp="spotify_player";
+      ff="fastfetch";
+      n="nvim";
+      sn="sudo nvim";
+      map="telnet mapscii.me";
+
+      hibernate="systemctl hibernate";
+    };
+    defaultKeymap = "emacs";
+    initExtra = ''
+      export PROG="/home/dd0k/prog"
+      export NIX="/etc/nixos"
+      eval "$(direnv hook zsh)"
+    '';
+  };
+
   programs.bash = {
     enable = true;
     shellAliases = {
@@ -87,18 +134,21 @@
       # alias f="nvim $(fzf -m --preview="bat --color=always {}")"
       # This doesn't work (direnv breaking history bash)
       # eval "$(direnv hook bash)"
+      # PROMPT_COMMAND="history -a; history -c; history -r; $_direnv_hook"
       '';
   };
 
   programs.oh-my-posh = {
     enable = true;
-    enableBashIntegration = true;
-    useTheme = "material";
+    # enableBashIntegration = true;
+    enableZshIntegration = true;
+    useTheme = "powerlevel10k_lean";
   };
 
   programs.kitty = {
     enable = true;
-    shellIntegration.enableBashIntegration = true;
+    # shellIntegration.enableBashIntegration = true;
+    shellIntegration.enableZshIntegration = true;
     themeFile = "Dracula";
     font.name = "FiraCode Nerd Font Mono, Medium";
     keybindings = {
@@ -115,6 +165,8 @@
       setw -g mouse on
       setw -g mode-keys vi
       unbind MouseDragEnd1Pane
+      # set-option -g default-command "${pkgs.zsh}/bin/zsh"
+      # set-option -g default-shell "${pkgs.zsh}/bin/zsh"
     '';
   };
 
@@ -158,7 +210,7 @@ Host PerfTest2
 
   programs.vim = {
     enable = true;
-    defaultEditor = true;
+    # defaultEditor = true;
     plugins = with pkgs.vimPlugins; [ vim-airline jedi-vim nerdtree ];
     settings = { ignorecase = true; };
     extraConfig = ''
@@ -186,17 +238,33 @@ Host PerfTest2
   plugins = with pkgs.vimPlugins; [
     
     telescope-file-browser-nvim
-
     # deps
     plenary-nvim
     nvim-web-devicons
     nui-nvim
 
-    octo-nvim
+    # gh cli integration
+    {
+      plugin = octo-nvim;
+      config = toLuaFile ./nvim/octo.lua;
+    }
+
+    # lines changed since last commit
+    {
+      plugin = gitsigns-nvim;
+      config = toLuaFile ./nvim/gitsigns.lua;
+    }
+
+    # status bar
+    lualine-nvim
+    {
+      plugin = lualine-lsp-progress;
+      config = toLuaFile ./nvim/lualine.lua;
+    }
 
     {
       plugin = tokyonight-nvim;
-      config = "colorscheme tokyonight";
+      config = "colorscheme tokyonight-night";
     }
 
     {
@@ -206,7 +274,7 @@ Host PerfTest2
 
     {
       plugin = comment-nvim;
-      config = toLua "require(\"Comment\").setup()";
+      config = toLuaFile ./nvim/comment.lua;
     }
 
     {
@@ -221,9 +289,15 @@ Host PerfTest2
       config = toLuaFile ./nvim/bufferline.lua;
     }
 
-    lazydev-nvim # no clue, some lua thing
+    {
+      # idk how this is different from nvimp.cmp
+      plugin = cmp-nvim-lsp;
+      # this config isn't realted, it just loads 
+      # keybinds because I can't source lua files from
+      # other lua files
+      config = toLuaFile ./nvim/keys.lua;
+    }
 
-    cmp-nvim-lsp
     {
       plugin = nvim-cmp;
       config = toLuaFile ./nvim/completion.lua;
@@ -248,7 +322,6 @@ Host PerfTest2
   viAlias = true;
   vimAlias = true;
   vimdiffAlias = true;
-  # extraLuaConfig = toLua '''';
 };
 
   programs.spotify-player = {

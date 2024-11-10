@@ -130,7 +130,7 @@ nixpkgs.config.permittedInsecurePackages = [
 ];
 	# bash default?
         # programs.zsh.promptInit = "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
-        users.defaultUserShell = pkgs.bash;
+        users.defaultUserShell = pkgs.zsh;
 	programs.zsh.enable = true;
 	
 
@@ -162,6 +162,7 @@ htop
 hotspot
 # Python
 python3
+pyright
 python311Packages.pyenchant
 python311Packages.numpy
 python311Packages.matplotlib
@@ -189,6 +190,7 @@ bat
 speedtest-go
 imagemagick_light
 gh
+gh-dash
 vscode
 zed-editor
 neovim
@@ -219,6 +221,7 @@ brightnessctl
 # art
 prusa-slicer
 gimp
+kdenlive
 vlc
 mpv
 # socials
