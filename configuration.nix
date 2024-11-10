@@ -162,7 +162,7 @@ htop
 hotspot
 # Python
 python3
-pyright
+pylyzer
 python311Packages.pyenchant
 python311Packages.numpy
 python311Packages.matplotlib

@@ -6,6 +6,7 @@
   home.stateVersion = "24.05";
 
   home.packages = [
+    pkgs.swaybg
     pkgs.dmenu
     pkgs.playerctl
     pkgs.shotman
@@ -16,6 +17,7 @@
 
   wayland.windowManager.sway = {
     enable = true;
+    checkConfig = false;
     config = rec {
       modifier = "Mod4";
       terminal = "kitty";
@@ -23,6 +25,12 @@
         "type:touchpad" = {
           natural_scroll = "enabled";  
           tap = "enabled";
+        };
+      };
+      output = {
+        "*" = {
+          # bg = "/home/dd0k/Pictures/bgrnd/Pyramids.jpg fill";
+          bg = "/etc/nixos/misc/Pyramids.jpg fill";
         };
       };
       startup = [

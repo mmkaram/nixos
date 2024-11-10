@@ -9,6 +9,20 @@ end
 
 local settings = {
 
+	pylyzer = {
+		cmd = {"pylyzer", "--server"},
+		filetypes = {"python"},
+		settings = {
+			python = {
+				checkOnType = false,
+				diagnostics = true,
+				inlayHints = true,
+				smartCompletion = true
+			}
+		}
+
+	},
+
     rust_analyzer = {
 	    cmd = {"rust-analyzer"},
         settings = {
