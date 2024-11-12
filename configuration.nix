@@ -14,6 +14,7 @@
   imports =
     [
       ./hardware-configuration.nix
+      ./programs.nix
 	inputs.home-manager.nixosModules.default
     ];
 
@@ -128,146 +129,13 @@ programs.steam = {
 ## Insecure Packages
 nixpkgs.config.permittedInsecurePackages = [
 ];
-	# bash default?
-        # programs.zsh.promptInit = "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
         users.defaultUserShell = pkgs.zsh;
 	programs.zsh.enable = true;
 	
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-	nixpkgs.config.allowUnfree = true;
-  environment.systemPackages = with pkgs; [
-    pulseaudio
-  vim
-spotify-player
-      	# vim_configurable 
-# My stuff
-# Rust
-lldb
-linuxPackages_latest.perf
-rustc
-rustfmt
-rust-analyzer
-cargo
-du-dust
-libgcc
-clang
-# lua
-lua
-lua-language-server
-# performance
-btop
-htop
-hotspot
-# Python
-python3
-pylyzer
-python311Packages.pyenchant
-python311Packages.numpy
-python311Packages.matplotlib
-ffmpeg
-# prog general
-calibre
-ripgrep
-direnv
-qemu
-tree # directory tree listing
-racket
-zip
-kitty
-lazygit
-lazydocker
-blesh
-atuin
-oh-my-posh
-zsh-powerlevel10k
-docker
-atuin
-scc
-eza
-bat
-speedtest-go
-imagemagick_light
-gh
-gh-dash
-vscode
-zed-editor
-neovim
-# drawio
-distrobox
-# tex
-texliveTeTeX
-texmaker
-# formatting
-ntfs3g
-dosfstools
-gparted
-# gaming
-steam
-# office
-xournalpp
-kanata
-# apostrophe
-obsidian
-zotero
-ranger
-# clipboard
-clipman
-clippy
-wl-clipboard
-# brightness
-brightnessctl
-# art
-prusa-slicer
-gimp
-kdenlive
-vlc
-mpv
-# socials
-yt-dlp
-# other/misc
-# llm.withPlugins(["llm-gpt4all"])
-beets
-unzip
-file # how is this not default?
-autojump
-screenfetch
-fastfetch
-qbittorrent
-inetutils
-cmatrix
-fzf
-atuin
-zsh
-git
-microsoft-edge
-# arc-browser
-jellyfin-media-player
-spotify
-discord
-slack
-element-desktop
-wget
-micro
-feh
-tmux
-# games
-bastet
-ninvaders
-nsnake
-# libre-office
-libreoffice-qt
-hunspell
-hunspellDicts.uk_UA
-hunspellDicts.th_TH
-# gnome
-gnomeExtensions.appindicator
-# Messing around
-wiki-tui
-ncspot
-];
-
+  nixpkgs.config.allowUnfree = true;
 
 home-manager = {
 	# also pass inputs to home-manager modules

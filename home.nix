@@ -29,7 +29,6 @@
       };
       output = {
         "*" = {
-          # bg = "/home/dd0k/Pictures/bgrnd/Pyramids.jpg fill";
           bg = "/etc/nixos/misc/Pyramids.jpg fill";
         };
       };
@@ -41,7 +40,6 @@
           '';
         }
       ];
-      # keybindings = builtins.readFile ./sway/keybindings.txt;
       keybindings = import ./sway/keybindings.nix {pkgs = pkgs;};
       };
       extraConfig = ''
@@ -54,6 +52,8 @@
   programs.zsh = {
     enable = true;
     shellAliases = {
+      copy = "wl-copy";
+
       gc="git commit -a -m";
       gP="git push";
       gp="git pull";
@@ -158,7 +158,8 @@
     # shellIntegration.enableBashIntegration = true;
     shellIntegration.enableZshIntegration = true;
     themeFile = "Dracula";
-    font.name = "FiraCode Nerd Font Mono, Medium";
+    font.package = pkgs.fira-code;
+    font.name = "FiraCode";
     keybindings = {
       "f11" = "toggle_fullscreen";
       "ctrl+shift+left" = "previous_window";
@@ -176,6 +177,10 @@
       # set-option -g default-command "${pkgs.zsh}/bin/zsh"
       # set-option -g default-shell "${pkgs.zsh}/bin/zsh"
     '';
+  };
+
+  programs.autojump = {
+    enable = true;
   };
 
   programs.ranger = {
@@ -226,12 +231,6 @@ Host PerfTest2
 
       set number
       set relativenumber
-
-      " Macros for commenting and uncommenting lines
-      let @v = "I#<Esc>j"
-      let @c = "I//<Esc>j"
-      let @f = "^xj"
-      let @d = "^xxj"
     '';
   };
 
@@ -242,6 +241,7 @@ Host PerfTest2
   in
   {
   enable = true;
+  defaultEditor = true;
 
   plugins = with pkgs.vimPlugins; [
     
@@ -250,6 +250,22 @@ Host PerfTest2
     plenary-nvim
     nvim-web-devicons
     nui-nvim
+
+
+    {
+      plugin = zen-mode-nvim;
+      config = toLuaFile ./nvim/maximize.lua;
+    }
+
+    {
+      plugin = lazygit-nvim;
+      config = toLuaFile ./nvim/lazygit.lua;
+    }
+
+    {
+      plugin = undotree;
+      config = toLuaFile ./nvim/undo.lua;
+    }
 
     # gh cli integration
     {

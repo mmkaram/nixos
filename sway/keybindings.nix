@@ -7,7 +7,7 @@
         "Mod4+Shift+S" = "exec 'systemctl hibernate'";
         "Mod4+Apostrophe" = "exec 'swaylock -c 145874 & systemctl suspend-then-hibernate'";
         "Mod4+Semicolon"="exec 'swaylock -c 145874'";
-        # "Mod4+F"="exec 'ranger'";
+        "Mod4+s"="exec 'kitty ranger'";
 
         # vol
         "Alt+Shift+Equal" = "exec pactl set-sink-volume @DEFAULT_SINK@ +5%";
@@ -76,7 +76,7 @@
         "Mod4+l" = "focus right";
         "Mod4+minus" = "scratchpad show";
         "Mod4+r" = "mode resize";
-        "Mod4+s" = "layout stacking";
+        "Mod4+q" = "layout stacking";
         "Mod4+space" = "focus mode_toggle";
         "Mod4+v" = "splitv";
         "Mod4+w" = "layout tabbed";

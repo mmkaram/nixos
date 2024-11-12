@@ -13,3 +13,5 @@ vim.g.mapleader = " "
   vim.api.nvim_set_keymap('n', '<Leader>nv', ':vnew<CR>', { noremap = true, silent = true })
 
 
+  -- fullscreen
+vim.api.nvim_set_keymap('n', '<Leader>f', ':ZenMode<CR>', {noremap = true, silent = true})

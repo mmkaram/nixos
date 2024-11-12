@@ -17,3 +17,10 @@ vim.api.nvim_set_keymap('n', '<leader>tg', ':Telescope grep_string<CR>', { norem
 -- Key mapping to open the file browser
 vim.api.nvim_set_keymap('n', '<leader>te', ':Telescope file_browser<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<C-o>', ':Telescope file_browser<CR>', { noremap = true, silent = true })
+
+-- Marks
+vim.api.nvim_set_keymap('n', '<leader>tm', ':Telescope marks<CR>', { noremap = true, silent = true })
+
+-- Search
+vim.api.nvim_set_keymap('n', '<leader>ts', ':Telescope live_grep<CR>', { noremap = true, silent = true })
+

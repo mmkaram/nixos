@@ -20,6 +20,13 @@ mapping = cmp.mapping.preset.insert({
             fallback()
         end
     end),
+    ['<C-Space'] = cmp.mapping(function(fallback)
+	    if cmp.visible() then
+	    	cmp.confirm()
+	    else
+		fallback()
+	    end
+	end, { 'i', 's' }),
     ["<Tab>"] = cmp.mapping(function(fallback)
         if cmp.visible() then
             cmp.select_next_item()
@@ -60,3 +67,4 @@ cmp.setup.cmdline(':', {
     }),
     matching = { disallow_symbol_nonprefix_matching = false }
 })
+vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, {silent = true, noremap = true})
