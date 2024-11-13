@@ -67,11 +67,16 @@ environment.systemPackages = with pkgs; [
       lunar-client
       steam
       # office
+      polkit_gnome # auth agent
       xournalpp
       kanata
       obsidian
       zotero
+      sublime
+      # KCalc
+      speedcrunch
       ranger
+      xfce.thunar
       clipman
       clippy
       wl-clipboard

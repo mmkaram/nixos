@@ -51,7 +51,7 @@
 
   # Enable the XFCE Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
+  # services.xserver.desktopManager.gnome.enable = true;
   programs.sway.enable = true;
   # bright and vol
   programs.light.enable = true;
@@ -183,6 +183,10 @@
   # Enabled (systemd) services
   # Enable Docker
   virtualisation.docker.enable = true;
+
+  # Enable polkit security to open gparted
+  # gparted must be opened from root user
+  # security.polkit.enable = true;
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
