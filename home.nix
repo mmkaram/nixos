@@ -6,6 +6,7 @@
   home.stateVersion = "24.05";
 
   home.packages = [
+    pkgs.starship
     pkgs.swaybg
     pkgs.dmenu
     pkgs.playerctl
@@ -29,7 +30,7 @@
       };
       output = {
         "*" = {
-          bg = "/etc/nixos/misc/Pyramids.jpg fill";
+          bg = "/etc/nixos/misc/Open.png fill";
         };
       };
       startup = [
@@ -96,6 +97,59 @@
       export NIX="/etc/nixos"
       eval "$(direnv hook zsh)"
     '';
+  };
+
+  programs.fish = {
+    enable = true;
+    shellAliases = {
+      copy = "wl-copy";
+
+      gc="git commit -a -m";
+      gP="git push";
+      gp="git pull";
+      ga="git add .";
+      gitgraph="git log --online --graph --decorate -all";
+      lgit="lazygit";
+      ghd="gh-dash";
+      ldoc="lazydocker";
+      t="tmux";
+      icat="kitten icat";
+      salah="bash ~/prog/salah";
+
+      tetris="bastet";
+      space_invaders="nivaders";
+      snake="nsnake";
+
+	nix-rebuild="sudo nixos-rebuild switch --flake /etc/nixos#default";
+        nix-update="cd /etc/nixos && sudo nix flake update";
+        nix-delete-older-than="sudo nix-collect-garbage --delete-older-than ";
+        nix-delete="sudo nix-collect-garbage --delete-old"; #--delete-older-than
+
+      # TODO:
+      # jump doesn't work because sourcing?
+      jump="autojump";
+      cls="clear";
+      r="ranger";
+      py="python3";
+      el="eza --git-repos -h -l -all";
+      sp="spotify_player";
+      ff="fastfetch";
+      n="nvim";
+      sn="sudo nvim";
+      map="telnet mapscii.me";
+
+      hibernate="systemctl hibernate";
+    };
+    shellInit = ''
+      set PROG "/home/dd0k/prog"
+      set NIX "/etc/nixos"
+      direnv hook fish | source
+      '';
+  };
+
+  programs.starship = {
+    enable = true;
+    enableFishIntegration = true;
   };
 
   programs.bash = {
@@ -251,6 +305,10 @@ Host PerfTest2
     nvim-web-devicons
     nui-nvim
 
+    {
+      plugin = codewindow-nvim;
+      config = toLuaFile ./nvim/codewindow.lua;
+    }
 
     {
       plugin = zen-mode-nvim;

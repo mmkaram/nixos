@@ -1,4 +1,6 @@
 {pkgs, ... }:
+# List packages installed in system profile. To search, run:
+# $ nix search wget
 {
 environment.systemPackages = with pkgs; [
       pulseaudio
@@ -29,6 +31,7 @@ environment.systemPackages = with pkgs; [
       python312Packages.matplotlib
       ffmpeg
       # prog general
+      fish
       calibre
       ripgrep
       direnv

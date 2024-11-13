@@ -24,3 +24,5 @@ vim.api.nvim_set_keymap('n', '<leader>tm', ':Telescope marks<CR>', { noremap = t
 -- Search
 vim.api.nvim_set_keymap('n', '<leader>ts', ':Telescope live_grep<CR>', { noremap = true, silent = true })
 
+-- Problems/diagnostics
+vim.api.nvim_set_keymap('n', '<leader>td', '<cmd>Telescope diagnostics<cr>', { desc = 'List diagnostics' })

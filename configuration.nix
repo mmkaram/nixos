@@ -1,10 +1,3 @@
-#Error executing  vim.on_key Lua callback: vim/_editor.lua:0: Error executing 'on_key' with ns_ids '10' Edit this configuration file to define what should be installed on
-# your system. Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
-
-# commands to run
-# gsettings set org.gnome.desktop.privacy remember-recent-files false
-
 { config, lib, pkgs, inputs, ... }:
 {
 
@@ -109,79 +102,73 @@
     description = "testuser";
     extraGroups = [ "wheel" ]; # Optional, add sudo access by adding to "wheel" group
   };
-
-
-## Text editing
-programs.neovim = {
-  enable = true;
-  defaultEditor = false;
-};
-services.kanata = {
-  enable = true;
-};
-
-## Gaming
-programs.steam = {
-	enable = true;
-	remotePlay.openFirewall = true;
-	dedicatedServer.openFirewall = true;
-};
-## Insecure Packages
-nixpkgs.config.permittedInsecurePackages = [
-];
-        users.defaultUserShell = pkgs.zsh;
-	programs.zsh.enable = true;
-	
-
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
-  nixpkgs.config.allowUnfree = true;
-
-home-manager = {
-	# also pass inputs to home-manager modules
-	extraSpecialArgs = { inherit inputs; };
-	
-	backupFileExtension = "backup";
-
-	users = {
-		"dd0k" = import ./home.nix;
-	};
-};
-
-services.kanata = {
-  keyboards.default = {
-    config = ''
-      (defsrc
-        grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
-        tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
-        caps a    s    d    f    g    h    j    k    l    ;    '    ret
-        lsft z    x    c    v    b    n    m    ,    .    /    rsft
-        lctl lmet lalt           spc            ralt prtsc rctl
-      )
-	(deflayermap (base-layer)
-  		caps bspc
-  		bspc caps
-  		ralt C-b
-	)
-    '';
+  users.defaultUserShell = pkgs.fish;
+  programs.fish.enable = true;
+  programs.zsh.enable = true;
+  ## Text editing
+  programs.neovim = {
+    enable = true;
+    defaultEditor = true;
   };
-};
+  services.kanata = {
+    enable = true;
+  };
 
-# fonts
-fonts.packages = with pkgs; [
-	(nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" ]; })
-];
+  ## Gaming
+  programs.steam = {
+  	enable = true;
+  	remotePlay.openFirewall = true;
+  	dedicatedServer.openFirewall = true;
+  };
+  ## Insecure Packages
+  nixpkgs.config.permittedInsecurePackages = [];
+  nixpkgs.config.allowUnfree = true;
+  
+  home-manager = {
+  	# also pass inputs to home-manager modules
+  	extraSpecialArgs = { inherit inputs; };
+  	backupFileExtension = "backup";
+  	users = {
+  		"dd0k" = import ./home.nix;
+  	};
+  };
+
+  # keyboard remapping with kanata
+  # caps and backspace switch
+  services.kanata = {
+    keyboards.default = {
+      config = ''
+        (defsrc
+          grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+          tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+          caps a    s    d    f    g    h    j    k    l    ;    '    ret
+          lsft z    x    c    v    b    n    m    ,    .    /    rsft
+          lctl lmet lalt           spc            ralt prtsc rctl
+        )
+  	(deflayermap (base-layer)
+    		caps bspc
+    		bspc caps
+    		ralt C-b
+  	)
+      '';
+    };
+  };
+  
+  # fonts
+  fonts.packages = with pkgs; [
+  	(nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" ]; })
+  ];
 
 
-# Auto optimization - delete old builds
-# nix = {
-#   settings.auto-optimize-store = true;
-#   gc = {
-#     automatic = true;
-#     dates = "weekly";
-#     options = "--delete-older-than 7d";
-#   };
-# };
+  # Auto optimization - delete old builds
+  # nix = {
+  #   settings.auto-optimize-store = true;
+  #   gc = {
+  #     automatic = true;
+  #     dates = "weekly";
+  #     options = "--delete-older-than 7d";
+  #   };
+  # };
 
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -192,10 +179,10 @@ fonts.packages = with pkgs; [
   #   enableSSHSupport = true;
   # };
 
-  # List services that you want to enable:
 
-	# Enable Docker
-	virtualisation.docker.enable = true;
+  # Enabled (systemd) services
+  # Enable Docker
+  virtualisation.docker.enable = true;
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
