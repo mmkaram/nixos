@@ -9,6 +9,18 @@ end
 
 local settings = {
 
+	-- cmp
+	clangd = {
+		cmd = { "clangd" },
+		filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto" },
+	},
+	-- elixir
+	-- lexical = {
+	-- 	cmd = {"lexical"},
+	-- 	filetypes = {"elixir", "eelixir", "heex", "surface"},
+	-- },
+
+	-- python
 	pylyzer = {
 		cmd = {"pylyzer", "--server"},
 		filetypes = {"python"},

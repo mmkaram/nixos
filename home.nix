@@ -141,6 +141,9 @@
       hibernate="systemctl hibernate";
     };
     shellInit = ''
+      fish_vi_key_bindings
+      # fish_default_key_bindings
+      set -U fish_greeting
       set PROG "/home/dd0k/prog"
       set NIX "/etc/nixos"
       direnv hook fish | source
@@ -258,6 +261,10 @@
   programs.ssh = {
     enable = true;
     extraConfig = '' 
+Host csuw
+    HostName linux.student.cs.uwaterloo.ca
+    User mkaram
+    ForwardX11Trusted yes
 Host hfcs
     HostName hfcs.csclub.uwaterloo.ca
     User mkaram
@@ -299,11 +306,25 @@ Host PerfTest2
 
   plugins = with pkgs.vimPlugins; [
     
+    # TODO:
+    # alpha-lua
+    # neo-tree
+    # conform-nvim
     telescope-file-browser-nvim
     # deps
     plenary-nvim
     nvim-web-devicons
     nui-nvim
+
+    {
+      plugin = presence-nvim;
+      config = toLuaFile ./nvim/presence.lua;
+    }
+
+    {
+      plugin = indent-blankline-nvim;
+      config = toLuaFile ./nvim/indent.lua;
+    }
 
     {
       plugin = codewindow-nvim;

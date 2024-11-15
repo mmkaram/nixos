@@ -14,7 +14,6 @@ environment.systemPackages = with pkgs; [
       cargo
       du-dust
       libgcc
-      clang
       # lua
       lua
       lua-language-server
@@ -29,8 +28,16 @@ environment.systemPackages = with pkgs; [
       python312Packages.pyenchant
       python312Packages.numpy
       python312Packages.matplotlib
-      ffmpeg
+      # elixr
+      # lexical
+      # elixir_1_15
+      # cpp
+      clang
+      clang-tools
       # prog general
+      nix-prefetch-github
+      ffmpeg
+      ollama
       fish
       calibre
       ripgrep
