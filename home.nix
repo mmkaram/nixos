@@ -316,7 +316,7 @@ Host PerfTest2
     nvim-web-devicons
     nui-nvim
 
-    quickfix-reflector-vim;
+    quickfix-reflector-vim
 
     {
       plugin = presence-nvim;

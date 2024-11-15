@@ -1,8 +1,15 @@
 {pkgs, ... }:
 # List packages installed in system profile. To search, run:
 # $ nix search wget
+let
+  # Import your package.nix
+  railsy = import ./flakes/railsy/package.nix {
+    inherit (pkgs) lib rustPlatform pkg-config openssl fetchFromGitHub;
+  };
+in
 {
 environment.systemPackages = with pkgs; [
+      railsy
       pulseaudio
       vim
       spotify-player
