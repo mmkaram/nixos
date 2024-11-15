@@ -316,6 +316,8 @@ Host PerfTest2
     nvim-web-devicons
     nui-nvim
 
+    quickfix-reflector-vim;
+
     {
       plugin = presence-nvim;
       config = toLuaFile ./nvim/presence.lua;
