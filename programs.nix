@@ -85,6 +85,11 @@ environment.systemPackages = with pkgs; [
       lunar-client
       steam
       # office
+      # celeste
+      # apostrophe
+      libsForQt5.dolphin
+      alpaca
+      impression
       polkit_gnome # auth agent
       xournalpp
       kanata

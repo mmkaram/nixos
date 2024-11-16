@@ -4,6 +4,7 @@
         "Mod4+d"="exec 'wofi --show drun'";
         "Mod4+Return" = "exec kitty tmux";
         "Mod4+Shift+Return" = "exec kitty";
+        "Mod4+a" = "exec alpaca";
         "Mod4+Shift+S" = "exec 'systemctl hibernate'";
         "Mod4+Apostrophe" = "exec 'swaylock -c 145874 & systemctl suspend-then-hibernate'";
         "Mod4+Semicolon"="exec 'swaylock -c 145874'";
@@ -66,7 +67,7 @@
         "Mod4+Shift+q" = "kill";
         "Mod4+Shift+space" = "floating toggle";
         "Mod4+Up" = "focus up";
-        "Mod4+a" = "focus parent";
+        # "Mod4+a" = "focus parent";
         "Mod4+b" = "splith";
         "Mod4+e" = "layout toggle split";
         "Mod4+f" = "fullscreen toggle";
