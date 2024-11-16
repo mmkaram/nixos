@@ -5,9 +5,9 @@ vim.g.mapleader = " "  -- Change this to your preferred leader key
 
 	-- Mapping to open Telescope
 	vim.api.nvim_set_keymap('n', '<leader>tt', ':Telescope<CR>', { noremap = true, silent = true })
-	
+
 	-- Additional mappings for various Telescope functions
-	vim.api.nvim_set_keymap('n', '<leader>tb', ':Telescope buffers<CR>', { noremap = true, silent = true })
+	vim.api.nvim_set_keymap('n', '<leader>tb', ':Telescope treesitter<CR>', { noremap = true, silent = true })
 	vim.api.nvim_set_keymap('n', '<C-p>', ':Telescope buffers<CR>', { noremap = true, silent = true })
 	vim.api.nvim_set_keymap('n', '<leader>tr', ':Telescope lsp_references<CR>', { noremap = true, silent = true })
 	vim.api.nvim_set_keymap('n', '<leader>tf', ':Telescope current_buffer_fuzzy_find<CR>', { noremap = true, silent = true })
