@@ -3,12 +3,16 @@
 # $ nix search wget
 let
   # Import your package.nix
-  railsy = import ./flakes/railsy/package.nix {
+  railsy = import ./packages/railsy/package.nix {
     inherit (pkgs) lib rustPlatform pkg-config openssl fetchFromGitHub;
+  };
+  salah = import ./packages/salah/package.nix {
+    inherit (pkgs) lib stdenv fetchFromGitHub;
   };
 in
 {
 environment.systemPackages = with pkgs; [
+      salah
       railsy
       pulseaudio
       vim

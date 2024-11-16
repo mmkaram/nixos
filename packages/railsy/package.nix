@@ -31,11 +31,11 @@ rustPlatform.buildRustPackage rec {
 
   PKG_CONFIG_PATH = "${openssl.dev}/lib/pkgconfig";
 
-  # meta = {
-  #   description = "Temporary email client in Rust";
-  #   homepage = "https://mmkaram.github.io/railsy.html";
-  #   license = lib.licenses.mit;
-  #   maintainers = with lib.maintainers; [ lib.maintainers.mmkaram ];
-  #   platforms = lib.platforms.unix;
-  # };
+  meta = {
+    description = "Temporary email client in Rust";
+    homepage = "https://mmkaram.github.io/railsy.html";
+    license = lib.licenses.mit;
+    maintainers = with lib.maintainers; [ lib.maintainers.mmkaram ];
+    platforms = lib.platforms.unix;
+  };
 }

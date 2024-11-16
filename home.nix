@@ -65,7 +65,6 @@
       ldoc="lazydocker";
       t="tmux";
       icat="kitten icat";
-      salah="bash ~/prog/salah";
 
       tetris="bastet";
       space_invaders="nivaders";
@@ -114,7 +113,6 @@
       ldoc="lazydocker";
       t="tmux";
       icat="kitten icat";
-      salah="bash ~/prog/salah";
 
       tetris="bastet";
       space_invaders="nivaders";
@@ -167,7 +165,6 @@
       ldoc="lazydocker";
       t="tmux";
       icat="kitten icat";
-      salah="bash ~/prog/salah";
 
       tetris="bastet";
       space_invaders="nivaders";
