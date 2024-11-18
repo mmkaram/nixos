@@ -28,17 +28,18 @@ vim.g.mapleader = " "
 	-- registers
 	vim.api.nvim_set_keymap('n', '<leader>t"', '<cmd>Telescope registers<cr>', { desc = 'List diagnostics' })
 
--- LSP rename
-require('telescope').setup({
-  extensions = {
-    ['ui-select'] = {
-      require('telescope.themes').get_dropdown()
-    }
-  }
-})
-
-require('telescope').load_extension('ui-select')
-
-vim.keymap.set('n', '<leader>tn', function()
-  return ":IncRename " .. vim.fn.expand("<cword>")
-end, { expr = true })
+-- -- LSP rename
+vim.keymap.set("n", "<leader>tn", vim.lsp.buf.rename, { desc = "LSP rename" })
+-- require('telescope').setup({
+--   extensions = {
+--     ['ui-select'] = {
+--       require('telescope.themes').get_dropdown()
+--     }
+--   }
+-- })
+--
+-- require('telescope').load_extension('ui-select')
+--
+-- vim.keymap.set('n', '<leader>tn', function()
+--   return ":IncRename " .. vim.fn.expand("<cword>")
+-- end, { expr = true })
