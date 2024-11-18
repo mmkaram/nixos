@@ -45,7 +45,12 @@ environment.systemPackages = with pkgs; [
       # cpp
       clang
       clang-tools
+      # haskell
+      haskellPackages.haskell-language-server
+      ghc
       # prog general
+      popsicle
+
       nix-prefetch-github
       ffmpeg
       ollama
@@ -88,6 +93,7 @@ environment.systemPackages = with pkgs; [
       # celeste
       # apostrophe
       libsForQt5.dolphin
+      nautilus
       alpaca
       impression
       polkit_gnome # auth agent

@@ -9,6 +9,13 @@ end
 
 local settings = {
 
+	--
+	hls = {
+		cmd = { "haskell-language-server-wrapper", "--lsp" },
+		filetypes = { 'haskell', 'lhaskell', 'cabal' },
+
+	},
+
 	-- cmp
 	clangd = {
 		cmd = { "clangd" },

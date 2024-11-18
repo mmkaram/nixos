@@ -228,6 +228,14 @@
       setw -g mouse on
       setw -g mode-keys vi
       unbind MouseDragEnd1Pane
+      # Set the prefix key to Ctrl + X
+      unbind C-b          # Unbind the default prefix (Ctrl + B)
+      set -g prefix C-x   # Set new prefix to Ctrl + X
+      bind C-x send-prefix # Allow sending prefix key
+      
+      # Start window numbering at 1 instead of 0
+      set -g base-index 1 # Set base index for windows to 1
+      set -g pane-base-index 1 # Set base index for panes to 1
       # set-option -g default-command "${pkgs.zsh}/bin/zsh"
       # set-option -g default-shell "${pkgs.zsh}/bin/zsh"
     '';
@@ -410,6 +418,9 @@ Host PerfTest2
       config = toLuaFile ./nvim/telescope.lua;
     }
 
+    # configured in telescope.lua
+    telescope-ui-select-nvim
+
     (nvim-treesitter.withPlugins (p: [
       p.tree-sitter-nix
       p.tree-sitter-python
@@ -417,6 +428,9 @@ Host PerfTest2
       p.tree-sitter-lua
       p.tree-sitter-json
       p.tree-sitter-rust
+      p.tree-sitter-haskell
+      p.tree-sitter-c
+      p.tree-sitter-cpp
     ]))
 
     vim-nix
