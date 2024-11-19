@@ -90,7 +90,7 @@ environment.systemPackages = with pkgs; [
       lunar-client
       steam
       # office
-      obs
+      obs-studio
       pcmanfm
       # celeste
       # apostrophe
