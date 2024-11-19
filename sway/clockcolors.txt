@@ -1,0 +1,5 @@
+#battery,
+#clock {
+  background-color: #bbccdd;
+  color: #333333;
+}

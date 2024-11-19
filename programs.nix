@@ -90,6 +90,8 @@ environment.systemPackages = with pkgs; [
       lunar-client
       steam
       # office
+      obs
+      pcmanfm
       # celeste
       # apostrophe
       libsForQt5.dolphin

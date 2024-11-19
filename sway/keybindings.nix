@@ -4,7 +4,7 @@
         "Mod4+d"="exec 'wofi --show drun'";
         "Mod4+Return" = "exec kitty tmux";
         "Mod4+Shift+Return" = "exec kitty";
-        "Mod4+a" = "exec nautilus";
+        "Mod4+a" = "exec pcmanfm";
         "Mod4+Shift+S" = "exec 'systemctl hibernate'";
         "Mod4+Apostrophe" = "exec 'swaylock -c 145874 & systemctl suspend-then-hibernate'";
         "Mod4+Semicolon"="exec 'swaylock -c 145874'";

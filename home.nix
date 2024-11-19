@@ -14,6 +14,12 @@
     pkgs.fd
     pkgs.sway-audio-idle-inhibit
     pkgs.wofi
+    pkgs.waybar
+    pkgs.libappindicator-gtk3
+  ];
+
+  imports = [
+    ./sway/waybar.nix
   ];
 
   wayland.windowManager.sway = {
@@ -22,6 +28,9 @@
     config = rec {
       modifier = "Mod4";
       terminal = "kitty";
+      bars = [{
+        command = "${pkgs.waybar}/bin/waybar";
+      }];
       input = {
         "type:touchpad" = {
           natural_scroll = "enabled";  
@@ -34,10 +43,8 @@
         };
       };
       startup = [
-        # Launch Firefox on start
         { command = ''
-          exec --no-startup-id kitty --name scratchkitty
-          for_window [title="scratchkitty"] move scratchpad
+          swaybar
           '';
         }
       ];
