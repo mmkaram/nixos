@@ -5,7 +5,7 @@
     settings = [{
       layer = "top";
       position = "top";
-      height = 23;
+      height = 20;
       modules-left = ["sway/workspaces" "sway/mode"];
       # modules-center = ["sway/window"];
       modules-right = [

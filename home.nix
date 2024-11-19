@@ -121,21 +121,16 @@
       t="tmux";
       icat="kitten icat";
 
-      tetris="bastet";
-      space_invaders="nivaders";
-      snake="nsnake";
+      nix-rebuild="sudo nixos-rebuild switch --flake /etc/nixos#default";
+      nix-update="cd /etc/nixos && sudo nix flake update";
+      nix-delete-older-than="sudo nix-collect-garbage --delete-older-than ";
+      nix-delete="sudo nix-collect-garbage --delete-old"; #--delete-older-than
 
-	nix-rebuild="sudo nixos-rebuild switch --flake /etc/nixos#default";
-        nix-update="cd /etc/nixos && sudo nix flake update";
-        nix-delete-older-than="sudo nix-collect-garbage --delete-older-than ";
-        nix-delete="sudo nix-collect-garbage --delete-old"; #--delete-older-than
-
-      # TODO:
-      # jump doesn't work because sourcing?
       jump="autojump";
       cls="clear";
       r="ranger";
       py="python3";
+      l="eza -lh";
       el="eza --git-repos -h -l -all";
       sp="spotify_player";
       ff="fastfetch";
