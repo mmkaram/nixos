@@ -197,6 +197,10 @@
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
+  # Enable localsend
+  programs.localsend.enable = true;
+  programs.localsend.openFirewall = true;
+
   # Enable direnv for auto running nix-shell
   programs.direnv.enable = false;
 

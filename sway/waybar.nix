@@ -96,8 +96,8 @@
       }
 
       #mode, #clock, #battery, #cpu, #memory, #network, #pulseaudio, #custom-spotify, #tray, #mode, #clock, #batery {
-        padding: 0 7px;
-        margin: 0 5px;
+        padding: 0 5px;
+        margin: 0 3px;
       }
 
       #mode {
