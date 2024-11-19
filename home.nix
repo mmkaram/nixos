@@ -326,6 +326,11 @@ Host PerfTest2
     quickfix-reflector-vim
 
     {
+      plugin = dashboard-nvim;
+      config = toLuaFile ./nvim/dash.lua;
+    }
+
+    {
       plugin = presence-nvim;
       config = toLuaFile ./nvim/presence.lua;
     }
