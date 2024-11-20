@@ -41,7 +41,7 @@
       };
 
       "disk" = {
-        interval = 30;
+        interval = 120;
         format = "Disk: {percentage_used}%";
         path = "/";
       };
@@ -51,7 +51,7 @@
         format-charging = "BAT: {capacity}% 󰂄";
         format-plugged = "BAT: {capacity}% ";
         states = {
-          warning = 30;
+          warning = 20;
           critical = 15;
         };
       };
