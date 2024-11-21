@@ -90,6 +90,7 @@ environment.systemPackages = with pkgs; [
       lunar-client
       steam
       # office
+      tealdeer
       localsend
       obs-studio
       pcmanfm
@@ -134,6 +135,7 @@ environment.systemPackages = with pkgs; [
       microsoft-edge
       spotify
       discord
+      element
       slack
       wget
       feh

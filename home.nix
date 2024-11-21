@@ -323,6 +323,8 @@ Host PerfTest2
     nvim-web-devicons
     nui-nvim
 
+    vim-be-good
+
     quickfix-reflector-vim
 
     {
