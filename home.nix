@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   home.username = "dd0k";
@@ -6,6 +6,7 @@
   home.stateVersion = "24.05";
 
   home.packages = [
+    inputs.zen-browser.packages.${pkgs.system}.specific
     pkgs.starship
     pkgs.swaybg
     pkgs.dmenu
