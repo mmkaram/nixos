@@ -33,15 +33,17 @@
       "cpu" = {
         format = "CPU: {usage}%";
         tooltip = false;
+        interval = 60;
       };
 
       "memory" = {
         format = "RAM: {percentage}%";
         tooltip-format = "Used: {used:0.1f}GiB\nAvailable: {avail:0.1f}GiB";
+        interval = 60;
       };
 
       "disk" = {
-        interval = 120;
+        interval = 60;
         format = "Disk: {percentage_used}%";
         path = "/";
       };
