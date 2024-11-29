@@ -10,6 +10,7 @@
       # modules-center = ["sway/window"];
       modules-right = [
         "tray"
+        "pulseaudio"
         "network"
         "cpu"
         "memory"
@@ -21,6 +22,12 @@
       "sway/workspaces" = {
         disable-scroll = true;
         all-outputs = true;
+      };
+
+      "pulseaudio" = {
+        format = "VOL: {volume}%";
+        format-muted = "VOL: Muted";
+        on-click = "pavucontrol";
       };
 
       "network" = {
