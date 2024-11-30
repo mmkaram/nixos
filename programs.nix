@@ -35,7 +35,8 @@ environment.systemPackages = with pkgs; [
       linuxPackages_latest.perf
       # Python
       python312
-      pylyzer
+      # pylyzer
+      pyright
       python312Packages.pyenchant
       python312Packages.numpy
       python312Packages.matplotlib

@@ -9,7 +9,9 @@ end
 
 local settings = {
 
-	--
+	-- TODO: Elixir, racket?, js?
+
+	-- haskell
 	hls = {
 		cmd = { "haskell-language-server-wrapper", "--lsp" },
 		filetypes = { 'haskell', 'lhaskell', 'cabal' },
@@ -21,25 +23,21 @@ local settings = {
 		cmd = { "clangd" },
 		filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto" },
 	},
-	-- elixir
-	-- lexical = {
-	-- 	cmd = {"lexical"},
-	-- 	filetypes = {"elixir", "eelixir", "heex", "surface"},
-	-- },
 
 	-- python
-	pylyzer = {
-		cmd = {"pylyzer", "--server"},
+	pyright = {
+		cmd = { "pyright-langserver", "--stdio" },
 		filetypes = {"python"},
 		settings = {
-			python = {
-				checkOnType = false,
-				diagnostics = true,
-				inlayHints = true,
-				smartCompletion = true
+			["pyright"] = {
+				analysis = {
+					autoSearchPaths = true,
+					diagnosticMode = "openFilesOnly",
+					useLibraryCodeForTypes = true
+				}
 			}
-		}
 
+		}
 	},
 
     rust_analyzer = {
