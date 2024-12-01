@@ -329,6 +329,11 @@ Host PerfTest2
     quickfix-reflector-vim
 
     {
+      plugin = guess-indent-nvim;
+      config = toLua "require('guess-indent').setup {}";
+    }
+
+    {
       plugin = dashboard-nvim;
       config = toLuaFile ./nvim/dash.lua;
     }
