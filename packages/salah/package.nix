@@ -7,14 +7,14 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "mmkaram";
     repo = "salah";
-    rev = "main";        # Branch name or specific commit hash
+    rev = "main";
     sha256 = "sha256-5n0ixwFQRq+Hj0FOkou+L3kP7U23kzkCL5ediSXkYxw=";
   };
 
   installPhase = ''
     mkdir -p $out/bin
-    cp ${src}/salah $out/bin/salah  # Adjust to your script's filename
-    chmod +x $out/bin/salah                    # Make it executable
+    cp ${src}/salah $out/bin/salah
+    chmod +x $out/bin/salah
   '';
 
   meta = with lib; {
