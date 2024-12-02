@@ -137,6 +137,10 @@ environment.systemPackages = with pkgs; [
       spotify
       discord
       element
+      element-desktop
+      # gomuks
+      # cinny-desktop
+      # nheko
       slack
       wget
       feh
