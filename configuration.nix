@@ -14,7 +14,7 @@
   #  | |  |  \| |  | |    | |  #
   #  | |  | |\  |  | |    | |  #
   # |___| |_| \_| |___|   |_|  #
-  ##############################                            
+  ##############################
     # enable expiremental nix features
     nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
@@ -29,8 +29,13 @@
     boot.loader.systemd-boot.enable = true;
     boot.loader.efi.canTouchEfiVariables = true;
 
-
-  ## NETWORK
+  ##############################################################
+  #  _   _   _____   _____  __        __   ___    ____    _  __#
+  # | \ | | | ____| |_   _| \ \      / /  / _ \  |  _ \  | |/ /#
+  # |  \| | |  _|     | |    \ \ /\ / /  | | | | | |_) | | ' / #
+  # | |\  | | |___    | |     \ V  V /   | |_| | |  _ <  | . \ #
+  # |_| \_| |_____|   |_|      \_/\_/     \___/  |_| \_\ |_|\_\#
+  ##############################################################
     networking.hostName = "Rocinante"; # Define your hostname.
     networking.networkmanager.enable = true;
     # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -40,12 +45,16 @@
     # Enable bluetooth
     hardware.bluetooth.enable = true;
 
-  ## LOCALIZATION
-
+  #################################################################################################
+  #  _        ___     ____      _      _       ___   _____     _      _____   ___    ___    _   _ #
+  # | |      / _ \   / ___|    / \    | |     |_ _| |__  /    / \    |_   _| |_ _|  / _ \  | \ | |#
+  # | |     | | | | | |       / _ \   | |      | |    / /    / _ \     | |    | |  | | | | |  \| |#
+  # | |___  | |_| | | |___   / ___ \  | |___   | |   / /_   / ___ \    | |    | |  | |_| | | |\  |#
+  # |_____|  \___/   \____| /_/   \_\ |_____| |___| /____| /_/   \_\   |_|   |___|  \___/  |_| \_|#
+  #################################################################################################
     time.timeZone = "Canada/Eastern";
     # services.automatic-timezoned.enable = true;
-    i18n.defaultLocale = "en_US.UTF-8";
-
+    i18n.defaultLocale = "en_US.UTF-9";
     i18n.extraLocaleSettings = {
       LC_ADDRESS = "en_US.UTF-8";
       LC_IDENTIFICATION = "en_US.UTF-8";
@@ -57,8 +66,13 @@
       LC_TELEPHONE = "en_US.UTF-8";
       LC_TIME = "en_US.UTF-8";
     };
-
-  ## DESKTOP
+  #########################################################
+  #  ____    _____   ____    _  __  _____    ___    ____  #
+  # |  _ \  | ____| / ___|  | |/ / |_   _|  / _ \  |  _ \ #
+  # | | | | |  _|   \___ \  | ' /    | |   | | | | | |_) |#
+  # | |_| | | |___   ___) | | . \    | |   | |_| | |  __/ #
+  # |____/  |_____| |____/  |_|\_\   |_|    \___/  |_|    #
+  #########################################################
     # Enable the X11 windowing system.
     services.xserver.enable = true;
 
@@ -95,7 +109,13 @@
     # Enable touchpad support.
     # services.xserver.libinput.enable = true;
 
-  ## USERS
+  ##########################################
+  #  _   _   ____    _____   ____    ____  #
+  # | | | | / ___|  | ____| |  _ \  / ___| #
+  # | | | | \___ \  |  _|   | |_) | \___ \ #
+  # | |_| |  ___) | | |___  |  _ <   ___) |#
+  #  \___/  |____/  |_____| |_| \_\ |____/ #
+  ##########################################
     users.users.dd0k = {
       isNormalUser = true;
       description = "dD0k";
@@ -108,15 +128,14 @@
     users.users.testuser = {
       isNormalUser = true;
       home = "/home/testuser";
-      shell = pkgs.bash; # You can also set this to another shell like pkgs.zsh
+      shell = pkgs.bash;
       description = "testuser";
-      extraGroups = [ "wheel" ]; # Optional, add sudo access by adding to "wheel" group
+      extraGroups = [ "wheel" ];
     };
     users.defaultUserShell = pkgs.fish;
     programs.fish.enable = true;
     programs.zsh.enable = true;
     home-manager = {
-      # also pass inputs to home-manager modules
       extraSpecialArgs = { inherit inputs; };
       backupFileExtension = "backup";
       users = {
@@ -131,8 +150,14 @@
       enable = true;
     };
 
-  ## PROGRAMS
-    ## Insecure Packages
+  #####################################################################
+  #  ____    ____     ___     ____   ____       _      __  __   ____  #
+  # |  _ \  |  _ \   / _ \   / ___| |  _ \     / \    |  \/  | / ___| #
+  # | |_) | | |_) | | | | | | |  _  | |_) |   / _ \   | |\/| | \___ \ #
+  # |  __/  |  _ <  | |_| | | |_| | |  _ <   / ___ \  | |  | |  ___) |#
+  # |_|     |_| \_\  \___/   \____| |_| \_\ /_/   \_\ |_|  |_| |____/ #
+  #####################################################################
+    # Enable insecure Packages
     nixpkgs.config.permittedInsecurePackages = [];
     nixpkgs.config.allowUnfree = true;
 
@@ -166,7 +191,13 @@
       nerd-fonts.droid-sans-mono
     ];
 
-  ## Services
+  ##################################################################
+  #  ____    _____   ____   __     __  ___    ____   _____   ____  #
+  # / ___|  | ____| |  _ \  \ \   / / |_ _|  / ___| | ____| / ___| #
+  # \___ \  |  _|   | |_) |  \ \ / /   | |  | |     |  _|   \___ \ #
+  #  ___) | | |___  |  _ <    \ V /    | |  | |___  | |___   ___) |#
+  # |____/  |_____| |_| \_\    \_/    |___|  \____| |_____| |____/ #
+  ##################################################################
     # Enable Docker
     virtualisation.docker.enable = true;
 
@@ -194,7 +225,13 @@
       "kernel.perf_event_mlock_kb" = 16 * 1024;  # Set to 16MB
     };
 
-  ## UNUSED
+  ##################################################
+  #  _   _   _   _   _   _   ____    _____   ____  #
+  # | | | | | \ | | | | | | / ___|  | ____| |  _ \ #
+  # | | | | |  \| | | | | | \___ \  |  _|   | | | |#
+  # | |_| | | |\  | | |_| |  ___) | | |___  | |_| |#
+  #  \___/  |_| \_|  \___/  |____/  |_____| |____/ #
+  ##################################################
     # Auto optimization - delete old builds
     # nix = {
     #   settings.auto-optimize-store = true;
