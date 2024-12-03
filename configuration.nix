@@ -54,7 +54,7 @@
   #################################################################################################
     time.timeZone = "Canada/Eastern";
     # services.automatic-timezoned.enable = true;
-    i18n.defaultLocale = "en_US.UTF-9";
+    i18n.defaultLocale = "en_US.UTF-8";
     i18n.extraLocaleSettings = {
       LC_ADDRESS = "en_US.UTF-8";
       LC_IDENTIFICATION = "en_US.UTF-8";

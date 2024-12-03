@@ -86,6 +86,8 @@ environment.systemPackages = with pkgs; [
         lunar-client
         steam
       ## office
+        # switch to port 465 for ssl outgoing
+        aerc
         tealdeer
         # localsend
         obs-studio

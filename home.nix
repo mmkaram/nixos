@@ -5,6 +5,38 @@
   home.homeDirectory = "/home/dd0k";
   home.stateVersion = "24.05";
 
+  accounts.email = {
+    accounts.Kernel = {
+      primary = true;
+      userName = "mahdymkaram@gmail.com";
+      realName = "Mahdy Karam";
+      flavor = "gmail.com";
+      imap = {
+        host = "imap.gmail.com";
+        port = 993;
+        tls = {
+          enable = true;
+          useStartTls = false;
+        };
+      };
+      smtp = {
+        host = "smtp.gmail.com";
+        port = 587;
+        tls = {
+          enable = true;
+          useStartTls = true;
+        };
+      };
+      mbsync= {
+        enable = true;
+        create = "maildr";
+      };
+      msmtp.enable = true;
+      notmuch.enable = true;
+      address = "mahdymkaram@gmail.com";
+    };
+  };
+
   home.packages = [
     inputs.zen-browser.packages.${pkgs.system}.specific
     pkgs.starship
