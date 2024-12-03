@@ -21,7 +21,7 @@
     imports =
       [
         ./hardware-configuration.nix
-        ./programs.nix
+        ./programs.nix # find installed programs here
         inputs.home-manager.nixosModules.default
       ];
 
@@ -36,14 +36,13 @@
   # | |\  | | |___    | |     \ V  V /   | |_| | |  _ <  | . \ #
   # |_| \_| |_____|   |_|      \_/\_/     \___/  |_| \_\ |_|\_\#
   ##############################################################
-    networking.hostName = "Rocinante"; # Define your hostname.
+    networking.hostName = "Rocinante";
     networking.networkmanager.enable = true;
+    hardware.bluetooth.enable = true;
     # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
     # Network proxy Confugration
     # networking.proxy.default = "http://user:password@proxy:port/";
     # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-    # Enable bluetooth
-    hardware.bluetooth.enable = true;
 
   #################################################################################################
   #  _        ___     ____      _      _       ___   _____     _      _____   ___    ___    _   _ #
