@@ -140,6 +140,7 @@
     enable = true;
     shellAliases = {
       copy = "wl-copy";
+      wifi="nmtui";
 
       gc="git commit -a -m";
       gP="git push";
