@@ -107,7 +107,8 @@ environment.systemPackages = with pkgs; [
         element-desktop
         iamb
         slack
-        discord
+        # discord
+        discord-canary
       ## other/misc
         unzip
         file
