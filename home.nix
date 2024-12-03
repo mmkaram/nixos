@@ -115,8 +115,6 @@
         nix-delete-older-than="sudo nix-collect-garbage --delete-older-than ";
         nix-delete="sudo nix-collect-garbage --delete-old"; #--delete-older-than
 
-      # TODO:
-      # jump doesn't work because sourcing?
       jump="autojump";
       cls="clear";
       r="ranger";
@@ -210,8 +208,6 @@
         nix-delete-older-than="sudo nix-collect-garbage --delete-older-than ";
         nix-delete="sudo nix-collect-garbage --delete-old"; #--delete-older-than
 
-      # TODO:
-      # jump doesn't work because sourcing?
       jump="autojump";
       cls="clear";
       r="ranger";
@@ -278,6 +274,10 @@
 
   programs.autojump = {
     enable = true;
+  };
+  programs.zoxide = {
+    enable = true;
+    enableFishIntegration = true;
   };
 
   programs.ranger = {

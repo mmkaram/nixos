@@ -21,7 +21,6 @@ environment.systemPackages = with pkgs; [
         rust-analyzer
         cargo
         du-dust
-        libgcc
       ## lua
         lua
         lua-language-server
@@ -32,10 +31,10 @@ environment.systemPackages = with pkgs; [
         linuxPackages_latest.perf
       ## Python
         python312
-        pyright
         python312Packages.pyenchant
         python312Packages.numpy
         python312Packages.matplotlib
+        pyright
       ## elixr
         # lexical
         # elixir_1_15
@@ -45,27 +44,24 @@ environment.systemPackages = with pkgs; [
       ## haskell
         haskellPackages.haskell-language-server
         ghc
-      # prog general
+      ## prog general
+        racket
         popsicle
         nix-prefetch-github
         ffmpeg
-        ollama
-        fish
-        calibre
-        ripgrep
         direnv
         qemu
-        tree # directory tree listing
-        racket
         zip
+        docker
+      ## Terminal
+        zoxide
+        ripgrep
+        tree
         kitty
         lazygit
         lazydocker
-        blesh
-        atuin
+        fish
         oh-my-posh
-        zsh-powerlevel10k
-        docker
         atuin
         scc
         eza
@@ -76,10 +72,8 @@ environment.systemPackages = with pkgs; [
         gh-dash
         vscode
         neovim
-        # distrobox
       ## formatting
         ntfs3g
-        dosfstools
         gparted # only opens if run from su root
       ## gaming
       ## minecraft
@@ -88,14 +82,12 @@ environment.systemPackages = with pkgs; [
       ## office
         # switch to port 465 for ssl outgoing
         aerc
+        wl-clipboard
+        calibre
         tealdeer
         # localsend
         obs-studio
         pcmanfm
-        # celeste
-        libsForQt5.dolphin
-        nautilus
-        alpaca
         impression
         polkit_gnome # auth agent
         xournalpp
@@ -105,10 +97,6 @@ environment.systemPackages = with pkgs; [
         sublime
         speedcrunch
         ranger
-        xfce.thunar
-        clipman
-        clippy
-        wl-clipboard
         brightnessctl
         prusa-slicer
         gimp
@@ -117,26 +105,22 @@ environment.systemPackages = with pkgs; [
       ## socials
         yt-dlp
         element-desktop
-        # gomuks
-        # cinny-desktop
-        # nheko
+        iamb
         slack
         discord
       ## other/misc
         unzip
-        file # how is this not default?
+        file
         autojump
         fastfetch
         qbittorrent
-        inetutils # ftp ping, whois and such
+        inetutils
         cmatrix
         fzf
-        atuin
         zsh
         git
         microsoft-edge
         spotify
-        element
         wget
         feh
         tmux
