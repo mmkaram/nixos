@@ -6,11 +6,11 @@
       layer = "top";
       position = "top";
       height = 20;
-      modules-left = ["sway/workspaces" "sway/mode"];
+      modules-left = ["sway/workspaces" "sway/mode" "tray"];
       # modules-center = ["sway/window"];
       modules-right = [
-        "tray"
         "pulseaudio"
+        "custom/media"
         "network"
         "cpu"
         "memory"
@@ -30,6 +30,13 @@
         on-click = "pavucontrol";
       };
 
+      "custom/media" = {
+        exec = "playerctl metadata --format '{{ artist }} - {{ title }}' || echo 'No Media'";
+        interval = 8;
+        format = "{}";
+        on-click = "playerctl play-pause";
+      };
+
       "network" = {
         format-wifi = "WiFi: {essid} ({signalStrength}%)";
         format-ethernet = "Eth: {ipaddr}/{cidr}";
@@ -40,7 +47,7 @@
       "cpu" = {
         format = "CPU: {usage}%";
         tooltip = false;
-        interval = 60;
+        interval = 8;
       };
 
       "memory" = {
