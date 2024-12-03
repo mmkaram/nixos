@@ -103,6 +103,7 @@
       #jack.enable = true;
 
       #media-session.enable = true;
+      wireplumber.enable = true;
     };
 
     # Enable touchpad support.
