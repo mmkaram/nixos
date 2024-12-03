@@ -509,11 +509,10 @@ Host PerfTest2
   };
 
   home.file = {
-    # Your dotfiles here
+    ".config/iamb/config.toml".source = ./dots/iamb/config.toml;
   };
 
   home.sessionVariables = {
-    # Your environment variables here
   };
 
   programs.home-manager.enable = true;
