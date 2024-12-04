@@ -82,6 +82,7 @@ environment.systemPackages = with pkgs; [
       ## office
         # switch to port 465 for ssl outgoing
         aerc
+        dunst
         wl-clipboard
         calibre
         tealdeer

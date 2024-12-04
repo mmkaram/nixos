@@ -89,6 +89,10 @@
       '';
   };
 
+  services.dunst = {
+    enable = true;
+  };
+
 
   programs.zsh = {
     enable = true;

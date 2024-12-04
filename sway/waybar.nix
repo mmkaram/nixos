@@ -9,8 +9,8 @@
       modules-left = ["sway/workspaces" "sway/mode" "tray"];
       # modules-center = ["sway/window"];
       modules-right = [
-        "pulseaudio"
         "custom/media"
+        "pulseaudio"
         "network"
         "cpu"
         "memory"
