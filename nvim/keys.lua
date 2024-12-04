@@ -52,3 +52,7 @@ vim.g.mapleader = " "
 
 	-- preview hunk
 	vim.api.nvim_set_keymap('n', '<Leader>lh', ':Git preview_hunk<CR>', { noremap = true, silent = true })
+
+-- Markdown
+
+	vim.api.nvim_set_keymap('n', '<Leader"md', ':Markview splitToggle', opts)

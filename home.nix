@@ -358,7 +358,11 @@ Host PerfTest2
     # TODO:
     # alpha-lua
     # neo-tree
-    # conform-nvim
+    {
+        
+      plugin = conform-nvim;
+      config = toLuaFile ./nvim/format.lua;
+    }
     telescope-file-browser-nvim
     # deps
     plenary-nvim
@@ -370,8 +374,13 @@ Host PerfTest2
     quickfix-reflector-vim
 
     {
+      plugin = markview-nvim;
+      config = toLua "require('markview').setup()";
+    }
+
+    {
       plugin = guess-indent-nvim;
-      config = toLua "require('guess-indent').setup {}";
+      config = toLua "require('guess-indent').setup()";
     }
 
     {
