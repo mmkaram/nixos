@@ -93,53 +93,6 @@
     enable = true;
   };
 
-
-  programs.zsh = {
-    enable = true;
-    shellAliases = {
-      copy = "wl-copy";
-
-      gc="git commit -a -m";
-      gP="git push";
-      gp="git pull";
-      ga="git add .";
-      gitgraph="git log --online --graph --decorate -all";
-      lgit="lazygit";
-      ghd="gh-dash";
-      ldoc="lazydocker";
-      t="tmux";
-      icat="kitten icat";
-
-      tetris="bastet";
-      space_invaders="nivaders";
-      snake="nsnake";
-
-	nix-rebuild="sudo nixos-rebuild switch --flake /etc/nixos#default";
-        nix-update="cd /etc/nixos && sudo nix flake update";
-        nix-delete-older-than="sudo nix-collect-garbage --delete-older-than ";
-        nix-delete="sudo nix-collect-garbage --delete-old"; #--delete-older-than
-
-      jump="autojump";
-      cls="clear";
-      r="ranger";
-      py="python3";
-      el="eza --git-repos -h -l -all";
-      sp="spotify_player";
-      ff="fastfetch";
-      n="nvim";
-      sn="sudo nvim";
-      map="telnet mapscii.me";
-
-      hibernate="systemctl hibernate";
-    };
-    defaultKeymap = "emacs";
-    initExtra = ''
-      export PROG="/home/dd0k/prog"
-      export NIX="/etc/nixos"
-      eval "$(direnv hook zsh)"
-    '';
-  };
-
   programs.fish = {
     enable = true;
     shellAliases = {
@@ -189,58 +142,6 @@
   programs.starship = {
     enable = true;
     enableFishIntegration = true;
-  };
-
-  programs.bash = {
-    enable = true;
-    shellAliases = {
-      gc="git commit -a -m";
-      gP="git push";
-      gp="git pull";
-      ga="git add .";
-      gitgraph="git log --online --graph --decorate -all";
-      lgit="lazygit";
-      ldoc="lazydocker";
-      t="tmux";
-      icat="kitten icat";
-
-      tetris="bastet";
-      space_invaders="nivaders";
-      snake="nsnake";
-
-	nix-rebuild="sudo nixos-rebuild switch --flake /etc/nixos#default";
-        nix-update="cd /etc/nixos && sudo nix flake update";
-        nix-delete-older-than="sudo nix-collect-garbage --delete-older-than ";
-        nix-delete="sudo nix-collect-garbage --delete-old"; #--delete-older-than
-
-      jump="autojump";
-      cls="clear";
-      r="ranger";
-      py="python3";
-      el="eza --git-repos -h -l -all";
-      sp="spotify_player";
-      ff="fastfetch";
-      n="nvim";
-      sn="sudo nvim";
-      map="telnet mapscii.me";
-
-      hibernate="systemctl hibernate";
-    };
-    initExtra = ''
-      export PROG="/home/dd0k/prog"
-      export NIX="/etc/nixos"
-      # alias f="nvim $(fzf -m --preview="bat --color=always {}")"
-      # This doesn't work (direnv breaking history bash)
-      # eval "$(direnv hook bash)"
-      # PROMPT_COMMAND="history -a; history -c; history -r; $_direnv_hook"
-      '';
-  };
-
-  programs.oh-my-posh = {
-    enable = true;
-    # enableBashIntegration = true;
-    enableZshIntegration = true;
-    useTheme = "powerlevel10k_lean";
   };
 
   programs.kitty = {

@@ -48,6 +48,7 @@ environment.systemPackages = with pkgs; [
         racket
         popsicle
         nix-prefetch-github
+        alejandra
         ffmpeg
         direnv
         qemu
@@ -61,7 +62,6 @@ environment.systemPackages = with pkgs; [
         lazygit
         lazydocker
         fish
-        oh-my-posh
         atuin
         scc
         eza

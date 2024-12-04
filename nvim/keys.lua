@@ -55,4 +55,8 @@ vim.g.mapleader = " "
 
 -- Markdown
 
-	vim.api.nvim_set_keymap('n', '<Leader"md', ':Markview splitToggle', opts)
+	vim.api.nvim_set_keymap('n', '<Leader"md', ':Markview splitToggle<CR>', opts)
+
+-- LSP
+vim.api.nvim_set_keymap('n', '<C-Space>', '<cmd>lua vim.lsp.buf.hover()<CR>', {silent = true, noremap = true})
+vim.api.nvim_set_keymap('n', '<C-S-Space>', '<cmd>lua vim.lsp.buf.references()<CR>', {silent = true, noremap = true})

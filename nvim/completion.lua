@@ -67,4 +67,3 @@ cmp.setup.cmdline(':', {
     }),
     matching = { disallow_symbol_nonprefix_matching = false }
 })
-vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, {silent = true, noremap = true})
