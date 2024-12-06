@@ -1,6 +1,9 @@
-{ config, pkgs, inputs, ... }:
-
 {
+  config,
+  pkgs,
+  inputs,
+  ...
+}: {
   home.username = "dd0k";
   home.homeDirectory = "/home/dd0k";
   home.stateVersion = "24.05";
@@ -27,7 +30,7 @@
           useStartTls = true;
         };
       };
-      mbsync= {
+      mbsync = {
         enable = true;
         create = "maildr";
       };
@@ -61,32 +64,43 @@
     config = rec {
       modifier = "Mod4";
       terminal = "kitty";
-      bars = [{
-        command = "${pkgs.waybar}/bin/waybar";
-      }];
+      bars = [
+        {
+          command = "${pkgs.waybar}/bin/waybar";
+        }
+      ];
+      gaps = {
+        inner = 5;
+        outer = 5;
+      };
+      window = {
+        border = 2;
+        titlebar = true;
+      };
       input = {
         "type:touchpad" = {
-          natural_scroll = "enabled";  
+          natural_scroll = "enabled";
           tap = "enabled";
         };
       };
       output = {
         "*" = {
-          bg = "/etc/nixos/misc/Open.png fill";
+          bg = "/etc/nixos/misc/Nix.png fill";
         };
       };
       startup = [
-        { command = ''
-          swaybar
+        {
+          command = ''
+            swaybar
           '';
         }
       ];
       keybindings = import ./sway/keybindings.nix {pkgs = pkgs;};
-      };
-      extraConfig = ''
-        exec "sway-audio-idle-inhibit"
-        exec "swayidle timeout 420 'swaylock -c 145874' timeout 660 'systemctl sleep' timeout 900 'systemctl suspend-then-hibernate'"
-      '';
+    };
+    extraConfig = ''
+      exec "sway-audio-idle-inhibit"
+      exec "swayidle timeout 420 'swaylock -c 145874' timeout 660 'systemctl sleep' timeout 900 'systemctl suspend-then-hibernate'"
+    '';
   };
 
   services.dunst = {
@@ -97,37 +111,37 @@
     enable = true;
     shellAliases = {
       copy = "wl-copy";
-      wifi="nmtui";
+      wifi = "nmtui";
 
-      gc="git commit -a -m";
-      gP="git push";
-      gp="git pull";
-      ga="git add .";
-      gitgraph="git log --online --graph --decorate -all";
-      lgit="lazygit";
-      ghd="gh-dash";
-      ldoc="lazydocker";
-      t="tmux";
-      icat="kitten icat";
+      gc = "git commit -a -m";
+      gP = "git push";
+      gp = "git pull";
+      ga = "git add .";
+      gitgraph = "git log --online --graph --decorate -all";
+      lgit = "lazygit";
+      ghd = "gh-dash";
+      ldoc = "lazydocker";
+      t = "tmux";
+      icat = "kitten icat";
 
-      nix-rebuild="sudo nixos-rebuild switch --flake /etc/nixos#default";
-      nix-update="cd /etc/nixos && sudo nix flake update";
-      nix-delete-older-than="sudo nix-collect-garbage --delete-older-than ";
-      nix-delete="sudo nix-collect-garbage --delete-old"; #--delete-older-than
+      nix-rebuild = "sudo nixos-rebuild switch --flake /etc/nixos#default";
+      nix-update = "cd /etc/nixos && sudo nix flake update";
+      nix-delete-older-than = "sudo nix-collect-garbage --delete-older-than ";
+      nix-delete = "sudo nix-collect-garbage --delete-old"; #--delete-older-than
 
-      jump="autojump";
-      cls="clear";
-      r="ranger";
-      py="python3";
-      l="eza -lh";
-      el="eza --git-repos -h -l -all";
-      sp="spotify_player";
-      ff="fastfetch";
-      n="nvim";
-      sn="sudo nvim";
-      map="telnet mapscii.me";
+      jump = "autojump";
+      cls = "clear";
+      r = "ranger";
+      py = "python3";
+      l = "eza -lh";
+      el = "eza --git-repos -h -l -all";
+      sp = "spotify_player";
+      ff = "fastfetch";
+      n = "nvim";
+      sn = "sudo nvim";
+      map = "telnet mapscii.me";
 
-      hibernate="systemctl hibernate";
+      hibernate = "systemctl hibernate";
     };
     shellInit = ''
       fish_vi_key_bindings
@@ -136,7 +150,7 @@
       set PROG "/home/dd0k/prog"
       set NIX "/etc/nixos"
       direnv hook fish | source
-      '';
+    '';
   };
 
   programs.starship = {
@@ -148,7 +162,8 @@
     enable = true;
     # shellIntegration.enableBashIntegration = true;
     shellIntegration.enableZshIntegration = true;
-    themeFile = "Dracula";
+    # themeFile = "Dracula";
+    themeFile = "tokyo_night_night";
     font.package = pkgs.fira-code;
     font.name = "FiraCode";
     keybindings = {
@@ -156,12 +171,15 @@
       "ctrl+shift+left" = "previous_window";
       "ctrl+shift+right" = "next_window";
     };
+    extraConfig = ''
+      cursor_trail 9
+    '';
   };
 
   programs.tmux = {
     enable = true;
     # prefix = "C-f";
-    extraConfig = '' 
+    extraConfig = ''
       setw -g mouse on
       setw -g mode-keys vi
       unbind MouseDragEnd1Pane
@@ -169,7 +187,7 @@
       unbind C-b          # Unbind the default prefix (Ctrl + B)
       set -g prefix C-x   # Set new prefix to Ctrl + X
       bind C-x send-prefix # Allow sending prefix key
-      
+
       # Start window numbering at 1 instead of 0
       set -g base-index 1 # Set base index for windows to 1
       set -g pane-base-index 1 # Set base index for panes to 1
@@ -188,7 +206,7 @@
 
   programs.ranger = {
     enable = true;
-    mappings = { 
+    mappings = {
       dD = "delete";
     };
     extraConfig = ''
@@ -210,33 +228,33 @@
 
   programs.ssh = {
     enable = true;
-    extraConfig = '' 
-Host csuw
-    HostName linux.student.cs.uwaterloo.ca
-    User mkaram
-    ForwardX11Trusted yes
-Host hfcs
-    HostName hfcs.csclub.uwaterloo.ca
-    User mkaram
-Host corn-syrup
-    HostName corn-syrup.csclub.uwaterloo.ca
-    User mkaram
-Host real1
-    HostName 172.19.134.37
-    ProxyJump corn-syrup
-    User ubuntu
-Host PerfTest2
-    HostName 172.19.134.117
-    ProxyJump corn-syrup
-    User ubuntu
+    extraConfig = ''
+      Host csuw
+          HostName linux.student.cs.uwaterloo.ca
+          User mkaram
+          ForwardX11Trusted yes
+      Host hfcs
+          HostName hfcs.csclub.uwaterloo.ca
+          User mkaram
+      Host corn-syrup
+          HostName corn-syrup.csclub.uwaterloo.ca
+          User mkaram
+      Host real1
+          HostName 172.19.134.37
+          ProxyJump corn-syrup
+          User ubuntu
+      Host PerfTest2
+          HostName 172.19.134.117
+          ProxyJump corn-syrup
+          User ubuntu
     '';
   };
 
   programs.vim = {
     enable = true;
     # defaultEditor = true;
-    plugins = with pkgs.vimPlugins; [ vim-airline jedi-vim nerdtree ];
-    settings = { ignorecase = true; };
+    plugins = with pkgs.vimPlugins; [vim-airline jedi-vim nerdtree];
+    settings = {ignorecase = true;};
     extraConfig = ''
       set mouse=a
 
@@ -245,170 +263,166 @@ Host PerfTest2
     '';
   };
 
-  programs.neovim =
-  let 
+  programs.neovim = let
     toLua = str: "lua << EOF\n${str}\nEOF\n";
     toLuaFile = file: "lua << EOF\n${builtins.readFile file}\nEOF\n";
-  in
-  {
-  enable = true;
-  defaultEditor = true;
+  in {
+    enable = true;
+    defaultEditor = true;
 
-  plugins = with pkgs.vimPlugins; [
-    
-    # TODO:
-    # alpha-lua
-    # neo-tree
-    {
-        
-      plugin = conform-nvim;
-      config = toLuaFile ./nvim/format.lua;
-    }
-    telescope-file-browser-nvim
-    # deps
-    plenary-nvim
-    nvim-web-devicons
-    nui-nvim
+    plugins = with pkgs.vimPlugins; [
+      # TODO:
+      # alpha-lua
+      # neo-tree
+      {
+        plugin = conform-nvim;
+        config = toLuaFile ./nvim/format.lua;
+      }
+      telescope-file-browser-nvim
+      # deps
+      plenary-nvim
+      nvim-web-devicons
+      nui-nvim
 
-    vim-be-good
+      vim-be-good
 
-    quickfix-reflector-vim
+      quickfix-reflector-vim
 
-    {
-      plugin = markview-nvim;
-      config = toLua "require('markview').setup()";
-    }
+      {
+        plugin = markview-nvim;
+        config = toLua "require('markview').setup()";
+      }
 
-    {
-      plugin = guess-indent-nvim;
-      config = toLua "require('guess-indent').setup()";
-    }
+      {
+        plugin = guess-indent-nvim;
+        config = toLua "require('guess-indent').setup()";
+      }
 
-    {
-      plugin = dashboard-nvim;
-      config = toLuaFile ./nvim/dash.lua;
-    }
+      {
+        plugin = dashboard-nvim;
+        config = toLuaFile ./nvim/dash.lua;
+      }
 
-    {
-      plugin = presence-nvim;
-      config = toLuaFile ./nvim/presence.lua;
-    }
+      {
+        plugin = presence-nvim;
+        config = toLuaFile ./nvim/presence.lua;
+      }
 
-    {
-      plugin = indent-blankline-nvim;
-      config = toLuaFile ./nvim/indent.lua;
-    }
+      {
+        plugin = indent-blankline-nvim;
+        config = toLuaFile ./nvim/indent.lua;
+      }
 
-    {
-      plugin = codewindow-nvim;
-      config = toLuaFile ./nvim/codewindow.lua;
-    }
+      {
+        plugin = codewindow-nvim;
+        config = toLuaFile ./nvim/codewindow.lua;
+      }
 
-    {
-      plugin = zen-mode-nvim;
-      config = toLuaFile ./nvim/maximize.lua;
-    }
+      {
+        plugin = zen-mode-nvim;
+        config = toLuaFile ./nvim/maximize.lua;
+      }
 
-    {
-      plugin = lazygit-nvim;
-      config = toLuaFile ./nvim/lazygit.lua;
-    }
+      {
+        plugin = lazygit-nvim;
+        config = toLuaFile ./nvim/lazygit.lua;
+      }
 
-    {
-      plugin = undotree;
-      config = toLuaFile ./nvim/undo.lua;
-    }
+      {
+        plugin = undotree;
+        config = toLuaFile ./nvim/undo.lua;
+      }
 
-    # gh cli integration
-    {
-      plugin = octo-nvim;
-      config = toLuaFile ./nvim/octo.lua;
-    }
+      # gh cli integration
+      {
+        plugin = octo-nvim;
+        config = toLuaFile ./nvim/octo.lua;
+      }
 
-    # lines changed since last commit
-    {
-      plugin = gitsigns-nvim;
-      config = toLuaFile ./nvim/gitsigns.lua;
-    }
+      # lines changed since last commit
+      {
+        plugin = gitsigns-nvim;
+        config = toLuaFile ./nvim/gitsigns.lua;
+      }
 
-    # status bar
-    lualine-nvim
-    {
-      plugin = lualine-lsp-progress;
-      config = toLuaFile ./nvim/lualine.lua;
-    }
+      # status bar
+      lualine-nvim
+      {
+        plugin = lualine-lsp-progress;
+        config = toLuaFile ./nvim/lualine.lua;
+      }
 
-    {
-      plugin = tokyonight-nvim;
-      config = "colorscheme tokyonight-night";
-    }
+      {
+        plugin = tokyonight-nvim;
+        config = "colorscheme tokyonight-night";
+      }
 
-    {
-      plugin = nvim-lspconfig;
-      config = toLuaFile ./nvim/lsp.lua;
-    }
+      {
+        plugin = nvim-lspconfig;
+        config = toLuaFile ./nvim/lsp.lua;
+      }
 
-    {
-      plugin = comment-nvim;
-      config = toLuaFile ./nvim/comment.lua;
-    }
+      {
+        plugin = comment-nvim;
+        config = toLuaFile ./nvim/comment.lua;
+      }
 
-    {
-      plugin = toggleterm-nvim;
-      config = toLuaFile ./nvim/term.lua;
-    }
+      {
+        plugin = toggleterm-nvim;
+        config = toLuaFile ./nvim/term.lua;
+      }
 
-    # tabs and stuff
-    vim-unimpaired
-    {
-      plugin = bufferline-nvim;
-      config = toLuaFile ./nvim/bufferline.lua;
-    }
+      # tabs and stuff
+      vim-unimpaired
+      {
+        plugin = bufferline-nvim;
+        config = toLuaFile ./nvim/bufferline.lua;
+      }
 
-    {
-      # idk how this is different from nvimp.cmp
-      plugin = cmp-nvim-lsp;
-      # this config isn't realted, it just loads 
-      # keybinds because I can't source lua files from
-      # other lua files
-      config = toLuaFile ./nvim/keys.lua;
-    }
+      {
+        # idk how this is different from nvimp.cmp
+        plugin = cmp-nvim-lsp;
+        # this config isn't realted, it just loads
+        # keybinds because I can't source lua files from
+        # other lua files
+        config = toLuaFile ./nvim/keys.lua;
+      }
 
-    {
-      plugin = nvim-cmp;
-      config = toLuaFile ./nvim/completion.lua;
-    }
+      {
+        plugin = nvim-cmp;
+        config = toLuaFile ./nvim/completion.lua;
+      }
 
-    {
-      plugin = telescope-nvim;
-      config = toLuaFile ./nvim/telescope.lua;
-    }
+      {
+        plugin = telescope-nvim;
+        config = toLuaFile ./nvim/telescope.lua;
+      }
 
-    # configured in telescope.lua
-    telescope-ui-select-nvim
+      # configured in telescope.lua
+      telescope-ui-select-nvim
 
-    (nvim-treesitter.withPlugins (p: [
-      p.tree-sitter-nix
-      p.tree-sitter-python
-      p.tree-sitter-bash
-      p.tree-sitter-lua
-      p.tree-sitter-json
-      p.tree-sitter-rust
-      p.tree-sitter-haskell
-      p.tree-sitter-c
-      p.tree-sitter-cpp
-    ]))
+      (nvim-treesitter.withPlugins (p: [
+        p.tree-sitter-nix
+        p.tree-sitter-python
+        p.tree-sitter-bash
+        p.tree-sitter-lua
+        p.tree-sitter-json
+        p.tree-sitter-rust
+        p.tree-sitter-haskell
+        p.tree-sitter-c
+        p.tree-sitter-cpp
+      ]))
 
-    vim-nix
-  ];
-  viAlias = true;
-  vimAlias = true;
-  vimdiffAlias = true;
-};
+      vim-nix
+    ];
+    viAlias = true;
+    vimAlias = true;
+    vimdiffAlias = true;
+  };
 
   programs.spotify-player = {
     enable = true;
-    settings = { 
+    settings = {
       client_id = "d5d01a282d5d475f8edf35dd5aab6b55";
       enable_notify = false;
       device = {
@@ -419,7 +433,14 @@ Host PerfTest2
     };
   };
 
-  programs.atuin = { 
+  programs.btop = {
+    enable = true;
+    settings = {
+      color_theme = "tokyo-night";
+    };
+  };
+
+  programs.atuin = {
     enable = true;
   };
 
@@ -431,23 +452,22 @@ Host PerfTest2
   };
 
   programs.home-manager.enable = true;
-  
-  
-  # Dark mode
-    dconf.settings = {
-      "org/gnome/desktop/background" = {
-        picture-uri-dark = "file://${pkgs.nixos-artwork.wallpapers.nineish-dark-gray.src}";
-      };
-      "org/gnome/desktop/interface" = {
-        color-scheme = "prefer-dark";
-      };
-    };
 
-    gtk = {
-      enable = true;
-      theme = {
-        name = "Adwaita-dark";
-        package = pkgs.gnome-themes-extra;
-      };
+  # Dark mode
+  dconf.settings = {
+    "org/gnome/desktop/background" = {
+      picture-uri-dark = "file://${pkgs.nixos-artwork.wallpapers.nineish-dark-gray.src}";
     };
+    "org/gnome/desktop/interface" = {
+      color-scheme = "prefer-dark";
+    };
+  };
+
+  gtk = {
+    enable = true;
+    theme = {
+      name = "Adwaita-dark";
+      package = pkgs.gnome-themes-extra;
+    };
+  };
 }
