@@ -59,4 +59,5 @@ vim.g.mapleader = " "
 
 -- LSP
 vim.api.nvim_set_keymap('n', '<C-Space>', '<cmd>lua vim.lsp.buf.hover()<CR>', {silent = true, noremap = true})
+-- borked
 vim.api.nvim_set_keymap('n', '<C-S-Space>', '<cmd>lua vim.lsp.buf.references()<CR>', {silent = true, noremap = true})

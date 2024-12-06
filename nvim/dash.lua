@@ -22,7 +22,7 @@ db.setup({
       '              ####              ',
       '               ##               ',
       '',
-      'Welcome to Caladan, Paul!',
+      'Your mothers warned you of my coming. Fear the moment.',
       '',
     },
     center = {
@@ -32,8 +32,10 @@ db.setup({
     },
     footer = {
       '',
-      'I have no fear, for fear is the little death that kills me over and over.',
-      'Without fear, I die but once.',
+      'I must not fear. Fear is the mind-killer. Fear is the little-death that brings total obliteration.',
+      'I will face my fear. I will permit it to pass over me and through me.',
+      'And when it has gone past, I will turn the inner eye to see its path. Where the fear has gone there will be nothing.',
+      'Only I will remain.',
     }
   }
 })
