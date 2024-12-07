@@ -8,6 +8,7 @@ vim.g.mapleader = " "
 	vim.api.nvim_set_keymap('n', '<leader>tb', ':Telescope treesitter<CR>', { noremap = true, silent = true })
 	vim.api.nvim_set_keymap('n', '<C-p>', ':Telescope buffers<CR>', { noremap = true, silent = true })
 	vim.api.nvim_set_keymap('n', '<leader>tr', ':Telescope lsp_references<CR>', { noremap = true, silent = true })
+	vim.api.nvim_set_keymap('n', '<leader>td', ':Telescope lsp_definitions<CR>', { noremap = true, silent = true })
 	vim.api.nvim_set_keymap('n', '<leader>tf', ':Telescope current_buffer_fuzzy_find<CR>', { noremap = true, silent = true })
 	vim.api.nvim_set_keymap('n', '<leader>tF', ':Telescope find_files<CR>', { noremap = true, silent = true })
 	vim.api.nvim_set_keymap('n', '<leader>tg', ':Telescope grep_string<CR>', { noremap = true, silent = true })
@@ -23,7 +24,7 @@ vim.g.mapleader = " "
 	vim.api.nvim_set_keymap('n', '<leader>ts', ':Telescope live_grep<CR>', { noremap = true, silent = true })
 
 	-- Problems/diagnostics
-	vim.api.nvim_set_keymap('n', '<leader>td', '<cmd>Telescope diagnostics<cr>', { desc = 'List diagnostics' })
+	vim.api.nvim_set_keymap('n', '<leader>tp', '<cmd>Telescope diagnostics<cr>', { desc = 'List diagnostics' })
 
 	-- registers
 	vim.api.nvim_set_keymap('n', '<leader>t"', '<cmd>Telescope registers<cr>', { desc = 'List diagnostics' })
