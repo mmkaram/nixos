@@ -50,8 +50,9 @@ vim.g.mapleader = " "
 	-- close buffers
 	vim.api.nvim_set_keymap('n', '<c-w>', ':bd<CR>', { noremap = true, silent = true})
 
-	-- preview hunk
-	vim.api.nvim_set_keymap('n', '<Leader>lh', ':Git preview_hunk<CR>', { noremap = true, silent = true })
+	-- Git things
+	vim.api.nvim_set_keymap('n', '<Leader>lh', ':Git preview_hunk<CR>', opts)
+	vim.api.nvim_set_keymap('n', '<Leader>lb', ':Telescope git_branches<CR>', opts)
 
 -- Markdown
 
