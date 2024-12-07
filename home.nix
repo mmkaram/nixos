@@ -292,6 +292,11 @@
       americano
 
       {
+        plugin = nvim-notify;
+        config = toLuaFile ./nvim/notify.lua;
+      }
+
+      {
         plugin = markview-nvim;
         config = toLua "require('markview').setup()";
       }
