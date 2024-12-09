@@ -1,4 +1,5 @@
 {
+  home,
   config,
   pkgs,
   inputs,
@@ -290,6 +291,11 @@
       quickfix-reflector-vim
 
       americano
+
+      {
+        plugin = oil-nvim;
+        config = toLua "require('oil').setup()";
+      }
 
       {
         plugin = nvim-notify;
