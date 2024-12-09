@@ -7,12 +7,7 @@ function merge(a, b)
 end
 
 local function on_attach(client, bufnr)
-    if client.server_capabilities.inlayHintProvider then
-        vim.g.inlay_hints_visible = true
-        vim.lsp.inlay_hint(bufnr, true)
-    else
-        print("no inlay hints available")
-    end
+    vim.lsp.inlay_hint.enable(true)
 end
 
 local settings = {
@@ -56,6 +51,12 @@ local settings = {
                 procMacro = {enable = true},
                 expressionAdjustmentHints = { enable = true },
                 lifetimeElisionHints = { enable = true },
+                inlayHints = {
+                    enable = true,
+                    showParameterNames = true,
+                    parameterHintsPrefix = "<- ",
+                    otherHintsPrefix = "=> ",
+                },
             }
         }
     },
