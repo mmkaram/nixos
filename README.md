@@ -3,13 +3,13 @@
 
 Ground up [nixos](https://www.nixos.org) configuration. Includes a lot of neovim, sway, and fish configuration.
 
-<!-- TOC -->
-
-- [Home Manager](#Home-Manager)
-- [Nvim](#Nvim)
-- [Abbreviations](#Abbreviations)
-
-<!-- /TOC -->
+<!-- <!-- TOC --> -->
+<!---->
+<!-- - [Home Manager](#Home-Manager) -->
+<!-- - [Nvim](#Nvim) -->
+<!-- - [Abbreviations](#Abbreviations) -->
+<!---->
+<!-- <!-- /TOC --> -->
 
 ## Home-Manager
 
