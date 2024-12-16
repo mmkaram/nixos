@@ -55,8 +55,7 @@ vim.g.mapleader = " "
 	vim.api.nvim_set_keymap('n', '<Leader>lb', ':Telescope git_branches<CR>', opts)
 
 -- Markdown
-
-	vim.api.nvim_set_keymap('n', '<Leader"md', ':Markview splitToggle<CR>', opts)
+	vim.api.nvim_set_keymap('n', '<Leader>md', ':Markview splitToggle<CR>', opts)
 
 -- LSP
 vim.api.nvim_set_keymap('n', '<C-Space>', '<cmd>lua vim.lsp.buf.hover()<CR>', {silent = true, noremap = true})

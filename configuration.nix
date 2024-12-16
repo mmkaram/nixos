@@ -202,6 +202,9 @@
   #  ___) | | |___  |  _ <    \ V /    | |  | |___  | |___   ___) |#
   # |____/  |_____| |_| \_\    \_/    |___|  \____| |_____| |____/ #
   ##################################################################
+  # ios usb tethering
+  services.usbmuxd.enable = true;
+
   # Enable Docker
   virtualisation.docker.enable = true;
 

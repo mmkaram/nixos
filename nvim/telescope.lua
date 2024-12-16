@@ -12,6 +12,7 @@ vim.g.mapleader = " "
 	vim.api.nvim_set_keymap('n', '<leader>tf', ':Telescope current_buffer_fuzzy_find<CR>', { noremap = true, silent = true })
 	vim.api.nvim_set_keymap('n', '<leader>tF', ':Telescope find_files<CR>', { noremap = true, silent = true })
 	vim.api.nvim_set_keymap('n', '<leader>tg', ':Telescope grep_string<CR>', { noremap = true, silent = true })
+	vim.api.nvim_set_keymap('n', '<leader>tb', ':Telescope lsp_document_symbols<CR>', { noremap = true, silent = true })
 
 	-- Key mapping to open the file browser
 	vim.api.nvim_set_keymap('n', '<leader>te', ':Telescope file_browser<CR>', { noremap = true, silent = true })
@@ -28,7 +29,7 @@ vim.g.mapleader = " "
 	vim.api.nvim_set_keymap('n', '<leader>tp', '<cmd>Telescope diagnostics<cr>', { desc = 'List diagnostics' })
 
 	-- registers
-	vim.api.nvim_set_keymap('n', '<leader>t"', '<cmd>Telescope registers<cr>', { desc = 'List diagnostics' })
+	vim.api.nvim_set_keymap('n', '<leader>t"', '<cmd>Telescope registers<cr>', { desc = 'List registers' })
 
 -- -- LSP rename
 vim.keymap.set("n", "<leader>tn", vim.lsp.buf.rename, { desc = "LSP rename" })

@@ -78,6 +78,8 @@ in {
     ## formatting
     ntfs3g
     gparted # only opens if run from su root
+    libimobiledevice
+    ifuse
     ## gaming
     ## minecraft
     lunar-client
@@ -85,6 +87,7 @@ in {
     ## office
     # switch to port 465 for ssl outgoing
     aerc
+    rsync
     dunst
     wl-clipboard
     calibre

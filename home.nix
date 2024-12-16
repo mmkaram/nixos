@@ -141,6 +141,7 @@
       n = "nvim";
       sn = "sudo nvim";
       map = "telnet mapscii.me";
+      dsize = "du -sh";
 
       hibernate = "systemctl hibernate";
     };
