@@ -36,7 +36,7 @@
         };
 
         "custom/media" = {
-          exec = "playerctl metadata --format '{{ artist }} - {{ title }}' || echo 'No Media'";
+          exec = "playerctl metadata --format '{{ artist }} - {{ title }} | {{ playerName }} - {{ status }}' || echo 'no media'";
           interval = 8;
           format = "{}";
           on-click = "playerctl play-pause";
