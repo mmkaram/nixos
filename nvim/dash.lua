@@ -1,8 +1,26 @@
-local db = require('dashboard')
+local ascii_heatmap = require('git-dashboard-nvim').setup {
+  show_only_weeks_with_commits = true,
+}
 
-db.setup({
+local opts_one = {
+theme = 'doom',
+  config = {
+    header = ascii_heatmap,
+    center = {
+      { icon = ' ', desc = 'Find File', action = 'Telescope find_files' },
+      { icon = ' ', desc = 'Search Text', action = 'Telescope live_grep' },
+      { icon = ' ', desc = 'Recent Files', action = 'Telescope oldfiles' },
+    },
+    footer = {
+    'Lead them to Paradise',
+    },
+  },
+}
+
+local opts_two = {
   theme = 'doom',
   config = {
+    packages = { enable = true },
     header = {
       '',
       '                                ',
@@ -26,7 +44,8 @@ db.setup({
       '',
     },
     center = {
-      { icon = ' ', desc = 'Find File', action = 'Telescope find_files' },
+      { icon = ' ', desc = 'Find File', action = 'Telescope find_files' },
+      { icon = ' ', desc = 'Search Text', action = 'Telescope live_grep' },
       { icon = ' ', desc = 'Recent Files', action = 'Telescope oldfiles' },
       -- { icon = ' ', desc = 'Open Config', action = 'edit ~/.config/nvim/init.lua' },
     },
@@ -40,5 +59,6 @@ db.setup({
       'Only I will remain.',
     }
   }
-})
+}
 
+require('dashboard').setup(opts_two)

@@ -10,7 +10,7 @@ vim.g.mapleader = " "
 	vim.api.nvim_set_keymap('n', '<leader>tr', ':Telescope lsp_references<CR>', { noremap = true, silent = true })
 	vim.api.nvim_set_keymap('n', '<leader>td', ':Telescope lsp_definitions<CR>', { noremap = true, silent = true })
 	vim.api.nvim_set_keymap('n', '<leader>tf', ':Telescope current_buffer_fuzzy_find<CR>', { noremap = true, silent = true })
-	vim.api.nvim_set_keymap('n', '<leader>tF', ':Telescope find_files<CR>', { noremap = true, silent = true })
+	vim.api.nvim_set_keymap('n', '<leader>tF', ':Telescope file_browser<CR>', { noremap = true, silent = true })
 	vim.api.nvim_set_keymap('n', '<leader>tg', ':Telescope grep_string<CR>', { noremap = true, silent = true })
 	vim.api.nvim_set_keymap('n', '<leader>tb', ':Telescope lsp_document_symbols<CR>', { noremap = true, silent = true })
 

@@ -2,6 +2,7 @@
   toLua = str: "lua << EOF\n${str}\nEOF\n";
   toLuaFile = file: "lua << EOF\n${builtins.readFile file}\nEOF\n";
   americano = import ../packages/americano-nvim/package.nix {inherit pkgs;};
+  git-dashboard = import ../packages/git-dashboard-nvim/package.nix {inherit pkgs;};
 in {
   enable = true;
   defaultEditor = true;
@@ -25,6 +26,9 @@ in {
     quickfix-reflector-vim
 
     americano
+
+    # configured in dash.lua
+    git-dashboard
 
     {
       plugin = oil-nvim;
