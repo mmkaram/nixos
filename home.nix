@@ -178,6 +178,7 @@
     '';
   };
 
+  # TODO: set hjkl to act as arrow keys
   programs.tmux = {
     enable = true;
     # prefix = "C-f";

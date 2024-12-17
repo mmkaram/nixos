@@ -184,7 +184,8 @@
         (deflayermap (base-layer)
             caps bspc
             bspc caps
-            ralt C-x
+            ralt esc
+            rctl C-x
         )
       '';
     };
