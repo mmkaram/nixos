@@ -196,6 +196,8 @@
       set -g pane-base-index 1 # Set base index for panes to 1
       # set-option -g default-command "${pkgs.zsh}/bin/zsh"
       # set-option -g default-shell "${pkgs.zsh}/bin/zsh"
+      set -g status-bg blue
+      set -g status-fg black
     '';
   };
 
