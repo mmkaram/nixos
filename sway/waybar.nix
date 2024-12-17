@@ -1,86 +1,92 @@
-{ config, lib, pkgs, ... }:
 {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   programs.waybar = {
     enable = true;
-    settings = [{
-      layer = "top";
-      position = "top";
-      height = 20;
-      modules-left = ["sway/workspaces" "sway/mode" "tray"];
-      # modules-center = ["sway/window"];
-      modules-right = [
-        "custom/media"
-        "pulseaudio"
-        "network"
-        "cpu"
-        "memory"
-        "disk"
-        "battery"
-        "clock"
-      ];
+    settings = [
+      {
+        layer = "top";
+        position = "top";
+        height = 20;
+        modules-left = ["sway/workspaces" "sway/mode" "tray"];
+        # modules-center = ["sway/window"];
+        modules-right = [
+          "custom/media"
+          "pulseaudio"
+          "network"
+          # "cpu"
+          # "memory"
+          # "disk"
+          "battery"
+          "clock"
+        ];
 
-      "sway/workspaces" = {
-        disable-scroll = true;
-        all-outputs = true;
-      };
-
-      "pulseaudio" = {
-        format = "VOL: {volume}%";
-        format-muted = "VOL: Muted";
-        on-click = "pavucontrol";
-      };
-
-      "custom/media" = {
-        exec = "playerctl metadata --format '{{ artist }} - {{ title }}' || echo 'No Media'";
-        interval = 8;
-        format = "{}";
-        on-click = "playerctl play-pause";
-      };
-
-      "network" = {
-        format-wifi = "WiFi: {essid} ({signalStrength}%)";
-        format-ethernet = "Eth: {ipaddr}/{cidr}";
-        format-disconnected = "Disconnected";
-        tooltip-format = "{ifname}: {ipaddr}";
-      };
-
-      "cpu" = {
-        format = "CPU: {usage}%";
-        tooltip = false;
-        interval = 8;
-      };
-
-      "memory" = {
-        format = "RAM: {percentage}%";
-        tooltip-format = "Used: {used:0.1f}GiB\nAvailable: {avail:0.1f}GiB";
-        interval = 60;
-      };
-
-      "disk" = {
-        interval = 60;
-        format = "Disk: {percentage_used}%";
-        path = "/";
-      };
-
-      "battery" = {
-        format = "BAT: {capacity}%";
-        format-charging = "BAT: {capacity}% 󰂄";
-        format-plugged = "BAT: {capacity}% ";
-        states = {
-          warning = 20;
-          critical = 15;
+        "sway/workspaces" = {
+          disable-scroll = true;
+          all-outputs = true;
         };
-      };
 
-      "clock" = {
-        format = "{:%Y-%m-%d %H:%M}";
-        tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
-      };
+        "pulseaudio" = {
+          format = "VOL: {volume}%";
+          format-muted = "VOL: Muted";
+          on-click = "pavucontrol";
+        };
 
-      "tray" = {
-        spacing = 10;
-      };
-    }];
+        "custom/media" = {
+          exec = "playerctl metadata --format '{{ artist }} - {{ title }}' || echo 'No Media'";
+          interval = 8;
+          format = "{}";
+          on-click = "playerctl play-pause";
+        };
+
+        "network" = {
+          format-wifi = "WiFi: {essid} ({signalStrength}%)";
+          format-ethernet = "Eth: {ipaddr}/{cidr}";
+          format-disconnected = "Disconnected";
+          tooltip-format = "{ifname}: {ipaddr}";
+        };
+
+        "cpu" = {
+          format = "CPU: {usage}%";
+          tooltip = false;
+          interval = 8;
+        };
+
+        "memory" = {
+          format = "RAM: {percentage}%";
+          tooltip-format = "Used: {used:0.1f}GiB\nAvailable: {avail:0.1f}GiB";
+          interval = 60;
+        };
+
+        "disk" = {
+          interval = 60;
+          format = "Disk: {percentage_used}%";
+          path = "/";
+        };
+
+        "battery" = {
+          format = "BAT: {capacity}%";
+          format-charging = "BAT: {capacity}% 󰂄";
+          format-plugged = "BAT: {capacity}% ";
+          states = {
+            warning = 20;
+            critical = 15;
+          };
+        };
+
+        "clock" = {
+          format = "{:%Y-%m-%d %H:%M}";
+          tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
+        };
+
+        "tray" = {
+          spacing = 10;
+        };
+      }
+    ];
 
     style = ''
       * {
