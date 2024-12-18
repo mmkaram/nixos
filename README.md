@@ -13,7 +13,7 @@ Ground up [nixos](https://www.nixos.org) configuration. Includes a lot of neovim
 
 ## Home-Manager
 
-Declared in the [configuration.nix](configuration.nix) file under "init". Contains program specific configs. Docs references are [here](https://home-manager-options.extranix.com).
+Declared in the [configuration.nix](configuration.nix) file under "init". Contains program specific configs. The docs I use to find options for HM are [here](https://home-manager-options.extranix.com).
 
 ## Nvim
 
