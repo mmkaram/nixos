@@ -48,6 +48,16 @@ in {
     haskellPackages.haskell-language-server
     ghc
     ## prog general
+    wget
+    unzip
+    file
+    autojump
+    fastfetch
+    qbittorrent
+    inetutils
+    cmatrix
+    feh
+    tmux
     racket
     popsicle
     nix-prefetch-github
@@ -57,6 +67,9 @@ in {
     qemu
     zip
     docker
+    fzf
+    zsh
+    git
     ## Terminal
     zoxide
     ripgrep
@@ -85,14 +98,13 @@ in {
     lunar-client
     steam
     ## office
-    # switch to port 465 for ssl outgoing
-    aerc
+    aerc # switch to port 465 for ssl outgoing
     rsync
     dunst
     wl-clipboard
     calibre
     tealdeer
-    # localsend
+    localsend
     obs-studio
     pcmanfm
     impression
@@ -117,21 +129,8 @@ in {
     # discord
     discord-canary
     ## other/misc
-    unzip
-    file
-    autojump
-    fastfetch
-    qbittorrent
-    inetutils
-    cmatrix
-    fzf
-    zsh
-    git
     microsoft-edge
     spotify
-    wget
-    feh
-    tmux
     ## rand
     wiki-tui
   ];
