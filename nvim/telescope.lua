@@ -5,7 +5,7 @@ vim.g.mapleader = " "
 	-- Mapping to open Telescope
 	vim.api.nvim_set_keymap('n', '<leader>tt', ':Telescope<CR>', { noremap = true, silent = true })
 	-- Additional mappings for various Telescope functions
-	vim.api.nvim_set_keymap('n', '<leader>tb', ':Telescope treesitter<CR>', { noremap = true, silent = true })
+	vim.api.nvim_set_keymap('n', '<leader>ti', ':Telescope treesitter<CR>', { noremap = true, silent = true })
 	vim.api.nvim_set_keymap('n', '<C-p>', ':Telescope buffers<CR>', { noremap = true, silent = true })
 	vim.api.nvim_set_keymap('n', '<leader>tr', ':Telescope lsp_references<CR>', { noremap = true, silent = true })
 	vim.api.nvim_set_keymap('n', '<leader>td', ':Telescope lsp_definitions<CR>', { noremap = true, silent = true })
@@ -13,6 +13,7 @@ vim.g.mapleader = " "
 	vim.api.nvim_set_keymap('n', '<leader>tF', ':Telescope file_browser<CR>', { noremap = true, silent = true })
 	vim.api.nvim_set_keymap('n', '<leader>tg', ':Telescope grep_string<CR>', { noremap = true, silent = true })
 	vim.api.nvim_set_keymap('n', '<leader>tb', ':Telescope lsp_document_symbols<CR>', { noremap = true, silent = true })
+	vim.api.nvim_set_keymap('n', '<leader>tv', ':Telescope lsp_dynamic_workspace_symbols<CR>', { noremap = true, silent = true })
 
 	-- Key mapping to open the file browser
 	vim.api.nvim_set_keymap('n', '<leader>te', ':Telescope file_browser<CR>', { noremap = true, silent = true })
