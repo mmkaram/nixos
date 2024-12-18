@@ -1,19 +1,30 @@
 local ascii_heatmap = require('git-dashboard-nvim').setup {
   show_only_weeks_with_commits = true,
+  show_contributions_count = false,
+  days = { 's', 'm', 't', 'w', 't', 'f', 's' },
+  filled_squares = { '█', '█', '█', '█', '█', '█' },
+  empty_square = ' ',
+  gap = '',
+  colors = {
+    -- tokinight colors
+    days_and_months_labels = '#61afef',
+    empty_square_highlight = '#3e4452',
+    filled_square_highlights = { '#61afef', '#61afef', '#61afef', '#61afef', '#61afef', '#61afef' },
+    branch_highlight = '#61afef',
+    dashboard_title = '#61afef',
+  },
 }
 
 local opts_one = {
-theme = 'doom',
+  theme = 'doom',
   config = {
     header = ascii_heatmap,
     center = {
-      { icon = ' ', desc = 'Find File', action = 'Telescope find_files' },
-      { icon = ' ', desc = 'Search Text', action = 'Telescope live_grep' },
-      { icon = ' ', desc = 'Recent Files', action = 'Telescope oldfiles' },
+      { action = '', desc = '', icon = '', key = 'n' },
     },
-    footer = {
-    'Lead them to Paradise',
-    },
+    footer = function()
+      return {}
+    end,
   },
 }
 
@@ -61,4 +72,4 @@ local opts_two = {
   }
 }
 
-require('dashboard').setup(opts_two)
+require('dashboard').setup(opts_one)
