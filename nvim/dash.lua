@@ -72,4 +72,14 @@ local opts_two = {
   }
 }
 
-require('dashboard').setup(opts_one)
+local function setup_dashboard()
+  local Path = require('plenary.path')
+  local git_dir = Path:new('.git')
+
+  if git_dir:exists() then
+    require('dashboard').setup(opts_one)
+  else
+    require('dashboard').setup(opts_two)
+  end
+end
+setup_dashboard()
