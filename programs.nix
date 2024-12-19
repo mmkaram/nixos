@@ -99,6 +99,7 @@ in {
     steam
     ## office
     aerc # switch to port 465 for ssl outgoing
+    rtorrent
     rsync
     dunst
     wl-clipboard
