@@ -5,9 +5,11 @@ Ground up [nixos](https://www.nixos.org) configuration. Includes a lot of neovim
 
 <!-- TOC -->
 
-<!-- - [Home Manager](#Home-Manager) -->
-<!-- - [Nvim](#Nvim) -->
-<!-- - [Abbreviations](#Abbreviations) -->
+- [Home Manager](#Home-Manager)
+- [Nvim](#Nvim)
+- [Packages](#Packages)
+- [Abbreviations](#Abbreviations)
+- [TODOs](#TODOs)
 
 <!-- /TOC -->
 
@@ -28,3 +30,8 @@ There are some programs I've packaged but have not had the time to possibly requ
 - nix-update (update nixpkgs pin to most recent commit, does not rebuild)
 - nix-delete (`sudo nix-collect-garbage --delete-old`)
 
+## TODOs
+- Yubikey integration for login, sudo, and ssh. Useful wiki page [here](https://wiki.nixos.org/wiki/Yubikey), useful youtube video [here](https://www.youtube.com/watch?v=3CeXbONjIgE&t=329s&pp=ygUNbml4b3MgeXViaWtleQ%3D%3D). Should probably [buy the Yubikey](https://www.yubico.com/eg/product/yubikey-5-nano/) first.
+- Multi device config with flakes
+- Unify my custom commands
+- Stylix
