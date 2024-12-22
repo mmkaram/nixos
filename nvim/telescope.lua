@@ -13,6 +13,7 @@ vim.g.mapleader = " "
 	vim.api.nvim_set_keymap('n', '<leader>tF', ':Telescope file_browser<CR>', { noremap = true, silent = true })
 	vim.api.nvim_set_keymap('n', '<leader>tg', ':Telescope grep_string<CR>', { noremap = true, silent = true })
 	vim.api.nvim_set_keymap('n', '<leader>tb', ':Telescope lsp_dynamic_workspace_symbols<CR>', { noremap = true, silent = true })
+	vim.api.nvim_set_keymap('n', '<leader>tv', ':Telescope lsp_document_symbols<CR>', { desc = 'Show document symbols', noremap = true, silent = true })
 
 	-- Key mapping to open the file browser
 	vim.api.nvim_set_keymap('n', '<leader>te', ':Telescope file_browser<CR>', { noremap = true, silent = true })
