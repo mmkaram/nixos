@@ -128,6 +128,7 @@ in {
     iamb
     slack
     # discord
+    beeper
     discord-canary
     ## other/misc
     microsoft-edge
