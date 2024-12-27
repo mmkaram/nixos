@@ -111,9 +111,6 @@
   programs.fish = {
     enable = true;
     shellAliases = {
-      copy = "wl-copy";
-      wifi = "nmtui";
-
       gc = "git commit -a -m";
       gP = "git push";
       gp = "git pull";
@@ -125,6 +122,8 @@
       t = "tmux";
       icat = "kitten icat";
 
+      copy = "wl-copy";
+      wifi = "nmtui";
       dune-rebuild = "sudo nixos-rebuild switch --flake /etc/nixos#default";
       dune-update = "cd /etc/nixos && sudo nix flake update";
       dune-delete-older-than = "sudo nix-collect-garbage --delete-older-than ";
