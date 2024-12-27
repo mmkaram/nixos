@@ -1,7 +1,7 @@
 # mmkaram's NixOS Configuration
 > Flake powered, home-manager orchestrated, modular, reproducible OS configuration.
 
-Ground up [nixos](https://www.nixos.org) configuration. Includes a lot of neovim, sway, and fish configuration.
+Ground up [nixos](https://www.nixos.org) configuration. Includes a lot of neovim, sway, and fish setup.
 
 <!-- TOC -->
 
