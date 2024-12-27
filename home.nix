@@ -125,10 +125,10 @@
       t = "tmux";
       icat = "kitten icat";
 
-      nix-rebuild = "sudo nixos-rebuild switch --flake /etc/nixos#default";
-      nix-update = "cd /etc/nixos && sudo nix flake update";
-      nix-delete-older-than = "sudo nix-collect-garbage --delete-older-than ";
-      nix-delete = "sudo nix-collect-garbage --delete-old"; #--delete-older-than
+      dune-rebuild = "sudo nixos-rebuild switch --flake /etc/nixos#default";
+      dune-update = "cd /etc/nixos && sudo nix flake update";
+      dune-delete-older-than = "sudo nix-collect-garbage --delete-older-than ";
+      dune-delete = "sudo nix-collect-garbage --delete-old"; #--delete-older-than
 
       jump = "autojump";
       cls = "clear";
