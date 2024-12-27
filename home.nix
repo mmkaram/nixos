@@ -124,7 +124,7 @@
 
       copy = "wl-copy";
       wifi = "nmtui";
-      dune-rebuild = "sudo nixos-rebuild switch --flake /etc/nixos#default";
+      dune-rebuild = "sudo nixos-rebuild switch --flake /etc/nixos#roci";
       dune-update = "cd /etc/nixos && sudo nix flake update";
       dune-delete-older-than = "sudo nix-collect-garbage --delete-older-than ";
       dune-delete = "sudo nix-collect-garbage --delete-old"; #--delete-older-than
