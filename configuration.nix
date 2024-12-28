@@ -25,7 +25,7 @@
 
   imports = [
     ./hardware-configuration.nix
-    ./programs.nix # find installed programs here
+    ./programs.nix
     inputs.home-manager.nixosModules.default
   ];
 

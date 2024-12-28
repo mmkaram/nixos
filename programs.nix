@@ -1,4 +1,8 @@
-{pkgs, ...}: let
+{
+  pkgs,
+  inputs,
+  ...
+}: let
   railsy = import ./packages/railsy/package.nix {
     inherit (pkgs) lib rustPlatform pkg-config openssl fetchFromGitHub;
   };
@@ -10,6 +14,7 @@
   };
 in {
   environment.systemPackages = with pkgs; [
+    inputs.ghostty.packages.${pkgs.system}.default
     # borked
     # videomass
     salah
