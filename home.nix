@@ -121,6 +121,7 @@
       ldoc = "lazydocker";
       t = "tmux";
       icat = "kitten icat";
+      cdb = "cd ..";
 
       copy = "wl-copy";
       wifi = "nmtui";
@@ -198,6 +199,8 @@
       # set-option -g default-shell "${pkgs.zsh}/bin/zsh"
       set -g status-bg blue
       set -g status-fg black
+
+      set -s escape-time 0
     '';
   };
 
