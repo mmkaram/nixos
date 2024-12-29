@@ -35,5 +35,6 @@ There are some programs I've packaged but have not had the time to possibly requ
 - Secrets manager
 - Cloud synced atuin
 - Stylix
-- Custom snippets in neovim
+- Fix snippets
+- Update typescript lsp
 - More keyboard remapping
