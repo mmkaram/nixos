@@ -31,6 +31,11 @@ in {
     git-dashboard
 
     {
+      plugin = luasnip;
+      config = toLuaFile ./luasnip.lua;
+    }
+
+    {
       plugin = oil-nvim;
       config = toLua "require('oil').setup()";
     }
