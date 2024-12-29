@@ -31,7 +31,7 @@ in {
     git-dashboard
 
     {
-      plugin = luasnip;
+      plugin = snippets-nvim;
       config = toLuaFile ./luasnip.lua;
     }
 

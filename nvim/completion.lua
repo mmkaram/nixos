@@ -1,5 +1,5 @@
 local cmp = require('cmp')
-local luasnip = require('luasnip')
+local luasnip = require('snippets')
 cmp.setup({
     snippet = {
         expand = function(args)
