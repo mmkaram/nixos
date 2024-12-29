@@ -12,7 +12,15 @@ end
 
 local settings = {
 
-	-- TODO: Elixir, racket?, js?
+	-- TODO: Elixir, racket?
+    -- TypeScript / JavaScript
+    tsserver = {
+        cmd = { "typescript-language-server", "--stdio" },
+        filetypes = { "typescript", "typescriptreact", "typescript.tsx", "javascript", "javascriptreact", "javascript.jsx" },
+        settings = {
+            documentFormatting = true,
+        },
+    },
 
 	-- haskell
 	hls = {

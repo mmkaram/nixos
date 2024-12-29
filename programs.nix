@@ -52,6 +52,9 @@ in {
     ## haskell
     haskellPackages.haskell-language-server
     ghc
+    ## js
+    typescript
+    typescript-language-server
     ## prog general
     wget
     unzip
