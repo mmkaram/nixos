@@ -128,9 +128,9 @@
       dune-rebuild = "sudo nixos-rebuild switch --flake /etc/nixos#roci";
       dune-update = "cd /etc/nixos && sudo nix flake update";
       dune-delete-older-than = "sudo nix-collect-garbage --delete-older-than ";
-      dune-delete = "sudo nix-collect-garbage --delete-old"; #--delete-older-than
+      dune-delete = "sudo nix-collect-garbage --delete-old";
 
-      jump = "autojump";
+      space = "du -h -s";
       cls = "clear";
       r = "ranger";
       py = "python3";
@@ -204,9 +204,6 @@
     '';
   };
 
-  programs.autojump = {
-    enable = true;
-  };
   programs.zoxide = {
     enable = true;
     enableFishIntegration = true;

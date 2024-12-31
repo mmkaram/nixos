@@ -59,7 +59,6 @@ in {
     wget
     unzip
     file
-    autojump
     fastfetch
     qbittorrent
     inetutils
