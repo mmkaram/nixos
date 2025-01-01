@@ -1,5 +1,6 @@
 {pkgs}: {
   # "Mod4+Shift+d" = "exec ${pkgs.dmenu}/bin/dmenu_path | ${pkgs.dmenu}/bin/dmenu | ${pkgs.findutils} bin/xargs swaymsg exec --";
+  "Mod4+n" = "exec 'sublime'";
   "Ctrl+Shift+Escape" = "exec 'kitty btop'";
   "Mod4+d" = "exec 'wofi --show drun'";
   "Mod4+Return" = "exec kitty tmux";

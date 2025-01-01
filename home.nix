@@ -130,6 +130,7 @@
       dune-delete-older-than = "sudo nix-collect-garbage --delete-older-than ";
       dune-delete = "sudo nix-collect-garbage --delete-old";
 
+      up = "ping 8.8.8.8";
       space = "du -h -s";
       cls = "clear";
       r = "ranger";
