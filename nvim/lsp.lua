@@ -1,6 +1,5 @@
 -- Require utils for merge
--- Merges ...dictionaries? objects? tables?
-function merge(a, b)
+local function merge(a, b)
     for k, v in pairs(b) do
         a[k] = v
     end
@@ -99,7 +98,7 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities()
 local nvim_lsp = require('lspconfig')
 for server, config in pairs(settings) do
     local setup_obj = {
-        on_attach = on_attach, -- Use the updated on_attach
+        on_attach = on_attach,
         capabilities = capabilities
     }
     merge(setup_obj, config)
