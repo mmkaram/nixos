@@ -77,7 +77,7 @@ in {
 
     {
       plugin = zen-mode-nvim;
-      config = toLuaFile ../nvim/maximize.lua;
+      config = toLua "require('zen-mode').setup()";
     }
 
     {
@@ -99,7 +99,7 @@ in {
     # lines changed since last commit
     {
       plugin = gitsigns-nvim;
-      config = toLuaFile ../nvim/gitsigns.lua;
+      config = toLua "require('gitsigns').setup()";
     }
 
     # status bar

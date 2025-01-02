@@ -28,6 +28,7 @@
     set -s escape-time 0
 
     # Key mappings for pane splitting and navigation
+    # borked
     bind-key -n C-% split-window -h      # Ctrl + 5 to split pane horizontally
     bind-key -n C-'\' split-window -v    # Ctrl + \ to split pane vertically
 

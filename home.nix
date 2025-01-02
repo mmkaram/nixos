@@ -134,7 +134,6 @@
     '';
   };
 
-  # TODO: set hjkl to act as arrow keys
   programs.tmux = import ./dots/tmux/tmux.nix;
 
   programs.zoxide = {
