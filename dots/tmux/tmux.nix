@@ -28,8 +28,7 @@
     set -s escape-time 0
 
     # Key mappings for pane splitting and navigation
-    # borked
-    bind-key -n C-% split-window -h      # Ctrl + 5 to split pane horizontally
+    bind-key -n C-] split-window -h      # Ctrl + 5 to split pane horizontally
     bind-key -n C-'\' split-window -v    # Ctrl + \ to split pane vertically
 
     # Navigation between panes using vim-like keys (hjkl)
@@ -41,6 +40,8 @@
     # Key mappings for window navigation
     bind-key -n C-n next-window          # Ctrl + n for next window
     bind-key -n C-p previous-window      # Ctrl + p for previous window
+
+    # TODO: Add ctrl + [ for copy paste mode
 
   '';
 }
