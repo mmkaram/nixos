@@ -48,7 +48,7 @@ vim.g.mapleader = " "
 	map_key("n", "<s-tab>", ":bprevious<CR>")
 
 	-- close buffers
-	vim.api.nvim_set_keymap('n', '<c-w>', ':bd<CR>', { noremap = true, silent = true})
+	vim.api.nvim_set_keymap('n', '<Leader>sc', ':bd<CR>', { noremap = true, silent = true})
 
 	-- Git things
 	vim.api.nvim_set_keymap('n', '<Leader>lh', ':Git preview_hunk<CR>', opts)
