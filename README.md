@@ -26,7 +26,7 @@ Plugins are declared in the [home.nix](home.nix) file under programs.neovim. All
 There are some programs I've packaged but have not had the time to possibly request adding them to nixpkgs. You can find them in the packages/ directory. To import them I import them in my [programs.nix](programs.nix) file which hosts the `enviorment.systemPackages` for my configuration.
 
 ## Abbreviations
-- dune-rebuild (nix rebuild + home manager + flake default)
+- dune-rebuild (nix rebuild + home manager + flake default (roci))
 - dune-update (update nixpkgs pin to most recent commit, does not rebuild)
 - dune-delete (`sudo nix-collect-garbage --delete-old`)
 

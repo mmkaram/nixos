@@ -12,6 +12,7 @@
     t = "tmux";
     icat = "kitten icat";
     cdb = "cd ..";
+    cd = "z";
 
     copy = "wl-copy";
     wifi = "nmtui";
