@@ -55,7 +55,7 @@
   # | |___  | |_| | | |___   / ___ \  | |___   | |   / /_   / ___ \    | |    | |  | |_| | | |\  |#
   # |_____|  \___/   \____| /_/   \_\ |_____| |___| /____| /_/   \_\   |_|   |___|  \___/  |_| \_|#
   #################################################################################################
-  time.timeZone = "Africa/Cairo"; # "Canada/Eastern"
+  time.timeZone = "Canada/Eastern"; # "Africa/Cairo"
   # services.automatic-timezoned.enable = true;
   i18n.defaultLocale = "en_US.UTF-8";
   i18n.extraLocaleSettings = {
