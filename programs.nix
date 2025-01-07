@@ -3,9 +3,9 @@
   inputs,
   ...
 }: let
-  railsy = import ./packages/railsy/package.nix {
-    inherit (pkgs) lib rustPlatform pkg-config openssl fetchFromGitHub;
-  };
+  # railsy = import ./packages/railsy/package.nix {
+  #   inherit (pkgs) lib rustPlatform pkg-config openssl fetchFromGitHub;
+  # };
   salah = import ./packages/salah/package.nix {
     inherit (pkgs) lib stdenv fetchFromGitHub;
   };
@@ -14,11 +14,10 @@
   };
 in {
   environment.systemPackages = with pkgs; [
-    inputs.ghostty.packages.${pkgs.system}.default
     # borked
     # videomass
+    # railsy
     salah
-    railsy
     pulseaudio
     vim
     spotify-player
@@ -82,6 +81,7 @@ in {
     ripgrep
     tree
     kitty
+    ghostty
     lazygit
     lazydocker
     fish

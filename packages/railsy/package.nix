@@ -3,23 +3,18 @@
   rustPlatform,
   pkg-config,
   openssl,
-  fetchFromGitHub,
+  fetchurl,
 }:
-
 rustPlatform.buildRustPackage rec {
   pname = "railsy";
   version = "0.1.1";
 
-  src = fetchFromGitHub {
-    owner = "mmkaram";
-    repo = "railsy";
-    rev = "ref/tags/v${version}";
-    hash = "sha256-5i0hjgNoflOIoOguQEpHZMQF6RPpxNnulbpwu35CHDc=";
+  src = fetchurl {
+    url = "https://crates.io/api/v1/crates/${pname}/${version}/download";
+    sha256 = "sha256-5i0hjgNoflOIoOguQEpHZMQF6RPpxNnulbpwu35CHDc=";
   };
 
-  cargoLock = {
-    lockFile = ./Cargo.lock;
-  };
+  cargoHash = "sha256-jtBw4ahSl88L0iuCXxQgZVm1EcboWRJMNtjxLVTtzts=";
 
   buildInputs = [
     openssl
@@ -35,7 +30,7 @@ rustPlatform.buildRustPackage rec {
     description = "Temporary email client in Rust";
     homepage = "https://mmkaram.github.io/railsy.html";
     license = lib.licenses.mit;
-    maintainers = with lib.maintainers; [ lib.maintainers.mmkaram ];
+    maintainers = with lib.maintainers; [mmkaram];
     platforms = lib.platforms.unix;
   };
 }

@@ -39,3 +39,4 @@ There are some programs I've packaged but have not had the time to possibly requ
 - Fix snippets
 - Stylix
 - More keyboard remapping
+- Get railsy to work

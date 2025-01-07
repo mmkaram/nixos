@@ -2,15 +2,15 @@
   # borked
   "Mod4+Shift+d" = "exec ${pkgs.dmenu}/bin/dmenu_path | ${pkgs.dmenu}/bin/dmenu | ${pkgs.findutils} bin/xargs swaymsg exec --";
   "Mod4+n" = "exec 'sublime'";
-  "Ctrl+Shift+Escape" = "exec 'kitty btop'";
+  "Ctrl+Shift+Escape" = "exec 'ghostty btop'";
   "Mod4+d" = "exec 'wofi --show drun'";
-  "Mod4+Return" = "exec kitty tmux";
-  "Mod4+Shift+Return" = "exec kitty";
+  "Mod4+Return" = "exec ghostty tmux";
+  "Mod4+Shift+Return" = "exec ghostty";
   "Mod4+a" = "exec pcmanfm";
   "Mod4+Shift+S" = "exec 'systemctl hibernate'";
   "Mod4+Apostrophe" = "exec 'swaylock -c 145874 & systemctl suspend-then-hibernate'";
   "Mod4+Semicolon" = "exec 'swaylock -c 145874'";
-  "Mod4+s" = "exec 'kitty ranger'";
+  "Mod4+s" = "exec 'ghostty ranger'";
 
   # vol
   "Alt+Shift+Equal" = "exec pactl set-sink-volume @DEFAULT_SINK@ +5%";
