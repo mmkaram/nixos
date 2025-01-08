@@ -41,7 +41,8 @@
     bind-key -n C-n next-window          # Ctrl + n for next window
     bind-key -n C-p previous-window      # Ctrl + p for previous window
 
-    # TODO: Add ctrl + [ for copy paste mode
+    set -ga terminal-overrides ',*:Ss=\E[%p1%d q:Se=\E[2 q'
 
+    # TODO: Add ctrl + [ for copy paste mode
   '';
 }
