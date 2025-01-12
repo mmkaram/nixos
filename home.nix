@@ -43,6 +43,7 @@
 
   home.packages = [
     inputs.zen-browser.packages.${pkgs.system}.specific
+    pkgs.oh-my-fish
     pkgs.swaybg
     pkgs.dmenu
     pkgs.playerctl
