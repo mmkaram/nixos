@@ -3,7 +3,8 @@
   "Mod4+Shift+d" = "exec ${pkgs.dmenu}/bin/dmenu_path | ${pkgs.dmenu}/bin/dmenu | ${pkgs.findutils} bin/xargs swaymsg exec --";
   "Mod4+n" = "exec 'sublime'";
   "Ctrl+Shift+Escape" = "exec 'ghostty -e btop'";
-  "Mod4+d" = "exec 'wofi --show drun'";
+  "Mod4+d" = "exec 'rofi -show filebrowser'";
+  "Mod4+Space" = "exec 'rofi -show drun'";
   "Mod4+Return" = "exec ghostty -e tmux";
   "Mod4+Shift+Return" = "exec ghostty";
   "Mod4+a" = "exec pcmanfm";
@@ -79,7 +80,7 @@
   "Mod4+minus" = "scratchpad show";
   "Mod4+r" = "mode resize";
   "Mod4+q" = "layout stacking";
-  "Mod4+space" = "focus mode_toggle";
+  # "Mod4+space" = "focus mode_toggle";
   "Mod4+v" = "splitv";
   "Mod4+w" = "layout tabbed";
   "Mod4+Ctrl+Left" = "workspace prev";

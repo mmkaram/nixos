@@ -43,6 +43,7 @@
 
   home.packages = [
     inputs.zen-browser.packages.${pkgs.system}.specific
+    pkgs.rofi
     pkgs.starship
     pkgs.oh-my-fish
     pkgs.swaybg
@@ -110,6 +111,11 @@
   };
 
   programs.fish = import ./dots/fish/fish.nix;
+
+  programs.rofi = {
+    enable = true;
+    theme = "Arc-Dark";
+  };
 
   programs.starship = {
     enable = true;
@@ -232,6 +238,7 @@
 
   home.file = {
     ".config/iamb/config.toml".source = ./dots/iamb/config.toml;
+    "./config/rofi/config.rasi".source = ./dots/wofi/tokyonight.rasi;
     ".config/ghostty/config".source = ./dots/ghostty/config;
   };
 
