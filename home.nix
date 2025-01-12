@@ -52,7 +52,6 @@
     pkgs.shotman
     pkgs.fd
     pkgs.sway-audio-idle-inhibit
-    pkgs.wofi
     pkgs.waybar
     pkgs.libappindicator-gtk3
   ];
@@ -238,7 +237,6 @@
 
   home.file = {
     ".config/iamb/config.toml".source = ./dots/iamb/config.toml;
-    "./config/rofi/config.rasi".source = ./dots/wofi/tokyonight.rasi;
     ".config/ghostty/config".source = ./dots/ghostty/config;
   };
 
