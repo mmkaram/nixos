@@ -54,6 +54,7 @@
     pkgs.sway-audio-idle-inhibit
     pkgs.waybar
     pkgs.libappindicator-gtk3
+    pkgs.nitch
   ];
 
   imports = [
