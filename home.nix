@@ -43,7 +43,6 @@
 
   home.packages = [
     inputs.zen-browser.packages.${pkgs.system}.specific
-    pkgs.starship
     pkgs.swaybg
     pkgs.dmenu
     pkgs.playerctl
@@ -109,12 +108,6 @@
   };
 
   programs.fish = import ./dots/fish/fish.nix;
-
-  programs.starship = {
-    enable = true;
-    enableFishIntegration = true;
-    enableTransience = true;
-  };
 
   programs.kitty = {
     enable = true;
