@@ -28,6 +28,11 @@ in {
     rust-analyzer
     cargo
     du-dust
+    ## js/ts/jsx/tsx
+    tailwindcss-language-server
+    nodePackages.tailwindcss
+    typescript
+    typescript-language-server
     ## lua
     lua
     lua-language-server
@@ -51,9 +56,6 @@ in {
     ## haskell
     haskellPackages.haskell-language-server
     ghc
-    ## js
-    typescript
-    typescript-language-server
     ## prog general
     wget
     unzip

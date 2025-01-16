@@ -1,3 +1,5 @@
+local lspconfig = require('lspconfig')
+lspconfig.tailwindcss.setup{}
 -- Require utils for merge
 local function merge(a, b)
     for k, v in pairs(b) do
@@ -13,7 +15,7 @@ local settings = {
 
 	-- TODO: Elixir, racket?
     -- TypeScript / JavaScript
-    tsserver = {
+    ts_ls = {
         cmd = { "typescript-language-server", "--stdio" },
         filetypes = { "typescript", "typescriptreact", "typescript.tsx", "javascript", "javascriptreact", "javascript.jsx" },
         settings = {
