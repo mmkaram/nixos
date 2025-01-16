@@ -21,6 +21,8 @@ in {
     nvim-web-devicons
     nui-nvim
 
+    luasnip
+
     vim-be-good
 
     quickfix-reflector-vim

@@ -13,7 +13,7 @@ local settings = {
 
 	-- TODO: Elixir, racket?
     -- TypeScript / JavaScript
-    ts_ls = {
+    tsserver = {
         cmd = { "typescript-language-server", "--stdio" },
         filetypes = { "typescript", "typescriptreact", "typescript.tsx", "javascript", "javascriptreact", "javascript.jsx" },
         settings = {
