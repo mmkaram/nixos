@@ -87,6 +87,7 @@
       }
     ];
 
+    # TODO: Clean up
     style = ''
       * {
         border: none;

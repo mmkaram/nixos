@@ -33,9 +33,11 @@ in {
     nodePackages.tailwindcss
     typescript
     typescript-language-server
+    prettierd
     ## lua
     lua
     lua-language-server
+    stylua
     ## performance
     btop
     htop
