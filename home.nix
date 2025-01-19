@@ -191,7 +191,7 @@
           proxyjump corn-syrup
           user ubuntu
       host flaskprod
-          hostname 172.19.134.36
+          hostname 172.19.134.134
           proxyjump corn-syrup
           user ubuntu
     '';
