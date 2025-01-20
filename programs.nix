@@ -102,6 +102,7 @@ in {
     ## formatting
     ntfs3g
     gparted # only opens if run from su root
+    duf
     libimobiledevice
     ifuse
     ## gaming
