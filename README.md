@@ -34,6 +34,7 @@ There are some programs I've packaged but have not had the time to possibly requ
 - dune-delete (`sudo nix-collect-garbage --delete-old`)
 
 ## TODOs
+- nvim debugger
 - Add a system to easily important dev flakes I use often
 - Do something with oh-my-fish
 - Get the file explorer in nvim to show hidden files (preferably make it a shortcut to toggle)
