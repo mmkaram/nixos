@@ -21,7 +21,10 @@ in {
     nvim-web-devicons
     nui-nvim
 
-    luasnip
+    {
+      plugin = luasnip;
+      config = toLuaFile ./luasnip.lua;
+    }
 
     vim-be-good
 
@@ -32,10 +35,7 @@ in {
     # configured in dash.lua
     git-dashboard
 
-    {
-      plugin = snippets-nvim;
-      config = toLuaFile ./luasnip.lua;
-    }
+    snippets-nvim
 
     {
       plugin = oil-nvim;
