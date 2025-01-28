@@ -98,6 +98,7 @@ in {
     gh
     gh-dash
     vscode
+    code-cursor
     neovim
     ## formatting
     ntfs3g
