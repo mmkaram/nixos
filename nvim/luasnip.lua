@@ -35,7 +35,7 @@ ls.add_snippets("lua", {
 
 -- KEYMAPS
 
-vim.keymap.set({ "i" }, "<C-g>", function()
+vim.keymap.set({ "i" }, "<C-q>", function()
 	if ls.expand_or_jumpable() then
 		ls.expand_or_jump()
 	end
@@ -52,3 +52,5 @@ vim.keymap.set({ "i", "s" }, "<S-tab>", function()
 		ls.jump(-1)
 	end
 end, { silent = true })
+
+return ls

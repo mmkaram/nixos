@@ -21,11 +21,6 @@ in {
     nvim-web-devicons
     nui-nvim
 
-    {
-      plugin = luasnip;
-      config = toLuaFile ./luasnip.lua;
-    }
-
     vim-be-good
 
     quickfix-reflector-vim
@@ -35,7 +30,26 @@ in {
     # configured in dash.lua
     git-dashboard
 
-    snippets-nvim
+    cmp_luasnip
+
+    {
+      plugin = luasnip;
+      config = toLuaFile ./luasnip.lua;
+    }
+
+    {
+      # idk how this is different from nvimp.cmp
+      plugin = cmp-nvim-lsp;
+      # this config isn't realted, it just loads
+      # keybinds because I can't source lua files from
+      # other lua files
+      config = toLuaFile ../nvim/keys.lua;
+    }
+
+    {
+      plugin = nvim-cmp;
+      config = toLuaFile ../nvim/completion.lua;
+    }
 
     {
       plugin = oil-nvim;
@@ -137,20 +151,6 @@ in {
     {
       plugin = bufferline-nvim;
       config = toLuaFile ../nvim/bufferline.lua;
-    }
-
-    {
-      # idk how this is different from nvimp.cmp
-      plugin = cmp-nvim-lsp;
-      # this config isn't realted, it just loads
-      # keybinds because I can't source lua files from
-      # other lua files
-      config = toLuaFile ../nvim/keys.lua;
-    }
-
-    {
-      plugin = nvim-cmp;
-      config = toLuaFile ../nvim/completion.lua;
     }
 
     {
