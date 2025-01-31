@@ -4,6 +4,7 @@ local t = ls.text_node
 local i = ls.insert_node
 local extras = require("luasnip.extras")
 local r = extras.rep
+local fmt = require("luasnip.extras.fmt")
 
 -- ALL SNIPS
 ls.add_snippets("all", {
