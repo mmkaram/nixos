@@ -145,6 +145,8 @@ in {
     beeper
     discord-canary
     ## other/misc
+    jq
+    xh
     microsoft-edge
     spotify
     ## rand
