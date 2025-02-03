@@ -36,6 +36,8 @@ There are some programs I've packaged but have not had the time to possibly requ
 ## TODOs
 - nvim debugger
 - nvim tmux integration (pane switching)
+- make a package for [posting](https://github.com/darrenburns/posting)
+- Make nvim shortcuts for sessions
 - find out if kitty has built in pane support
 - Create a system to easily import dev flakes I use often
 - Get the file explorer in nvim to show hidden files (preferably make it a shortcut to toggle)

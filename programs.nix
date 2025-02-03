@@ -59,6 +59,7 @@ in {
     haskellPackages.haskell-language-server
     ghc
     ## prog general
+    bruno
     wget
     unzip
     file
