@@ -16,4 +16,12 @@ cmp.setup({
 		{ name = "nvim_lsp" },
 		{ name = "luasnip" },
 	}),
+	window = {
+		completion = cmp.config.window.bordered({
+			border = "rounded",
+		}),
+		documentation = cmp.config.window.bordered({
+			border = "rounded",
+		}),
+	},
 })
