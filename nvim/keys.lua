@@ -64,3 +64,7 @@ vim.api.nvim_set_keymap("n", "<C-S-Space>", "<cmd>lua vim.lsp.buf.references()<C
 
 -- Oil
 vim.api.nvim_set_keymap("n", "<Leader>o", ":Oil<CR>", opts)
+
+-- Neo-Tree
+vim.keymap.set("n", "<Leader>F", ":Neotree filesystem right toggle<CR>", opts)
+vim.keymap.set("n", "<Leader>S", ":Neotree document_symbols right toggle<CR>", opts)

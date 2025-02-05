@@ -30,6 +30,11 @@ in {
     # configured in dash.lua
     git-dashboard
 
+    {
+      plugin = neo-tree-nvim;
+      config = toLua "require('neo-tree').setup({window={mappings = {['l'] = 'toggle_node',},},sources = {'filesystem', 'document_symbols'},}) ";
+    }
+
     cmp_luasnip
 
     {
