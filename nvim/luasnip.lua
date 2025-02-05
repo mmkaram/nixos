@@ -19,11 +19,10 @@ local jsset = {
 	s("cl", {
 		t("console.log("),
 		i(1),
-		t(")"),
+		t(");"),
 	}),
 	s("rfc", {
 		t({
-			"import React from 'react';",
 			"",
 			"const ",
 		}),
@@ -63,13 +62,13 @@ ls.add_snippets("lua", {
 
 -- KEYMAPS
 
-vim.keymap.set({ "i", "s" }, "<A-k>", function()
+vim.keymap.set({ "i", "s" }, "<C-j>", function()
 	if ls.expand_or_jumpable() then
 		ls.expand_or_jump()
 	end
 end, { silent = true })
 
-vim.keymap.set({ "i", "s" }, "<A-j>", function()
+vim.keymap.set({ "i", "s" }, "<C-k>", function()
 	if ls.jumpable(-1) then
 		ls.jump(-1)
 	end
