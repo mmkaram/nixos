@@ -23,12 +23,11 @@ local jsset = {
 	}),
 	s("rfc", {
 		t({
-			"",
-			"const ",
+			"export default function ",
 		}),
 		i(1, "ComponentName"),
 		t({
-			" = () => {",
+			"() {",
 			"  return (",
 			"    <div>",
 			"      ",
@@ -38,12 +37,9 @@ local jsset = {
 			"",
 			"    </div>",
 			"  );",
-			"};",
-			"",
-			"export default ",
+			"}",
 		}),
-		r(1),
-		t(";"),
+		-- r(1)
 	}),
 }
 
