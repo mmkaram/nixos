@@ -56,6 +56,22 @@ ls.add_snippets("lua", {
 	}),
 })
 
+-- MD
+ls.add_snippets("markdown", {
+	s("top", {
+		t("---"),
+		t("title: "),
+		i(1),
+		t("date: "),
+		i(2, "YYYY-MM-DD"), -- TODO: Make this a lua function that auto grabs date
+		t("draft: "),
+		i(3),
+		t("summary: "),
+		i(4),
+		t("---"),
+	}),
+})
+
 -- KEYMAPS
 
 vim.keymap.set({ "i", "s" }, "<C-j>", function()
