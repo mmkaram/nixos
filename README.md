@@ -21,7 +21,7 @@ Declared in the [configuration.nix](configuration.nix) file under "init". Contai
 
 Plugins are declared in the extended module of my [home.nix](home.nix) called [nvim.nix](nvim/nvim.nix). All lua configs are under the nvim/ directory.
 Useful lua pages
-- [format.lua](nvim/formatting.lua) for code formatting
+- [format.lua](nvim/format.lua) for code formatting
 - [lsp.lua](nvim/lsp.lua) to manage lsps
 
 ## Packages
