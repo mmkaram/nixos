@@ -4,7 +4,7 @@ local t = ls.text_node
 local i = ls.insert_node
 local extras = require("luasnip.extras")
 local r = extras.rep
-local fmt = require("luasnip.extras.fmt")
+local fmt = require("luasnip.extras.fmt").fmt
 
 -- ALL SNIPS
 ls.add_snippets("all", {
@@ -58,18 +58,24 @@ ls.add_snippets("lua", {
 
 -- MD
 ls.add_snippets("markdown", {
-	s("top", {
-		t("---"),
-		t("title: "),
-		i(1),
-		t("date: "),
-		i(2, "YYYY-MM-DD"), -- TODO: Make this a lua function that auto grabs date
-		t("draft: "),
-		i(3),
-		t("summary: "),
-		i(4),
-		t("---"),
-	}),
+	s(
+		"top",
+		fmt(
+			[[
+				---
+				title: {title}
+				date: {date}
+				draft: {draft}
+				summary: {summary}
+			]],
+			{
+				title = i(1, "exampleTitle"),
+				date = i(2, "YYYY-MM-DD"),
+				draft = i(3, "bool"),
+				summary = i(4, "summary"),
+			}
+		)
+	),
 })
 
 -- KEYMAPS
