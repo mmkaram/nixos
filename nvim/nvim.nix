@@ -31,8 +31,8 @@ in {
     git-dashboard
 
     {
-      plugins = obsidian-nvim;
-      config = toLuaFile ./obisdian.lua;
+      plugin = obsidian-nvim;
+      config = toLuaFile ./obsidian.lua;
     }
 
     {
