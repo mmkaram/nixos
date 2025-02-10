@@ -11,7 +11,7 @@
   "Mod4+Shift+S" = "exec 'systemctl hibernate'";
   "Mod4+Apostrophe" = "exec 'swaylock -c 145874 & systemctl suspend-then-hibernate'";
   "Mod4+Semicolon" = "exec 'swaylock -c 145874'";
-  "Mod4+s" = "exec 'ghostty -e ranger'";
+  "Mod4+s" = "exec 'exec kitty ranger'";
 
   # vol
   "Alt+Shift+Equal" = "exec pactl set-sink-volume @DEFAULT_SINK@ +5%";
