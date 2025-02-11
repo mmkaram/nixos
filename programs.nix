@@ -60,7 +60,6 @@ in {
     ghc
     ## prog general
     hoppscotch
-    bruno
     wget
     unzip
     file
