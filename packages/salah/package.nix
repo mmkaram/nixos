@@ -10,8 +10,8 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "mmkaram";
     repo = "salah";
-    rev = "main";
-    sha256 = "sha256-5n0ixwFQRq+Hj0FOkou+L3kP7U23kzkCL5ediSXkYxw=";
+    rev = "1f2458f42f1c9b676296f9c832a1e2fe293ba795";
+    sha256 = "sha256-1LJ1Hkohn7gmgPo8OtKIL6eQp4ldMQo3P+vRV02iIGI=";
   };
 
   installPhase = ''

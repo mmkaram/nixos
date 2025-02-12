@@ -22,7 +22,8 @@ in {
     vim
     spotify-player
     ## Rust
-    lldb
+    # TODO: borked with current nixpkgs
+    # lldb
     rustc
     rustfmt
     rust-analyzer
