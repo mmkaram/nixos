@@ -34,6 +34,9 @@ in {
     typescript
     typescript-language-server
     prettierd
+    # the actual "prisma" package is being instaled via npm
+    # v 6.3.x was borked when I tested
+    prisma-engines
     ## lua
     lua
     lua-language-server

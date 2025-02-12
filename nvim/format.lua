@@ -9,6 +9,7 @@ require("conform").setup({
 		typescript = { "prettierd", "prettier" },
 		nix = { "alejandra" },
 		cpp = { "clang-format" },
+		prisma = { "prisma-fmt" },
 	},
 })
 
