@@ -181,6 +181,7 @@ in {
       p.tree-sitter-haskell
       p.tree-sitter-c
       p.tree-sitter-cpp
+      p.tree-sitter-prisma
     ]))
 
     vim-nix
