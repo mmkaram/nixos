@@ -44,5 +44,7 @@
     set PROG "/home/dd0k/prog"
     set NIX "/etc/nixos"
     direnv hook fish | source
+    bind -e \el
+    bind -M insert \el 'clear-screen'
   '';
 }
