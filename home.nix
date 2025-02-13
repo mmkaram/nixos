@@ -144,7 +144,7 @@
     '';
   };
 
-  programs.tmux = import ./dots/tmux/tmux.nix;
+  programs.tmux = import ./dots/tmux/tmux.nix {inherit pkgs;};
 
   programs.zoxide = {
     enable = true;

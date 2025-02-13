@@ -1,6 +1,13 @@
-{
+{pkgs}: {
   enable = true;
   # prefix = "C-f";
+  plugins = with pkgs.tmuxPlugins; [
+    vim-tmux-navigator
+    {
+      plugin = resurrect;
+      extraConfig = "set -g @resurrect-strategy-nvim 'session'";
+    }
+  ];
   extraConfig = ''
     # Enable mouse support
     setw -g mouse on
