@@ -31,6 +31,11 @@ in {
     git-dashboard
 
     {
+      plugin = tmux-nvim;
+      config = toLua "require('tmux').setup()";
+    }
+
+    {
       plugin = obsidian-nvim;
       config = toLuaFile ./obsidian.lua;
     }
