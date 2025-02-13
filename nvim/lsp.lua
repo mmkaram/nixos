@@ -9,6 +9,7 @@ end
 
 local function on_attach(client, bufnr)
 	vim.lsp.inlay_hint.enable(true)
+	vim.keymap.set("n", "<Space>ta", vim.lsp.buf.signature_help, { buffer = bufnr, noremap = true, silent = true })
 end
 
 local settings = {
