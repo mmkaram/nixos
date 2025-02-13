@@ -80,7 +80,7 @@
   services.xserver.enable = true;
 
   # Enable desktop manager
-  services.xserver.displayManager.gdm.enable = true;
+  services.xserver.displayManager.lightdm.enable = true;
   programs.sway.enable = true;
   # bright and vol
   programs.light.enable = true;
