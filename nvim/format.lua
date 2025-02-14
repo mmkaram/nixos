@@ -11,6 +11,11 @@ require("conform").setup({
 		cpp = { "clang-format" },
 		prisma = { "prisma-fmt" },
 	},
+	prisma_fmt = {
+		command = "prisma-fmt",
+		args = { "--stdin-filename", "$FILENAME" },
+		stdin = true,
+	},
 })
 
 vim.api.nvim_create_autocmd("BufWritePre", {

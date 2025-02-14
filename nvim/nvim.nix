@@ -30,6 +30,8 @@ in {
     # configured in dash.lua
     git-dashboard
 
+    vim-prisma
+
     {
       plugin = tmux-nvim;
       config = toLua "require('tmux').setup()";
@@ -186,6 +188,7 @@ in {
       p.tree-sitter-haskell
       p.tree-sitter-c
       p.tree-sitter-cpp
+      p.tree-sitter-sql
       p.tree-sitter-prisma
     ]))
 
