@@ -36,6 +36,7 @@ There are some programs I've packaged but have not had the time to possibly requ
 ## TODOs
 - check if lldb works now
 - vimTex
+- get prisma lsp and formatting to work for nvim
 - nvim debugger
 - nvim tmux integration (pane switching)
 - make a package for [posting](https://github.com/darrenburns/posting)
