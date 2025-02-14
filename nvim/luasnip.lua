@@ -63,10 +63,10 @@ ls.add_snippets("markdown", {
 		fmt(
 			[[
 				---
-				title: {title}
+				title: "{title}"
 				date: {date}
 				draft: {draft}
-				summary: {summary}
+				summary: "{summary}"
 				---
 			]],
 			{
