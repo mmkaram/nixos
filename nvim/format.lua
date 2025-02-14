@@ -9,12 +9,7 @@ require("conform").setup({
 		typescript = { "prettierd", "prettier" },
 		nix = { "alejandra" },
 		cpp = { "clang-format" },
-		prisma = { "prisma-fmt" },
-	},
-	prisma_fmt = {
-		command = "prisma-fmt",
-		args = { "--stdin-filename", "$FILENAME" },
-		stdin = true,
+		prisma = { "prettierd" },
 	},
 })
 
