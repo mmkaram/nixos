@@ -186,12 +186,8 @@
       Host corn-syrup
           HostName corn-syrup.csclub.uwaterloo.ca
           User mkaram
-      host nodeprod
-          hostname 172.19.134.53
-          proxyjump corn-syrup
-          user ubuntu
-      host flaskprod
-          hostname 172.19.134.134
+      host prod
+          hostname 172.19.134.119
           proxyjump corn-syrup
           user ubuntu
     '';
