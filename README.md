@@ -50,3 +50,4 @@ There are some programs I've packaged but have not had the time to possibly requ
 - More keyboard remapping
 - Obsidian is still kinda borked with nvim
 - Get railsy to work
+- Preview pdfs in ranger
