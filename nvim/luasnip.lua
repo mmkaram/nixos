@@ -67,6 +67,7 @@ ls.add_snippets("markdown", {
 				date: {date}
 				draft: {draft}
 				summary: {summary}
+				---
 			]],
 			{
 				title = i(1, "exampleTitle"),
