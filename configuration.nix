@@ -22,11 +22,6 @@
   ##############################
   # enable expiremental nix features
   nix.settings.experimental-features = ["nix-command" "flakes"];
-  system.activationScripts.chmodNixos = ''
-    chmod -R 0755 /etc/nixos
-  '';
-
-  boot.initrd.luks.devices."luks-212fbe65-b5e7-4935-b1d0-17a592d6ce54".device = "/dev/disk/by-uuid/212fbe65-b5e7-4935-b1d0-17a592d6ce54";
 
   imports = [
     ./hardware-configuration.nix
