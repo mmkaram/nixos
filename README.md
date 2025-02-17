@@ -53,3 +53,4 @@ There are some programs I've packaged but have not had the time to possibly requ
 - Get railsy to work
 - Preview pdfs in ranger
 - Package prisma lsp
+- run this on first build `sudo chown -R $USER /etc/nixos` because I'm tired of always having to use sudo when I first reconfigure a system
