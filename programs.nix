@@ -12,6 +12,9 @@
   videomass = import ./packages/videomass/package.nix {
     inherit (pkgs) lib stdenv fetchFromGitHub python312Packages pkgs;
   };
+  prisma-lsp = import ./packages/prisma-lsp/package.nix {
+    inherit (pkgs) buildNpmPackage fetchFromGithub;
+  };
 in {
   environment.systemPackages = with pkgs; [
     # borked
