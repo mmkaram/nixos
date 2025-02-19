@@ -13,13 +13,14 @@
     inherit (pkgs) lib stdenv fetchFromGitHub python312Packages pkgs;
   };
   prisma-lsp = import ./packages/prisma-lsp/package.nix {
-    inherit (pkgs) buildNpmPackage fetchFromGithub;
+    inherit (pkgs) buildNpmPackage fetchFromGitHub;
   };
 in {
   environment.systemPackages = with pkgs; [
     # borked
     # videomass
     # railsy
+    prisma-lsp
     salah
     pulseaudio
     vim
