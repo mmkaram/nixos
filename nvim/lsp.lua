@@ -33,13 +33,8 @@ local settings = {
 
 	-- prisma
 	prismals = {
-		cmd = { "npx", "prisma-language-server", "--stdio" },
+		cmd = { "prisma-language-server", "--stdio" },
 		filetypes = { "prisma" },
-		settings = {
-			prisma = {
-				prismaFmtBinPath = "", -- You can set this to a specific path if needed
-			},
-		},
 	},
 
 	-- haskell
