@@ -52,5 +52,5 @@ There are some programs I've packaged but have not had the time to possibly requ
 - Obsidian is still kinda borked with nvim
 - Get railsy to work
 - Preview pdfs in ranger
-- Package prisma lsp
+- Package prisma lsp (currently using npm on each project that needs the lsp)
 - run this on first build `sudo chown -R $USER /etc/nixos` because I'm tired of always having to use sudo when I first reconfigure a system
