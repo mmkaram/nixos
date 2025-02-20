@@ -1,4 +1,11 @@
 require("conform").setup({
+	formatters = {
+		prisma_fmt = {
+			command = "prisma-fmt",
+			args = { "format" },
+			stdin = true,
+		},
+	},
 	formatters_by_ft = {
 		lua = { "stylua" },
 		python = { "isort", "black" },
@@ -9,6 +16,7 @@ require("conform").setup({
 		typescript = { "prettierd" },
 		nix = { "alejandra" },
 		cpp = { "clang-format" },
+		prisma = { "prisma_fmt" },
 	},
 })
 

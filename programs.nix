@@ -20,7 +20,7 @@ in {
     # borked
     # videomass
     # railsy
-    prisma-lsp
+    # prisma-lsp
     salah
     pulseaudio
     vim
