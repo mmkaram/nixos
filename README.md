@@ -36,7 +36,6 @@ There are some programs I've packaged but have not had the time to possibly requ
 ## TODOs
 - check if lldb works now
 - vimTex
-- get prisma lsp and formatting to work for nvim
 - nvim debugger
 - nvim tmux integration (pane switching)
 - make a package for [posting](https://github.com/darrenburns/posting)
@@ -52,5 +51,4 @@ There are some programs I've packaged but have not had the time to possibly requ
 - Obsidian is still kinda borked with nvim
 - Get railsy to work
 - Preview pdfs in ranger
-- Package prisma lsp (currently using npm on each project that needs the lsp)
 - run this on first build `sudo chown -R $USER /etc/nixos` because I'm tired of always having to use sudo when I first reconfigure a system
