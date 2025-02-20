@@ -39,6 +39,7 @@ in {
     typescript
     typescript-language-server
     prettierd
+    nodePackages_latest."@prisma/language-server"
     # the actual "prisma" package is being instaled via npm
     # v 6.3.x was borked when I tested
     prisma-engines
