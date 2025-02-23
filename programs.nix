@@ -121,6 +121,7 @@ in {
     lunar-client
     steam
     ## office
+    wpa_supplicant
     aerc # switch to port 465 for ssl outgoing
     drawio
     rtorrent
