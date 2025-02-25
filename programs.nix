@@ -69,6 +69,8 @@ in {
     ghc
     ## prog general
     hoppscotch
+    atac
+    serie
     wget
     unzip
     file
