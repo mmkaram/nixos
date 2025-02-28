@@ -27,6 +27,8 @@
     ./hardware-configuration.nix
     ./programs.nix
     inputs.home-manager.nixosModules.default
+    # Fingerpints
+    ./dots/fprintd/fprintd.nix
   ];
 
   # Bootloader.
