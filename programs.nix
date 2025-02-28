@@ -123,6 +123,7 @@ in {
     lunar-client
     steam
     ## office
+    fprintd-tod
     wpa_supplicant
     aerc # switch to port 465 for ssl outgoing
     drawio
