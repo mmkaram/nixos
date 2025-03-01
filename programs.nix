@@ -110,7 +110,7 @@ in {
     gh
     gh-dash
     vscode
-    # code-cursor
+    code-cursor
     neovim
     ## formatting
     ntfs3g
