@@ -20,14 +20,14 @@
   #  | |  | |\  |  | |    | |  #
   # |___| |_| \_| |___|   |_|  #
   ##############################
-  # enable expiremental nix features
+  # enable expiremental nix features (for flakes)
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
   imports = [
     ./hardware-configuration.nix
     ./programs.nix
     inputs.home-manager.nixosModules.default
-    # Fingerpints
+    # Fingerpint options
     ./dots/fprintd/fprintd.nix
   ];
 
@@ -82,7 +82,7 @@
   services.xserver.enable = true;
 
   # Enable desktop manager
-  services.xserver.displayManager.lightdm.enable = true;
+  services.displayManager.ly.enable = true;
   programs.sway.enable = true;
   # bright and vol
   programs.light.enable = true;
