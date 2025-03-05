@@ -39,7 +39,6 @@ There are some programs I've packaged but have not had the time to possibly requ
 - nvim debugger
 - nvim tmux integration (pane switching)
 - make a package for [posting](https://github.com/darrenburns/posting)
-- Make nvim shortcuts for sessions
 - find out if kitty has built in pane support
 - Create a system to easily import dev flakes I use often
 - Get the file explorer in nvim to show hidden files (preferably make it a shortcut to toggle)
@@ -52,3 +51,5 @@ There are some programs I've packaged but have not had the time to possibly requ
 - Get railsy to work
 - Preview pdfs in ranger
 - run this on first build `sudo chown -R $USER /etc/nixos` because I'm tired of always having to use sudo when I first reconfigure a system
+- fix ranger file browser
+- add ranger like app that can filter through open windows
