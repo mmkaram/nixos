@@ -34,6 +34,7 @@ There are some programs I've packaged but have not had the time to possibly requ
 - dune-delete (`sudo nix-collect-garbage --delete-old`)
 
 ## TODOs
+- find a way to insert emojis
 - Get the nixpkgs version of the Zen browser when it's up
 - vimTex
 - nvim debugger
