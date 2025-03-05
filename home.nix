@@ -42,7 +42,6 @@
   };
 
   home.packages = [
-    inputs.zen-browser.packages.${pkgs.system}.specific
     pkgs.rofi
     pkgs.starship
     pkgs.oh-my-fish
