@@ -70,7 +70,6 @@ in {
     ghc
     ## racket
     racket
-    drracket
     ## prog general
     hoppscotch # api ednpoint client
     atac # terminal api endpoint client
@@ -139,7 +138,6 @@ in {
     obs-studio
     pcmanfm
     impression
-    polkit_gnome # auth agent
     xournalpp
     kanata
     obsidian
