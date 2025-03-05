@@ -27,7 +27,7 @@ in {
     spotify-player
     ## Rust
     # TODO: borked with current nixpkgs
-    # lldb
+    lldb
     rustc
     rustfmt
     rust-analyzer
