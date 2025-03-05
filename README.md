@@ -34,7 +34,6 @@ There are some programs I've packaged but have not had the time to possibly requ
 - dune-delete (`sudo nix-collect-garbage --delete-old`)
 
 ## TODOs
-- check if lldb works now
 - vimTex
 - nvim debugger
 - nvim tmux integration (pane switching)
