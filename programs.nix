@@ -17,6 +17,7 @@
   };
 in {
   environment.systemPackages = with pkgs; [
+    (callPackage ./packages/zen/package.nix {})
     # borked
     # videomass
     # railsy
