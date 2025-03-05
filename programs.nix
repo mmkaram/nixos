@@ -68,10 +68,13 @@ in {
     ## haskell
     haskellPackages.haskell-language-server
     ghc
+    ## racket
+    racket
+    drracket
     ## prog general
-    hoppscotch
-    atac
-    serie
+    hoppscotch # api ednpoint client
+    atac # terminal api endpoint client
+    serie # git graph
     wget
     unzip
     file
@@ -79,15 +82,14 @@ in {
     qbittorrent
     inetutils
     cmatrix
-    feh
+    feh # img viewer
     tmux
-    racket
     popsicle
     nix-prefetch-github
     alejandra
     ffmpeg
     direnv
-    qemu
+    qemu # Virtualizer
     zip
     docker
     fzf
@@ -103,11 +105,10 @@ in {
     lazydocker
     fish
     atuin
-    scc
+    scc # lines of code counter
     eza
     bat
     speedtest-go
-    # imagemagick_light
     gh
     gh-dash
     vscode
@@ -160,8 +161,8 @@ in {
     beeper
     discord-canary
     ## other/misc
-    jq
-    xh
+    jq # json parser
+    xh # curl
     microsoft-edge
     spotify
     ## rand
