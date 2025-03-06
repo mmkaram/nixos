@@ -33,6 +33,11 @@ in {
     vim-prisma
 
     {
+      plugin = trouble-nvim;
+      config = toLuaFile ./trouble.lua;
+    }
+
+    {
       plugin = tmux-nvim;
       config = toLua "require('tmux').setup()";
     }
