@@ -59,6 +59,7 @@ in {
     python312Packages.numpy
     python312Packages.matplotlib
     pyright
+    uv
     ## elixr
     # lexical
     # elixir_1_15
