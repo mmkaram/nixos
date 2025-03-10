@@ -27,13 +27,14 @@
     ./hardware-configuration.nix
     ./programs.nix
     inputs.home-manager.nixosModules.default
-    # Fingerpint options
-    ./dots/fprintd/fprintd.nix
   ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+
+  # Fingerprint
+  services.fprintd = import ./dots/fprintd/fprintd.nix pkgs;
 
   ##############################################################
   #  _   _   _____   _____  __        __   ___    ____    _  __#

@@ -1,9 +1,5 @@
-{
-  pkgs,
-  inputs,
-  ...
-}: {
-  services.fprintd.enable = true;
-  services.fprintd.tod.enable = true;
-  services.fprintd.tod.driver = pkgs.libfprint-2-tod1-vfs0090;
+{pkgs, ...}: {
+  enable = true;
+  tod.enable = true;
+  tod.driver = pkgs.libfprint-2-tod1-vfs0090;
 }
