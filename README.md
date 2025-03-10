@@ -34,6 +34,7 @@ There are some programs I've packaged but have not had the time to possibly requ
 - dune-delete (`sudo nix-collect-garbage --delete-old`)
 
 ## TODOs
+- [X] nvim tmux integration (pane switching)
 - [ ] Look into nix-ld
 - [ ] Create a system to easily import dev flakes I use often (nix-autobahn with nix-ld possibly)
 - [ ] add rofi like app that can filter through open windows
@@ -45,7 +46,6 @@ There are some programs I've packaged but have not had the time to possibly requ
 - [ ] get lazygit to exit with esc and not q (terminal and neovim plugin)
 - [ ] vimTex
 - [ ] nvim debugger
-- [ ] nvim tmux integration (pane switching)
 - [ ] find out if kitty has built in pane support
 - [ ] Cloud synced atuin
 - [ ] Get the file explorer in nvim to show hidden files (preferably make it a shortcut to toggle)
