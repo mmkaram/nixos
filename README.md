@@ -34,8 +34,10 @@ There are some programs I've packaged but have not had the time to possibly requ
 - dune-delete (`sudo nix-collect-garbage --delete-old`)
 
 ## TODOs
-- add shortcuts/system for fingerprints(fprintd-enroll, etc.)
+- Look into nix-ld
 - find a way to insert emojis
+- More keyboard remapping (disable arrow keys to get better at vim)
+- add shortcuts/system for fingerprints(fprintd-enroll, etc.)
 - Get the nixpkgs version of the Zen browser when it's up
 - vimTex
 - nvim debugger
@@ -48,7 +50,6 @@ There are some programs I've packaged but have not had the time to possibly requ
 - Secrets manager
 - Cloud synced atuin
 - Stylix
-- More keyboard remapping
 - Obsidian is still kinda borked with nvim
 - Get railsy to work
 - Preview pdfs in ranger
