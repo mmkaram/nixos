@@ -153,9 +153,6 @@
     enable = true;
     defaultEditor = true;
   };
-  services.kanata = {
-    enable = true;
-  };
 
   #####################################################################
   #  ____    ____     ___     ____   ____       _      __  __   ____  #
@@ -174,7 +171,7 @@
     dedicatedServer.openFirewall = true;
   };
   services.kanata = {
-    # switch caps with backspace
+    enable = true;
     keyboards.default = {
       config = ''
             (defsrc
@@ -185,8 +182,8 @@
               lctl lmet lalt           spc            ralt prtsc rctl
             )
         (deflayermap (base-layer)
-            caps bspc
-            bspc caps
+            caps esc
+            esc caps
         )
       '';
     };
