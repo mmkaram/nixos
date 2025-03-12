@@ -45,7 +45,7 @@ vim.api.nvim_set_keymap("n", "<C-o>", ":Telescope find_files<CR>", { noremap = t
 vim.api.nvim_set_keymap("n", "<leader>tm", ":Telescope marks<CR>", { noremap = true, silent = true })
 
 -- Search
-vim.api.nvim_set_keymap("n", "<leader>ts", ":Telescope live_grep<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-s>", ":Telescope live_grep<CR>", { noremap = true, silent = true })
 
 -- Problems/diagnostics
 vim.api.nvim_set_keymap("n", "<leader>tp", "<cmd>Telescope diagnostics<cr>", { desc = "List diagnostics" })
