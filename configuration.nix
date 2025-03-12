@@ -183,6 +183,7 @@
             )
         (deflayermap (base-layer)
             caps esc
+            esc caps
         )
       '';
     };
