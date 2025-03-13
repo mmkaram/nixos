@@ -162,9 +162,7 @@
   # |_|     |_| \_\  \___/   \____| |_| \_\ /_/   \_\ |_|  |_| |____/ #
   #####################################################################
   # Enable insecure Packages
-  nixpkgs.config.permittedInsecurePackages = [
-    "olm-3.2.16"
-  ];
+  nixpkgs.config.permittedInsecurePackages = [];
   nixpkgs.config.allowUnfree = true;
 
   programs.steam = {
