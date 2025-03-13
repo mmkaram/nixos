@@ -82,11 +82,15 @@
       input = {
         "type:touchpad" = {
           natural_scroll = "enabled";
+          pointer_accel = "0.1";
+          accel_profile = "flat";
           tap = "enabled";
+          scroll_factor = "0.2";
         };
         "type:pointer" = {
           accel_profile = "flat";
-          pointer_accel = "0.3";
+          pointer_accel = "0.1";
+          scroll_factor = "0.2";
         };
       };
       output = {
