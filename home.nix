@@ -133,9 +133,7 @@
 
   programs.kitty = {
     enable = true;
-    # shellIntegration.enableBashIntegration = true;
     shellIntegration.enableZshIntegration = true;
-    # themeFile = "Dracula";
     themeFile = "tokyo_night_night";
     font.package = pkgs.fira-code;
     font.name = "FiraCode";
