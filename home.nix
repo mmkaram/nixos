@@ -129,9 +129,6 @@
     enable = true;
     enableFishIntegration = true;
     enableTransience = true;
-    settings = {
-      aws.disabled = true;
-    };
   };
 
   programs.kitty = {
