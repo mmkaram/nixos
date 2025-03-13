@@ -33,6 +33,10 @@ in {
     vim-prisma
 
     {
+      plugin = autoclose-nvim;
+      config = toLua "require('autoclose').setup()";
+    }
+    {
       plugin = mini-surround;
       config = ./mini-surround.lua;
     }
