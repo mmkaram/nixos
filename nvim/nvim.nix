@@ -39,7 +39,7 @@ in {
 
     {
       plugin = mini-surround;
-      config = ./mini-surround.lua;
+      config = toLuaFile ./mini-surround.lua;
     }
 
     {
