@@ -154,6 +154,7 @@ in {
     ## socials
     yt-dlp
     element-desktop
+    nheko
     iamb
     slack
     # discord
