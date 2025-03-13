@@ -35,9 +35,10 @@ There are some programs I've packaged but have not had the time to possibly requ
 
 ## TODOs
 - [X] nvim tmux integration (pane switching)
+- [X] add rofi like app that can filter through open windows
+- [ ] get rofi file browser to open reasonable defaults for specific filetypes
 - [ ] Look into nix-ld
 - [ ] Create a system to easily import dev flakes I use often (nix-autobahn with nix-ld possibly)
-- [ ] add rofi like app that can filter through open windows
 - [ ] find a way to insert emojis
 - [ ] More keyboard remapping (disable arrow keys to get better at vim)
 - [ ] add shortcuts/system for fingerprints(fprintd-enroll, etc.)

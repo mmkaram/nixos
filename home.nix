@@ -42,7 +42,7 @@
   };
 
   home.packages = [
-    pkgs.rofi
+    pkgs.rofi-wayland
     pkgs.starship
     pkgs.oh-my-fish
     pkgs.swaybg
@@ -117,6 +117,7 @@
 
   programs.rofi = {
     enable = true;
+    package = pkgs.rofi-wayland;
     theme = "Arc-Dark";
   };
 
