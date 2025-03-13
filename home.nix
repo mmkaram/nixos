@@ -84,6 +84,10 @@
           natural_scroll = "enabled";
           tap = "enabled";
         };
+        "type:pointer" = {
+          accel_profile = "flat";
+          pointer_accel = "0.3";
+        };
       };
       output = {
         "*" = {
