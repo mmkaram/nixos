@@ -33,6 +33,11 @@ in {
     vim-prisma
 
     {
+      plugin = mini-surround;
+      config = ./mini-surround.lua;
+    }
+
+    {
       plugin = trouble-nvim;
       config = toLuaFile ./trouble.lua;
     }
