@@ -154,6 +154,7 @@ in {
     ## socials
     yt-dlp
     element-desktop
+    cinny-desktop
     iamb
     slack
     # discord
