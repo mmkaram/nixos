@@ -48,11 +48,11 @@
           tooltip-format = "{ifname}: {ipaddr}";
         };
 
-        "cpu" = {
-          format = "CPU: {usage}%";
-          tooltip = false;
-          interval = 8;
-        };
+        # "cpu" = {
+        #   format = "CPU: {usage}%";
+        #   tooltip = false;
+        #   interval = 8;
+        # };
 
         "memory" = {
           format = "RAM: {percentage}%";
