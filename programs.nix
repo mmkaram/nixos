@@ -21,7 +21,6 @@ in {
     # borked
     # videomass
     # railsy
-    # prisma-lsp
     salah
     pulseaudio
     vim
