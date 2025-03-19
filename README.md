@@ -36,6 +36,7 @@ There are some programs I've packaged but have not had the time to possibly requ
 ## TODOs
 - [X] nvim tmux integration (pane switching)
 - [X] add rofi like app that can filter through open windows
+- [ ] update gimp
 - [ ] get rofi file browser to open reasonable defaults for specific filetypes
 - [ ] Look into nix-ld
 - [ ] Create a system to easily import dev flakes I use often (nix-autobahn with nix-ld possibly)
