@@ -17,7 +17,7 @@
   };
 in {
   environment.systemPackages = with pkgs; [
-    (callPackage ./packages/zen/package.nix {})
+    inputs.zen-browser.packages."${system}".default
     # borked
     # videomass
     # railsy
