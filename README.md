@@ -36,6 +36,7 @@ There are some programs I've packaged but have not had the time to possibly requ
 ## TODOs
 - [X] nvim tmux integration (pane switching)
 - [X] add rofi like app that can filter through open windows
+- [X] find out if kitty has built in pane support
 - [ ] update gimp
 - [ ] get rofi file browser to open reasonable defaults for specific filetypes
 - [ ] Look into nix-ld
@@ -48,7 +49,6 @@ There are some programs I've packaged but have not had the time to possibly requ
 - [ ] get lazygit to exit with esc and not q (terminal and neovim plugin)
 - [ ] vimTex
 - [ ] nvim debugger
-- [ ] find out if kitty has built in pane support
 - [ ] Cloud synced atuin
 - [ ] Get the file explorer in nvim to show hidden files (preferably make it a shortcut to toggle)
 - [ ] Yubikey integration for login, sudo, and ssh. Useful wiki page [here](https://wiki.nixos.org/wiki/Yubikey), useful youtube video [here](https://www.youtube.com/watch?v=3CeXbONjIgE&t=329s&pp=ygUNbml4b3MgeXViaWtleQ%3D%3D). Should probably [buy the Yubikey](https://www.yubico.com/eg/product/yubikey-5-nano/) first.
