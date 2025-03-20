@@ -26,7 +26,6 @@ in {
     vim
     spotify-player
     ## Rust
-    # TODO: borked with current nixpkgs
     lldb
     rustc
     rustfmt
