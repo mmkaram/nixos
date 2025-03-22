@@ -77,6 +77,7 @@ in {
     unzip
     file
     fastfetch
+    pfetch
     qbittorrent
     inetutils
     cmatrix
