@@ -126,7 +126,7 @@
   users.users.dd0k = {
     isNormalUser = true;
     description = "dD0k";
-    extraGroups = ["networkmanager" "wheel" "docker" "video"];
+    extraGroups = ["networkmanager" "wheel" "docker" "video" "libvirtd"];
     packages = with pkgs; [
       firefox
       zoom-us
@@ -207,13 +207,25 @@
   # Enable Docker
   virtualisation.docker.enable = true;
 
+  # Virtualization
+  services.qemuGuest.enable = true;
+  programs.virt-manager.enable = true;
+  virtualisation.libvirtd = {
+    enable = true;
+    qemu = {
+      package = pkgs.qemu_kvm;
+      runAsRoot = true;
+      swtpm.enable = true;
+      ovmf.enable = true;
+    };
+  };
+
   # Enable polkit security to open gparted
   # gparted must be opened from root user
   # security.polkit.enable = true;
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
-  services.qemuGuest.enable = true;
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
