@@ -86,7 +86,6 @@ in {
     nix-prefetch-github
     alejandra
     ffmpeg
-    direnv
     qemu # Virtualizer
     zip
     docker

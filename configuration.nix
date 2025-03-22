@@ -236,9 +236,6 @@
   programs.localsend.enable = true;
   programs.localsend.openFirewall = true;
 
-  # Enable direnv for auto running nix-shell
-  programs.direnv.enable = false;
-
   boot.kernel.sysctl = {
     "kernel.perf_event_mlock_kb" = 16 * 1024; # Set to 16MB
   };

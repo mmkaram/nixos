@@ -119,6 +119,11 @@
 
   programs.fish = import ./dots/fish/fish.nix;
 
+  programs.direnv = {
+    enable = true;
+    nix-direnv.enable = true;
+  };
+
   programs.rofi = {
     enable = true;
     package = pkgs.rofi-wayland;
