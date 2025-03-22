@@ -47,4 +47,17 @@
     bind -e \el
     bind -M insert \el 'clear-screen'
   '';
+
+  functions = {
+    gclone = ''
+      function gclone
+        if test (count $argv) -eq 1
+          set repo $argv[1]
+          git clone git@github.com:mmkaram/$repo.git
+        else
+          echo "Usage: gclone <repository_name>"
+        end
+      end
+    '';
+  };
 }
