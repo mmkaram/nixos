@@ -222,7 +222,9 @@
 
   # Enable polkit security to open gparted
   # gparted must be opened from root user
-  security.polkit.enable = true;
+  # security.polkit.enable = true;
+
+  services.gnome.gnome-keyring.enable = true;
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
@@ -249,8 +251,6 @@
       options = "--delete-older-than 7d";
     };
   };
-
-  services.gnome.gnome-keyring.enable = true;
 
   system.stateVersion = "24.11";
 
