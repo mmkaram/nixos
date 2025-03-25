@@ -1,6 +1,7 @@
 {
   pkgs,
   inputs,
+  config,
   ...
 }: {
   ##################################
@@ -124,6 +125,7 @@
   users.users.dd0k = {
     isNormalUser = true;
     description = "dD0k";
+    passwordFile = config.age.secrets.password.path;
     extraGroups = ["users" "networkmanager" "wheel" "docker" "video" "libvirtd"];
     packages = with pkgs; [
       firefox
@@ -228,6 +230,12 @@
   age = {
     identityPaths = ["/home/dd0k/.ssh/id_rsa"];
     secrets = {
+      password = {
+        file = ./secrets/password.age;
+        owner = "dd0k";
+        group = "users";
+        mode = "600";
+      };
       spotifyClientId = {
         file = ./secrets/secret1.age; # Path to your encrypted secret file
         owner = "dd0k"; # Owner of the secret file
