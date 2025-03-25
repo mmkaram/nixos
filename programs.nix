@@ -9,17 +9,10 @@
   salah = import ./packages/salah/package.nix {
     inherit (pkgs) lib stdenv fetchFromGitHub;
   };
-  videomass = import ./packages/videomass/package.nix {
-    inherit (pkgs) lib stdenv fetchFromGitHub python312Packages pkgs;
-  };
-  prisma-lsp = import ./packages/prisma-lsp/package.nix {
-    inherit (pkgs) buildNpmPackage fetchFromGitHub;
-  };
 in {
   environment.systemPackages = with pkgs; [
     inputs.zen-browser.packages."${system}".default
     # borked
-    # videomass
     # railsy
     salah
     pulseaudio
@@ -38,6 +31,7 @@ in {
     typescript
     typescript-language-server
     prettierd
+    prisma
     nodePackages_latest."@prisma/language-server"
     # the actual "prisma" package is being instaled via npm
     # v 6.3.x was borked when I tested
