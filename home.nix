@@ -79,7 +79,7 @@
           pointer_accel = "0.2";
           accel_profile = "flat";
           tap = "enabled";
-          scroll_factor = "0.2";
+          scroll_factor = "0.3";
         };
         "type:pointer" = {
           accel_profile = "flat";
