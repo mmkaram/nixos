@@ -241,6 +241,7 @@
     "kernel.perf_event_mlock_kb" = 16 * 1024;
   };
 
+  # Enbale auto garbage collection
   nix = {
     gc = {
       automatic = true;
