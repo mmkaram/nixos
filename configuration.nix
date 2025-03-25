@@ -222,7 +222,7 @@
 
   # Enable polkit security to open gparted
   # gparted must be opened from root user
-  # security.polkit.enable = true;
+  security.polkit.enable = true;
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
