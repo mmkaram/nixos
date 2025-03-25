@@ -236,13 +236,22 @@
   programs.localsend.enable = true;
   programs.localsend.openFirewall = true;
 
+  # Allow 16MB for max perf locked memory
   boot.kernel.sysctl = {
-    "kernel.perf_event_mlock_kb" = 16 * 1024; # Set to 16MB
+    "kernel.perf_event_mlock_kb" = 16 * 1024;
   };
 
-  system.stateVersion = "24.11";
+  nix = {
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 7d";
+    };
+  };
 
   services.gnome.gnome-keyring.enable = true;
+
+  system.stateVersion = "24.11";
 
   ##################################################
   #  _   _   _   _   _   _   ____    _____   ____  #
@@ -252,14 +261,6 @@
   #  \___/  |_| \_|  \___/  |____/  |_____| |____/ #
   ##################################################
   # Auto optimization - delete old builds
-  # nix = {
-  #   settings.auto-optimize-store = true;
-  #   gc = {
-  #     automatic = true;
-  #     dates = "weekly";
-  #     options = "--delete-older-than 7d";
-  #   };
-  # };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
