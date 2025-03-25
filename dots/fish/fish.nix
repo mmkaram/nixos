@@ -59,5 +59,15 @@
         end
       end
     '';
+    devshell = ''
+      function devshell
+        if test (count $argv) -eq 1
+          set package $argv[1]
+          nix shell github:nixos/nixpkgs/nixos-unstable#$package
+        else
+          echo "Usage: devshell <package_name>"
+        end
+      end
+    '';
   };
 }
