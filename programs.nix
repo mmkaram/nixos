@@ -70,6 +70,7 @@
     qemu # Virtualizer
     docker
     git
+    inputs.agenix.packages."${system}".default
   ];
   terminalTools = with pkgs; [
     tmux
