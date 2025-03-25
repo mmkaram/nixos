@@ -3,29 +3,18 @@
   inputs,
   ...
 }: let
-  # railsy = import ./packages/railsy/package.nix {
-  #   inherit (pkgs) lib rustPlatform pkg-config openssl fetchFromGitHub;
-  # };
   salah = import ./packages/salah/package.nix {
     inherit (pkgs) lib stdenv fetchFromGitHub;
   };
-in {
-  environment.systemPackages = with pkgs; [
-    inputs.zen-browser.packages."${system}".default
-    # borked
-    # railsy
-    salah
-    pulseaudio
-    vim
-    spotify-player
-    ## Rust
+  rustTools = with pkgs; [
     lldb
     rustc
     rustfmt
     rust-analyzer
     cargo
     du-dust
-    ## js/ts/jsx/tsx
+  ];
+  webTools = with pkgs; [
     tailwindcss-language-server
     nodePackages.tailwindcss
     typescript
@@ -33,63 +22,58 @@ in {
     prettierd
     prisma
     nodePackages_latest."@prisma/language-server"
-    # the actual "prisma" package is being instaled via npm
-    # v 6.3.x was borked when I tested
     prisma-engines
-    ## lua
+  ];
+  luaTools = with pkgs; [
     lua
     lua-language-server
     stylua
-    ## performance
+  ];
+  perfTools = with pkgs; [
     btop
     htop
     hotspot
     linuxPackages_latest.perf
-    ## Python
+  ];
+  pythonTools = with pkgs; [
     python312
     python312Packages.pyenchant
     python312Packages.numpy
     python312Packages.matplotlib
     pyright
     uv
-    ## elixr
-    # lexical
-    # elixir_1_15
-    ## cpp
+  ];
+  CXXTools = with pkgs; [
     clang
     clang-tools
-    ## haskell
+  ];
+  haskelTools = with pkgs; [
     haskellPackages.haskell-language-server
     ghc
-    ## racket
-    racket
-    ## nix
+  ];
+  nixTools = with pkgs; [
     nix-prefetch-github
     alejandra
     nil
-    ## prog general
+  ];
+  devTools = with pkgs; [
     hoppscotch # api ednpoint client
     atac # terminal api endpoint client
     serie # git graph
-    wget
-    unzip
-    file
-    fastfetch
-    pfetch
     qbittorrent
     inetutils
-    cmatrix
-    feh # img viewer
     tmux
     popsicle
     ffmpeg
     qemu # Virtualizer
-    zip
     docker
     fzf
     zsh
     git
-    ## Terminal
+    jq # json parser
+    xh # curl
+  ];
+  terminalTools = with pkgs; [
     zoxide
     ripgrep
     tree
@@ -108,26 +92,39 @@ in {
     vscode
     code-cursor
     neovim
-    ## formatting
+    vim
+    zip
+    unzip
+    wget
+    file
+    fastfetch
+    pfetch
+  ];
+  diskTools = with pkgs; [
     ntfs3g
     gparted # only opens if run from su root
     duf
     libimobiledevice
     ifuse
-    ## gaming
-    ## minecraft
+  ];
+  games = with pkgs; [
     lunar-client
     steam
-    ## office
-    charm-freeze
-    fprintd-tod
+  ];
+  desktopTools = with pkgs; [
+    feh # img viewer
+    dunst
+    wl-clipboard
     wpa_supplicant
+    fprintd-tod
+    speedcrunch
+  ];
+  officeTools = with pkgs; [
+    charm-freeze
     aerc # switch to port 465 for ssl outgoing
     drawio
     rtorrent
     rsync
-    dunst
-    wl-clipboard
     calibre
     tealdeer
     localsend
@@ -135,32 +132,55 @@ in {
     pcmanfm
     impression
     xournalpp
-    kanata
     obsidian
     zotero
     sublime
-    speedcrunch
     ranger
     brightnessctl
     prusa-slicer
     gimp
     vlc
     mpv
-    ## socials
+  ];
+  communicationTools = with pkgs; [
     yt-dlp
     element-desktop
     cinny-desktop
     iamb
     slack
-    # discord
     beeper
     discord-canary
-    ## other/misc
-    jq # json parser
-    xh # curl
-    microsoft-edge
+  ];
+  audioTools = with pkgs; [
+    spotify-player
+    pulseaudio
     spotify
-    ## rand
+  ];
+  browsingTools = with pkgs; [
+    inputs.zen-browser.packages."${system}".default
+    microsoft-edge
     wiki-tui
   ];
+in {
+  environment.systemPackages =
+    rustTools
+    ++ webTools
+    ++ luaTools
+    ++ perfTools
+    ++ pythonTools
+    ++ CXXTools
+    ++ haskelTools
+    ++ nixTools
+    ++ devTools
+    ++ terminalTools
+    ++ diskTools
+    ++ games
+    ++ officeTools
+    ++ communicationTools
+    ++ audioTools
+    ++ browsingTools
+    ++ desktopTools
+    ++ (with pkgs; [
+      salah
+    ]);
 }
