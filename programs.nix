@@ -65,18 +65,14 @@
     serie # git graph
     qbittorrent
     inetutils
-    tmux
     popsicle
     ffmpeg
     qemu # Virtualizer
     docker
-    fzf
-    zsh
     git
-    jq # json parser
-    xh # curl
   ];
   terminalTools = with pkgs; [
+    tmux
     zoxide
     ripgrep
     tree
@@ -102,6 +98,10 @@
     file
     fastfetch
     pfetch
+    jq # json parser
+    xh # curl
+    fzf
+    zsh
   ];
   diskTools = with pkgs; [
     ntfs3g
@@ -115,7 +115,6 @@
     steam
   ];
   desktopTools = with pkgs; [
-    feh # img viewer
     dunst
     wl-clipboard
     wpa_supplicant
@@ -144,6 +143,7 @@
     gimp
     vlc
     mpv
+    feh # img viewer
   ];
   communicationTools = with pkgs; [
     yt-dlp
