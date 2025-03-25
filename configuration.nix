@@ -125,7 +125,7 @@
   users.users.dd0k = {
     isNormalUser = true;
     description = "dD0k";
-    passwordFile = config.age.secrets.password.path;
+    hashedPasswordFile = config.age.secrets.password.path;
     extraGroups = ["users" "networkmanager" "wheel" "docker" "video" "libvirtd"];
     packages = with pkgs; [
       firefox
