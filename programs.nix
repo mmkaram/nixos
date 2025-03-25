@@ -69,6 +69,10 @@ in {
     ghc
     ## racket
     racket
+    ## nix
+    nix-prefetch-github
+    alejandra
+    nil
     ## prog general
     hoppscotch # api ednpoint client
     atac # terminal api endpoint client
@@ -84,8 +88,6 @@ in {
     feh # img viewer
     tmux
     popsicle
-    nix-prefetch-github
-    alejandra
     ffmpeg
     qemu # Virtualizer
     zip

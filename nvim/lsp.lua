@@ -1,4 +1,5 @@
 local lspconfig = require("lspconfig")
+local util = require("lspconfig.util")
 lspconfig.tailwindcss.setup({})
 -- Require utils for merge
 local function merge(a, b)
@@ -7,7 +8,7 @@ local function merge(a, b)
 	end
 end
 
-local function on_attach(client, bufnr)
+local function on_attach(_, bufnr)
 	vim.lsp.inlay_hint.enable(true)
 	vim.keymap.set("n", "<Space>ta", vim.lsp.buf.signature_help, { buffer = bufnr, noremap = true, silent = true })
 end
@@ -35,6 +36,14 @@ local settings = {
 	prismals = {
 		cmd = { "prisma-language-server", "--stdio" },
 		filetypes = { "prisma" },
+	},
+
+	-- nix
+	nil_ls = {
+		cmd = { "nil" },
+		filetypes = { "nix" },
+		single_file_support = true,
+		root_dir = util.root_pattern("flake.nix", ".git"),
 	},
 
 	-- haskell
