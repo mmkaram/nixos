@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  config,
+  ...
+}: {
   home.username = "dd0k";
   home.homeDirectory = "/home/dd0k";
   home.stateVersion = "24.05";
@@ -213,7 +217,7 @@
   programs.spotify-player = {
     enable = true;
     settings = {
-      client_id = "d5d01a282d5d475f8edf35dd5aab6b55";
+      client_id = builtins.readFile config.age.secrets.spotifyClientId.path;
       enable_notify = false;
       device = {
         volume = 100;

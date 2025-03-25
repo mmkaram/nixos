@@ -1,6 +1,7 @@
 {
   pkgs,
   inputs,
+  config,
   ...
 }: {
   ##################################
@@ -124,7 +125,7 @@
   users.users.dd0k = {
     isNormalUser = true;
     description = "dD0k";
-    extraGroups = ["networkmanager" "wheel" "docker" "video" "libvirtd"];
+    extraGroups = ["users" "networkmanager" "wheel" "docker" "video" "libvirtd"];
     packages = with pkgs; [
       firefox
       zoom-us
@@ -141,7 +142,7 @@
   programs.fish.enable = true;
   programs.zsh.enable = true;
   home-manager = {
-    extraSpecialArgs = {inherit inputs;};
+    extraSpecialArgs = {inherit config inputs;};
     backupFileExtension = "backup";
     users = {
       "dd0k" = import ./home.nix;
@@ -223,6 +224,19 @@
   # security.polkit.enable = true;
 
   services.gnome.gnome-keyring.enable = true;
+
+  # age secrets manager
+  age = {
+    identityPaths = ["/home/dd0k/.ssh/id_rsa"];
+    secrets = {
+      spotifyClientId = {
+        file = ./secrets/secret1.age; # Path to your encrypted secret file
+        owner = "dd0k"; # Owner of the secret file
+        group = "users"; # Group of the secret file
+        mode = "600"; # Permissions for the secret file
+      };
+    };
+  };
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
