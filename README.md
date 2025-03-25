@@ -44,7 +44,6 @@ There are some programs I've packaged but have not had the time to possibly requ
 - [ ] Create a system to easily import dev flakes I use often (nix-autobahn with nix-ld possibly)
 - [ ] find a way to insert emojis
 - [ ] More keyboard remapping (disable arrow keys to get better at vim)
-- [ ] add shortcuts/system for fingerprints(fprintd-enroll, etc.)
 - [ ] Get the nixpkgs version of the Zen browser when it's up
 - [ ] run this on first build `sudo chown -R $USER /etc/nixos` because I'm tired of always having to use sudo when I first reconfigure a system
 - [ ] get lazygit to exit with esc and not q (terminal and neovim plugin)
