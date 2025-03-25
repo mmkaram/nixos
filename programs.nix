@@ -6,6 +6,9 @@
   salah = import ./packages/salah/package.nix {
     inherit (pkgs) lib stdenv fetchFromGitHub;
   };
+  customTools = [
+    salah
+  ];
   rustTools = with pkgs; [
     lldb
     rustc
@@ -180,7 +183,5 @@ in {
     ++ audioTools
     ++ browsingTools
     ++ desktopTools
-    ++ (with pkgs; [
-      salah
-    ]);
+    ++ customTools;
 }
