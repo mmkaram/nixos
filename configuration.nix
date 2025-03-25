@@ -1,7 +1,6 @@
 {
   pkgs,
   inputs,
-  config,
   ...
 }: {
   ##################################
@@ -142,7 +141,7 @@
   programs.fish.enable = true;
   programs.zsh.enable = true;
   home-manager = {
-    extraSpecialArgs = {inherit config inputs;};
+    extraSpecialArgs = {inherit inputs;};
     backupFileExtension = "backup";
     users = {
       "dd0k" = import ./home.nix;
