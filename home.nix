@@ -1,10 +1,4 @@
-{
-  home,
-  config,
-  pkgs,
-  inputs,
-  ...
-}: {
+{pkgs, ...}: {
   home.username = "dd0k";
   home.homeDirectory = "/home/dd0k";
   home.stateVersion = "24.05";
@@ -82,7 +76,7 @@
       input = {
         "type:touchpad" = {
           natural_scroll = "enabled";
-          pointer_accel = "0.1";
+          pointer_accel = "0.2";
           accel_profile = "flat";
           tap = "enabled";
           scroll_factor = "0.2";
