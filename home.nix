@@ -63,7 +63,7 @@
   wayland.windowManager.sway = {
     enable = true;
     checkConfig = false;
-    config = rec {
+    config = {
       modifier = "Mod4";
       terminal = "kitty";
       bars = [
