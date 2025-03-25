@@ -8,9 +8,6 @@ in {
   defaultEditor = true;
 
   plugins = with pkgs.vimPlugins; [
-    # TODO:
-    # alpha-lua
-    # neo-tree
     {
       plugin = conform-nvim;
       config = toLuaFile ../nvim/format.lua;
