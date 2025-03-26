@@ -36,7 +36,7 @@ require("which-key").add({
 	{ "<leader>n", group = "New Split" },
 	{ "<leader>l", group = "Git" },
 	{ "<leader>f", group = "File/Zen" },
-	{ "<leader>m", group = "Markdown" },
+	{ "<leader>m", group = "Minimap/Markdown" },
 	{ "<leader>o", group = "File Explorer" },
 	{ "<leader>u", group = "Undotree" },
 	{ "<leader>tx", group = "Trouble" },
