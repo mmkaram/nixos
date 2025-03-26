@@ -30,6 +30,11 @@ in {
     vim-prisma
 
     {
+      plugin = which-key-nvim;
+      config = toLuaFile ./whichkey.lua;
+    }
+
+    {
       plugin = autoclose-nvim;
       config = toLua "require('autoclose').setup()";
     }
