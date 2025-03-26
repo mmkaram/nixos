@@ -37,7 +37,7 @@ local telescope_maps = {
 }
 
 for _, map in ipairs(telescope_maps) do
-	map_key(table.unpack(map))
+	map_key(unpack(map))
 end
 
 -- Window management
@@ -54,7 +54,7 @@ local window_maps = {
 }
 
 for _, map in ipairs(window_maps) do
-	map_key(table.unpack(map))
+	map_key(unpack(map))
 end
 
 -- Buffer management
@@ -65,7 +65,7 @@ local buffer_maps = {
 }
 
 for _, map in ipairs(buffer_maps) do
-	map_key(table.unpack(map))
+	map_key(unpack(map))
 end
 
 -- Git keymaps
@@ -75,7 +75,7 @@ local git_maps = {
 }
 
 for _, map in ipairs(git_maps) do
-	map_key(table.unpack(map))
+	map_key(unpack(map))
 end
 
 -- LSP keymaps
@@ -86,7 +86,7 @@ local lsp_maps = {
 }
 
 for _, map in ipairs(lsp_maps) do
-	map_key(table.unpack(map))
+	map_key(unpack(map))
 end
 
 -- File explorer keymaps
@@ -97,7 +97,23 @@ local file_maps = {
 }
 
 for _, map in ipairs(file_maps) do
-	map_key(table.unpack(map))
+	map_key(unpack(map))
+end
+
+local trouble_undo = {
+	{
+		"n",
+		"<space>tx",
+		function()
+			require("trouble").open("diagnostics")
+		end,
+		desc = "Open LSP issues in Trouble",
+	},
+	{ "n", "<leader>u", vim.cmd.UndotreeToggle, desc = "Toggle Undotree" },
+}
+
+for _, map in ipairs(trouble_undo) do
+	map_key(unpack(map))
 end
 
 -- Markdown
