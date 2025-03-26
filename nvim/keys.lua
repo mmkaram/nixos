@@ -29,13 +29,6 @@ vim.api.nvim_set_keymap("n", "<Leader>nv", ":vnew<CR>", { noremap = true, silent
 -- fullscreen
 map_key("n", "<Leader>f", ":ZenMode<CR>")
 
--- pane movement
--- no longer needed that tmux-nvim is up
--- vim.api.nvim_set_keymap("n", "<c-k>", ":wincmd k<CR>", { noremap = true, silent = true })
--- vim.api.nvim_set_keymap("n", "<c-j>", ":wincmd j<CR>", { noremap = true, silent = true })
--- vim.api.nvim_set_keymap("n", "<c-h>", ":wincmd h<CR>", { noremap = true, silent = true })
--- vim.api.nvim_set_keymap("n", "<c-l>", ":wincmd l<CR>", { noremap = true, silent = true })
-
 -- TODO: broken
 -- Resize panes vertically
 map_key("n", "<C-S-k>", ":resize +2<CR>")
