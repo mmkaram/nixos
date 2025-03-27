@@ -89,7 +89,7 @@
       };
       output = {
         "*" = {
-          bg = "/etc/nixos/misc/Nix.png fill";
+          bg = "/etc/nixos/misc/Open.png fill";
         };
       };
       startup = [
