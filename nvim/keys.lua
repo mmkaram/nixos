@@ -91,8 +91,9 @@ end
 
 -- File explorer keymaps
 local file_maps = {
-	{ "n", "<leader>o", ":Oil<CR>", desc = "Open file explorer" },
+	{ "n", "<leader>o", ":Oil<CR>", desc = "Open file editor" },
 	{ "n", "<leader>F", ":Neotree filesystem right toggle<CR>", desc = "Toggle file explorer" },
+	{ "n", "F", ":Neotree filesystem right toggle<CR>", desc = "Toggle file explorer" },
 	{ "n", "<leader>S", ":Neotree document_symbols right toggle<CR>", desc = "Toggle document symbols" },
 }
 
