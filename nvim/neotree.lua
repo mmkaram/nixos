@@ -1,4 +1,4 @@
 require("neo-tree").setup({
 	window = { mappings = { ["l"] = "toggle_node" } },
-	sources = { "filesystem" },
+	sources = { "filesystem", "document_symbols" },
 })
