@@ -3,6 +3,7 @@
   toLuaFile = file: "lua << EOF\n${builtins.readFile file}\nEOF\n";
   americano = import ../packages/americano-nvim/package.nix {inherit pkgs;};
   git-dashboard = import ../packages/git-dashboard-nvim/package.nix {inherit pkgs;};
+  neo-tree-nvim = import ../packages/neo-tree-nvim/package.nix {inherit pkgs;};
 in {
   enable = true;
   defaultEditor = true;
