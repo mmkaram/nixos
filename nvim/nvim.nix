@@ -25,9 +25,6 @@ in {
 
     americano
 
-    # configured in dash.lua
-    git-dashboard
-
     vim-prisma
 
     {
@@ -110,6 +107,8 @@ in {
       plugin = dashboard-nvim;
       config = toLuaFile ../nvim/dash.lua;
     }
+    # configured in dash.lua
+    git-dashboard
 
     {
       plugin = presence-nvim;
