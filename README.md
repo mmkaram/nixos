@@ -37,6 +37,7 @@ There are some programs I've packaged but have not had the time to possibly requ
 - [X] nvim tmux integration (pane switching)
 - [X] add rofi like app that can filter through open windows
 - [X] find out if kitty has built in pane support
+- [ ] Go back to upstream neo-tree-nvim when 2025-03-27/31 is live
 - [ ] all fish functions only work the second time I run them
 - [ ] update gimp
 - [ ] get rofi file browser to open reasonable defaults for specific filetypes
