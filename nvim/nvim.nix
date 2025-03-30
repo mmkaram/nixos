@@ -135,10 +135,7 @@ in {
       config = toLuaFile ../nvim/lazygit.lua;
     }
 
-    {
-      plugin = undotree;
-      config = toLuaFile ../nvim/undo.lua;
-    }
+    undotree
 
     # gh cli integration
     {
