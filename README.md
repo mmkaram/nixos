@@ -60,3 +60,4 @@ There are some programs I've packaged but have not had the time to possibly requ
 - [ ] Get railsy to work
 - [ ] Preview pdfs in ranger
 - [ ] Avante.nvim
+- [ ] Fix single window screen share, both OBS and discord streaming only allow me to share the whole screen with all windows, may be a sway problem, worked fine on gnome I think
