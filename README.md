@@ -37,24 +37,22 @@ There are some programs I've packaged but have not had the time to possibly requ
 - [X] nvim tmux integration (pane switching)
 - [X] add rofi like app that can filter through open windows
 - [X] find out if kitty has built in pane support
+- [X] Secrets manager
 - [ ] Go back to upstream neo-tree-nvim when 2025-03-27/31 is live
 - [ ] all fish functions only work the second time I run them
-- [ ] update gimp
+- [ ] update gimp (3.X.X)
 - [ ] get rofi file browser to open reasonable defaults for specific filetypes
 - [ ] Look into nix-ld
 - [ ] Create a system to easily import dev flakes I use often (nix-autobahn with nix-ld possibly)
 - [ ] find a way to insert emojis
-- [ ] More keyboard remapping (disable arrow keys to get better at vim)
 - [ ] Get the nixpkgs version of the Zen browser when it's up
 - [ ] run this on first build `sudo chown -R $USER /etc/nixos` because I'm tired of always having to use sudo when I first reconfigure a system
-- [ ] get lazygit to exit with esc and not q (terminal and neovim plugin)
 - [ ] vimTex
 - [ ] nvim debugger
 - [ ] Cloud synced atuin
 - [ ] Get the file explorer in nvim to show hidden files (preferably make it a shortcut to toggle)
 - [ ] Yubikey integration for login, sudo, and ssh. Useful wiki page [here](https://wiki.nixos.org/wiki/Yubikey), useful youtube video [here](https://www.youtube.com/watch?v=3CeXbONjIgE&t=329s&pp=ygUNbml4b3MgeXViaWtleQ%3D%3D). Should probably [buy the Yubikey](https://www.yubico.com/eg/product/yubikey-5-nano/) first.
 - [ ] make a package for [posting](https://github.com/darrenburns/posting)
-- [ ] Secrets manager
 - [ ] Stylix
 - [ ] Obsidian is still kinda borked with nvim
 - [ ] Get railsy to work
