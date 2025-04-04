@@ -9,12 +9,14 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-alien.url = "github:thiagokokada/nix-alien";
   };
 
   outputs = {
     self,
     nixpkgs,
     agenix,
+    nix-alien,
     ...
   } @ inputs: {
     nixosConfigurations.roci = nixpkgs.lib.nixosSystem {
@@ -24,6 +26,12 @@
         ./configuration.nix
         agenix.nixosModules.default
         inputs.home-manager.nixosModules.default
+        ({pkgs, ...}: {
+          environment.systemPackages = [
+            inputs.nix-alien.packages.${pkgs.system}.nix-alien
+          ];
+          programs.nix-ld.enable = true;
+        })
       ];
     };
   };
