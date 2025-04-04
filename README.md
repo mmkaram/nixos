@@ -39,11 +39,11 @@ There are some programs I've packaged but have not had the time to possibly requ
 - [X] find out if kitty has built in pane support
 - [X] Secrets manager
 - [X] Implement nix-ld
+- [ ] Implement nix-alien
 - [ ] Go back to upstream neo-tree-nvim when 2025-03-27/31 is live
 - [ ] all fish functions only work the second time I run them
 - [ ] update gimp (3.X.X)
 - [ ] get rofi file browser to open reasonable defaults for specific filetypes
-- [ ] Create a system to easily import dev flakes I use often (nix-autobahn with nix-ld possibly)
 - [ ] find a way to insert emojis
 - [ ] Get the nixpkgs version of the Zen browser when it's up
 - [ ] run this on first build `sudo chown -R $USER /etc/nixos` because I'm tired of always having to use sudo when I first reconfigure a system
