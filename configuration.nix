@@ -245,6 +245,9 @@
     };
   };
 
+  # Nix-ld to run unpatched dynamic binaries on NixOS
+  programs.nix-ld.enable = true;
+
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
   # Open ports in the firewall.
