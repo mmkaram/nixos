@@ -39,7 +39,7 @@ There are some programs I've packaged but have not had the time to possibly requ
 - [X] find out if kitty has built in pane support
 - [X] Secrets manager
 - [X] Implement nix-ld
-- [ ] Implement nix-alien
+- [X] Implement nix-alien
 - [ ] Go back to upstream neo-tree-nvim when 2025-03-27/31 is live
 - [ ] all fish functions only work the second time I run them
 - [ ] update gimp (3.X.X)
