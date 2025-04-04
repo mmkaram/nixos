@@ -34,28 +34,34 @@ There are some programs I've packaged but have not had the time to possibly requ
 - dune-delete (`sudo nix-collect-garbage --delete-old`)
 
 ## TODOs
+### Completed
 - [X] nvim tmux integration (pane switching)
 - [X] add rofi like app that can filter through open windows
 - [X] find out if kitty has built in pane support
 - [X] Secrets manager
 - [X] Implement nix-ld
 - [X] Implement nix-alien
+### Nvim
 - [ ] Go back to upstream neo-tree-nvim when 2025-03-27/31 is live
-- [ ] all fish functions only work the second time I run them
-- [ ] update gimp (3.X.X)
-- [ ] get rofi file browser to open reasonable defaults for specific filetypes
-- [ ] find a way to insert emojis
-- [ ] Get the nixpkgs version of the Zen browser when it's up
-- [ ] run this on first build `sudo chown -R $USER /etc/nixos` because I'm tired of always having to use sudo when I first reconfigure a system
 - [ ] vimTex
 - [ ] nvim debugger
-- [ ] Cloud synced atuin
+- [ ] Avante.nvim
+- [ ] js/ts lsp diagnostics only show errors/warnings in open files
 - [ ] Get the file explorer in nvim to show hidden files (preferably make it a shortcut to toggle)
+- [ ] Obsidian is still kinda borked with nvim
+### Updates
+- [ ] update gimp (3.X.X)
+- [ ] Get the nixpkgs version of the Zen browser when it's up
+### QoL
+- [ ] all fish functions only work the second time I run them
+- [ ] get rofi file browser to open reasonable defaults for specific filetypes
+- [ ] find a way to insert emojis
+- [ ] run this on first build `sudo chown -R $USER /etc/nixos` because I'm tired of always having to use sudo when I first reconfigure a system
+- [ ] Cloud synced atuin
+### Projects
 - [ ] Yubikey integration for login, sudo, and ssh. Useful wiki page [here](https://wiki.nixos.org/wiki/Yubikey), useful youtube video [here](https://www.youtube.com/watch?v=3CeXbONjIgE&t=329s&pp=ygUNbml4b3MgeXViaWtleQ%3D%3D). Should probably [buy the Yubikey](https://www.yubico.com/eg/product/yubikey-5-nano/) first.
 - [ ] Stylix
-- [ ] Obsidian is still kinda borked with nvim
+### Other
 - [ ] Get railsy to work
 - [ ] Preview pdfs in ranger
-- [ ] Avante.nvim
 - [ ] Fix single window screen share, both OBS and discord streaming only allow me to share the whole screen with all windows, may be a sway problem, worked fine on gnome I think
-- [ ] js/ts lsp diagnostics only show errors/warnings in open files
