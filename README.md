@@ -52,7 +52,6 @@ There are some programs I've packaged but have not had the time to possibly requ
 - [ ] Cloud synced atuin
 - [ ] Get the file explorer in nvim to show hidden files (preferably make it a shortcut to toggle)
 - [ ] Yubikey integration for login, sudo, and ssh. Useful wiki page [here](https://wiki.nixos.org/wiki/Yubikey), useful youtube video [here](https://www.youtube.com/watch?v=3CeXbONjIgE&t=329s&pp=ygUNbml4b3MgeXViaWtleQ%3D%3D). Should probably [buy the Yubikey](https://www.yubico.com/eg/product/yubikey-5-nano/) first.
-- [ ] make a package for [posting](https://github.com/darrenburns/posting)
 - [ ] Stylix
 - [ ] Obsidian is still kinda borked with nvim
 - [ ] Get railsy to work
