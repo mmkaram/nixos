@@ -46,7 +46,7 @@ local window_maps = {
 	{ "n", "<leader>sv", ":vsplit<CR>", desc = "Vertical split" },
 	{ "n", "<leader>nh", ":new<CR>", desc = "New horizontal split" },
 	{ "n", "<leader>nv", ":vnew<CR>", desc = "New vertical split" },
-	{ "n", "<leader>f", ":ZenMode<CR>", desc = "Toggle zen mode" },
+	{ "n", "<leader>z", ":ZenMode<CR>", desc = "Toggle zen mode" },
 	{ "n", "<C-S-k>", ":resize +2<CR>", desc = "Increase window height" },
 	{ "n", "<C-S-j>", ":resize -2<CR>", desc = "Decrease window height" },
 	{ "n", "<C-S-h>", ":vertical resize -2<CR>", desc = "Decrease window width" },
@@ -93,7 +93,6 @@ end
 local file_maps = {
 	{ "n", "<leader>o", ":Oil<CR>", desc = "Open file editor" },
 	{ "n", "<leader>F", ":Neotree filesystem right toggle<CR>", desc = "Toggle file explorer" },
-	{ "n", "F", ":Neotree filesystem right toggle<CR>", desc = "Toggle file explorer" },
 	{ "n", "<leader>S", ":Neotree document_symbols right toggle<CR>", desc = "Toggle document symbols" },
 }
 
