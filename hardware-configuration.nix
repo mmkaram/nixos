@@ -19,10 +19,9 @@
   };
 
   # Encryption details
-  # The first line is for the swap encryption, after running the NixOS Calamares installer this line was put into my ./configuration.nix
-  # This is an issue because this is machine specific, hopefully this big has been fixed, if not should probably report.
+  # As of the nixos iso from 2025/04/04 on nixos.org, checking off the encrypt drive button on the GUI installer will put both the below
+  # lines in the configuration.nix and not hardware-configuration.nix.
   boot.initrd.luks.devices."luks-212fbe65-b5e7-4935-b1d0-17a592d6ce54".device = "/dev/disk/by-uuid/212fbe65-b5e7-4935-b1d0-17a592d6ce54";
-  # This was put in the correct file, see comment above.
   boot.initrd.luks.devices."luks-ced2ee20-76d9-40a2-8f6c-985c09f1a883".device = "/dev/disk/by-uuid/ced2ee20-76d9-40a2-8f6c-985c09f1a883";
 
   fileSystems."/boot" = {
