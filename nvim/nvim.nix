@@ -9,28 +9,19 @@ in {
   defaultEditor = true;
 
   plugins = with pkgs.vimPlugins; [
-    {
-      plugin = conform-nvim;
-      config = toLuaFile ../nvim/format.lua;
-    }
-    telescope-file-browser-nvim
-    # deps
+    # Dependencies
     plenary-nvim
     nvim-web-devicons
     nui-nvim
 
+    # Misc
     vim-be-good
-
     quickfix-reflector-vim
-
-    americano
-
-    vim-prisma
-
     # Tmux/nvim status line amalgamater
     # TODO: Status line LSP indicator doesn't work
     # vim-tpipeline
 
+    # Util
     {
       plugin = which-key-nvim;
       config = toLuaFile ./whichkey.lua;
@@ -66,25 +57,9 @@ in {
       config = toLuaFile ./neotree.lua;
     }
 
-    cmp_luasnip
-
     {
       plugin = luasnip;
       config = toLuaFile ./luasnip.lua;
-    }
-
-    {
-      # idk how this is different from nvimp.cmp
-      plugin = cmp-nvim-lsp;
-      # this config isn't realted, it just loads
-      # keybinds because I can't source lua files from
-      # other lua files
-      config = toLuaFile ../nvim/keys.lua;
-    }
-
-    {
-      plugin = nvim-cmp;
-      config = toLuaFile ../nvim/completion.lua;
     }
 
     {
@@ -108,20 +83,13 @@ in {
     }
 
     {
-      plugin = dashboard-nvim;
-      config = toLuaFile ../nvim/dash.lua;
+      plugin = toggleterm-nvim;
+      config = toLuaFile ../nvim/term.lua;
     }
-    # configured in dash.lua
-    git-dashboard
 
     {
       plugin = presence-nvim;
       config = toLuaFile ../nvim/presence.lua;
-    }
-
-    {
-      plugin = indent-blankline-nvim;
-      config = toLuaFile ../nvim/indent.lua;
     }
 
     {
@@ -133,69 +101,80 @@ in {
       plugin = zen-mode-nvim;
       config = toLua "require('zen-mode').setup()";
     }
-
+    # Git
     {
       plugin = lazygit-nvim;
       config = toLuaFile ../nvim/lazygit.lua;
     }
-
-    undotree
-
-    # gh cli integration
     {
       plugin = octo-nvim;
       config = toLuaFile ../nvim/octo.lua;
     }
-
-    # lines changed since last commit
+    undotree
     {
       plugin = gitsigns-nvim;
       config = toLua "require('gitsigns').setup()";
     }
-
-    # status bar
+    # Themeing
     lualine-nvim
     {
       plugin = lualine-lsp-progress;
       config = toLuaFile ../nvim/lualine.lua;
     }
-
+    {
+      plugin = dashboard-nvim;
+      config = toLuaFile ../nvim/dash.lua;
+    }
+    git-dashboard
     {
       plugin = tokyonight-nvim;
       config = "colorscheme tokyonight-night";
       # config = "colorscheme americano";
     }
+    americano
 
-    {
-      plugin = nvim-lspconfig;
-      config = toLuaFile ../nvim/lsp.lua;
-    }
-
-    {
-      plugin = comment-nvim;
-      config = toLuaFile ../nvim/comment.lua;
-    }
-
-    {
-      plugin = toggleterm-nvim;
-      config = toLuaFile ../nvim/term.lua;
-    }
-
-    # tabs and stuff
+    # Buffer management
     vim-unimpaired
     {
       plugin = bufferline-nvim;
       config = toLuaFile ../nvim/bufferline.lua;
     }
-
     {
       plugin = telescope-nvim;
       config = toLuaFile ../nvim/telescope.lua;
     }
-
-    # configured in telescope.lua
     telescope-ui-select-nvim
+    telescope-file-browser-nvim
+    # Formatting
+    {
+      plugin = conform-nvim;
+      config = toLuaFile ../nvim/format.lua;
+    }
+    {
+      plugin = comment-nvim;
+      config = toLuaFile ../nvim/comment.lua;
+    }
+    {
+      plugin = indent-blankline-nvim;
+      config = toLuaFile ../nvim/indent.lua;
+    }
 
+    # LSP
+    {
+      plugin = nvim-cmp;
+      config = toLuaFile ../nvim/completion.lua;
+    }
+    {
+      plugin = nvim-lspconfig;
+      config = toLuaFile ../nvim/lsp.lua;
+    }
+    {
+      plugin = cmp-nvim-lsp;
+      # this config isn't realted, it just loads
+      # keybinds because I can't source lua files from
+      # other lua files
+      config = toLuaFile ../nvim/keys.lua;
+    }
     (nvim-treesitter.withPlugins (p: [
       p.tree-sitter-nix
       p.tree-sitter-python
@@ -209,8 +188,9 @@ in {
       p.tree-sitter-sql
       p.tree-sitter-prisma
     ]))
-
+    vim-prisma
     vim-nix
+    cmp_luasnip
   ];
   viAlias = true;
   vimAlias = true;
