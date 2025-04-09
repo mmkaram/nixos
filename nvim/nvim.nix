@@ -27,7 +27,9 @@ in {
 
     vim-prisma
 
-    vim-tpipeline
+    # Tmux/nvim status line amalgamater
+    # TODO: Status line LSP indicator doesn't work
+    # vim-tpipeline
 
     {
       plugin = which-key-nvim;
