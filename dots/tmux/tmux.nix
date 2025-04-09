@@ -31,6 +31,13 @@
     set -g status-bg blue
     set -g status-fg black
 
+    # Nvim status bar combination
+    set -g focus-events on
+    set -g status-style bg=default
+    set -g status-left-length 90
+    set -g status-right-length 90
+    set -g status-justify centre
+
     # Reduce escape time for faster response
     set -s escape-time 0
 

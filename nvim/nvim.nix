@@ -27,6 +27,8 @@ in {
 
     vim-prisma
 
+    vim-tpipeline
+
     {
       plugin = which-key-nvim;
       config = toLuaFile ./whichkey.lua;
