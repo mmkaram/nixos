@@ -73,6 +73,7 @@
     inputs.agenix.packages."${system}".default
   ];
   terminalTools = with pkgs; [
+    p7zip
     tmux
     zoxide
     ripgrep
