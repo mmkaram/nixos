@@ -11,6 +11,7 @@
   # | |_| | | |_| | | |___   ___) |#
   # |____/   \___/   \____| |____/ #
   ##################################
+  # Docs
   # https://search.nixos.org/options
   ##############################
   #  ___   _   _   ___   _____ #
@@ -19,6 +20,7 @@
   #  | |  | |\  |  | |    | |  #
   # |___| |_| \_| |___|   |_|  #
   ##############################
+  # Init
   # enable expiremental nix features (for flakes)
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
@@ -42,6 +44,7 @@
   # | |\  | | |___    | |     \ V  V /   | |_| | |  _ <  | . \ #
   # |_| \_| |_____|   |_|      \_/\_/     \___/  |_| \_\ |_|\_\#
   ##############################################################
+  # Network
   networking.hostName = "Rocinante";
   networking.networkmanager.enable = true;
   hardware.bluetooth.enable = true;
@@ -57,6 +60,7 @@
   # | |___  | |_| | | |___   / ___ \  | |___   | |   / /_   / ___ \    | |    | |  | |_| | | |\  |#
   # |_____|  \___/   \____| /_/   \_\ |_____| |___| /____| /_/   \_\   |_|   |___|  \___/  |_| \_|#
   #################################################################################################
+  # Localization
   time.timeZone = "Canada/Eastern"; # "Africa/Cairo"
   # services.automatic-timezoned.enable = true;
   i18n.defaultLocale = "en_US.UTF-8";
@@ -78,6 +82,7 @@
   # | |_| | | |___   ___) | | . \    | |   | |_| | |  __/ #
   # |____/  |_____| |____/  |_|\_\   |_|    \___/  |_|    #
   #########################################################
+  # Desktop
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
@@ -122,6 +127,7 @@
   # | |_| |  ___) | | |___  |  _ <   ___) |#
   #  \___/  |____/  |_____| |_| \_\ |____/ #
   ##########################################
+  # Users
   users.users.dd0k = {
     isNormalUser = true;
     description = "dD0k";
@@ -161,6 +167,7 @@
   # |  __/  |  _ <  | |_| | | |_| | |  _ <   / ___ \  | |  | |  ___) |#
   # |_|     |_| \_\  \___/   \____| |_| \_\ /_/   \_\ |_|  |_| |____/ #
   #####################################################################
+  # Programs
   # Enable insecure Packages
   nixpkgs.config.permittedInsecurePackages = [];
   nixpkgs.config.allowUnfree = true;
@@ -201,6 +208,7 @@
   #  ___) | | |___  |  _ <    \ V /    | |  | |___  | |___   ___) |#
   # |____/  |_____| |_| \_\    \_/    |___|  \____| |_____| |____/ #
   ##################################################################
+  # services
   # ios usb tethering
   services.usbmuxd.enable = true;
 
@@ -283,6 +291,7 @@
   # | |_| | | |\  | | |_| |  ___) | | |___  | |_| |#
   #  \___/  |_| \_|  \___/  |____/  |_____| |____/ #
   ##################################################
+  # Unused
   # Auto optimization - delete old builds
 
   # Some programs need SUID wrappers, can be configured further or are
