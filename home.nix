@@ -35,19 +35,20 @@
     };
   };
 
-  home.packages = [
-    pkgs.rofi-wayland
-    pkgs.starship
-    pkgs.oh-my-fish
-    pkgs.swaybg
-    pkgs.dmenu
-    pkgs.playerctl
-    pkgs.shotman
-    pkgs.fd
-    pkgs.sway-audio-idle-inhibit
-    pkgs.waybar
-    pkgs.libappindicator-gtk3
-    pkgs.nitch
+  home.packages = with pkgs; [
+    rofimoji
+    rofi-wayland
+    starship
+    oh-my-fish
+    swaybg
+    dmenu
+    playerctl
+    shotman
+    fd
+    sway-audio-idle-inhibit
+    waybar
+    libappindicator-gtk3
+    nitch
   ];
 
   imports = [

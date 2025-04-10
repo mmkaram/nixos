@@ -41,6 +41,7 @@ There are some programs I've packaged but have not had the time to possibly requ
 - [X] Secrets manager
 - [X] Implement nix-ld
 - [X] Implement nix-alien
+- [X] find a way to insert emojis
 ### Nvim
 - [ ] Go back to upstream neo-tree-nvim when 2025-03-27/31 is live
 - [ ] vimTex
@@ -55,7 +56,6 @@ There are some programs I've packaged but have not had the time to possibly requ
 ### QoL
 - [ ] all fish functions only work the second time I run them
 - [ ] get rofi file browser to open reasonable defaults for specific filetypes
-- [ ] find a way to insert emojis
 - [ ] Cloud synced atuin
 ### Projects
 - [ ] Yubikey integration for login, sudo, and ssh. Useful wiki page [here](https://wiki.nixos.org/wiki/Yubikey), useful youtube video [here](https://www.youtube.com/watch?v=3CeXbONjIgE&t=329s&pp=ygUNbml4b3MgeXViaWtleQ%3D%3D). Should probably [buy the Yubikey](https://www.yubico.com/eg/product/yubikey-5-nano/) first.
