@@ -6,8 +6,12 @@
   salah = import ./packages/salah/package.nix {
     inherit (pkgs) lib stdenv fetchFromGitHub;
   };
+  iamb = import ./packages/iamb/package.nix {
+    inherit (pkgs) rustPlatform fetchFromGitHub installShellFiles;
+  };
   customTools = [
     salah
+    iamb
   ];
   rustTools = with pkgs; [
     lldb
@@ -152,7 +156,7 @@
     yt-dlp
     element-desktop
     cinny-desktop
-    iamb
+    # iamb
     slack
     beeper
     discord-canary
