@@ -1,2 +1,10 @@
 [profiles."matrix.org"]
 user_id = "@mmkaram:matrix.org"
+
+[settings.image_preview]
+protocol.type = "kitty"
+protocol.font_size = [ 11, 26 ]
+
+[settings.notifications]
+enabled = true
+
