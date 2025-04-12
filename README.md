@@ -44,6 +44,7 @@ There are some programs I've packaged but have not had the time to possibly requ
 - [X] find a way to insert emojis
 ### Nvim
 - [ ] Go back to upstream neo-tree-nvim when 2025-03-27/31 is live
+- [ ] mini.ai
 - [ ] vimTex
 - [ ] nvim debugger
 - [ ] Avante.nvim
