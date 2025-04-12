@@ -51,6 +51,7 @@ There are some programs I've packaged but have not had the time to possibly requ
 - [ ] Get the file explorer in nvim to show hidden files (preferably make it a shortcut to toggle)
 - [ ] Obsidian is still kinda borked with nvim
 ### Updates
+- [ ] update iamb (cur 0.10) to a version that supports images
 - [ ] update gimp (3.X.X)
 - [ ] Get the nixpkgs version of the Zen browser when it's up
 ### QoL
