@@ -85,7 +85,7 @@
         "type:pointer" = {
           accel_profile = "flat";
           pointer_accel = "0.1";
-          scroll_factor = "0.2";
+          scroll_factor = "0.5";
         };
       };
       output = {
