@@ -143,7 +143,7 @@
     ranger
     brightnessctl
     prusa-slicer
-    gimp
+    # gimp
     vlc
     mpv
     feh # img viewer
