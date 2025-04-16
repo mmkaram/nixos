@@ -143,7 +143,7 @@
     ranger
     brightnessctl
     prusa-slicer
-    # gimp
+    gimp
     vlc
     mpv
     feh # img viewer
@@ -155,7 +155,7 @@
     iamb
     slack
     beeper
-    discord-canary
+    discord
   ];
   audioTools = with pkgs; [
     spotify-player
