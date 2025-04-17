@@ -49,6 +49,8 @@
   CXXTools = with pkgs; [
     clang
     clang-tools
+    # Embdded
+    arduino-ide
   ];
   haskelTools = with pkgs; [
     haskellPackages.haskell-language-server
