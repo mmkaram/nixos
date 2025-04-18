@@ -51,6 +51,8 @@
     clang-tools
     # Embdded
     arduino-ide
+    arduino-language-server
+    arduino-cli
     platformio
   ];
   haskelTools = with pkgs; [
