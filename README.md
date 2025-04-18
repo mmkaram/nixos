@@ -43,6 +43,7 @@ There are some programs I've packaged but have not had the time to possibly requ
 - [X] Implement nix-alien
 - [X] find a way to insert emojis
 ### Nvim
+- [ ] Update to nvim 0.11.X to use multiline in file error messages
 - [ ] Go back to upstream neo-tree-nvim when 2025-03-27/31 is live
 - [ ] mini.ai
 - [ ] vimTex
