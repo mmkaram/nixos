@@ -68,7 +68,6 @@ local settings = {
 			"esp32:esp32:esp32",
 		},
 		filetypes = { "arduino" },
-		on_attach = on_attach,
 	},
 
 	-- python
