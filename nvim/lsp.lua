@@ -63,16 +63,12 @@ local settings = {
 		cmd = {
 			"arduino-language-server",
 			"-cli-config",
-			os.getenv("HOME") .. "/.arduino15/arduino-cli.yaml",
-			"-cli",
-			"arduino-cli",
-			"-clangd",
-			"clangd",
+			"/home/dd0k/.arduino15/arduino-cli.yaml",
 			"-fqbn",
 			"esp32:esp32:esp32",
 		},
 		filetypes = { "arduino" },
-		root_dir = require("lspconfig.util").root_pattern("sketch.yaml", ".git"),
+		on_attach = on_attach,
 	},
 
 	-- python
