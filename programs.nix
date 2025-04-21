@@ -49,7 +49,9 @@
   CXXTools = with pkgs; [
     clang
     clang-tools
-    # Embdded
+  ];
+  embeddedTools = with pkgs; [
+    kicad
     arduino-ide
     arduino-language-server
     arduino-cli
@@ -180,6 +182,7 @@ in {
     ++ perfTools
     ++ pythonTools
     ++ CXXTools
+    ++ embeddedTools
     ++ haskelTools
     ++ nixTools
     ++ devTools
