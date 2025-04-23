@@ -149,6 +149,7 @@ cmp.setup({
 })
 
 vim.diagnostic.config({
+	-- TODO: current_line doesn't work, maybe update
 	virtual_lines = { only_current_line = true }, -- show virtual lines only on the current line
-	virtual_text = false, -- disable virtual text if you prefer
+	virtual_text = false,
 })
