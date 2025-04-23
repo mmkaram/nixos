@@ -24,7 +24,8 @@
     typescript-language-server
     prettierd
     prisma
-    nodePackages_latest."@prisma/language-server"
+    # Install through npm per project, broken on nixpkgs
+    # nodePackages_latest."@prisma/language-server"
     prisma-engines
   ];
   luaTools = with pkgs; [
