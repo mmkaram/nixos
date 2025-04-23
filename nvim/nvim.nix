@@ -106,10 +106,10 @@ in {
       plugin = lazygit-nvim;
       config = toLuaFile ../nvim/lazygit.lua;
     }
-    {
-      plugin = octo-nvim;
-      config = toLuaFile ../nvim/octo.lua;
-    }
+    # {
+    #   plugin = octo-nvim;
+    #   config = toLuaFile ../nvim/octo.lua;
+    # }
     undotree
     {
       plugin = gitsigns-nvim;
