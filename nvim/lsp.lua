@@ -147,3 +147,8 @@ cmp.setup({
 		["<Enter>"] = cmp.mapping.confirm({ select = true }),
 	}),
 })
+
+vim.diagnostic.config({
+	virtual_lines = { only_current_line = true }, -- show virtual lines only on the current line
+	virtual_text = false, -- disable virtual text if you prefer
+})
