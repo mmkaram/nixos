@@ -152,7 +152,6 @@ in {
     }
     {
       plugin = comment-nvim;
-      # config = toLuaFile ../nvim/comment.lua;
       config = toLua "require('Comment').setup()";
     }
     {
