@@ -152,6 +152,7 @@
     brightnessctl
     prusa-slicer
     gimp
+    davinci-resolve
     vlc
     mpv
     feh # img viewer
