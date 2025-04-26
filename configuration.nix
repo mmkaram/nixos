@@ -235,7 +235,7 @@
   services.gnome.gnome-keyring.enable = true;
 
   # age secrets manager
-  age = import ./age/nix;
+  age = import ./secrets/age.nix;
 
   # Nix-ld to run unpatched dynamic binaries on NixOS
   programs.nix-ld.enable = true;
