@@ -152,7 +152,7 @@
     ranger
     brightnessctl
     prusa-slicer
-    gimp
+    gimp3
     davinci-resolve
     vlc
     mpv
