@@ -81,6 +81,7 @@
     inputs.agenix.packages."${system}".default
   ];
   terminalTools = with pkgs; [
+    # startship
     p7zip
     tmux
     zoxide

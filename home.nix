@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  config,
+  ...
+}: {
   home.username = "dd0k";
   home.homeDirectory = "/home/dd0k";
   home.stateVersion = "24.05";
@@ -38,7 +42,6 @@
   home.packages = with pkgs; [
     rofimoji
     rofi-wayland
-    starship
     oh-my-fish
     swaybg
     dmenu
@@ -125,11 +128,11 @@
     theme = "Arc-Dark";
   };
 
-  programs.starship = {
-    enable = true;
-    enableFishIntegration = true;
-    enableTransience = true;
-  };
+  # programs.starship = {
+  #   enable = false;
+  #   enableFishIntegration = false;
+  #   enableTransience = false;
+  # };
 
   programs.kitty = {
     enable = true;
@@ -241,6 +244,7 @@
   };
 
   home.sessionVariables = {
+    GEMINI_API_KEY = config.age.secrets.gemini.value;
   };
 
   programs.home-manager.enable = true;

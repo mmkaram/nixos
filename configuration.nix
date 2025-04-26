@@ -149,7 +149,7 @@
   programs.fish.enable = true;
   programs.zsh.enable = true;
   home-manager = {
-    extraSpecialArgs = {inherit inputs;};
+    extraSpecialArgs = {inherit inputs config;};
     backupFileExtension = "backup";
     users = {
       "dd0k" = import ./home.nix;
@@ -249,6 +249,12 @@
         owner = "dd0k"; # Owner of the secret file
         group = "users"; # Group of the secret file
         mode = "600"; # Permissions for the secret file
+      };
+      gemini = {
+        file = ./secrets/gemini.age;
+        owner = "dd0k";
+        group = "users";
+        mode = "600";
       };
     };
   };
