@@ -69,7 +69,7 @@
   ];
   devTools = with pkgs; [
     hoppscotch # api ednpoint client
-    atac # terminal api endpoint client
+    atac # TUI api endpoint client
     serie # git graph
     qbittorrent
     inetutils
@@ -81,7 +81,7 @@
     inputs.agenix.packages."${system}".default
   ];
   terminalTools = with pkgs; [
-    # startship
+    starship
     p7zip
     tmux
     zoxide

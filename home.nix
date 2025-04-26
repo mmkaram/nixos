@@ -130,12 +130,11 @@
     theme = "Arc-Dark";
   };
 
-  # programs.starship = {
-  #   enable = false;
-  #   enableFishIntegration = false;
-  #   enableTransience = false;
-  #   enableInteractive = false;
-  # };
+  programs.starship = {
+    enable = true;
+    enableFishIntegration = true;
+    enableTransience = true;
+  };
 
   programs.kitty = {
     enable = true;
