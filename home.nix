@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  inputs,
+  ...
+}: {
   home.username = "dd0k";
   home.homeDirectory = "/home/dd0k";
   home.stateVersion = "24.11";
@@ -51,6 +55,7 @@
   ];
 
   imports = [
+    inputs.agenix.homeManagerModules.default
     ./sway/waybar.nix
   ];
 
@@ -240,6 +245,7 @@
     ".config/ghostty/config".source = ./dots/ghostty/config;
   };
 
+  age.secrets = {};
   home.sessionVariables = {
   };
 

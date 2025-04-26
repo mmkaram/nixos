@@ -38,6 +38,7 @@
     hibernate = "systemctl hibernate";
   };
   shellInit = ''
+    source /run/agenix/gemini
     fish_vi_key_bindings
     # fish_default_key_bindings
     set -U fish_greeting
