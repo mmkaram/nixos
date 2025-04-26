@@ -1,7 +1,6 @@
 {
   pkgs,
   inputs,
-  config,
   ...
 }: {
   home.username = "dd0k";
