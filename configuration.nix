@@ -149,7 +149,7 @@
   programs.fish.enable = true;
   programs.zsh.enable = true;
   home-manager = {
-    extraSpecialArgs = {inherit inputs config;};
+    extraSpecialArgs = {inherit inputs;};
     backupFileExtension = "backup";
     users = {
       "dd0k" = import ./home.nix;

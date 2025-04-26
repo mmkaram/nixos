@@ -1,11 +1,7 @@
-{
-  pkgs,
-  config,
-  ...
-}: {
+{pkgs, ...}: {
   home.username = "dd0k";
   home.homeDirectory = "/home/dd0k";
-  home.stateVersion = "24.05";
+  home.stateVersion = "24.11";
 
   accounts.email = {
     accounts.Kernel = {
@@ -132,6 +128,7 @@
   #   enable = false;
   #   enableFishIntegration = false;
   #   enableTransience = false;
+  #   enableInteractive = false;
   # };
 
   programs.kitty = {
@@ -244,7 +241,6 @@
   };
 
   home.sessionVariables = {
-    GEMINI_API_KEY = config.age.secrets.gemini.value;
   };
 
   programs.home-manager.enable = true;
