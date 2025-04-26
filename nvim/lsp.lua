@@ -34,7 +34,7 @@ local settings = {
 
 	-- prisma
 	prismals = {
-		cmd = { "prisma-language-server", "--stdio" },
+		cmd = { "npx", "prisma-language-server", "--stdio" },
 		filetypes = { "prisma" },
 	},
 

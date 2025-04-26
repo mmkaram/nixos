@@ -89,7 +89,7 @@
   # Enable desktop manager
   services.displayManager.ly.enable = true;
   programs.sway.enable = true;
-  # bright and vol
+  # Brightness and volume
   programs.light.enable = true;
 
   # Configure keymap in X11
