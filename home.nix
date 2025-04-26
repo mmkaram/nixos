@@ -1,6 +1,7 @@
 {
   pkgs,
   inputs,
+  config,
   ...
 }: {
   home.username = "dd0k";
@@ -216,10 +217,15 @@
 
   programs.neovim = import ./nvim/nvim.nix {inherit pkgs;};
 
+  age.secrets = {
+    spotifyClientId = {
+      file = ./secrets/secret1.age;
+    };
+  };
   programs.spotify-player = {
     enable = true;
     settings = {
-      client_id = "$(cat /run/agenix/spotifyClientId)";
+      client_id = "d5d01a282d5d475f8edf35dd5aab6b55";
       enable_notify = false;
       device = {
         volume = 100;

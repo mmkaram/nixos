@@ -7,12 +7,6 @@
       group = "users";
       mode = "600";
     };
-    spotifyClientId = {
-      file = ./secret1.age;
-      owner = "dd0k";
-      group = "users";
-      mode = "600";
-    };
     gemini = {
       file = ./gemini.age;
       path = "/run/agenix/gemini";
