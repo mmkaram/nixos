@@ -4,4 +4,5 @@ let
 in {
   "secret1.age".publicKeys = [dd0k];
   "password.age".publicKeys = [dd0k];
+  "gemini.age".publicKeys = [dd0k];
 }

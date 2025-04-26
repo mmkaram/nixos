@@ -162,6 +162,10 @@ in {
 
     # LSP
     {
+      plugin = avante-nvim;
+      config = toLuaFile ./avante.lua;
+    }
+    {
       plugin = nvim-cmp;
       config = toLuaFile ../nvim/completion.lua;
     }
