@@ -122,7 +122,7 @@
     ifuse
   ];
   games = with pkgs; [
-    lunar-client
+    prismlauncher
     steam
   ];
   desktopTools = with pkgs; [
