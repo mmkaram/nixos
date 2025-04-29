@@ -61,7 +61,7 @@
   # |_____|  \___/   \____| /_/   \_\ |_____| |___| /____| /_/   \_\   |_|   |___|  \___/  |_| \_|#
   #################################################################################################
   # Localization
-  time.timeZone = "Canada/Eastern"; # "Africa/Cairo"
+  time.timeZone = "America/Los_Angeles"; # "Afric/Cairo" "Canada/Eastern"
   # services.automatic-timezoned.enable = true;
   i18n.defaultLocale = "en_US.UTF-8";
   i18n.extraLocaleSettings = {
