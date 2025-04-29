@@ -29,7 +29,7 @@ in {
 
     {
       plugin = autoclose-nvim;
-      config = toLua "require('autoclose').setup()";
+      config = toLuaFile ./autoclose.lua;
     }
 
     {
