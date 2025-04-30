@@ -109,7 +109,7 @@ in {
     # TODO: Uncomment when not broken in nixpkgs
     # {
     #   plugin = octo-nvim;
-    #   config = toLuaFile ../nvim/octo.lua;
+    #   config = toLuaFile ./octo.lua;
     # }
     undotree
     {

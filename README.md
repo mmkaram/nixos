@@ -46,7 +46,7 @@ There are some programs I've packaged but have not had the time to possibly requ
 - [X] Use virtual lines for error messsages
 - [X] Avante.nvim
 - [ ] [Flash.nvim](https://youtu.be/eJ3XV-3uoug?si=UxFJs2Xk0Ve6PXTc)
-- [ ] Update octo-nvim when it isn't broken 2025/04/23
+- [ ] Update octo-nvim when it isn't broken. borked ver: 2025/04/24
 - [ ] Go back to upstream neo-tree-nvim when 2025-03-27/31 is live
 - [ ] mini.ai
 - [ ] vimTex
