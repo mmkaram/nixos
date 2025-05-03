@@ -126,6 +126,7 @@
   games = with pkgs; [
     prismlauncher
     steam
+    lutris
   ];
   desktopTools = with pkgs; [
     dunst
