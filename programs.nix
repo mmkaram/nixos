@@ -68,6 +68,7 @@
     nil
   ];
   devTools = with pkgs; [
+    wine
     hoppscotch # api ednpoint client
     atac # TUI api endpoint client
     serie # git graph
