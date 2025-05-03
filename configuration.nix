@@ -86,6 +86,9 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
+  # Enable openGL
+  hardware.graphics.enable = true;
+
   # Enable desktop manager
   services.displayManager.ly.enable = true;
   programs.sway.enable = true;
