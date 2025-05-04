@@ -83,6 +83,7 @@
     inputs.agenix.packages."${system}".default
   ];
   terminalTools = with pkgs; [
+    sshx
     starship
     p7zip
     tmux
