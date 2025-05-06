@@ -67,7 +67,7 @@ There are some programs I've packaged but have not had the time to possibly requ
 - [ ] Yubikey integration for login, sudo, and ssh. Useful wiki page [here](https://wiki.nixos.org/wiki/Yubikey), useful youtube video [here](https://www.youtube.com/watch?v=3CeXbONjIgE&t=329s&pp=ygUNbml4b3MgeXViaWtleQ%3D%3D). Should probably [buy the Yubikey](https://www.yubico.com/eg/product/yubikey-5-nano/) first.
 - [ ] Stylix
 ### Other
-- [ ] Track my nmconnection file for school wifi: /etc/NetworkManager/system-connections/waterloo-eduroam.nmconnection
+- [ ] Track my nmconnection file for school wifi: /etc/NetworkManager/system-connections/waterloo-eduroam.nmconnection (look into ensureProfiles options)
 - [ ] Get railsy to work
 - [ ] Preview pdfs in ranger
 - [ ] Fix single window screen share, both OBS and discord streaming only allow me to share the whole screen with all windows, may be a sway problem, worked fine on gnome I think
