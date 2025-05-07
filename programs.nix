@@ -83,6 +83,7 @@
     inputs.agenix.packages."${system}".default
   ];
   terminalTools = with pkgs; [
+    charm-freeze
     sshx
     starship
     p7zip
@@ -138,7 +139,6 @@
   ];
   officeTools = with pkgs; [
     xdg-utils
-    charm-freeze
     aerc # switch to port 465 for ssl outgoing
     drawio
     rtorrent
