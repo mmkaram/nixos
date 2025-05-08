@@ -141,13 +141,6 @@
       zoom-us
     ];
   };
-  users.users.testuser = {
-    isNormalUser = true;
-    home = "/home/testuser";
-    shell = pkgs.bash;
-    description = "testuser";
-    extraGroups = ["wheel"];
-  };
   users.defaultUserShell = pkgs.fish;
   programs.fish.enable = true;
   programs.zsh.enable = true;
