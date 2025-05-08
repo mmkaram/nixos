@@ -233,9 +233,7 @@
 
   # Enable polkit security to open gparted
   # gparted must be opened from root user
-  # security.polkit.enable = true;
-
-  services.gnome.gnome-keyring.enable = true;
+  security.polkit.enable = true;
 
   # age secrets manager
   age = import ./secrets/age.nix;
