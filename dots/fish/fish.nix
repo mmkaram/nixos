@@ -38,15 +38,21 @@
     hibernate = "systemctl hibernate";
   };
   shellInit = ''
+    # Set geminiAPI key as env var
     source /run/agenix/gemini
     fish_vi_key_bindings
-    # fish_default_key_bindings
+    # Disable greeting
     set -U fish_greeting
+    # Set env vars
     set PROG "/home/dd0k/prog"
     set NIX "/etc/nixos"
+    # Enable direnv in fish
     direnv hook fish | source
+    # Set alt+l to clear screen
     bind -e \el
     bind -M insert \el 'clear-screen'
+    # Set nvim as manpager
+    set -gx MANPAGER 'nvim +Man!'
   '';
 
   functions = {
