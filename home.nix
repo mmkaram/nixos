@@ -250,8 +250,7 @@
   };
 
   age.secrets = {};
-  home.sessionVariables = {
-  };
+  home.sessionVariables = {};
 
   programs.home-manager.enable = true;
 
