@@ -173,6 +173,12 @@
     remotePlay.openFirewall = true;
     dedicatedServer.openFirewall = true;
   };
+
+  programs.wireshark = {
+    enable = true;
+    package = pkgs.wireshark;
+  };
+
   services.kanata = {
     enable = true;
     keyboards.default = {
