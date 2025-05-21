@@ -237,6 +237,7 @@
 
   security.pam.u2f = {
     enable = true;
+    authFile = "/etc/nixos/u2f_keys";
     settings = {
       interactive = true;
       cue = true;
