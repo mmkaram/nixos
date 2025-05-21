@@ -233,6 +233,25 @@
 
   # yubikey/yubico
   services.pcscd.enable = true;
+  services.udev.packages = [pkgs.yubikey-personalization];
+
+  security.pam.u2f = {
+    enable = true;
+    settings = {
+      interactive = true;
+      cue = true;
+    };
+  };
+
+  security.pam.services = {
+    login.u2fAuth = true;
+    sudo.u2fAuth = true;
+  };
+
+  programs.gnupg.agent = {
+    enable = true;
+    enableSSHSupport = true;
+  };
 
   # Nix-ld to run unpatched dynamic binaries on NixOS
   programs.nix-ld.enable = true;
@@ -278,8 +297,4 @@
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
 }
