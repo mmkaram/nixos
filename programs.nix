@@ -136,7 +136,6 @@
     yubikey-touch-detector
     pam_u2f
     yubioath-flutter
-    yubikey-manager-qt
     yubikey-personalization-gui
     libu2f-host
   ];
