@@ -231,6 +231,9 @@
   # age secrets manager
   age = import ./secrets/age.nix;
 
+  # yubikey/yubico
+  services.pcscd.enable = true;
+
   # Nix-ld to run unpatched dynamic binaries on NixOS
   programs.nix-ld.enable = true;
 
