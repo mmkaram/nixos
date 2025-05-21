@@ -135,7 +135,12 @@
     isNormalUser = true;
     description = "dD0k";
     hashedPasswordFile = config.age.secrets.password.path;
-    extraGroups = ["users" "networkmanager" "wheel" "docker" "video" "libvirtd" "dialout" "uucp"];
+    # Groups
+    # esp32: dialout, uucp
+    # wireshark: wireshark
+    # docker: docker
+    # virt-man: libvirtd
+    extraGroups = ["users" "networkmanager" "wheel" "docker" "video" "libvirtd" "dialout" "uucp" "wireshark"];
     packages = with pkgs; [
       firefox
       zoom-us
