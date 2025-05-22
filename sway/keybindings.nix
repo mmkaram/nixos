@@ -3,7 +3,7 @@
   "Mod4+Shift+d" = "exec ${pkgs.dmenu}/bin/dmenu_path | ${pkgs.dmenu}/bin/dmenu | ${pkgs.findutils} bin/xargs swaymsg exec --";
   "Mod4+n" = "exec 'sublime'";
   "Ctrl+Shift+Escape" = "exec 'kitty btop'";
-  "Mod4+d" = "exec 'rofi -show filebrowser'";
+  "Mod4+d" = "exec 'exec kitty ranger'";
   "Mod4+Space" = "exec 'rofi -show drun'";
   "Mod4+p" = "exec 'rofimoji'";
   "Alt+Tab" = "exec 'rofi -show window'";
@@ -13,7 +13,6 @@
   "Mod4+Shift+S" = "exec 'systemctl hibernate'";
   "Mod4+Apostrophe" = "exec 'swaylock -c 145874 & systemctl suspend-then-hibernate'";
   "Mod4+Semicolon" = "exec 'swaylock -c 145874'";
-  "Mod4+s" = "exec 'exec kitty ranger'";
 
   # vol
   "Alt+Shift+Equal" = "exec pactl set-sink-volume @DEFAULT_SINK@ +5%";

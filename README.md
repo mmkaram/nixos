@@ -61,7 +61,6 @@ There are some programs I've packaged but have not had the time to possibly requ
 - [ ] Get the nixpkgs version of the Zen browser when it's up
 ### QoL
 - [ ] all fish functions only work the second time I run them
-- [ ] get rofi file browser to open reasonable defaults for specific filetypes
 - [ ] Cloud synced atuin
 ### Projects
 - [ ] Yubikey for agenix
