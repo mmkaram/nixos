@@ -251,7 +251,7 @@
     settings = {
       interactive = true;
       cue = true;
-      authFile = "/etc/nixos/u2f_keys";
+      authFile = "/etc/nixos/secrets/u2f_keys";
     };
   };
 
