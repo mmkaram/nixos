@@ -7,6 +7,7 @@
   "Mod4+Space" = "exec 'rofi -show drun'";
   "Mod4+p" = "exec 'rofimoji'";
   "Alt+Tab" = "exec 'rofi -show window'";
+  "Ctrl+Alt+v" = "exec 'cliphist list | rofi -dmenu | cliphist decode | wl-copy'";
   "Mod4+Return" = "exec kitty tmux";
   "Mod4+Shift+Return" = "exec kitty";
   "Mod4+a" = "exec pcmanfm";

@@ -41,6 +41,7 @@
 
   home.packages = with pkgs; [
     rofimoji
+    cliphist
     rofi-wayland
     oh-my-fish
     swaybg
@@ -127,6 +128,12 @@
     enable = true;
     package = pkgs.rofi-wayland;
     theme = "Arc-Dark";
+  };
+
+  services.cliphist = {
+    enable = true;
+    package = pkgs.cliphist;
+    allowImages = true;
   };
 
   programs.starship = {
