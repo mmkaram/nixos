@@ -181,6 +181,7 @@
     discord
   ];
   audioTools = with pkgs; [
+    ncspot
     spotify-player
     pulseaudio
     spotify
