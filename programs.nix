@@ -163,6 +163,7 @@
     zotero
     sublime
     ranger
+    yazi
     brightnessctl
     prusa-slicer
     gimp3
