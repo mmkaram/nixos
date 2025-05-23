@@ -62,6 +62,7 @@ There are some programs I've packaged but have not had the time to possibly requ
 ### QoL
 - [ ] all fish functions only work the second time I run them
 - [ ] Cloud synced atuin
+- [ ] Add declarative configuration for home EPSON printer
 ### Projects
 - [ ] Yubikey for agenix
 - [ ] Stylix
