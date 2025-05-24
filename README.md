@@ -61,7 +61,6 @@ There are some programs I've packaged but have not had the time to possibly requ
 - [ ] Get the nixpkgs version of the Zen browser when it's up
 - [ ] ncspot configuration (space to play pause, spotify client ID, build with cover)
 - [ ] mprocs
-- [ ] just
 ### QoL
 - [ ] all fish functions only work the second time I run them
 - [ ] Cloud synced atuin
@@ -69,6 +68,7 @@ There are some programs I've packaged but have not had the time to possibly requ
 ### Projects
 - [ ] Yubikey for agenix
 - [ ] Stylix
+- [ ] just
 ### Other
 - [ ] Track my nmconnection file for school wifi: /etc/NetworkManager/system-connections/waterloo-eduroam.nmconnection (look into ensureProfiles options)
 - [ ] Get railsy to work
