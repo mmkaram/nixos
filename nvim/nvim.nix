@@ -21,6 +21,12 @@ in {
     # vim-tpipeline
 
     # Util
+
+    {
+      plugin = mini-ai;
+      config = toLua "require('mini.ai').setup()";
+    }
+
     {
       plugin = which-key-nvim;
       config = toLuaFile ./whichkey.lua;
