@@ -88,6 +88,7 @@
     starship
     p7zip
     tmux
+    mprocs
     zoxide
     ripgrep
     tree
