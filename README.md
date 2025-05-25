@@ -69,6 +69,7 @@ There are some programs I've packaged but have not had the time to possibly requ
 - [ ] Yubikey for agenix
 - [ ] Stylix
 - [ ] just
+- [ ] wikiman
 ### Other
 - [ ] Track my nmconnection file for school wifi: /etc/NetworkManager/system-connections/waterloo-eduroam.nmconnection (look into ensureProfiles options)
 - [ ] Get railsy to work
