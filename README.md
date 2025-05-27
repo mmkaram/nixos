@@ -8,7 +8,6 @@ Ground up [nixos](https://www.nixos.org) configuration. Includes a lot of neovim
 - [Home Manager](#Home-Manager)
 - [Nvim](#Nvim)
 - [Packages](#Packages)
-- [Abbreviations](#Abbreviations)
 - [TODOs](#TODOs)
 
 <!-- /TOC -->
@@ -44,6 +43,7 @@ There are some programs I've packaged but have not had the time to possibly requ
 - [ ] Add declarative configuration for home EPSON printer
 ### Projects
 - [ ] Yubikey for agenix
+- [ ] Yubikey for luks
 - [ ] Stylix
 - [ ] just
 - [ ] Add nixos wiki to wikiman
@@ -51,4 +51,4 @@ There are some programs I've packaged but have not had the time to possibly requ
 - [ ] Track my nmconnection file for school wifi: /etc/NetworkManager/system-connections/waterloo-eduroam.nmconnection (look into ensureProfiles options)
 - [ ] Get railsy to work
 - [ ] Preview pdfs in ranger
-- [ ] Fix single window screen share, both OBS and discord streaming only allow me to share the whole screen with all windows, may be a sway problem, worked fine on gnome I think
+- [ ] Fix single window screensharing on discord and obs, worked fine on gnome
