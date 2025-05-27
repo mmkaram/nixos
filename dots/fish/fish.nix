@@ -16,12 +16,7 @@
 
     copy = "wl-copy";
     wifi = "nmtui";
-    dune-rebuild = "sudo nixos-rebuild switch --flake /etc/nixos#roci";
-    dune-update = "cd /etc/nixos && sudo nix flake update";
-    dune-delete-older-than = "sudo nix-collect-garbage --delete-older-than ";
-    dune-delete = "sudo nix-collect-garbage --delete-old";
 
-    up = "ping 8.8.8.8";
     space = "du -h -s";
     cls = "clear";
     r = "ranger";
