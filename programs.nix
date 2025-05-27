@@ -148,6 +148,7 @@
   officeTools = with pkgs; [
     wdisplays
     xdg-utils
+    thunderbird
     aerc # switch to port 465 for ssl outgoing
     drawio
     rtorrent
