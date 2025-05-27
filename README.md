@@ -29,19 +29,7 @@ Useful lua pages
 There are some programs I've packaged but have not had the time to possibly request adding them to nixpkgs. You can find them in the packages/ directory. To import them I import them in my [programs.nix](programs.nix) file which hosts the `enviorment.systemPackages` for my configuration.
 
 ## TODOs
-### Completed
-- [X] nvim tmux integration (pane switching)
-- [X] add rofi like app that can filter through open windows
-- [X] find out if kitty has built in pane support
-- [X] Secrets manager
-- [X] Implement nix-ld
-- [X] Implement nix-alien
-- [X] find a way to insert emojis
 ### Nvim
-- [X] Use virtual lines for error messsages
-- [X] Avante.nvim
-- [X] Go back to upstream neo-tree-nvim when 2025-03-27/31 is live
-- [X] mini.ai
 - [ ] [Flash.nvim](https://youtu.be/eJ3XV-3uoug?si=UxFJs2Xk0Ve6PXTc)
 - [ ] Update octo-nvim when it isn't broken. borked ver: 2025/04/24
 - [ ] vimTex
@@ -50,7 +38,6 @@ There are some programs I've packaged but have not had the time to possibly requ
 - [ ] Get the file explorer in nvim to show hidden files (preferably make it a shortcut to toggle)
 - [ ] Obsidian is still kinda borked with nvim
 ### Updates
-- [X] update gimp (3.X.X)
 - [ ] update @prisma/language-server when fixed, currently broken on nixpkgs
 - [ ] update iamb (cur 0.10) to a version that supports images
 - [ ] Get the nixpkgs version of the Zen browser when it's up
