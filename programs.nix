@@ -146,6 +146,7 @@
     speedcrunch
   ];
   officeTools = with pkgs; [
+    wdisplays
     xdg-utils
     aerc # switch to port 465 for ssl outgoing
     drawio
