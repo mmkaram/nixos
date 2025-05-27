@@ -266,11 +266,11 @@
   security.pam.services = {
     login = {
       u2fAuth = true;
-      unixAuth = false;
+      # unixAuth = false;
     };
     sudo = {
       u2fAuth = true;
-      unixAuth = false;
+      # unixAuth = false;
     };
   };
 
