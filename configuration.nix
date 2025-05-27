@@ -103,6 +103,8 @@
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
+
+  # Avahi for mDNS
   services.avahi = {
     enable = true;
     nssmdns4 = true;
