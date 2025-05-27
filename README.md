@@ -30,7 +30,6 @@ There are some programs I've packaged but have not had the time to possibly requ
 
 ## TODOs
 ### Nvim
-- [ ] [Flash.nvim](https://youtu.be/eJ3XV-3uoug?si=UxFJs2Xk0Ve6PXTc)
 - [ ] Update octo-nvim when it isn't broken. borked ver: 2025/04/24
 - [ ] vimTex
 - [ ] nvim debugger

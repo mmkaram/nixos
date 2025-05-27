@@ -118,3 +118,8 @@ end
 
 -- Markdown
 map_key("n", "<leader>md", ":Markview splitToggle<CR>", { desc = "Toggle markdown view" })
+
+-- Flash
+map_key({ "n", "x", "o" }, "s", function()
+	require("flash").jump()
+end, { desc = "Flash Jump" })

@@ -23,6 +23,11 @@ in {
     # Util
 
     {
+      plugin = flash-nvim;
+      config = toLua "require('flash').setup({})";
+    }
+
+    {
       plugin = mini-ai;
       config = toLua "require('mini.ai').setup()";
     }
