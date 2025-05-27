@@ -68,6 +68,7 @@
     nil
   ];
   devTools = with pkgs; [
+    just
     wineWowPackages.stable
     winetricks
     hoppscotch # api ednpoint client
