@@ -64,6 +64,7 @@ There are some programs I've packaged but have not had the time to possibly requ
 - [ ] Stylix
 - [ ] just
 - [ ] Add nixos wiki to wikiman
+- [ ] make sudo require yubikey and nothing else, [AI guidance](https://t3.chat/chat/ca5054b9-6fdd-4418-a9b3-cb78d0d20677)
 ### Other
 - [ ] Track my nmconnection file for school wifi: /etc/NetworkManager/system-connections/waterloo-eduroam.nmconnection (look into ensureProfiles options)
 - [ ] Get railsy to work
