@@ -69,8 +69,6 @@
   ];
   devTools = with pkgs; [
     just
-    wineWowPackages.stable
-    winetricks
     hoppscotch # api ednpoint client
     atac # TUI api endpoint client
     serie # git graph
