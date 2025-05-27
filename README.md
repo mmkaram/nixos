@@ -33,9 +33,6 @@ There are some programs I've packaged but have not had the time to possibly requ
 - [ ] Update octo-nvim when it isn't broken. borked ver: 2025/04/24
 - [ ] vimTex
 - [ ] nvim debugger
-- [ ] js/ts lsp diagnostics only show errors/warnings in open files
-- [ ] Get the file explorer in nvim to show hidden files (preferably make it a shortcut to toggle)
-- [ ] Obsidian is still kinda borked with nvim
 ### Updates
 - [ ] update @prisma/language-server when fixed, currently broken on nixpkgs
 - [ ] update iamb (cur 0.10) to a version that supports images
