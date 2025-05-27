@@ -128,7 +128,6 @@
   games = with pkgs; [
     prismlauncher
     steam
-    lutris
   ];
   yubikeyTools = with pkgs; [
     yubikey-manager
