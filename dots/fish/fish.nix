@@ -49,6 +49,9 @@
     bind -M insert \el 'clear-screen'
     # Set nvim as manpager
     set -gx MANPAGER 'nvim +Man!'
+    # call functions once because they only work on the second run
+    devshell
+    gclone
   '';
 
   functions = {
