@@ -142,6 +142,7 @@
     libu2f-host
   ];
   desktopTools = with pkgs; [
+    pavucontrol
     dunst
     wl-clipboard
     wpa_supplicant
