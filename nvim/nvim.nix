@@ -44,12 +44,12 @@ in {
 
     {
       plugin = mini-surround;
-      config = toLuaFile ./mini-surround.lua;
+      config = toLua "require('mini.surround').setup()";
     }
 
     {
       plugin = trouble-nvim;
-      config = toLuaFile ./trouble.lua;
+      config = toLua "require('trouble')";
     }
 
     {
@@ -119,7 +119,7 @@ in {
     # TODO: Uncomment when not broken in nixpkgs
     # {
     #   plugin = octo-nvim;
-    #   config = toLuaFile ./octo.lua;
+    #   config = toLua "require('octo').setup()"
     # }
     undotree
     {
