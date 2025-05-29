@@ -14,3 +14,6 @@ update:
 
 delete:
 	just/delete-old-flake.sh
+
+history:
+	sudo nixos-rebuild list-generations
