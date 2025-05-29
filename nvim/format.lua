@@ -17,6 +17,7 @@ require("conform").setup({
 		nix = { "alejandra" },
 		cpp = { "clang-format" },
 		prisma = { "prisma_fmt" },
+		svelte = { "prettierd" },
 	},
 })
 
