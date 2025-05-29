@@ -41,6 +41,14 @@ local jsset = {
 		}),
 		-- r(1)
 	}),
+	-- Svelte
+	s("load", {
+		t("import type { PageLoad } from './$types';"),
+		t(""), -- Empty line
+		t("export const load: PageLoad = async ({ params }) => {"),
+		i(1), -- Optional: An insert node for content inside the load function
+		t("}"),
+	}),
 }
 
 ls.add_snippets("typescriptreact", jsset)
@@ -71,6 +79,7 @@ ls.add_snippets("markdown", {
 			]],
 			{
 				title = i(1, "exampleTitle"),
+				-- TODO: Dynamic date
 				date = i(2, "YYYY-MM-DD"),
 				draft = i(3, "bool"),
 				summary = i(4, "summary"),
