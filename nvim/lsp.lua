@@ -32,6 +32,13 @@ local settings = {
 		},
 	},
 
+	-- Svelte
+	svelte = {
+		cmd = { "svelteserver", "--stdio" },
+		filetypes = { "svelte" },
+		highlight = { enable = true },
+	},
+
 	-- prisma
 	prismals = {
 		cmd = { "npx", "prisma-language-server", "--stdio" },

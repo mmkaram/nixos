@@ -27,6 +27,8 @@
     # Install through npm per project, broken on nixpkgs
     # nodePackages_latest."@prisma/language-server"
     prisma-engines
+    # svelte
+    svelte-language-server
   ];
   luaTools = with pkgs; [
     lua

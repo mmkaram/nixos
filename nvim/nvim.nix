@@ -202,9 +202,11 @@ in {
       p.tree-sitter-cpp
       p.tree-sitter-sql
       p.tree-sitter-prisma
+      p.tree-sitter-svelte
     ]))
     vim-prisma
     vim-nix
+    vim-svelte
     cmp_luasnip
   ];
   viAlias = true;
