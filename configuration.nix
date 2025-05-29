@@ -48,6 +48,7 @@
   networking.hostName = "Rocinante";
   networking.networkmanager.enable = true;
   hardware.bluetooth.enable = true;
+  services.blueman.enable = true;
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   # Network proxy Confugration
   # networking.proxy.default = "http://user:password@proxy:port/";
