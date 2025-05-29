@@ -18,6 +18,7 @@
     du-dust
   ];
   webTools = with pkgs; [
+    nodejs
     tailwindcss-language-server
     nodePackages.tailwindcss
     typescript
