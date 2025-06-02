@@ -193,7 +193,6 @@
   ];
   browsingTools = with pkgs; [
     inputs.zen-browser.packages."${system}".default
-    microsoft-edge
     wiki-tui
     wikiman
   ];
