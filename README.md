@@ -29,7 +29,6 @@ There are some programs I've packaged but have not had the time to possibly requ
 
 ## TODOs
 ### Nvim
-- [ ] Update octo-nvim when it isn't broken. borked ver: 2025/04/24
 - [ ] vimTex
 - [ ] nvim debugger
 ### Updates

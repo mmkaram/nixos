@@ -116,11 +116,10 @@ in {
       plugin = lazygit-nvim;
       config = toLuaFile ../nvim/lazygit.lua;
     }
-    # TODO: Uncomment when not broken in nixpkgs
-    # {
-    #   plugin = octo-nvim;
-    #   config = toLua "require('octo').setup()"
-    # }
+    {
+      plugin = octo-nvim;
+      config = toLua "require('octo').setup()";
+    }
     undotree
     {
       plugin = gitsigns-nvim;
