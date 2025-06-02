@@ -36,16 +36,13 @@ There are some programs I've packaged but have not had the time to possibly requ
 - [ ] update @prisma/language-server when fixed, currently broken on nixpkgs
 - [ ] update iamb (cur 0.10) to a version that supports images
 - [ ] Get the nixpkgs version of the Zen browser when it's up
-- [ ] ncspot configuration (space to play pause, spotify client ID, build with cover)
 ### QoL
-- [ ] all fish functions only work the second time I run them
 - [ ] Cloud synced atuin
 - [ ] Add declarative configuration for home EPSON printer
 ### Projects
 - [ ] Yubikey for agenix
 - [ ] Yubikey for luks
 - [ ] Stylix
-- [ ] just
 - [ ] Add nixos wiki to wikiman
 ### Other
 - [ ] Track my nmconnection file for school wifi: /etc/NetworkManager/system-connections/waterloo-eduroam.nmconnection (look into ensureProfiles options)
