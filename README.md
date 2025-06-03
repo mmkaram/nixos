@@ -36,6 +36,7 @@ There are some programs I've packaged but have not had the time to possibly requ
 - [ ] update iamb (cur 0.10) to a version that supports images
 - [ ] Get the nixpkgs version of the Zen browser when it's up
 ### QoL
+- [ ] Get nm-applet to open on startup
 - [ ] Cloud synced atuin
 - [ ] Add declarative configuration for home EPSON printer
 ### Projects
