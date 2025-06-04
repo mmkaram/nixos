@@ -7,13 +7,13 @@ rebuild-pre:
 
 rebuild:
 	just rebuild-pre
-	just/rebuild-flake.sh
+	scripts/rebuild-flake.sh
 
 update:
-	just/update-flake.sh
+	scripts/update-flake.sh
 
 delete:
-	just/delete-old-flake.sh
+	scripts/delete-old-flake.sh
 
 history:
 	sudo nixos-rebuild list-generations
