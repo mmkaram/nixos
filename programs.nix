@@ -142,6 +142,7 @@
     libu2f-host
   ];
   desktopTools = with pkgs; [
+    networkmanagerapplet
     pavucontrol
     dunst
     wl-clipboard
