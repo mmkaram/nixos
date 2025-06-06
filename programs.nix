@@ -85,6 +85,7 @@
     inputs.agenix.packages."${system}".default
   ];
   terminalTools = with pkgs; [
+    caligula
     charm-freeze
     sshx
     starship
