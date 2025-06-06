@@ -252,6 +252,13 @@
     enable = true;
   };
 
+  programs.mpv = {
+    enable = true;
+    config = {
+      vo = "x11";
+    };
+  };
+
   home.file = {
     ".config/iamb/config.toml".source = ./dots/iamb/config.toml;
     ".config/ghostty/config".source = ./dots/ghostty/config;
