@@ -174,6 +174,7 @@
     brightnessctl
     prusa-slicer
     gimp3
+    darktable
     vlc
     mpv
     feh # img viewer
