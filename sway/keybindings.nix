@@ -3,7 +3,7 @@
   "Mod4+Shift+d" = "exec ${pkgs.dmenu}/bin/dmenu_path | ${pkgs.dmenu}/bin/dmenu | ${pkgs.findutils} bin/xargs swaymsg exec --";
   "Mod4+n" = "exec 'sublime'";
   "Ctrl+Shift+Escape" = "exec 'kitty btop'";
-  "Mod4+d" = "exec 'exec kitty ranger'";
+  "Mod4+d" = "exec 'exec pcmanfm'";
   "Mod4+s" = "exec 'exec kitty yazi'";
   "Mod4+Space" = "exec 'rofi -show drun'";
   "Mod4+p" = "exec 'rofimoji'";
