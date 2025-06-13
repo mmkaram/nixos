@@ -143,6 +143,7 @@
     libu2f-host
   ];
   desktopTools = with pkgs; [
+    udiskie
     networkmanagerapplet
     pavucontrol
     dunst

@@ -111,6 +111,7 @@
       exec "sway-audio-idle-inhibit"
       exec "swayidle timeout 420 'swaylock -c 145874' timeout 660 'systemctl sleep' timeout 900 'systemctl suspend-then-hibernate'"
       exec "nm-applet"
+      exec "udiskie"
     '';
   };
 

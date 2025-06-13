@@ -37,6 +37,10 @@
   # Fingerprint
   services.fprintd = import ./dots/fprintd/fprintd.nix pkgs;
 
+  # Automount
+  services.udisks2.enable = true;
+  services.gvfs.enable = true; # For integration with file managers
+
   ##############################################################
   #  _   _   _____   _____  __        __   ___    ____    _  __#
   # | \ | | | ____| |_   _| \ \      / /  / _ \  |  _ \  | |/ /#
