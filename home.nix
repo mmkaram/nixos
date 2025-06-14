@@ -8,35 +8,47 @@
   home.stateVersion = "24.11";
 
   accounts.email = {
-    accounts.Kernel = {
-      primary = true;
-      userName = "mahdymkaram@gmail.com";
+    maildirBasePath = "Maildir";
+
+    accounts.outlook = {
+      address = "mahdykaram@outlook.com";
+      userName = "mahdykaram@outlook.com";
       realName = "Mahdy Karam";
-      flavor = "gmail.com";
+      primary = true;
+
       imap = {
-        host = "imap.gmail.com";
+        host = "imap-mail.outlook.com";
         port = 993;
-        tls = {
-          enable = true;
-          useStartTls = false;
-        };
+        tls.enable = true;
       };
+
       smtp = {
-        host = "smtp.gmail.com";
+        host = "smtp-mail.outlook.com";
         port = 587;
-        tls = {
-          enable = true;
-          useStartTls = true;
-        };
+        tls.enable = true; # STARTTLS
       };
-      mbsync = {
-        enable = true;
-        create = "maildr";
-      };
+
+      # Use a password command, e.g., from pass or gnome-keyring
+      passwordCommand = "echo ThisWontWorkAnywayBecauseItIsntOAuth2";
+
+      neomutt.enable = true;
       msmtp.enable = true;
-      notmuch.enable = true;
-      address = "mahdymkaram@gmail.com";
+      mbsync.enable = true;
+
+      folders = {
+        inbox = "INBOX";
+        sent = "Sent";
+        trash = "Deleted";
+        drafts = "Drafts";
+      };
     };
+  };
+  programs.msmtp.enable = true;
+  programs.mbsync.enable = true;
+
+  programs.neomutt = {
+    enable = true;
+    vimKeys = false;
   };
 
   home.packages = with pkgs; [
