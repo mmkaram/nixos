@@ -165,6 +165,7 @@
     tealdeer
     localsend
     obs-studio
+    audacity
     pcmanfm
     impression
     xournalpp

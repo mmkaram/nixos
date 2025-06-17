@@ -36,7 +36,6 @@ There are some programs I've packaged but have not had the time to possibly requ
 - [ ] update iamb (cur 0.10) to a version that supports images
 - [ ] Get the nixpkgs version of the Zen browser when it's up
 ### QoL
-- [ ] Get nm-applet to open on startup
 - [ ] Cloud synced atuin
 - [ ] Add declarative configuration for home EPSON printer
 ### Projects
@@ -46,6 +45,4 @@ There are some programs I've packaged but have not had the time to possibly requ
 - [ ] Add nixos wiki to wikiman
 ### Other
 - [ ] Track my nmconnection file for school wifi: /etc/NetworkManager/system-connections/waterloo-eduroam.nmconnection (look into ensureProfiles options)
-- [ ] Get railsy to work
-- [ ] Preview pdfs in ranger
 - [ ] Fix single window screensharing on discord and obs, worked fine on gnome
