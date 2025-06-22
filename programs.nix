@@ -130,6 +130,7 @@
     ifuse
   ];
   games = with pkgs; [
+    tetrio-desktop
     prismlauncher
     steam
   ];
