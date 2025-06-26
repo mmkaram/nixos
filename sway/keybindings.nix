@@ -34,7 +34,7 @@
   "Alt+Shift+0" = "exec 'brightnessctl set 5%+'";
 
   # screen
-  "Print" = "exec 'shotman --capture region'";
+  "Print" = "exec 'flameshot gui'";
 
   # New keybindings
   "Mod4+0" = "workspace number 10";

@@ -52,6 +52,7 @@
   };
 
   home.packages = with pkgs; [
+    flameshot
     rofimoji
     cliphist
     rofi-wayland
@@ -59,7 +60,6 @@
     swaybg
     dmenu
     playerctl
-    shotman
     fd
     sway-audio-idle-inhibit
     waybar
@@ -270,6 +270,10 @@
     config = {
       vo = "x11";
     };
+  };
+
+  services.flameshot = {
+    enable = true;
   };
 
   home.file = {
