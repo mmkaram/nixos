@@ -237,10 +237,8 @@
   programs.neovim = import ./nvim/nvim.nix {inherit pkgs;};
 
   age.secrets = {
-    spotifyClientId = {
-      file = ./secrets/secret1.age;
-    };
   };
+
   programs.spotify-player = {
     enable = true;
     settings = {
