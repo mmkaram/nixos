@@ -30,7 +30,7 @@
     inputs.home-manager.nixosModules.default
   ];
 
-  # Bootloader.
+  # Bootloader
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
@@ -324,7 +324,6 @@
   #  \___/  |_| \_|  \___/  |____/  |_____| |____/ #
   ##################################################
   # Unused
-  # Auto optimization - delete old builds
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
