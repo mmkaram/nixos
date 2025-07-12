@@ -57,10 +57,10 @@ in {
       config = toLua "require('tmux').setup()";
     }
 
-    {
-      plugin = obsidian-nvim;
-      config = toLuaFile ./obsidian.lua;
-    }
+    # {
+    #   plugin = obsidian-nvim;
+    #   config = toLuaFile ./obsidian.lua;
+    # }
 
     {
       plugin = neo-tree-nvim;
