@@ -72,7 +72,7 @@ end
 local git_maps = {
 	{ "n", "<leader>lh", ":Git preview_hunk<CR>", desc = "Preview git hunk" },
 	{ "n", "<leader>lb", ":Telescope git_branches<CR>", desc = "Git branches" },
-	{ "n", "<leader>lg", "<Leader>lg", desc = "Lazy Git" },
+	{ "n", "<leader>lg", ":LazyGit<CR>", desc = "Lazy Git" },
 }
 
 for _, map in ipairs(git_maps) do
