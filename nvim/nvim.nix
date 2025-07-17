@@ -112,10 +112,7 @@ in {
       config = toLua "require('zen-mode').setup()";
     }
     # Git
-    {
-      plugin = lazygit-nvim;
-      config = toLuaFile ../nvim/lazygit.lua;
-    }
+    lazygit-nvim
     {
       plugin = octo-nvim;
       config = toLua "require('octo').setup()";
