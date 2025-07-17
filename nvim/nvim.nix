@@ -44,7 +44,7 @@ in {
 
     {
       plugin = mini-surround;
-      config = toLua "require('mini.surround').setup()";
+      config = toLuaFile ./surround.lua;
     }
 
     {
