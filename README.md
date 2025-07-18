@@ -39,6 +39,7 @@ There are some programs I've packaged but have not had the time to possibly requ
 - [ ] Cloud synced atuin
 - [ ] Add declarative configuration for home EPSON printer
 ### Projects
+- [ ] Nix flatpak
 - [ ] Yubikey for agenix
 - [ ] Yubikey for luks
 - [ ] Stylix
