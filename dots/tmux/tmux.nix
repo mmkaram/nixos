@@ -66,6 +66,9 @@
     bind-key -n M-8 select-window -t 8
     bind-key -n M-9 select-window -t 9
 
+    # Create new session
+    bind-key g run-shell 'tmux new-session -d -s "session_$(date +%s)"'
+
     set -ga terminal-overrides ',*:Ss=\E[%p1%d q:Se=\E[2 q'
 
     # TODO: Add ctrl + [ for copy paste mode
