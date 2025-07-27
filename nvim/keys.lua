@@ -8,6 +8,7 @@ end
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.g.mapleader = " "
+vim.o.signcolumn = "yes"
 
 -- Telescope configuration
 require("telescope").setup({
