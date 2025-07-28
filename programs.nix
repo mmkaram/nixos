@@ -178,6 +178,8 @@
     brightnessctl
     prusa-slicer
     gimp3
+    converseen
+    kdePackages.kdenlive
     darktable
     vlc
     mpv
@@ -185,6 +187,7 @@
   ];
   communicationTools = with pkgs; [
     yt-dlp
+    pipeline
     element-desktop
     cinny-desktop
     iamb
