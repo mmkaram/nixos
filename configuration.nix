@@ -300,6 +300,12 @@
   programs.localsend.enable = true;
   programs.localsend.openFirewall = true;
 
+  # Enable mullvad vpn
+  services.mullvad-vpn = {
+    enable = true;
+    package = pkgs.mullvad-vpn;
+  };
+
   # Allow 16MB for max perf locked memory
   boot.kernel.sysctl = {
     "kernel.perf_event_mlock_kb" = 16 * 1024;
