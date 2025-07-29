@@ -178,6 +178,8 @@
     brightnessctl
     prusa-slicer
     gimp3
+    imagemagick
+    ghostscript
     converseen
     kdePackages.kdenlive
     darktable
