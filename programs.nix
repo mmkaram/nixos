@@ -72,6 +72,7 @@
   ];
   devTools = with pkgs; [
     just
+    hurl
     hoppscotch # api ednpoint client
     atac # TUI api endpoint client
     serie # git graph
