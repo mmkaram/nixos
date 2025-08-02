@@ -168,10 +168,6 @@ in {
 
     # LSP
     {
-      plugin = avante-nvim;
-      config = toLuaFile ./avante.lua;
-    }
-    {
       plugin = codecompanion-nvim;
       config = toLuaFile ./companion.lua;
     }

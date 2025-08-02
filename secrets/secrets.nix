@@ -3,6 +3,5 @@ let
 ";
 in {
   "password.age".publicKeys = [dd0k];
-  "gemini.age".publicKeys = [dd0k];
   "openrouter.age".publicKeys = [dd0k];
 }

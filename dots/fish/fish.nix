@@ -34,8 +34,6 @@
     hibernate = "systemctl hibernate";
   };
   shellInit = ''
-    # Set geminiAPI key as env var
-    source /run/agenix/gemini
     fish_vi_key_bindings
     # Disable greeting
     set -U fish_greeting

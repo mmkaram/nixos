@@ -7,13 +7,6 @@
       group = "users";
       mode = "600";
     };
-    gemini = {
-      file = ./gemini.age;
-      path = "/run/agenix/gemini";
-      owner = "dd0k";
-      group = "users";
-      mode = "600";
-    };
     openrouter = {
       file = ./openrouter.age;
       path = "/run/agenix/openrouter";
