@@ -14,5 +14,12 @@
       group = "users";
       mode = "600";
     };
+    openrouter = {
+      file = ./openrouter.age;
+      path = "/run/agenix/openrouter";
+      owner = "dd0k";
+      group = "users";
+      mode = "600";
+    };
   };
 }

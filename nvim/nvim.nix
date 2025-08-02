@@ -172,6 +172,10 @@ in {
       config = toLuaFile ./avante.lua;
     }
     {
+      plugin = codecompanion-nvim;
+      config = toLuaFile ./companion.lua;
+    }
+    {
       plugin = nvim-cmp;
       config = toLuaFile ../nvim/completion.lua;
     }
@@ -199,6 +203,7 @@ in {
       p.tree-sitter-sql
       p.tree-sitter-prisma
       p.tree-sitter-svelte
+      p.tree-sitter-yaml
     ]))
     vim-prisma
     vim-nix
