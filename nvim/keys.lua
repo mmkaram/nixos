@@ -125,3 +125,13 @@ map_key("n", "<leader>md", ":Markview splitToggle<CR>", { desc = "Toggle markdow
 map_key({ "n", "x", "o" }, "s", function()
 	require("flash").jump()
 end, { desc = "Flash Jump" })
+
+-- CodeCompanion
+local companion = {
+	{ "n", "<leader>aa", ":CodeCompanionChat Toggle", desc = "Toggle CodeCompanionChat" },
+	{ "n", "<leader>ai", ":CodeCompanion", desc = "Toggle CodeCompanionInline" },
+}
+
+for _, map in ipairs(companion) do
+	map_key(unpack(map))
+end
