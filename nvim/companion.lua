@@ -1,3 +1,4 @@
+local model = "qwen/qwen3-coder:free"
 require("codecompanion").setup({
 	strategies = {
 		chat = {
@@ -17,7 +18,7 @@ require("codecompanion").setup({
 				},
 				schema = {
 					model = {
-						default = "qwen/qwen3-coder",
+						default = model,
 					},
 				},
 			})
