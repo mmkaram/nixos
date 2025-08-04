@@ -19,6 +19,14 @@ require("codecompanion").setup({
 				schema = {
 					model = {
 						default = model,
+						choices = {
+
+							"qwen/qwen3-coder:free",
+							"qwen/qwen3-coder",
+							"openrouter/horizon-beta",
+							"google/gemini-2.5-flash",
+							"openai/gpt-4.1",
+						},
 					},
 				},
 			})

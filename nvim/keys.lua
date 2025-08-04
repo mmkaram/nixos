@@ -129,7 +129,9 @@ end, { desc = "Flash Jump" })
 -- CodeCompanion
 local companion = {
 	{ "n", "<leader>aa", ":CodeCompanionChat Toggle<CR>", desc = "Toggle CodeCompanionChat" },
-	{ "n", "<leader>ai", ":CodeCompanion<CR>", desc = "Toggle CodeCompanionInline" },
+	{ "n", "<leader>an", ":CodeCompanionChat<CR>", desc = "New CodeCompanionChat" },
+	{ "n", "<leader>ao", ":CodeCompanionActions<CR>", desc = "New CodeCompanionActions" },
+	{ { "n", "v" }, "<leader>ai", ":CodeCompanion<CR>", desc = "Toggle CodeCompanionInline" },
 }
 
 for _, map in ipairs(companion) do
