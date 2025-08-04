@@ -79,6 +79,7 @@
     qbittorrent
     inetutils
     popsicle
+    caligula
     ffmpeg
     qemu # Virtualizer
     docker
