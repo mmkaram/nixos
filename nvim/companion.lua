@@ -1,4 +1,4 @@
-local model = "qwen/qwen3-coder:free"
+local model = "qwen/qwen3-coder"
 require("codecompanion").setup({
 	strategies = {
 		chat = {
@@ -20,8 +20,6 @@ require("codecompanion").setup({
 					model = {
 						default = model,
 						choices = {
-
-							"qwen/qwen3-coder:free",
 							"qwen/qwen3-coder",
 							"openrouter/horizon-beta",
 							"google/gemini-2.5-flash",
