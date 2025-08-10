@@ -141,7 +141,7 @@ in {
     americano
 
     # Buffer management
-    vim-unimpaired
+    # vim-unimpaired
     {
       plugin = bufferline-nvim;
       config = toLuaFile ../nvim/bufferline.lua;
