@@ -194,15 +194,18 @@
     enable = true;
     userName = "mmkaram";
     userEmail = "mahdykaram@outlook.com";
-    signing = {
-      format = "ssh";
-      key = "~/.ssh/id_ed25519_sk";
-      signByDefault = true;
-    };
+    # signing = {
+    #   format = "ssh";
+    #   key = "~/.ssh/id_ed25519_sk";
+    #   signByDefault = true;
+    # };
     extraConfig.init = {
       defaultBranch = "main";
       safe.directory = "/etc/nixos";
       push.autoSetupRemote = true;
+      gpg.format = "ssh";
+      user.signingkey = "~/.ssh/id_ed25519_sk";
+      commit.gpgSign = true;
     };
   };
 
