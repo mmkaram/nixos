@@ -194,6 +194,11 @@
     enable = true;
     userName = "mmkaram";
     userEmail = "mahdykaram@outlook.com";
+    signing = {
+      format = "ssh";
+      key = "~/.ssh/id_ed25519_sk";
+      signByDefault = true;
+    };
     extraConfig.init = {
       defaultBranch = "main";
       safe.directory = "/etc/nixos";
