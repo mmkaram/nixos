@@ -71,6 +71,7 @@
     nil
   ];
   devTools = with pkgs; [
+    opencode
     just
     hurl
     hoppscotch # api ednpoint client
