@@ -13,7 +13,7 @@
     lldb
     rustc
     rustfmt
-    rust-analyzer
+    # rust-analyzer
     cargo
     du-dust
   ];
@@ -143,7 +143,6 @@
     yubikey-touch-detector
     pam_u2f
     yubioath-flutter
-    yubikey-personalization-gui
     libu2f-host
   ];
   desktopTools = with pkgs; [
@@ -162,7 +161,7 @@
     thunderbird
     neomutt
     aerc # switch to port 465 for ssl outgoing
-    drawio
+    # drawio
     rtorrent
     rsync
     calibre
@@ -194,7 +193,6 @@
     yt-dlp
     pipeline
     element-desktop
-    cinny-desktop
     iamb
     slack
     beeper
