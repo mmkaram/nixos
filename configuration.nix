@@ -283,6 +283,9 @@
   programs.gnupg.agent = {
     enable = true;
     enableSSHSupport = true;
+    scdaemonSettings = {
+      disable-ccid = true;
+    };
   };
 
   # Nix-ld to run unpatched dynamic binaries on NixOS
