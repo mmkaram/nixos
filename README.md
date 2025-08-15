@@ -40,6 +40,7 @@ There are some programs I've packaged but have not had the time to possibly requ
 ### QoL
 - [ ] Cloud synced atuin
 - [ ] Add declarative configuration for home EPSON printer
+- [ ] Get yubico authenticator app to open on startup and hide window
 ### Projects
 - [ ] Nix flatpak
 - [ ] Yubikey for agenix
