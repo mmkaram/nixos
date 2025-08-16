@@ -283,8 +283,8 @@
   programs.gnupg.agent = {
     enable = true;
     enableSSHSupport = true;
-    scdaemonSettings = {
-      disable-ccid = true;
+    settings = {
+      disable-scdaemon = true;
     };
   };
 
