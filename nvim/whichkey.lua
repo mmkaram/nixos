@@ -1,4 +1,3 @@
--- Add this to your plugin configuration
 require("which-key").setup({
 	-- Basic configuration
 	plugins = {
