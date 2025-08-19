@@ -18,6 +18,7 @@
     du-dust
   ];
   webTools = with pkgs; [
+    wrangler
     nodejs
     tailwindcss-language-server
     nodePackages.tailwindcss
