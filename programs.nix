@@ -203,6 +203,7 @@
     spotify-player
     pulseaudio
     spotify
+    tidal-hifi
   ];
   browsingTools = with pkgs; [
     inputs.zen-browser.packages."${system}".default
