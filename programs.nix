@@ -72,6 +72,9 @@
     nil
   ];
   devTools = with pkgs; [
+    typst
+    typstyle
+    tinymist # LSP for typst
     opencode
     just
     hurl

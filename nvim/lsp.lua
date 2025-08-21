@@ -109,6 +109,15 @@ local settings = {
 			},
 		},
 	},
+	tinymist = {
+		cmd = { "tinymist" },
+		filetypes = { "typst" },
+		settings = {
+			formatterMode = "typstyle",
+			exportPdf = "never",
+		},
+	},
+
 	lua_ls = {
 		cmd = { "lua-language-server" },
 		settings = {
