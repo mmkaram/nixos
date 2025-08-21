@@ -200,6 +200,7 @@ in {
       p.tree-sitter-prisma
       p.tree-sitter-svelte
       p.tree-sitter-yaml
+      p.tree-sitter-typst
     ]))
     vim-prisma
     vim-nix
