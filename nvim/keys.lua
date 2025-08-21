@@ -120,6 +120,7 @@ end
 
 -- Markdown
 map_key("n", "<leader>md", ":Markview splitToggle<CR>", { desc = "Toggle markdown view" })
+map_key("n", "<leader>mt", ":Markview toggle<CR>", { desc = "Toggle markdown preview" })
 
 -- Flash
 map_key({ "n", "x", "o" }, "s", function()
