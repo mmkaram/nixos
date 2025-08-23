@@ -23,6 +23,7 @@
     y = "yazi";
     py = "python3";
     l = "eza -lh";
+    lg = "eza --git-repos";
     el = "eza --git-repos -h -l -all";
     sp = "spotify_player";
     ff = "fastfetch";
