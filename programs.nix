@@ -77,7 +77,6 @@
     tinymist # LSP for typst
     opencode
     just
-    hurl
     hoppscotch # api ednpoint client
     atac # TUI api endpoint client
     serie # git graph
