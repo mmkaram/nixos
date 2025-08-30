@@ -38,6 +38,7 @@ There are some programs I've packaged but have not had the time to possibly requ
 - [ ] Get the nixpkgs version of the Zen browser when it's up
 - [ ] Add rust analyzer when not borked
 - [ ] Add drawio when not borked
+- [ ] Add hurl when not borked
 ### QoL
 - [ ] Cloud synced atuin
 - [ ] Add declarative configuration for home EPSON printer
