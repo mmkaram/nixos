@@ -184,6 +184,7 @@
     prusa-slicer
     gimp3
     imagemagick
+    switcheroo
     ghostscript
     converseen
     kdePackages.kdenlive
