@@ -48,7 +48,6 @@ There are some programs I've packaged but have not had the time to possibly requ
 - [ ] Yubikey for agenix
 - [ ] Yubikey for luks
 - [ ] Stylix
-- [ ] Add nixos wiki to wikiman
 ### Other
 - [ ] Track my nmconnection file for school wifi: /etc/NetworkManager/system-connections/waterloo-eduroam.nmconnection (look into ensureProfiles options)
 - [ ] Fix single window screensharing on discord and obs, worked fine on gnome
