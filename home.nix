@@ -107,7 +107,7 @@
       };
       output = {
         "*" = {
-          bg = "/etc/nixos/misc/Open.png fill";
+          bg = "/etc/nixos/misc/Pyramids.jpg fill";
         };
       };
       startup = [
