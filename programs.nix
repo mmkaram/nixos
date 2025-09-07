@@ -211,6 +211,7 @@
   ];
   browsingTools = with pkgs; [
     inputs.zen-browser.packages."${system}".default
+    ungoogled-chromium
     wiki-tui
     wikiman
   ];
