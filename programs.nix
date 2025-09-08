@@ -211,6 +211,7 @@
   ];
   browsingTools = with pkgs; [
     inputs.zen-browser.packages."${system}".default
+    bitwarden-desktop
     ungoogled-chromium
     wiki-tui
     wikiman
