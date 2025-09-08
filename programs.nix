@@ -162,7 +162,6 @@
     wdisplays
     xdg-utils
     thunderbird
-    neomutt
     aerc # switch to port 465 for ssl outgoing
     # drawio
     rtorrent

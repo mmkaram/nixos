@@ -7,50 +7,6 @@
   home.homeDirectory = "/home/dd0k";
   home.stateVersion = "24.11";
 
-  accounts.email = {
-    maildirBasePath = "Maildir";
-
-    accounts.outlook = {
-      address = "mahdykaram@outlook.com";
-      userName = "mahdykaram@outlook.com";
-      realName = "Mahdy Karam";
-      primary = true;
-
-      imap = {
-        host = "imap-mail.outlook.com";
-        port = 993;
-        tls.enable = true;
-      };
-
-      smtp = {
-        host = "smtp-mail.outlook.com";
-        port = 587;
-        tls.enable = true; # STARTTLS
-      };
-
-      # Use a password command, e.g., from pass or gnome-keyring
-      passwordCommand = "echo ThisWontWorkAnywayBecauseItIsntOAuth2";
-
-      neomutt.enable = true;
-      msmtp.enable = true;
-      mbsync.enable = true;
-
-      folders = {
-        inbox = "INBOX";
-        sent = "Sent";
-        trash = "Deleted";
-        drafts = "Drafts";
-      };
-    };
-  };
-  programs.msmtp.enable = true;
-  programs.mbsync.enable = true;
-
-  programs.neomutt = {
-    enable = true;
-    vimKeys = false;
-  };
-
   home.packages = with pkgs; [
     flameshot
     rofimoji
