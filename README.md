@@ -29,7 +29,6 @@ There are some programs I've packaged but have not had the time to possibly requ
 
 ## TODOs
 ### Nvim
-- [ ] Get typst preview working, [ref](https://www.youtube.com/watch?v=mO0957nYAwk)
 - [ ] nvim debugger
 ### Updates
 - [ ] update @prisma/language-server when fixed, currently broken on nixpkgs
