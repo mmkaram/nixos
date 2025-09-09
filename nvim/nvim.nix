@@ -88,6 +88,11 @@ in {
     }
 
     {
+      plugin = typst-preview-nvim;
+      config = toLua "require('typst-preview')";
+    }
+
+    {
       plugin = guess-indent-nvim;
       config = toLua "require('guess-indent').setup()";
     }
