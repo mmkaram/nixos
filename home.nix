@@ -5,7 +5,7 @@
 }: {
   home.username = "dd0k";
   home.homeDirectory = "/home/dd0k";
-  home.stateVersion = "24.11";
+  home.stateVersion = "25.11";
 
   home.packages = with pkgs; [
     flameshot
