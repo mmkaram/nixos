@@ -54,7 +54,7 @@ cmp.setup({
 })
 
 vim.diagnostic.config({
-	virtual_lines = { only_current_line = true },
+	virtual_lines = { current_line = true },
 	virtual_text = false,
 })
 vim.lsp.inlay_hint.enable(true)
