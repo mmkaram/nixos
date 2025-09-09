@@ -163,7 +163,7 @@
     wdisplays
     xdg-utils
     thunderbird
-    # drawio
+    drawio
     rtorrent
     rsync
     calibre
