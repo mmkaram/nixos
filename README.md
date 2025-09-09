@@ -35,7 +35,6 @@ There are some programs I've packaged but have not had the time to possibly requ
 ### Updates
 - [ ] update @prisma/language-server when fixed, currently broken on nixpkgs
 - [ ] update iamb (cur 0.10) to a version that supports images
-- [ ] Add rust analyzer when not borked
 - [ ] Add drawio when not borked
 - [ ] Add hurl when not borked
 ### QoL
