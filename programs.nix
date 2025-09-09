@@ -175,6 +175,7 @@
     impression
     xournalpp
     obsidian
+    apostrophe
     zotero
     sublime
     ranger
