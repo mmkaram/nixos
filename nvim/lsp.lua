@@ -1,3 +1,23 @@
+vim.lsp.inlay_hint.enable(true)
+
+vim.lsp.config("rust_analyzer", {
+	settings = {
+		["rust-analyzer"] = {
+			diagnostics = {
+				enable = false,
+			},
+			inlayHints = {
+				parameterHints = {
+					enable = true,
+				},
+				typeHints = {
+					enable = true,
+				},
+			},
+		},
+	},
+})
+
 vim.lsp.config("arduino_language_server", {
 	cmd = {
 		"arduino-language-server",
@@ -28,9 +48,6 @@ vim.lsp.enable({
 	"rust_analyzer",
 })
 
-local capabilities = require("cmp_nvim_lsp").default_capabilities()
-
--- Set up nvim-cmp
 local cmp = require("cmp")
 cmp.setup({
 	mapping = cmp.mapping.preset.insert({
@@ -39,7 +56,5 @@ cmp.setup({
 })
 
 vim.diagnostic.config({
-	-- TODO: current_line doesn't work, maybe update
-	virtual_lines = { only_current_line = true }, -- show virtual lines only on the current line
 	virtual_text = false,
 })
