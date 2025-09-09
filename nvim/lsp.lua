@@ -13,6 +13,28 @@ vim.lsp.enable({
 	"rust_analyzer",
 })
 
+vim.lsp.config("lua_ls", {
+	settings = {
+		Lua = {
+			runtime = {
+				version = "LuaJIT",
+			},
+			diagnostics = {
+				globals = { "vim" },
+			},
+			workspace = {
+				library = {
+					vim.env.VIMRUNTIME,
+					vim.fn.stdpath("config"),
+				},
+			},
+			telemetry = {
+				enable = false,
+			},
+		},
+	},
+})
+
 vim.lsp.config("rust_analyzer", {
 	settings = {
 		["rust-analyzer"] = {
