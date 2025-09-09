@@ -224,13 +224,6 @@
     enable = true;
   };
 
-  programs.mpv = {
-    enable = true;
-    config = {
-      vo = "x11";
-    };
-  };
-
   services.flameshot = {
     enable = true;
   };
