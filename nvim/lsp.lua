@@ -32,13 +32,6 @@ local settings = {
 		},
 	},
 
-	-- Svelte
-	svelte = {
-		cmd = { "svelteserver", "--stdio" },
-		filetypes = { "svelte" },
-		highlight = { enable = true },
-	},
-
 	-- prisma
 	prismals = {
 		cmd = { "npx", "prisma-language-server", "--stdio" },
@@ -109,41 +102,9 @@ local settings = {
 			},
 		},
 	},
-	tinymist = {
-		cmd = { "tinymist" },
-		filetypes = { "typst" },
-		settings = {
-			formatterMode = "typstyle",
-			exportPdf = "never",
-		},
-	},
-
-	lua_ls = {
-		cmd = { "lua-language-server" },
-		settings = {
-			Lua = {
-				workspace = {
-					library = {
-						-- TODO fix
-						["/usr/share/nvim/runtime/lua"] = true,
-						["/usr/share/nvim/runtime/lua/lsp"] = true,
-					},
-				},
-				diagnostics = {
-					enable = true,
-					globals = {
-						"vim",
-					},
-					disable = "lowercase-global",
-				},
-				completion = {
-					enable = true,
-					workspaceWord = false,
-				},
-			},
-		},
-	},
 }
+
+vim.lsp.enable({ "lua_ls", "tinymist", "svelte" })
 
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 local nvim_lsp = require("lspconfig")
