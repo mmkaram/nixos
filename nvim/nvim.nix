@@ -84,7 +84,7 @@ in {
 
     {
       plugin = markview-nvim;
-      config = toLua "require('markview').setup()";
+      config = toLua "require('markview').setup({typst={enable = false}})";
     }
 
     {
