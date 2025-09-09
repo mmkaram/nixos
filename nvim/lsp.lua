@@ -16,75 +16,6 @@ end
 local settings = {
 
 	-- TODO: Elixir, racket?
-	-- TypeScript / JavaScript
-	ts_ls = {
-		cmd = { "typescript-language-server", "--stdio" },
-		filetypes = {
-			"typescript",
-			"typescriptreact",
-			"typescript.tsx",
-			"javascript",
-			"javascriptreact",
-			"javascript.jsx",
-		},
-		settings = {
-			documentFormatting = true,
-		},
-	},
-
-	-- prisma
-	prismals = {
-		cmd = { "npx", "prisma-language-server", "--stdio" },
-		filetypes = { "prisma" },
-	},
-
-	-- nix
-	nil_ls = {
-		cmd = { "nil" },
-		filetypes = { "nix" },
-		single_file_support = true,
-		root_dir = util.root_pattern("flake.nix", ".git"),
-	},
-
-	-- haskell
-	hls = {
-		cmd = { "haskell-language-server-wrapper", "--lsp" },
-		filetypes = { "haskell", "lhaskell", "cabal" },
-	},
-
-	-- C/CXX
-	clangd = {
-		cmd = { "clangd" },
-		filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto" },
-	},
-
-	-- arduino
-	arduino_language_server = {
-		cmd = {
-			"arduino-language-server",
-			"-cli-config",
-			"/home/dd0k/.arduino15/arduino-cli.yaml",
-			"-fqbn",
-			"esp32:esp32:esp32",
-		},
-		filetypes = { "arduino" },
-	},
-
-	-- python
-	pyright = {
-		cmd = { "pyright-langserver", "--stdio" },
-		filetypes = { "python" },
-		settings = {
-			["pyright"] = {
-				analysis = {
-					autoSearchPaths = true,
-					diagnosticMode = "openFilesOnly",
-					useLibraryCodeForTypes = true,
-				},
-			},
-		},
-	},
-
 	rust_analyzer = {
 		cmd = { "rust-analyzer" },
 		settings = {
@@ -104,7 +35,33 @@ local settings = {
 	},
 }
 
-vim.lsp.enable({ "lua_ls", "tinymist", "svelte" })
+vim.lsp.config("arduino_language_server", {
+	cmd = {
+		"arduino-language-server",
+		"-cli-config",
+		"/home/dd0k/.arduino15/arduino-cli.yaml",
+		"-cli",
+		"arduino-cli",
+		"-clangd",
+		"clangd",
+		"-fqbn",
+		"esp32:esp32:esp32", -- Fully Qualified Board Name
+	},
+	filetypes = { "arduino" },
+})
+
+vim.lsp.enable({
+	"lua_ls",
+	"tinymist",
+	"svelte",
+	"prismals",
+	"nil_ls",
+	"hls",
+	"clangd",
+	"pyright",
+	"ts_ls",
+	"arduino_language_server",
+})
 
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 local nvim_lsp = require("lspconfig")
