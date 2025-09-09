@@ -1,4 +1,17 @@
-vim.lsp.inlay_hint.enable(true)
+vim.lsp.enable({
+	"lua_ls",
+	"tinymist",
+	"svelte",
+	"prismals",
+	"nil_ls",
+	"hls",
+	"clangd",
+	"pyright",
+	"ts_ls",
+	"tailwindcss",
+	"arduino_language_server",
+	"rust_analyzer",
+})
 
 vim.lsp.config("rust_analyzer", {
 	settings = {
@@ -33,21 +46,6 @@ vim.lsp.config("arduino_language_server", {
 	filetypes = { "arduino" },
 })
 
-vim.lsp.enable({
-	"lua_ls",
-	"tinymist",
-	"svelte",
-	"prismals",
-	"nil_ls",
-	"hls",
-	"clangd",
-	"pyright",
-	"ts_ls",
-	"tailwindcss",
-	"arduino_language_server",
-	"rust_analyzer",
-})
-
 local cmp = require("cmp")
 cmp.setup({
 	mapping = cmp.mapping.preset.insert({
@@ -58,3 +56,4 @@ cmp.setup({
 vim.diagnostic.config({
 	virtual_text = false,
 })
+vim.lsp.inlay_hint.enable(true)
