@@ -115,6 +115,7 @@
     gh-dash
     vscode
     code-cursor
+    zed-editor
     neovim
     vim
     zip
