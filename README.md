@@ -34,7 +34,6 @@ There are some programs I've packaged but have not had the time to possibly requ
 - [ ] nvim debugger
 ### Updates
 - [ ] update @prisma/language-server when fixed, currently broken on nixpkgs
-- [ ] update iamb (cur 0.10) to a version that supports images
 - [ ] Add drawio when not borked
 - [ ] Add hurl when not borked
 ### QoL

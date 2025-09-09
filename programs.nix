@@ -163,7 +163,6 @@
     wdisplays
     xdg-utils
     thunderbird
-    aerc # switch to port 465 for ssl outgoing
     # drawio
     rtorrent
     rsync
@@ -197,7 +196,6 @@
     yt-dlp
     pipeline
     element-desktop
-    iamb
     slack
     beeper
     discord
