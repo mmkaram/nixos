@@ -13,15 +13,8 @@ in {
     nvim-web-devicons
     nui-nvim
 
-    # Misc
-    vim-be-good
-    quickfix-reflector-vim
-    # Tmux/nvim status line amalgamater
-    # TODO: Status line LSP indicator doesn't work
-    # vim-tpipeline
-
     # Util
-
+    quickfix-reflector-vim
     {
       plugin = flash-nvim;
       config = toLua "require('flash').setup({})";
@@ -118,10 +111,6 @@ in {
     }
     # Git
     lazygit-nvim
-    {
-      plugin = octo-nvim;
-      config = toLua "require('octo').setup()";
-    }
     undotree
     {
       plugin = gitsigns-nvim;
@@ -129,6 +118,7 @@ in {
     }
     # Themeing
     lualine-nvim
+    vim-tpipeline
     {
       plugin = lualine-lsp-progress;
       config = toLuaFile ../nvim/lualine.lua;
