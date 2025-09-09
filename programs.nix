@@ -13,7 +13,7 @@
     lldb
     rustc
     rustfmt
-    # rust-analyzer
+    rust-analyzer
     cargo
     du-dust
   ];
