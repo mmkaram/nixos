@@ -119,9 +119,9 @@
   };
   # Brother drivers
   services.printing.drivers = with pkgs; [
-    gutenprint # Common printer drivers
-    brlaser # Brother-specific drivers
-    brgenml1cupswrapper # Additional Brother drivers
+    # gutenprint # Common printer drivers
+    # brlaser # Brother-specific drivers
+    # brgenml1cupswrapper # Additional Brother drivers
     cups-brother-dcpt310
   ];
 
