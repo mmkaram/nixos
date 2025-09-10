@@ -109,12 +109,21 @@
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
+  # printing gui
+  programs.system-config-printer.enable = true;
   # Avahi for mDNS
   services.avahi = {
     enable = true;
     nssmdns4 = true;
     openFirewall = true;
   };
+  # Brother drivers
+  services.printing.drivers = with pkgs; [
+    gutenprint # Common printer drivers
+    brlaser # Brother-specific drivers
+    brgenml1cupswrapper # Additional Brother drivers
+    cups-brother-dcpt310
+  ];
 
   # Enable sound with pipewire.
   # sound.enable = true;
