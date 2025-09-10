@@ -181,12 +181,29 @@
         "type": "github"
       }
     },
+    "nixpkgs-prisma": {
+      "locked": {
+        "lastModified": 1736459693,
+        "narHash": "sha256-qUWUkQanh85XIkkMQQVManmmogJVplWsFV8/KRr2Jsc=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "fdd340a071fbb4c10010fb2f8a15467700de2c31",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "fdd340a071fbb4c10010fb2f8a15467700de2c31",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "agenix": "agenix",
         "home-manager": "home-manager_2",
         "nix-alien": "nix-alien",
         "nixpkgs": "nixpkgs",
+        "nixpkgs-prisma": "nixpkgs-prisma",
         "zen-browser": "zen-browser"
       }
     },

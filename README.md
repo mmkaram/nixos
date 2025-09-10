@@ -29,7 +29,6 @@ There are some programs I've packaged but have not had the time to possibly requ
 
 ## TODOs
 ### Updates
-- [ ] update @prisma/language-server when fixed, currently broken on nixpkgs
 - [ ] Add hurl when not borked
 ### QoL
 - [ ] Cloud synced atuin
