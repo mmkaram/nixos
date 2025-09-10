@@ -3,7 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    nixpkgs-prisma.url = "github:nixos/nixpkgs/fdd340a071fbb4c10010fb2f8a15467700de2c31";
+    nixpkgs-old.url = "github:nixos/nixpkgs/fdd340a071fbb4c10010fb2f8a15467700de2c31";
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -25,7 +25,7 @@
   outputs = {
     self,
     nixpkgs,
-    nixpkgs-prisma,
+    nixpkgs-old,
     agenix,
     nix-alien,
     ...
@@ -37,7 +37,7 @@
       config = {allowUnfree = true;};
     };
 
-    pkgsPrisma = import nixpkgs-prisma {
+    pkgsOld = import nixpkgs-old {
       inherit system;
       config = {allowUnfree = true;};
     };
@@ -46,7 +46,7 @@
       system = "x86_64-linux";
       specialArgs = {
         inherit inputs;
-        pkgsPrisma = pkgsPrisma;
+        pkgsOld = pkgsOld;
       };
       modules = [
         ./configuration.nix

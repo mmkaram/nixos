@@ -1,10 +1,11 @@
 {
   pkgs,
   inputs,
-  pkgsPrisma,
+  pkgsOld,
   ...
 }: let
-  prismaOld = pkgsPrisma.nodePackages."@prisma/language-server";
+  prismaLanguageServer = pkgsOld.nodePackages."@prisma/language-server";
+  hurl = pkgsOld."hurl";
   salah = import ./packages/salah/package.nix {
     inherit (pkgs) lib stdenv fetchFromGitHub;
   };
@@ -28,7 +29,7 @@
     typescript-language-server
     prettierd
     prisma
-    prismaOld
+    prismaLanguageServer
     prisma-engines
     # svelte
     svelte-language-server
@@ -126,6 +127,7 @@
     fastfetch
     pfetch
     jq # json parser
+    hurl
     xh # curl
     fzf
     zsh

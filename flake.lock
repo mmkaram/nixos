@@ -181,7 +181,7 @@
         "type": "github"
       }
     },
-    "nixpkgs-prisma": {
+    "nixpkgs-old": {
       "locked": {
         "lastModified": 1736459693,
         "narHash": "sha256-qUWUkQanh85XIkkMQQVManmmogJVplWsFV8/KRr2Jsc=",
@@ -203,7 +203,7 @@
         "home-manager": "home-manager_2",
         "nix-alien": "nix-alien",
         "nixpkgs": "nixpkgs",
-        "nixpkgs-prisma": "nixpkgs-prisma",
+        "nixpkgs-old": "nixpkgs-old",
         "zen-browser": "zen-browser"
       }
     },
