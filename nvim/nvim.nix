@@ -198,8 +198,6 @@ in {
       p.tree-sitter-typst
     ]))
     vim-prisma
-    vim-nix
-    vim-svelte
     cmp_luasnip
   ];
   viAlias = true;
