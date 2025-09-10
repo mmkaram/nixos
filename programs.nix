@@ -1,8 +1,10 @@
 {
   pkgs,
   inputs,
+  pkgsPrisma,
   ...
 }: let
+  prismaOld = pkgsPrisma.nodePackages."@prisma/language-server";
   salah = import ./packages/salah/package.nix {
     inherit (pkgs) lib stdenv fetchFromGitHub;
   };
@@ -26,8 +28,7 @@
     typescript-language-server
     prettierd
     prisma
-    # Install through npm per project, broken on nixpkgs
-    # nodePackages_latest."@prisma/language-server"
+    prismaOld
     prisma-engines
     # svelte
     svelte-language-server
