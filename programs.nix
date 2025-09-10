@@ -31,7 +31,6 @@
     prisma
     prismaLanguageServer
     prisma-engines
-    # svelte
     svelte-language-server
   ];
   luaTools = with pkgs; [
