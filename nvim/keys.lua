@@ -5,9 +5,10 @@ local function map_key(mode, lhs, rhs, opts)
 end
 
 -- General settings
-vim.opt.number = true
-vim.opt.relativenumber = true
 vim.g.mapleader = " "
+vim.o.number = true
+vim.o.relativenumber = true
+vim.o.winborder = "rounded"
 vim.o.signcolumn = "yes"
 
 -- Telescope configuration
