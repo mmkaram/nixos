@@ -32,18 +32,12 @@
   } @ inputs: let
     system = "x86_64-linux";
 
-    pkgs = import nixpkgs {
-      inherit system;
-      config = {allowUnfree = true;};
-    };
-
     pkgsOld = import nixpkgs-old {
       inherit system;
       config = {allowUnfree = true;};
     };
   in {
     nixosConfigurations.Rocinante = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
       specialArgs = {
         inherit inputs;
         pkgsOld = pkgsOld;
