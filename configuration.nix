@@ -94,9 +94,10 @@
   # Enable openGL
   hardware.graphics.enable = true;
 
-  # Enable desktop manager
+  # Enable window manager
   services.displayManager.ly.enable = true;
   programs.sway.enable = true;
+
   # Brightness and volume
   programs.light.enable = true;
 
