@@ -1,11 +1,8 @@
 {
   pkgs,
   inputs,
-  pkgsOld,
   ...
 }: let
-  prismaLanguageServer = pkgsOld.nodePackages."@prisma/language-server";
-  hurl = pkgsOld."hurl";
   salah = import ./packages/salah/package.nix {
     inherit (pkgs) lib stdenv fetchFromGitHub;
   };

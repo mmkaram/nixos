@@ -24,21 +24,32 @@
     nixpkgs-old,
     agenix,
     ...
-  } @ inputs: let
-    system = "x86_64-linux";
+  } @ inputs: {
+    overlays = {
+      oldPkgs = final: prev: {
+        prismaLanguageServer =
+          (import nixpkgs-old {
+            system = prev.system;
+            config.allowUnfree = true;
+          }).nodePackages."@prisma/language-server";
 
-    pkgsOld = import nixpkgs-old {
-      inherit system;
-      config = {allowUnfree = true;};
+        hurl =
+          (import nixpkgs-old {
+            system = prev.system;
+            config.allowUnfree = true;
+          }).hurl;
+      };
     };
-  in {
+
     nixosConfigurations.Rocinante = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = {
         inherit inputs;
-        pkgsOld = pkgsOld;
       };
       modules = [
+        {
+          nixpkgs.overlays = [self.overlays.oldPkgs];
+        }
         ./configuration.nix
         agenix.nixosModules.default
         inputs.home-manager.nixosModules.default
