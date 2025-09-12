@@ -27,7 +27,7 @@
     ./hyprland/waybar.nix
   ];
 
-  wayland.windowManager.hyprland = import ./hyprland/hyprland.nix {inherit pkgs;};
+  wayland.windowManager.hyprland = import ./hyprland/hyprland.nix;
   services.hyprpaper = {
     enable = true;
 
@@ -36,6 +36,24 @@
 
       wallpaper = [
         "eDP-1,/etc/nixos/misc/Pyramids.jpg"
+      ];
+    };
+  };
+  services.hypridle = {
+    enable = true;
+    settings = {
+      general = {
+        lock_cmd = "hyprlock";
+        after_sleep_cmd = "hyprctl dispatch dpms on";
+        ignore_dbus_inhibit = false;
+      };
+
+      listener = [
+        {
+          timeout = 120; # 2 minutes
+          on-timeout = "systemctl suspend";
+          on-resume = "hyprctl dispatch dpms on";
+        }
       ];
     };
   };

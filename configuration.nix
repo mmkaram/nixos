@@ -96,6 +96,7 @@
 
   # Enable window manager
   services.displayManager.ly.enable = true;
+  programs.hyprlock.enable = true;
   programs.hyprland = {
     enable = true;
     # withUWSM = true;
