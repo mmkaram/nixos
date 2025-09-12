@@ -162,6 +162,12 @@
       "$mainMod, K, movefocus, u"
       "$mainMod, J, movefocus, d"
 
+      # Move windows
+      "$mainMod SHIFT, H, movewindow, l"
+      "$mainMod SHIFT, J, movewindow, d"
+      "$mainMod SHIFT, K, movewindow, u"
+      "$mainMod SHIFT, L, movewindow, r"
+
       # Workspaces
       "$mainMod, 1, workspace, 1"
       "$mainMod, 2, workspace, 2"
