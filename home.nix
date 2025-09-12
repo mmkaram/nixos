@@ -27,7 +27,7 @@
     ./hyprland/waybar.nix
   ];
 
-  wayland.windowManager.hyprland = import ./hyprland/hyprland.nix;
+  wayland.windowManager.hyprland = import ./hyprland/hyprland.nix {inherit pkgs;};
   services.hyprpaper = {
     enable = true;
 
