@@ -96,7 +96,11 @@
 
   # Enable window manager
   services.displayManager.ly.enable = true;
-  programs.sway.enable = true;
+  programs.hyprland = {
+    enable = true;
+    # withUWSM = true;
+    xwayland.enable = true;
+  };
 
   # Brightness and volume
   programs.light.enable = true;
@@ -109,7 +113,6 @@
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
-
   # printing gui
   programs.system-config-printer.enable = true;
   # Avahi for mDNS
