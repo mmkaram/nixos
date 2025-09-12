@@ -34,10 +34,10 @@
     enable = true;
 
     settings = {
-      preload = ["/etc/nixos/misc/Pyramids.jpg"];
+      preload = ["/etc/nixos/misc/glyphs.jpg"];
 
       wallpaper = [
-        "eDP-1,/etc/nixos/misc/Pyramids.jpg"
+        "eDP-1,/etc/nixos/misc/glyphs.jpg"
       ];
     };
   };
