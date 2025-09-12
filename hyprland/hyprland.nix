@@ -122,6 +122,7 @@
     # Key bindings
     bind = [
       "$mainMod, Return, exec, kitty tmux"
+      "$mainMod SHIFT, Return, exec, kitty"
       "$mainMod SHIFT, Q, killactive"
       "$mainMod, M, exit"
       "$mainMod, A, exec, kitty yazi ."
