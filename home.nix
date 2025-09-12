@@ -8,6 +8,8 @@
   home.stateVersion = "25.11";
 
   home.packages = with pkgs; [
+    hyprcursor
+    graphite-cursors
     flameshot
     rofimoji
     cliphist
