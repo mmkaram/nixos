@@ -28,6 +28,17 @@
   ];
 
   wayland.windowManager.hyprland = import ./hyprland/hyprland.nix {inherit pkgs;};
+  services.hyprpaper = {
+    enable = true;
+
+    settings = {
+      preload = ["/etc/nixos/misc/Pyramids.jpg"];
+
+      wallpaper = [
+        "eDP-1,/etc/nixos/misc/Pyramids.jpg"
+      ];
+    };
+  };
 
   services.dunst = {
     enable = true;
