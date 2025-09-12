@@ -24,8 +24,10 @@
 
   imports = [
     inputs.agenix.homeManagerModules.default
-    ./sway/waybar.nix
+    ./hyprland/waybar.nix
   ];
+
+  wayland.windowManager.hyprland = import ./hyprland/hyprland.nix {inherit pkgs;};
 
   services.dunst = {
     enable = true;
