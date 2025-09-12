@@ -1,7 +1,7 @@
 # mmkaram's NixOS Configuration
 > Flake powered, home-manager orchestrated, modular, reproducible OS configuration.
 
-Ground up [nixos](https://www.nixos.org) configuration. Includes a lot of neovim, sway, and fish setup.
+Ground up [nixos](https://www.nixos.org) configuration. Includes a lot of neovim, hyprland, and fish setup.
 
 <!-- TOC -->
 
@@ -28,6 +28,10 @@ Useful lua pages
 There are some programs I've packaged but have not had the time to possibly request adding them to nixpkgs. You can find them in the packages/ directory. To import them I import them in my [programs.nix](programs.nix) file which hosts the `enviorment.systemPackages` for my configuration.
 
 ## TODOs
+### hyprland
+- [ ] udiskie
+- [ ] audio idle inhibit
+- [ ] auto timeout
 ### QoL
 - [ ] Cloud synced atuin
 - [ ] Add declarative configuration for home EPSON printer

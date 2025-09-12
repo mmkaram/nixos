@@ -13,12 +13,11 @@
     cliphist
     rofi-wayland
     oh-my-fish
-    swaybg
     dmenu
     playerctl
     fd
-    sway-audio-idle-inhibit
     waybar
+    hyprpaper
     libappindicator-gtk3
     nitch
   ];
@@ -27,61 +26,6 @@
     inputs.agenix.homeManagerModules.default
     ./sway/waybar.nix
   ];
-
-  wayland.windowManager.sway = {
-    enable = true;
-    checkConfig = false;
-    config = {
-      modifier = "Mod4";
-      terminal = "kitty";
-      bars = [
-        {
-          command = "${pkgs.waybar}/bin/waybar";
-        }
-      ];
-      gaps = {
-        inner = 5;
-        outer = 5;
-      };
-      window = {
-        border = 2;
-        titlebar = true;
-      };
-      input = {
-        "type:touchpad" = {
-          natural_scroll = "enabled";
-          pointer_accel = "0.2";
-          accel_profile = "flat";
-          tap = "enabled";
-          scroll_factor = "0.3";
-        };
-        "type:pointer" = {
-          accel_profile = "flat";
-          pointer_accel = "0.1";
-          scroll_factor = "0.5";
-        };
-      };
-      output = {
-        "*" = {
-          bg = "/etc/nixos/misc/Pyramids.jpg fill";
-        };
-      };
-      startup = [
-        {
-          command = ''
-            swaybar
-          '';
-        }
-      ];
-      keybindings = import ./sway/keybindings.nix {pkgs = pkgs;};
-    };
-    extraConfig = ''
-      exec "sway-audio-idle-inhibit"
-      exec "swayidle timeout 420 'swaylock -c 145874' timeout 660 'systemctl sleep' timeout 900 'systemctl suspend-then-hibernate'"
-      exec "nm-applet"
-      exec "udiskie"
-    '';
-  };
 
   services.dunst = {
     enable = true;

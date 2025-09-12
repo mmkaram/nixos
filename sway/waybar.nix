@@ -6,8 +6,8 @@
         layer = "top";
         position = "top";
         height = 20;
-        modules-left = ["sway/workspaces" "sway/mode" "tray"];
-        # modules-center = ["sway/window"];
+        modules-left = ["hyprland/workspaces" "hyprland/mode" "tray"];
+        # modules-center = ["hyprland/window"];
         modules-right = [
           "custom/media"
           "pulseaudio"
@@ -19,7 +19,7 @@
           "clock"
         ];
 
-        "sway/workspaces" = {
+        "hyprland/workspaces" = {
           disable-scroll = true;
           all-outputs = true;
         };
@@ -107,9 +107,9 @@
         border-bottom: 3px solid transparent;
       }
 
-      #workspaces button.focused {
-        background: #64727D;
-        border-bottom: 3px solid white;
+      #workspaces button.active {
+          background: #64727D;
+          border-bottom: 3px solid white;
       }
 
       #mode, #clock, #battery, #cpu, #memory, #network, #pulseaudio, #custom-spotify, #tray, #mode, #clock, #batery {
