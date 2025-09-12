@@ -119,12 +119,6 @@
       workspace_swipe = true;
     };
 
-    # Device config
-    device = {
-      name = "epic-mouse-v1";
-      sensitivity = -0.5;
-    };
-
     # Key bindings
     bind = [
       "$mainMod, Return, exec, kitty tmux"
@@ -133,9 +127,13 @@
       "$mainMod, A, exec, kitty yazi ."
       "$mainMod SHIFT, A, exec, $fileManager"
       "$mainMod, V, togglefloating"
+      "$mainMod, W, togglegroup"
+      "$mainMod, bracketright, changegroupactive, f"
+      "$mainMod, bracketleft, changegroupactive, b"
       "$mainMod, SPACE, exec, $menu"
       "$mainMod, P, pseudo"
       "$mainMod, E, togglesplit"
+      "$mainMod, F, fullscreen, 0"
 
       # Screenshots
       ", Print, exec, flameshot gui"
