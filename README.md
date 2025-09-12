@@ -29,6 +29,8 @@ There are some programs I've packaged but have not had the time to possibly requ
 
 ## TODOs
 ### hyprland
+- [ ] change animations
+- [ ] change cursor
 - [ ] scratchpad rules for tidal and yubico app
 - [ ] fix play/pause/forward/back shortcuts
 - [ ] audio idle inhibit
