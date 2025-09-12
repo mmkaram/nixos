@@ -29,7 +29,6 @@ There are some programs I've packaged but have not had the time to possibly requ
 
 ## TODOs
 ### hyprland
-- [ ] udiskie
 - [ ] audio idle inhibit
 - [ ] auto timeout
 ### QoL
