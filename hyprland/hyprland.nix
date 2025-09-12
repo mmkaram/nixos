@@ -139,10 +139,10 @@
       ", Print, exec, flameshot gui"
 
       # Media controls
-      ", Alt+Down, exec, playerctl play-pause"
+      "ALT, Down, exec, playerctl play-pause"
       ", XF86AudioPlay, exec, playerctl play-pause"
-      ", Alt+Page_Down, exec, playerctl next"
-      ", Alt+Page_Up, exec, playerctl previous"
+      "ALT, Page_Down, exec, playerctl next"
+      "ALT, Page_Up, exec, playerctl previous"
 
       # Clipboard and utilities
       "Ctrl+Alt, v, exec, sh -c \"cliphist list | rofi -dmenu | cliphist decode | wl-copy\""
