@@ -102,6 +102,8 @@
     # withUWSM = true;
     xwayland.enable = true;
   };
+  # enable wayland on electron applications
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
   # Brightness and volume
   programs.light.enable = true;
