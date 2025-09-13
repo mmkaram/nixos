@@ -17,6 +17,8 @@
     exec-once = [
       "nm-applet & flameshot & udiskie"
       "waybar & hyprpaper"
+      # WAYLAND_DISPLAY is not set when hypridle service starts
+      "systemctl --user restart hypridle.service"
     ];
 
     # Environment variables
