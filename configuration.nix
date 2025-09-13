@@ -95,11 +95,11 @@
   hardware.graphics.enable = true;
 
   # Enable window manager
-  services.displayManager.ly.enable = true;
+  services.displayManager.sddm.enable = true;
   programs.hyprlock.enable = true;
   programs.hyprland = {
     enable = true;
-    # withUWSM = true;
+    withUWSM = true;
     xwayland.enable = true;
   };
   # enable wayland on electron applications
