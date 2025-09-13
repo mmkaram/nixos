@@ -63,7 +63,7 @@
 
     # Animations
     animations = {
-      enabled = true;
+      enabled = false;
       bezier = [
         "easeOutQuint,0.23,1,0.32,1"
         "easeInOutCubic,0.65,0.05,0.36,1"
