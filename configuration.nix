@@ -95,7 +95,7 @@
   hardware.graphics.enable = true;
 
   # Enable window manager
-  services.displayManager.sddm.enable = true;
+  services.displayManager.gdm.enable = true;
   programs.hyprlock.enable = true;
   programs.hyprland = {
     enable = true;
