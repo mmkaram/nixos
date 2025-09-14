@@ -25,20 +25,18 @@
     agenix,
     ...
   } @ inputs: {
-    overlays = {
-      oldPkgs = final: prev: {
-        prismaLanguageServer =
-          (import nixpkgs-old {
-            system = prev.system;
-            config.allowUnfree = true;
-          }).nodePackages."@prisma/language-server";
+    oldPkgs = final: prev: {
+      prismaLanguageServer =
+        (import nixpkgs-old {
+          system = prev.system;
+          config.allowUnfree = true;
+        }).nodePackages."@prisma/language-server";
 
-        hurl =
-          (import nixpkgs-old {
-            system = prev.system;
-            config.allowUnfree = true;
-          }).hurl;
-      };
+      hurl =
+        (import nixpkgs-old {
+          system = prev.system;
+          config.allowUnfree = true;
+        }).hurl;
     };
 
     nixosConfigurations.Rocinante = nixpkgs.lib.nixosSystem {
@@ -48,7 +46,7 @@
       };
       modules = [
         {
-          nixpkgs.overlays = [self.overlays.oldPkgs];
+          nixpkgs.overlays = [self.oldPkgs];
         }
         ./configuration.nix
         agenix.nixosModules.default
