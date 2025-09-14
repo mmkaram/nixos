@@ -191,6 +191,8 @@
       "$mainMod SHIFT, 8, movetoworkspace, 8"
       "$mainMod SHIFT, 9, movetoworkspace, 9"
       "$mainMod SHIFT, 0, movetoworkspace, 10"
+      "$mainMod CTRL, left, workspace, e-1"
+      "$mainMod CTRL, right, workspace, e+1"
 
       # Special workspace
       "$mainMod, minus, togglespecialworkspace, magic"
