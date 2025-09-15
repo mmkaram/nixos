@@ -195,8 +195,10 @@
       "$mainMod CTRL, right, workspace, e+1"
 
       # Special workspace
-      "$mainMod, minus, togglespecialworkspace, magic"
-      "$mainMod SHIFT, minus, movetoworkspace, special:magic"
+      "$mainMod, minus, togglespecialworkspace, minus"
+      "$mainMod SHIFT, minus, movetoworkspace, special:minus"
+      "$mainMod, equal, togglespecialworkspace, equal"
+      "$mainMod SHIFT, equal, movetoworkspace, special:equal"
 
       # Mouse workspace switching
       "$mainMod, mouse_down, workspace, e+1"
