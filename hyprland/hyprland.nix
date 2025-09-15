@@ -149,7 +149,7 @@
 
       # Clipboard and utilities
       "Ctrl+Alt, v, exec, sh -c \"cliphist list | rofi -dmenu | cliphist decode | wl-copy\""
-      ", Alt+Tab, exec, rofi -show window"
+      "Alt, Tab, exec, rofi -show window"
       "Super, semicolon, exec, rofimoji"
 
       # Focus movement
