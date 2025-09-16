@@ -213,13 +213,20 @@
 
   home.file = {
     ".config/ghostty/config".source = ./dots/ghostty/config;
-    ".icons/graphite-dark".source = ./misc/graphite-dark;
   };
 
   age.secrets = {};
   home.sessionVariables = {};
 
   programs.home-manager.enable = true;
+
+  home.pointerCursor = {
+    gtk.enable = true;
+    # x11.enable = true;
+    package = pkgs.graphite-cursors;
+    name = "graphite-dark";
+    size = 16;
+  };
 
   # Dark mode
   dconf.settings = {

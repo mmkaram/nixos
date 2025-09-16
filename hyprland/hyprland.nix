@@ -21,10 +21,10 @@
 
     # Environment variables
     env = [
-      "HYPRCURSOR_SIZE,24"
-      "HYPRCURSOR_THEME,graphite-dark"
-      "XCURSOR_THEME,graphite-dark"
-      "XCURSOR_SIZE,24"
+      # "HYPRCURSOR_SIZE,24"
+      # "HYPRCURSOR_THEME,graphite-dark"
+      # "XCURSOR_THEME,graphite-dark"
+      # "XCURSOR_SIZE,24"
     ];
 
     # General settings
