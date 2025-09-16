@@ -35,10 +35,12 @@ There are some programs I've packaged but have not had the time to possibly requ
 - [ ] fix automatic dark mode detection on flutter apps
 ### QoL
 - [ ] disable nvim swapfiles
+- [ ] automatically install extensions for chromium(ublock, sponsorblock, bitwarden)
 - [ ] Cloud synced atuin
 - [ ] Add declarative configuration for home EPSON printer
 - [ ] Get yubico authenticator app to open on startup and hide window
 ### Projects
+- [ ] configuration shuffle to allow for multiple hosts
 - [ ] Nix flatpak
 - [ ] Yubikey for agenix
 - [ ] Yubikey for luks
