@@ -32,6 +32,7 @@ There are some programs I've packaged but have not had the time to possibly requ
 - [ ] add resize keybinds
 - [ ] fix odd suspend behavior
 - [ ] scratchpad rules for tidal and yubico app
+- [ ] fix automatic dark mode detection on flutter apps
 ### QoL
 - [ ] disable nvim swapfiles
 - [ ] Cloud synced atuin
