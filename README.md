@@ -34,7 +34,6 @@ There are some programs I've packaged but have not had the time to possibly requ
 - [ ] scratchpad rules for tidal and yubico app
 - [ ] fix automatic dark mode detection on flutter apps
 ### QoL
-- [ ] disable nvim swapfiles
 - [ ] automatically install extensions for chromium(ublock, sponsorblock, bitwarden)
 - [ ] Cloud synced atuin
 - [ ] Add declarative configuration for home EPSON printer
