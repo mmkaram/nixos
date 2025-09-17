@@ -10,6 +10,7 @@ vim.o.number = true
 vim.o.relativenumber = true
 vim.o.winborder = "rounded"
 vim.o.signcolumn = "yes"
+vim.o.swapfile = false
 
 -- Telescope configuration
 require("telescope").setup({
