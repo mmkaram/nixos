@@ -2,7 +2,8 @@
   pkgs,
   inputs,
   ...
-}: {
+}:
+{
   home.username = "dd0k";
   home.homeDirectory = "/home/dd0k";
   home.stateVersion = "25.11";
@@ -29,12 +30,12 @@
     ./hyprland/waybar.nix
   ];
 
-  wayland.windowManager.hyprland = import ./hyprland/hyprland.nix {};
+  wayland.windowManager.hyprland = import ./hyprland/hyprland.nix { };
   services.hyprpaper = {
     enable = true;
 
     settings = {
-      preload = ["/etc/nixos/misc/glyphs.jpg"];
+      preload = [ "/etc/nixos/misc/glyphs.jpg" ];
 
       wallpaper = [
         "eDP-1,/etc/nixos/misc/glyphs.jpg"
@@ -52,7 +53,7 @@
 
       listener = [
         {
-          timeout = 120; # 2 minutes
+          timeout = 300; # 2 minutes
           on-timeout = "systemctl suspend";
           on-resume = "hyprctl dispatch dpms on";
         }
@@ -105,7 +106,7 @@
     '';
   };
 
-  programs.tmux = import ./dots/tmux/tmux.nix {inherit pkgs;};
+  programs.tmux = import ./dots/tmux/tmux.nix { inherit pkgs; };
 
   programs.zoxide = {
     enable = true;
@@ -162,8 +163,14 @@
   programs.vim = {
     enable = true;
     # defaultEditor = true;
-    plugins = with pkgs.vimPlugins; [vim-airline jedi-vim nerdtree];
-    settings = {ignorecase = true;};
+    plugins = with pkgs.vimPlugins; [
+      vim-airline
+      jedi-vim
+      nerdtree
+    ];
+    settings = {
+      ignorecase = true;
+    };
     extraConfig = ''
       set mouse=a
 
@@ -172,7 +179,7 @@
     '';
   };
 
-  programs.neovim = import ./nvim/nvim.nix {inherit pkgs;};
+  programs.neovim = import ./nvim/nvim.nix { inherit pkgs; };
 
   age.secrets = {
   };
@@ -215,8 +222,8 @@
     ".config/ghostty/config".source = ./dots/ghostty/config;
   };
 
-  age.secrets = {};
-  home.sessionVariables = {};
+  age.secrets = { };
+  home.sessionVariables = { };
 
   programs.home-manager.enable = true;
 
