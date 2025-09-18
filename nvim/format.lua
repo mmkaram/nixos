@@ -14,7 +14,7 @@ require("conform").setup({
 		javascriptreact = { "prettierd", stop_after_first = true },
 		typescriptreact = { "prettierd", stop_after_first = true },
 		typescript = { "prettierd" },
-		nix = { "alejandra" },
+		nix = { "nixfmt" },
 		cpp = { "clang-format" },
 		prisma = { "prisma_fmt" },
 		svelte = { "prettierd" },

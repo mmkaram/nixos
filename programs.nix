@@ -66,8 +66,8 @@
   ];
   nixTools = with pkgs; [
     nix-prefetch-github
-    alejandra
     nil
+    nixfmt-rfc-style
   ];
   devTools = with pkgs; [
     typst
