@@ -1,4 +1,5 @@
-{pkgs}: {
+{ pkgs }:
+{
   enable = true;
   # prefix = "C-f";
   plugins = with pkgs.tmuxPlugins; [

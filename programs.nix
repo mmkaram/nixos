@@ -2,7 +2,8 @@
   pkgs,
   inputs,
   ...
-}: let
+}:
+let
   salah = import ./packages/salah/package.nix {
     inherit (pkgs) lib stdenv fetchFromGitHub;
   };
@@ -214,7 +215,8 @@
     wiki-tui
     wikiman
   ];
-in {
+in
+{
   environment.systemPackages =
     rustTools
     ++ webTools
