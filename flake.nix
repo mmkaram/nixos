@@ -18,40 +18,42 @@
     };
   };
 
-  outputs = {
-    self,
-    nixpkgs,
-    nixpkgs-old,
-    agenix,
-    ...
-  } @ inputs: {
-    oldPkgs = final: prev: {
-      prismaLanguageServer =
-        (import nixpkgs-old {
-          system = prev.system;
-          config.allowUnfree = true;
-        }).nodePackages."@prisma/language-server";
+  outputs =
+    {
+      self,
+      nixpkgs,
+      nixpkgs-old,
+      agenix,
+      ...
+    }@inputs:
+    {
+      oldPkgs = final: prev: {
+        prismaLanguageServer =
+          (import nixpkgs-old {
+            system = prev.system;
+            config.allowUnfree = true;
+          }).nodePackages."@prisma/language-server";
 
-      hurl =
-        (import nixpkgs-old {
-          system = prev.system;
-          config.allowUnfree = true;
-        }).hurl;
-    };
-
-    nixosConfigurations.Rocinante = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      specialArgs = {
-        inherit inputs;
+        hurl =
+          (import nixpkgs-old {
+            system = prev.system;
+            config.allowUnfree = true;
+          }).hurl;
       };
-      modules = [
-        {
-          nixpkgs.overlays = [self.oldPkgs];
-        }
-        ./configuration.nix
-        agenix.nixosModules.default
-        inputs.home-manager.nixosModules.default
-      ];
+
+      nixosConfigurations.Rocinante = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = {
+          inherit inputs;
+        };
+        modules = [
+          {
+            nixpkgs.overlays = [ self.oldPkgs ];
+          }
+          ./configuration.nix
+          agenix.nixosModules.default
+          inputs.home-manager.nixosModules.default
+        ];
+      };
     };
-  };
 }

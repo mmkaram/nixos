@@ -3,7 +3,8 @@
   inputs,
   config,
   ...
-}: {
+}:
+{
   ##################################
   #  ____     ___     ____   ____  #
   # |  _ \   / _ \   / ___| / ___| #
@@ -22,7 +23,10 @@
   ##############################
   # Init
   # enable expiremental nix features (for flakes)
-  nix.settings.experimental-features = ["nix-command" "flakes"];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   imports = [
     ./hardware-configuration.nix
@@ -168,7 +172,17 @@
     # wireshark: wireshark
     # docker: docker
     # virt-man: libvirtd
-    extraGroups = ["users" "networkmanager" "wheel" "docker" "video" "libvirtd" "dialout" "uucp" "wireshark"];
+    extraGroups = [
+      "users"
+      "networkmanager"
+      "wheel"
+      "docker"
+      "video"
+      "libvirtd"
+      "dialout"
+      "uucp"
+      "wireshark"
+    ];
     packages = with pkgs; [
       firefox
       zoom-us
@@ -178,7 +192,7 @@
   programs.fish.enable = true;
   programs.zsh.enable = true;
   home-manager = {
-    extraSpecialArgs = {inherit inputs;};
+    extraSpecialArgs = { inherit inputs; };
     backupFileExtension = "backup";
     users = {
       "dd0k" = import ./home.nix;
@@ -198,7 +212,7 @@
   #####################################################################
   # Programs
   # Enable insecure Packages
-  nixpkgs.config.permittedInsecurePackages = [];
+  nixpkgs.config.permittedInsecurePackages = [ ];
   nixpkgs.config.allowUnfree = true;
 
   programs.steam = {
@@ -260,7 +274,7 @@
       runAsRoot = true;
       swtpm.enable = true;
       ovmf.enable = true;
-      ovmf.packages = [pkgs.OVMFFull.fd];
+      ovmf.packages = [ pkgs.OVMFFull.fd ];
     };
   };
 
@@ -273,7 +287,7 @@
 
   # yubikey/yubico
   services.pcscd.enable = true;
-  services.udev.packages = [pkgs.yubikey-personalization];
+  services.udev.packages = [ pkgs.yubikey-personalization ];
 
   security.pam.u2f = {
     enable = true;

@@ -1,5 +1,5 @@
 {
-  identityPaths = ["/home/dd0k/.ssh/id_rsa"];
+  identityPaths = [ "/home/dd0k/.ssh/id_rsa" ];
   secrets = {
     password = {
       file = ./password.age;

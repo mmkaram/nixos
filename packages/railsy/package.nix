@@ -30,7 +30,7 @@ rustPlatform.buildRustPackage rec {
     description = "Temporary email client in Rust";
     homepage = "https://mmkaram.github.io/railsy.html";
     license = lib.licenses.mit;
-    maintainers = with lib.maintainers; [mmkaram];
+    maintainers = with lib.maintainers; [ mmkaram ];
     platforms = lib.platforms.unix;
   };
 }

@@ -1,4 +1,5 @@
-{...}: {
+{ ... }:
+{
   programs.waybar = {
     enable = true;
     settings = [
@@ -6,7 +7,11 @@
         layer = "top";
         position = "top";
         height = 20;
-        modules-left = ["hyprland/workspaces" "hyprland/mode" "tray"];
+        modules-left = [
+          "hyprland/workspaces"
+          "hyprland/mode"
+          "tray"
+        ];
         # modules-center = ["hyprland/window"];
         modules-right = [
           "custom/media"

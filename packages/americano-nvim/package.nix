@@ -1,4 +1,4 @@
-{pkgs, ...}:
+{ pkgs, ... }:
 pkgs.vimUtils.buildVimPlugin {
   name = "americano.nvim";
   src = pkgs.fetchFromGitHub {

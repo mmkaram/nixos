@@ -1,4 +1,4 @@
-{pkgs, ...}:
+{ pkgs, ... }:
 pkgs.vimUtils.buildVimPlugin {
   name = "git-dashboard-nvim";
   src = pkgs.fetchFromGitHub {
