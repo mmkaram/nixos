@@ -1,3 +1,5 @@
+-- git-dashboard crashes with large commit histories like that of nixpkgs/master
+-- if opened on a non master branch no crashes occur
 local ascii_heatmap = require("git-dashboard-nvim").setup({
 	show_only_weeks_with_commits = true,
 	show_contributions_count = false,
