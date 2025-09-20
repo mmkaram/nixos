@@ -132,6 +132,7 @@
       gpg.format = "ssh";
       user.signingkey = "~/.ssh/id_ed25519_sk";
       commit.gpgSign = true;
+      push.autoSetupRemote = true;
       init = {
         defaultBranch = "main";
         safe.directory = "/etc/nixos";
