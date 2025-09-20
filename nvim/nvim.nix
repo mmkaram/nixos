@@ -15,6 +15,12 @@ in
     nvim-web-devicons
     nui-nvim
 
+    # Mini
+    {
+      plugin = mini-pick;
+      config = toLuaFile ./mini.lua;
+    }
+
     # Util
     quickfix-reflector-vim
     {
