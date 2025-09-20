@@ -20,6 +20,10 @@ in
       plugin = mini-pick;
       config = toLuaFile ./mini.lua;
     }
+    {
+      plugin = mini-extra;
+      config = toLua "require('mini.extra').setup()";
+    }
 
     # Util
     quickfix-reflector-vim
