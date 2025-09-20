@@ -21,6 +21,8 @@ require("telescope").setup({
 	},
 })
 
+local MiniPick = require("mini.pick")
+
 -- Telescope keymaps
 local telescope_maps = {
 	{ "n", "<leader>tt", ":Telescope<CR>", desc = "Open Telescope" },
@@ -32,9 +34,11 @@ local telescope_maps = {
 	{ "n", "<leader>tb", ":Telescope lsp_dynamic_workspace_symbols<CR>", desc = "Workspace symbols" },
 	{ "n", "<leader>tv", ":Telescope lsp_document_symbols<CR>", desc = "Document symbols" },
 	{ "n", "<leader>te", ":Telescope file_browser<CR>", desc = "File browser" },
-	{ "n", "<C-o>", ":Telescope find_files<CR>", desc = "Find files" },
+	-- { "n", "<C-o>", ":Telescope find_files<CR>", desc = "Find files" },
+	{ "n", "<C-o>", ":Pick files<CR>", desc = "Find files" },
+	-- { "n", "<C-s>", ":Telescope live_grep<CR>", desc = "Live grep" },
+	{ "n", "<C-s>", ":Pick grep_live<CR>", desc = "Live grep" },
 	{ "n", "<leader>tm", ":Telescope marks<CR>", desc = "List marks" },
-	{ "n", "<C-s>", ":Telescope live_grep<CR>", desc = "Live grep" },
 	{ "n", "<leader>tp", ":Telescope diagnostics<CR>", desc = "List diagnostics" },
 	{ "n", '<leader>t"', ":Telescope registers<CR>", desc = "List registers" },
 }
