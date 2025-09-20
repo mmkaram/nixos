@@ -23,18 +23,18 @@ require("telescope").setup({
 
 -- Telescope keymaps
 local telescope_maps = {
-	{ "n", "<leader>ti", ":Pick treesitter<CR>", desc = "Treesitter symbols" },
-	{ "n", "<C-p>", ":Pick buffers", desc = "List buffers" },
-	{ "n", "<leader>tr", ':Pick lsp scope="references"', desc = "LSP references" },
-	{ "n", "<leader>td", ':Pick lsp scope="definition"', desc = "LSP definitions" },
+	{ "n", "<leader>ti", ":Pick treesitter<CR>", desc = "Treesitter symbols" }, -- TODO: borked
+	{ "n", "<C-i>", ":Pick buffers", desc = "List buffers" },
+	{ "n", "<leader>tr", ':Pick lsp scope="references"<CR>', desc = "LSP references" },
+	{ "n", "<leader>td", ':Pick lsp scope="definition"<CR>', desc = "LSP definitions" },
 	{ "n", "<leader>tf", ":Telescope current_buffer_fuzzy_find<CR>", desc = "Fuzzy find in buffer" },
 	{ "n", "<leader>tb", ':Pick lsp scope="workspace_symbol"<CR>', desc = "Workspace symbols" },
-	{ "n", "<leader>tv", ':Pick lsp scope="document_symbol"', desc = "Document symbols" },
+	{ "n", "<leader>tv", ':Pick lsp scope="document_symbol"<CR>', desc = "Document symbols" },
 	{ "n", "<leader>te", ":Pick explorer<CR>", desc = "File browser" },
 	{ "n", "<C-o>", ":Pick files<CR>", desc = "Find files" },
 	{ "n", "<C-s>", ":Pick grep_live<CR>", desc = "Live grep" },
 	{ "n", "<leader>tm", ":Pick marks<CR>", desc = "List marks" },
-	{ "n", "<leader>tp", ":Pick diagnostics<CR>", desc = "List diagnostics" },
+	{ "n", "<leader>tp", ":Pick diagnostic<CR>", desc = "List diagnostics" },
 	{ "n", '<leader>t"', ":Pick registers<CR>", desc = "List registers" },
 }
 
