@@ -27,10 +27,10 @@
 
   imports = [
     inputs.agenix.homeManagerModules.default
-    ../../hyprland/waybar.nix
+    ../../dots/hyprland/waybar.nix
   ];
 
-  wayland.windowManager.hyprland = import ../../hyprland/hyprland.nix { };
+  wayland.windowManager.hyprland = import ../../dots/hyprland/hyprland.nix { };
   services.hyprpaper = {
     enable = true;
 
