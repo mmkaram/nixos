@@ -216,26 +216,23 @@ let
     wikiman
   ];
 in
-{
-  environment.systemPackages =
-    rustTools
-    ++ webTools
-    ++ luaTools
-    ++ perfTools
-    ++ pythonTools
-    ++ CXXTools
-    ++ embeddedTools
-    ++ haskelTools
-    ++ nixTools
-    ++ devTools
-    ++ terminalTools
-    ++ diskTools
-    ++ games
-    ++ yubikeyTools
-    ++ officeTools
-    ++ communicationTools
-    ++ audioTools
-    ++ browsingTools
-    ++ desktopTools
-    ++ customTools;
-}
+rustTools
+++ webTools
+++ luaTools
+++ perfTools
+++ pythonTools
+++ CXXTools
+++ embeddedTools
+++ haskelTools
+++ nixTools
+++ devTools
+++ terminalTools
+++ diskTools
+++ games
+++ yubikeyTools
+++ officeTools
+++ communicationTools
+++ audioTools
+++ browsingTools
+++ desktopTools
+++ customTools
