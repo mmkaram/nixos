@@ -84,7 +84,7 @@ in
 
     {
       plugin = nvim-notify;
-      config = toLuaFile ../nvim/notify.lua;
+      config = toLuaFile ./notify.lua;
     }
 
     {
@@ -104,17 +104,17 @@ in
 
     {
       plugin = toggleterm-nvim;
-      config = toLuaFile ../nvim/term.lua;
+      config = toLuaFile ./term.lua;
     }
 
     {
       plugin = presence-nvim;
-      config = toLuaFile ../nvim/presence.lua;
+      config = toLuaFile ./presence.lua;
     }
 
     {
       plugin = codewindow-nvim;
-      config = toLuaFile ../nvim/codewindow.lua;
+      config = toLuaFile ./codewindow.lua;
     }
 
     {
@@ -133,11 +133,11 @@ in
     vim-tpipeline
     {
       plugin = lualine-lsp-progress;
-      config = toLuaFile ../nvim/lualine.lua;
+      config = toLuaFile ./lualine.lua;
     }
     {
       plugin = dashboard-nvim;
-      config = toLuaFile ../nvim/dash.lua;
+      config = toLuaFile ./dash.lua;
     }
     git-dashboard
     {
@@ -151,18 +151,18 @@ in
     # vim-unimpaired
     {
       plugin = bufferline-nvim;
-      config = toLuaFile ../nvim/bufferline.lua;
+      config = toLuaFile ./bufferline.lua;
     }
     {
       plugin = telescope-nvim;
-      config = toLuaFile ../nvim/telescope.lua;
+      config = toLuaFile ./telescope.lua;
     }
     telescope-ui-select-nvim
     telescope-file-browser-nvim
     # Formatting
     {
       plugin = conform-nvim;
-      config = toLuaFile ../nvim/format.lua;
+      config = toLuaFile ./format.lua;
     }
     {
       plugin = comment-nvim;
@@ -170,7 +170,7 @@ in
     }
     {
       plugin = indent-blankline-nvim;
-      config = toLuaFile ../nvim/indent.lua;
+      config = toLuaFile ./indent.lua;
     }
 
     # LSP
@@ -180,18 +180,18 @@ in
     }
     {
       plugin = nvim-cmp;
-      config = toLuaFile ../nvim/completion.lua;
+      config = toLuaFile ./completion.lua;
     }
     {
       plugin = nvim-lspconfig;
-      config = toLuaFile ../nvim/lsp.lua;
+      config = toLuaFile ./lsp.lua;
     }
     {
       plugin = cmp-nvim-lsp;
       # this config isn't realted, it just loads
       # keybinds because I can't source lua files from
       # other lua files
-      config = toLuaFile ../nvim/keys.lua;
+      config = toLuaFile ./keys.lua;
     }
     (nvim-treesitter.withPlugins (p: [
       p.tree-sitter-nix
