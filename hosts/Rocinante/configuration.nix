@@ -30,9 +30,11 @@
 
   imports = [
     ./hardware-configuration.nix
-    ./programs.nix
     inputs.home-manager.nixosModules.default
   ];
+
+  # Programs
+  environment.systemPackages = import ./programs.nix { inherit pkgs inputs; };
 
   # Bootloader
   boot.loader.systemd-boot.enable = true;
