@@ -180,7 +180,7 @@
     '';
   };
 
-  programs.neovim = import ../../nvim/nvim.nix { inherit pkgs; };
+  programs.neovim = import ../../dots/nvim/nvim.nix { inherit pkgs; };
 
   age.secrets = {
   };
