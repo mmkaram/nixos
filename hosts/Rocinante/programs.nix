@@ -155,7 +155,7 @@ let
     pavucontrol
     dunst
     wl-clipboard
-    wpa_supplicant
+    wpa_supplicant_gui
     fprintd-tod
     speedcrunch
   ];
