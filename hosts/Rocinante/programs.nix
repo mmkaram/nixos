@@ -4,7 +4,7 @@
   ...
 }:
 let
-  salah = import ./packages/salah/package.nix {
+  salah = import ../../packages/salah/package.nix {
     inherit (pkgs) lib stdenv fetchFromGitHub;
   };
   customTools = [

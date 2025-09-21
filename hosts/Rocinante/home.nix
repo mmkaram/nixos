@@ -27,10 +27,10 @@
 
   imports = [
     inputs.agenix.homeManagerModules.default
-    ./hyprland/waybar.nix
+    ../../hyprland/waybar.nix
   ];
 
-  wayland.windowManager.hyprland = import ./hyprland/hyprland.nix { };
+  wayland.windowManager.hyprland = import ../../hyprland/hyprland.nix { };
   services.hyprpaper = {
     enable = true;
 
@@ -65,7 +65,7 @@
     enable = true;
   };
 
-  programs.fish = import ./dots/fish/fish.nix;
+  programs.fish = import ../../dots/fish/fish.nix;
 
   programs.direnv = {
     enable = true;
@@ -106,7 +106,7 @@
     '';
   };
 
-  programs.tmux = import ./dots/tmux/tmux.nix { inherit pkgs; };
+  programs.tmux = import ../../dots/tmux/tmux.nix { inherit pkgs; };
 
   programs.zoxide = {
     enable = true;
@@ -180,7 +180,7 @@
     '';
   };
 
-  programs.neovim = import ./nvim/nvim.nix { inherit pkgs; };
+  programs.neovim = import ../../nvim/nvim.nix { inherit pkgs; };
 
   age.secrets = {
   };
@@ -220,7 +220,7 @@
   };
 
   home.file = {
-    ".config/ghostty/config".source = ./dots/ghostty/config;
+    ".config/ghostty/config".source = ../../dots/ghostty/config;
   };
 
   age.secrets = { };

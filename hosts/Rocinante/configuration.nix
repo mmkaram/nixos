@@ -39,7 +39,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   # Fingerprint
-  services.fprintd = import ./dots/fprintd/fprintd.nix pkgs;
+  services.fprintd = import ../../dots/fprintd/fprintd.nix pkgs;
 
   # Automount
   services.udisks2.enable = true;
@@ -283,7 +283,7 @@
   security.polkit.enable = true;
 
   # age secrets manager
-  age = import ./secrets/age.nix;
+  age = import ../../secrets/age.nix;
 
   # yubikey/yubico
   services.pcscd.enable = true;

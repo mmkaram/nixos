@@ -50,7 +50,7 @@
           {
             nixpkgs.overlays = [ self.oldPkgs ];
           }
-          ./configuration.nix
+          ./hosts/Rocinante/configuration.nix
           agenix.nixosModules.default
           inputs.home-manager.nixosModules.default
         ];
