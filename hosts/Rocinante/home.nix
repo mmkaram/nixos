@@ -97,9 +97,6 @@
 
   programs.neovim = import ../../dots/nvim/nvim.nix { inherit pkgs; };
 
-  age.secrets = {
-  };
-
   programs.spotify-player = {
     enable = true;
     settings = {
@@ -120,9 +117,7 @@
     };
   };
 
-  programs.atuin = {
-    enable = true;
-  };
+  programs.atuin.enable = true;
 
   services.flameshot = {
     enable = true;
