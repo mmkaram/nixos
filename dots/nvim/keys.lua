@@ -11,6 +11,8 @@ vim.o.relativenumber = true
 vim.o.winborder = "rounded"
 vim.o.signcolumn = "yes"
 vim.o.swapfile = false
+vim.o.ignorecase = true
+vim.o.smartcase = true
 
 -- Telescope configuration
 require("telescope").setup({
