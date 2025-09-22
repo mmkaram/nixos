@@ -13,6 +13,14 @@ ls.add_snippets("all", {
 	}),
 })
 
+-- BASH
+local bashset = {
+	s("benv", {
+		t("#!/usr/bin/env bash"),
+	}),
+}
+ls.add_snippets("sh", bashset)
+
 -- JS / TS / JSX / TSX
 
 local jsset = {
