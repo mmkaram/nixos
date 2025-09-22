@@ -192,7 +192,6 @@ let
     apostrophe
     zotero
     sublime
-    ranger
     yazi
     brightnessctl
     prusa-slicer
