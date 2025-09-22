@@ -90,6 +90,17 @@ let
     inputs.agenix.packages."${system}".default
   ];
   terminalTools = with pkgs; [
+    waybar
+    hyprpaper
+    hyprcursor
+    rofi-wayland
+    graphite-cursors
+    flameshot
+    rofimoji
+    cliphist
+    dmenu
+    oh-my-fish
+    nitch
     caligula
     charm-freeze
     sshx
@@ -99,6 +110,7 @@ let
     mprocs
     zoxide
     ripgrep
+    fd
     tree
     kitty
     ghostty
@@ -150,6 +162,8 @@ let
     libu2f-host
   ];
   desktopTools = with pkgs; [
+    libappindicator-gtk3
+    playerctl
     udiskie
     networkmanagerapplet
     pavucontrol

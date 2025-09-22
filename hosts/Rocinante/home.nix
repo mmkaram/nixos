@@ -8,23 +8,6 @@
   home.homeDirectory = "/home/dd0k";
   home.stateVersion = "25.11";
 
-  home.packages = with pkgs; [
-    hyprcursor
-    graphite-cursors
-    flameshot
-    rofimoji
-    cliphist
-    rofi-wayland
-    oh-my-fish
-    dmenu
-    playerctl
-    fd
-    waybar
-    hyprpaper
-    libappindicator-gtk3
-    nitch
-  ];
-
   imports = [
     inputs.agenix.homeManagerModules.default
   ];
