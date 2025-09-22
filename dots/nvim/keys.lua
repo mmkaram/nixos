@@ -13,6 +13,7 @@ vim.o.signcolumn = "yes"
 vim.o.swapfile = false
 vim.o.ignorecase = true
 vim.o.smartcase = true
+vim.opt.colorcolumn = "100"
 
 -- Telescope configuration
 require("telescope").setup({
@@ -25,7 +26,7 @@ require("telescope").setup({
 
 -- Telescope keymaps
 local telescope_maps = {
-	{ "n", "<leader>ti", ":Pick treesitter<CR>", desc = "Treesitter symbols" }, -- TODO: borked
+	{ "n", "<leader>ti", ":Pick treesitter<CR>", desc = "Treesitter symbols" },
 	{ "n", "<C-i>", ":Pick buffers", desc = "List buffers" },
 	{ "n", "<leader>tr", ':Pick lsp scope="references"<CR>', desc = "LSP references" },
 	{ "n", "<leader>td", ':Pick lsp scope="definition"<CR>', desc = "LSP definitions" },
