@@ -17,3 +17,6 @@ delete:
 
 history:
 	sudo nixos-rebuild list-generations
+
+update-sk:
+	scripts/update-sk.sh
