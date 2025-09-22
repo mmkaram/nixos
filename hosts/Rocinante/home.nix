@@ -14,39 +14,10 @@
 
   wayland.windowManager.hyprland = import ../../dots/hyprland/hyprland.nix { };
   programs.waybar = import ../../dots/hyprland/waybar.nix { };
-  services.hyprpaper = {
-    enable = true;
+  services.hyprpaper = import ../../dots/hyprland/hyprpaper.nix { };
+  services.hypridle = import ../../dots/hyprland/hypridle.nix { };
 
-    settings = {
-      preload = [ "/etc/nixos/misc/glyphs.jpg" ];
-
-      wallpaper = [
-        "eDP-1,/etc/nixos/misc/glyphs.jpg"
-      ];
-    };
-  };
-  services.hypridle = {
-    enable = true;
-    settings = {
-      general = {
-        lock_cmd = "hyprlock";
-        after_sleep_cmd = "hyprctl dispatch dpms on";
-        ignore_dbus_inhibit = false;
-      };
-
-      listener = [
-        {
-          timeout = 300; # 2 minutes
-          on-timeout = "systemctl suspend";
-          on-resume = "hyprctl dispatch dpms on";
-        }
-      ];
-    };
-  };
-
-  services.dunst = {
-    enable = true;
-  };
+  services.dunst.enable = true;
 
   programs.fish = import ../../dots/fish/fish.nix;
 
