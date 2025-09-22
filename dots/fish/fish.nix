@@ -19,7 +19,6 @@
 
     space = "du -h -s";
     cls = "clear";
-    r = "ranger";
     y = "yazi";
     py = "python3";
     l = "eza -lh";

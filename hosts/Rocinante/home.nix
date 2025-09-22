@@ -82,17 +82,6 @@
     enableFishIntegration = true;
   };
 
-  programs.ranger = {
-    enable = true;
-    mappings = {
-      dD = "delete";
-    };
-    extraConfig = ''
-      set preview_images true
-      set preview_images_method kitty
-    '';
-  };
-
   programs.git = {
     enable = true;
     userName = "mmkaram";
