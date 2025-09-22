@@ -88,18 +88,8 @@
 
   programs.vim = {
     enable = true;
-    # defaultEditor = true;
-    plugins = with pkgs.vimPlugins; [
-      vim-airline
-      jedi-vim
-      nerdtree
-    ];
-    settings = {
-      ignorecase = true;
-    };
     extraConfig = ''
       set mouse=a
-
       set number
       set relativenumber
     '';
