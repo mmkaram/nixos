@@ -3,7 +3,6 @@ let
   toLua = str: "lua << EOF\n${str}\nEOF\n";
   toLuaFile = file: "lua << EOF\n${builtins.readFile file}\nEOF\n";
   americano = import ../../packages/americano-nvim/package.nix { inherit pkgs; };
-  git-dashboard = import ../../packages/git-dashboard-nvim/package.nix { inherit pkgs; };
 in
 {
   enable = true;
@@ -139,7 +138,7 @@ in
       plugin = dashboard-nvim;
       config = toLuaFile ./dash.lua;
     }
-    git-dashboard
+    git-dashboard-nvim
     {
       plugin = tokyonight-nvim;
       config = "colorscheme tokyonight-night";
