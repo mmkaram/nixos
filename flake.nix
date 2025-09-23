@@ -28,12 +28,6 @@
     }@inputs:
     {
       oldPkgs = final: prev: {
-        prismaLanguageServer =
-          (import nixpkgs-old {
-            system = prev.system;
-            config.allowUnfree = true;
-          }).nodePackages."@prisma/language-server";
-
         hurl =
           (import nixpkgs-old {
             system = prev.system;
