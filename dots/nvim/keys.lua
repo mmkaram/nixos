@@ -14,6 +14,9 @@ vim.o.swapfile = false
 vim.o.ignorecase = true
 vim.o.smartcase = true
 vim.opt.colorcolumn = "100"
+vim.o.tabstop = 4 -- Number of spaces in a tab character
+vim.o.shiftwidth = 4 -- Number of spaces to use for each step of auto-indent
+-- vim.o.expandtab = true -- Use spaces instead of tabs
 
 -- Telescope configuration
 require("telescope").setup({
