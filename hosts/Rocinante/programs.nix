@@ -4,12 +4,6 @@
   ...
 }:
 let
-  salah = import ../../packages/salah/package.nix {
-    inherit (pkgs) lib stdenv fetchFromGitHub;
-  };
-  customTools = [
-    salah
-  ];
   rustTools = with pkgs; [
     lldb
     rustc
@@ -248,4 +242,3 @@ rustTools
 ++ audioTools
 ++ browsingTools
 ++ desktopTools
-++ customTools
