@@ -46,6 +46,5 @@ There are some programs I've packaged but have not had the time to possibly requ
 - [ ] Yubikey for luks
 - [ ] Stylix
 ### Other
-- [ ] look into ``` 'programs.ssh' default values will be removed in the future.```
-- [ ] Track my nmconnection file for school wifi: /etc/NetworkManager/system-connections/waterloo-eduroam.nmconnection (look into ensureProfiles options)
-- [ ] Fix single window screensharing on discord and obs, worked fine on gnome
+- [ ] look into `'programs.ssh' default values will be removed in the future.`
+- [ ] Track my nmconnection file for eduroam: /etc/NetworkManager/system-connections/waterloo-eduroam.nmconnection (look into `ensureProfiles` options)
