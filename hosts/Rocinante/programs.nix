@@ -27,7 +27,7 @@ let
     typescript-language-server
     prettierd
     prisma
-    prismaLanguageServer
+    prisma-language-server
     prisma-engines
     svelte-language-server
   ];
@@ -93,7 +93,7 @@ let
     waybar
     hyprpaper
     hyprcursor
-    rofi-wayland
+    rofi
     graphite-cursors
     flameshot
     rofimoji
