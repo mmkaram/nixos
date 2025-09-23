@@ -40,7 +40,7 @@ let
     btop
     htop
     hotspot
-    linuxPackages_latest.perf
+    perf
   ];
   pythonTools = with pkgs; [
     python312
