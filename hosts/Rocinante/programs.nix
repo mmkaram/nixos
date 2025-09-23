@@ -16,7 +16,7 @@ let
     wrangler
     nodejs
     tailwindcss-language-server
-    nodePackages.tailwindcss
+    tailwindcss
     typescript
     typescript-language-server
     prettierd
