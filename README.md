@@ -39,6 +39,7 @@ There are some programs I've packaged but have not had the time to possibly requ
 - [ ] Add declarative configuration for home EPSON printer
 - [ ] Get yubico authenticator app to open on startup and hide window
 - [ ] Change toggle-term with something more native
+- [ ] Does isort formatting for python do anything?
 ### Projects
 - [ ] configuration shuffle to allow for multiple hosts
 - [ ] Nix flatpak
