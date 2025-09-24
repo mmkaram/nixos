@@ -118,9 +118,12 @@
     };
 
     # Gestures
-    gestures = {
-      workspace_swipe = true;
-    };
+    # gestures = {
+    #   gesture = "4, horizontal, workspace";
+    #   workspace_swipe_create_new = false;
+    #   workspace_swipe_distance = 500;
+    #   workspace_swipe_invert = false;
+    # };
 
     # Key bindings
     bind = [
