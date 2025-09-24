@@ -5,9 +5,10 @@ default:
 rebuild-pre:
 	git add *.nix
 
-rebuild:
+rebuild num_cores="all":
+	@echo "Rebuild with cores: {{num_cores}}"
 	just rebuild-pre
-	scripts/rebuild-flake.sh
+	scripts/rebuild-flake.sh {{num_cores}}
 
 update:
 	scripts/update-flake.sh
