@@ -1,9 +1,14 @@
 #!/usr/bin/env bash
 
-if [ ! -z $1 ]; then
-	export HOST=$1
+# Default to hostname as host if $1 is empty or non-numeric
+if [[ -z "$1" || ! "$1" =~ ^[0-9]+$ ]]; then
+    HOST=$(hostname)
+    CORE_OPTION=""
 else
-	export HOST=$(hostname)
+    HOST=$(hostname)
+    CORE_OPTION="--option cores $1"
 fi
 
-sudo nixos-rebuild --flake .#$HOST switch
+# Run nixos-rebuild with optional core limit
+sudo nixos-rebuild --flake .#$HOST switch $CORE_OPTION
+
