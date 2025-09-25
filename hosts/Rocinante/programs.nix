@@ -107,7 +107,6 @@ let
     fd
     tree
     kitty
-    ghostty
     lazygit
     lazydocker
     fish
