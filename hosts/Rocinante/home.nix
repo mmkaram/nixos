@@ -100,10 +100,7 @@
     };
   };
 
-  home.file = {
-    ".config/ghostty/config".source = ../../dots/ghostty/config;
-  };
-
+  home.file = { };
   age.secrets = { };
   home.sessionVariables = { };
 
