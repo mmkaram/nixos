@@ -207,6 +207,9 @@
   nixpkgs.config.permittedInsecurePackages = [ ];
   nixpkgs.config.allowUnfree = true;
 
+  # Enable nix-ld
+  programs.nix-ld.enable = true;
+
   programs.steam = {
     enable = true;
     remotePlay.openFirewall = true;
