@@ -33,7 +33,7 @@ There are some programs I've packaged but have not had the time to possibly requ
 - [ ] fix odd suspend behavior
 - [ ] scratchpad rules for tidal and yubico app
 - [ ] fix automatic dark mode detection on flutter apps
-- [ ] Gestures are borked
+- [ ] Add desktop switching gesture
 ### QoL
 - [ ] Yubikey app is broken, [ref](https://github.com/nixos/nixpkgs/issues/442315)
 - [ ] automatically install extensions for chromium(ublock, sponsorblock, bitwarden)
