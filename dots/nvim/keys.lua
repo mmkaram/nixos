@@ -18,22 +18,27 @@ vim.o.tabstop = 4 -- Number of spaces in a tab character
 vim.o.shiftwidth = 4 -- Number of spaces to use for each step of auto-indent
 -- vim.o.expandtab = true -- Use spaces instead of tabs
 
--- Telescope configuration
-require("telescope").setup({
-	pickers = {
-		find_files = {
-			hidden = true,
-		},
-	},
-})
+-- :lua MiniPick.builtin.grep_live({globs={"src/app/layout.tsx"}})
 
--- Telescope keymaps
-local telescope_maps = {
+-- mini_pick keymaps
+local mini_pick = {
 	{ "n", "<leader>ti", ":Pick treesitter<CR>", desc = "Treesitter symbols" },
 	{ "n", "<C-i>", ":Pick buffers", desc = "List buffers" },
 	{ "n", "<leader>tr", ':Pick lsp scope="references"<CR>', desc = "LSP references" },
 	{ "n", "<leader>td", ':Pick lsp scope="definition"<CR>', desc = "LSP definitions" },
-	{ "n", "<leader>tf", ":Telescope current_buffer_fuzzy_find<CR>", desc = "Fuzzy find in buffer" },
+	{
+		"n",
+		"<leader>tf",
+		function()
+			local current_file = vim.fn.expand("%")
+			if current_file == "" then
+				vim.notify("No file in current buffer", vim.log.levels.WARN)
+				return
+			end
+			require("mini.pick").builtin.grep_live({ globs = { current_file } })
+		end,
+		{ desc = "Live grep in current file" },
+	},
 	{ "n", "<leader>tb", ':Pick lsp scope="workspace_symbol"<CR>', desc = "Workspace symbols" },
 	{ "n", "<leader>tv", ':Pick lsp scope="document_symbol"<CR>', desc = "Document symbols" },
 	{ "n", "<leader>te", ":Pick explorer<CR>", desc = "File browser" },
@@ -44,7 +49,7 @@ local telescope_maps = {
 	{ "n", '<leader>t"', ":Pick registers<CR>", desc = "List registers" },
 }
 
-for _, map in ipairs(telescope_maps) do
+for _, map in ipairs(mini_pick) do
 	map_key(unpack(map))
 end
 

@@ -8,7 +8,7 @@ require("codecompanion").setup({
 					callback = "strategies.chat.slash_commands.file",
 					description = "Select a file using mini_pick",
 					opts = {
-						provider = "mini_pick", -- Can be "default", "telescope", "fzf_lua", "mini_pick" or "snacks"
+						provider = "mini_pick",
 						contains_code = true,
 					},
 				},
