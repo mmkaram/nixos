@@ -149,12 +149,6 @@ in
       plugin = bufferline-nvim;
       config = toLuaFile ./bufferline.lua;
     }
-    {
-      plugin = telescope-nvim;
-      config = toLuaFile ./telescope.lua;
-    }
-    telescope-ui-select-nvim
-    telescope-file-browser-nvim
     # Formatting
     {
       plugin = conform-nvim;
