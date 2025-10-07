@@ -21,9 +21,14 @@ require("conform").setup({
 	},
 })
 
-vim.api.nvim_create_autocmd("BufWritePre", {
-	pattern = "*",
-	callback = function(args)
-		require("conform").format({ bufnr = args.buf })
-	end,
-})
+vim.api.nvim_create_user_command("W", function()
+	-- Run format first, then write
+	require("conform").format({ async = false }) -- synchronous formatting
+	vim.cmd.write() -- write to disk
+end, {})
+
+vim.cmd("cnoreabbrev <expr> w getline('.') == ':w' ? ':W' : 'w'")
+
+vim.keymap.set("n", "<leader>w", function()
+	vim.cmd.write() -- write without formatting
+end, { desc = "Save without formatting" })
