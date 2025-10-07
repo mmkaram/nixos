@@ -2,9 +2,9 @@
 {
   enable = true;
   settings = {
-    preload = [ "/etc/nixos/misc/glyphs.jpg" ];
+    preload = [ "/etc/nixos/misc/Shuttle.JPG" ];
     wallpaper = [
-      "eDP-1,/etc/nixos/misc/glyphs.jpg"
+      "eDP-1,/etc/nixos/misc/Shuttle.JPG"
     ];
   };
 }
