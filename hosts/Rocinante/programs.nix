@@ -70,7 +70,7 @@ let
     tinymist # LSP for typst
     opencode
     just
-    hoppscotch # api ednpoint client
+    yaak # api ednpoint client
     atac # TUI api endpoint client
     serie # git graph
     qbittorrent
