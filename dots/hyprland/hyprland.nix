@@ -142,9 +142,12 @@
       "$mainMod, E, togglesplit"
       "$mainMod, F, fullscreen, 0"
 
-      "CTRL ALT SHIFT, F1, exec, chromium"
-      "CTRL ALT SHIFT, F2, exec, thunderbird"
-      "CTRL ALT SHIFT, F3, exec, discord"
+      "CTRL ALT SHIFT, F1, exec, /etc/nixos/scripts/focus-or-launch.sh kitty kitty"
+      "CTRL ALT SHIFT, F2, exec, /etc/nixos/scripts/focus-or-launch.sh chromium-browser chromium"
+      "CTRL ALT SHIFT, F3, exec, /etc/nixos/scripts/focus-or-launch.sh thunderbird thunderbird"
+      "CTRL ALT SHIFT, F4, exec, /etc/nixos/scripts/focus-or-launch.sh obsidian obsidian"
+      "CTRL ALT SHIFT, F5, exec, /etc/nixos/scripts/focus-or-launch.sh tidal-hifi tidal-hifi"
+      "CTRL ALT SHIFT, F6, exec, /etc/nixos/scripts/focus-or-launch.sh discord discord"
 
       # Screenshots
       ", Print, exec, flameshot gui"
