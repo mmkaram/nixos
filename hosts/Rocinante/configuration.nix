@@ -243,7 +243,7 @@
         )
 
         (deflayer apps
-          _    C-A-S-F1  C-A-S-F2  C-A-S-F3  C-A-S-F4  C-A-S-F5  _    _    _    _    _    _    _    _
+          _    C-A-S-F1  C-A-S-F2  C-A-S-F3  C-A-S-F4  C-A-S-F5  C-A-S-F6    _    _    _    _    _    _    _
           _    _    _    _    _    _    _    _    _    _    _    _    _    _
           _    _    _    _    _    _    _    _    _    _    _    _    _
           _    _    _    _    _    _    _    _    _    _    _    _
