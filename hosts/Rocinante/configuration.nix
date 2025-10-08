@@ -224,21 +224,40 @@
   services.kanata = {
     enable = true;
     keyboards.default = {
+      extraDefCfg = "danger-enable-cmd yes";
       config = ''
-            (defsrc
-              grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
-              tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
-              caps a    s    d    f    g    h    j    k    l    ;    '    ret
-              lsft z    x    c    v    b    n    m    ,    .    /    rsft
-              lctl lmet lalt           spc            ralt prtsc rctl
-            )
-        (deflayermap (base-layer)
-            caps esc
-            esc caps
+        (defsrc
+          grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+          tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+          caps a    s    d    f    g    h    j    k    l    ;    '    ret
+          lsft z    x    c    v    b    n    m    ,    .    /    rsft
+          lctl lmet lalt           spc            ralt prtsc rctl
+        )
+
+        (deflayer base
+          grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+          tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+          @cap a    s    d    f    g    h    j    k    l    ;    '    ret
+          lsft z    x    c    v    b    n    m    ,    .    /    rsft
+          lctl lmet lalt           spc            ralt prtsc rctl
+        )
+
+        (deflayer apps
+          _    C-A-S-F1  C-A-S-F2  C-A-S-F3  C-A-S-F4  C-A-S-F5  _    _    _    _    _    _    _    _
+          _    _    _    _    _    _    _    _    _    _    _    _    _    _
+          _    _    _    _    _    _    _    _    _    _    _    _    _
+          _    _    _    _    _    _    _    _    _    _    _    _
+          _    _    _              _              _    _    _
+        )
+
+        (defalias
+          ;; Tap for escape, hold for apps layer (200ms hold threshold)
+          cap (tap-hold 100 200 esc (layer-while-held apps))
         )
       '';
     };
   };
+
   # FONTS
   fonts.packages = with pkgs; [
     nerd-fonts.fira-code
