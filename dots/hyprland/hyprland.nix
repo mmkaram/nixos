@@ -142,6 +142,10 @@
       "$mainMod, E, togglesplit"
       "$mainMod, F, fullscreen, 0"
 
+      "CTRL ALT SHIFT, F1, exec, chromium"
+      "CTRL ALT SHIFT, F2, exec, thunderbird"
+      "CTRL ALT SHIFT, F3, exec, discord"
+
       # Screenshots
       ", Print, exec, flameshot gui"
 
