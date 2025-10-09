@@ -70,19 +70,6 @@
 
   programs.neovim = import ../../dots/nvim/nvim.nix { inherit pkgs; };
 
-  programs.spotify-player = {
-    enable = true;
-    settings = {
-      client_id = "d5d01a282d5d475f8edf35dd5aab6b55";
-      enable_notify = false;
-      device = {
-        volume = 100;
-        name = "term";
-        normalization = false;
-      };
-    };
-  };
-
   programs.btop = {
     enable = true;
     settings = {
