@@ -88,9 +88,10 @@ let
     hyprpaper
     hyprcursor
     rofi
+    rofimoji
+    rofi-power-menu
     graphite-cursors
     flameshot
-    rofimoji
     cliphist
     dmenu
     oh-my-fish
