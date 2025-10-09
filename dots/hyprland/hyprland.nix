@@ -163,7 +163,7 @@
       # Clipboard and utilities
       "Ctrl+Alt, v, exec, sh -c \"cliphist list | rofi -dmenu | cliphist decode | wl-copy\""
       "Alt, Tab, exec, rofi -show window -show-icons"
-      "Super, semicolon, exec, rofimoji"
+      "Super, semicolon, exec, rofimoji --action copy"
 
       # Focus movement
       "$mainMod, left, movefocus, l"
