@@ -30,6 +30,7 @@
     enable = true;
     package = pkgs.rofi;
     theme = "~/.config/rofi/spotlight-dark.rasi";
+    plugins = [ pkgs.rofi-calc ];
   };
   home.file.".config/rofi/spotlight-dark.rasi".source = ../../dots/rofi/spotlight-dark.rasi;
 

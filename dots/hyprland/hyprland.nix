@@ -141,6 +141,8 @@
       "$mainMod, P, pseudo"
       "$mainMod, E, togglesplit"
       "$mainMod, F, fullscreen, 0"
+      "$mainMod, C, exec, rofi -show calc -modi calc"
+      "$mainMod, Escape, exec, rofi -show p -modi p:'rofi-power-menu'"
 
       "CTRL ALT SHIFT, F1, exec, /etc/nixos/scripts/focus-or-launch.sh kitty kitty"
       "CTRL ALT SHIFT, F2, exec, /etc/nixos/scripts/focus-or-launch.sh chromium-browser chromium"
