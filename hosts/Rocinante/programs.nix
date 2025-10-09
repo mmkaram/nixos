@@ -59,7 +59,10 @@ let
     haskellPackages.haskell-language-server
     ghc
   ];
+  ns = pkgs.writeShellScriptBin "ns" (builtins.readFile "${pkgs.nix-search-tv.src}/nixpkgs.sh");
   nixTools = with pkgs; [
+    nix-search-tv
+    ns
     nix-prefetch-github
     nil
     nixfmt-rfc-style
@@ -192,7 +195,7 @@ let
     gimp3
     imagemagick
     switcheroo
-    ghostscript #
+    ghostscript
     converseen
     kdePackages.kdenlive
     darktable
