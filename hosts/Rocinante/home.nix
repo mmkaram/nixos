@@ -29,9 +29,9 @@
   programs.rofi = {
     enable = true;
     package = pkgs.rofi;
-    theme = "~/.config/rofi/rounded-gray-dark.rasi";
+    theme = "~/.config/rofi/spotlight-dark.rasi";
   };
-  home.file.".config/rofi/rounded-gray-dark.rasi".source = ../../dots/rofi/rounded-gray-dark.rasi;
+  home.file.".config/rofi/spotlight-dark.rasi".source = ../../dots/rofi/spotlight-dark.rasi;
 
   services.cliphist = {
     enable = true;

@@ -11,7 +11,7 @@
     # Variables
     "$terminal" = "kitty";
     "$fileManager" = "pcmanfm";
-    "$menu" = "rofi -show drun";
+    "$menu" = "rofi -show drun -show-icons -icon-theme 'Papirus'";
     "$mainMod" = "SUPER";
 
     # Autostart
