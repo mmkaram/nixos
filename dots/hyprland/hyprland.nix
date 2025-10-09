@@ -132,6 +132,7 @@
       "$mainMod SHIFT, Q, killactive"
       "$mainMod, M, exit"
       "$mainMod, A, exec, kitty yazi ."
+      "CTRL SHIFT, Escape, exec, kitty btop"
       "$mainMod SHIFT, A, exec, $fileManager"
       "$mainMod, V, togglefloating"
       "$mainMod, W, togglegroup"
