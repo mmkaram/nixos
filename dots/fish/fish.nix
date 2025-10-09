@@ -24,7 +24,6 @@
     l = "eza -lh";
     lg = "eza --git-repos";
     el = "eza --git-repos -h -l -all";
-    sp = "spotify_player";
     ff = "fastfetch";
     n = "nvim";
     sn = "sudo nvim";

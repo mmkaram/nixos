@@ -112,7 +112,7 @@ let
     lazydocker
     fish
     atuin
-    scc # lines of code counter
+    scc # LoC counter
     eza
     bat
     speedtest-go
@@ -192,13 +192,13 @@ let
     gimp3
     imagemagick
     switcheroo
-    ghostscript
+    ghostscript #
     converseen
     kdePackages.kdenlive
     darktable
     vlc
     mpv
-    feh # img viewer
+    feh
   ];
   communicationTools = with pkgs; [
     yt-dlp
@@ -209,8 +209,6 @@ let
     discord
   ];
   audioTools = with pkgs; [
-    ncspot
-    spotify-player
     pulseaudio
     spotify
     tidal-hifi
