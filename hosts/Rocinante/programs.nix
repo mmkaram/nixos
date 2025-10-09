@@ -43,6 +43,7 @@ let
     python312Packages.matplotlib
     pyright
     uv
+    black
   ];
   CXXTools = with pkgs; [
     clang
