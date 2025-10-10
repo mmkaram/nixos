@@ -32,7 +32,6 @@ There are some programs I've packaged but have not had the time to possibly requ
 - [ ] add resize keybinds
 - [ ] fix odd suspend behavior
 - [ ] fix automatic dark mode detection on flutter apps
-- [ ] Add desktop switching gesture
 ### QoL
 - [ ] automatically install extensions for chromium(ublock, sponsorblock, bitwarden)
 - [ ] Cloud synced atuin
