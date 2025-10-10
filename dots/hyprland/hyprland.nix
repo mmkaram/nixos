@@ -117,14 +117,6 @@
       };
     };
 
-    # Gestures
-    # gestures = {
-    #   gesture = "4, horizontal, workspace";
-    #   workspace_swipe_create_new = false;
-    #   workspace_swipe_distance = 500;
-    #   workspace_swipe_invert = false;
-    # };
-
     # Key bindings
     bind = [
       "$mainMod, Return, exec, kitty tmux"
