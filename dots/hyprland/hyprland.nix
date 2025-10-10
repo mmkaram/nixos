@@ -243,6 +243,13 @@
       "$mainMod, mouse:273, resizewindow"
     ];
 
+    # Gestures
+    gesture = [
+      "3, horizontal, workspace"
+      "3, up, fullscreen"
+      "2, pinch, resize"
+    ];
+
     # Window rules
     windowrule = [
       "suppressevent maximize, class:.*"
