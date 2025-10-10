@@ -29,7 +29,6 @@ There are some programs I've packaged but have not had the time to possibly requ
 
 ## TODOs
 ### hyprland
-- [ ] add resize keybinds
 - [ ] fix odd suspend behavior
 - [ ] fix automatic dark mode detection on flutter apps
 ### QoL
