@@ -13,14 +13,15 @@ in
     };
 
     listener = [
+    # Everything is shifted by 60 seconds for some reason
       {
-        timeout = builtins.floor (120 * timeMultiplier); # 2 minutes - screen off
-        on-timeout = "hyprctl dispatch dpms off";
-        on-resume = "hyprctl dispatch dpms on";
+        timeout = builtins.floor (120 * timeMultiplier); # 2 minute - lock
+        on-timeout = "loginctl lock-session";
       }
       {
-        timeout = builtins.floor (180 * timeMultiplier); # 3 minutes - sleep/lock
-        on-timeout = "loginctl lock-session";
+        timeout = builtins.floor (180 * timeMultiplier); # 3 minutes - screen off
+        on-timeout = "hyprctl dispatch dpms off";
+        on-resume = "hyprctl dispatch dpms on";
       }
       {
         timeout = builtins.floor (240 * timeMultiplier); # 4 minutes - suspend
