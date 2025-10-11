@@ -13,7 +13,6 @@ in
     };
 
     listener = [
-    # Everything is shifted by 60 seconds for some reason
       {
         timeout = builtins.floor (120 * timeMultiplier); # 2 minute - lock
         on-timeout = "loginctl lock-session";
