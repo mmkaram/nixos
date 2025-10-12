@@ -14,18 +14,14 @@ Ground up [nixos](https://www.nixos.org) configuration. Includes a lot of neovim
 
 ## Home-Manager
 
-Declared in the [configuration.nix](configuration.nix) file under "init". Contains program specific configs. The docs I use to find options for HM are [here](https://home-manager-options.extranix.com).
+Imported in the [configuration.nix](./hosts/Rocinante/configuration.nix) file under "init". Contains program specific configs.
 
 ## Nvim
 
 Plugins are declared in the extended module of my [home.nix](home.nix) called [nvim.nix](nvim/nvim.nix). All lua configs are under the nvim/ directory.
 Useful lua pages
-- [format.lua](./nvim/format.lua) for code formatting
-- [lsp.lua](./nvim/lsp.lua) to manage lsps
-
-## Packages
-
-There are some programs I've packaged but have not had the time to possibly request adding them to nixpkgs. You can find them in the packages/ directory. To import them I import them in my [programs.nix](programs.nix) file which hosts the `enviorment.systemPackages` for my configuration.
+- [format.lua](./dots/nvim/format.lua) for code formatting
+- [lsp.lua](./dots/nvim/lsp.lua) to manage lsps
 
 ## TODOs
 ### QoL
