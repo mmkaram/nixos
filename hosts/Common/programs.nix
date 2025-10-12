@@ -24,6 +24,7 @@ let
     prisma-language-server
     prisma-engines
     svelte-language-server
+    bun
   ];
   luaTools = with pkgs; [
     lua
