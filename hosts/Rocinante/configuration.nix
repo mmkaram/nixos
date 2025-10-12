@@ -25,7 +25,7 @@
   ];
 
   # Programs
-  environment.systemPackages = import ./programs.nix { inherit pkgs inputs; };
+  environment.systemPackages = import ../Common/programs.nix { inherit pkgs inputs; };
 
   # Bootloader
   boot.loader.systemd-boot.enable = true;
@@ -65,17 +65,6 @@
   # time.timeZone = "Africa/Cairo"; # "America/Los_Angeles" "Canada/Eastern"
   services.automatic-timezoned.enable = true;
   i18n.defaultLocale = "en_US.UTF-8";
-  i18n.extraLocaleSettings = {
-    LC_ADDRESS = "en_US.UTF-8";
-    LC_IDENTIFICATION = "en_US.UTF-8";
-    LC_MEASUREMENT = "en_US.UTF-8";
-    LC_MONETARY = "en_US.UTF-8";
-    LC_NAME = "en_US.UTF-8";
-    LC_NUMERIC = "en_US.UTF-8";
-    LC_PAPER = "en_US.UTF-8";
-    LC_TELEPHONE = "en_US.UTF-8";
-    LC_TIME = "en_US.UTF-8";
-  };
   #########################################################
   #  ____    _____   ____    _  __  _____    ___    ____  #
   # |  _ \  | ____| / ___|  | |/ / |_   _|  / _ \  |  _ \ #
@@ -84,14 +73,13 @@
   # |____/  |_____| |____/  |_|\_\   |_|    \___/  |_|    #
   #########################################################
   # Desktop
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
 
   # Enable openGL
   hardware.graphics.enable = true;
 
   # Enable window manager
   services.displayManager.sddm.enable = true;
+  services.displayManager.sddm.wayland.enable = true;
   programs.hyprlock.enable = true;
   programs.hyprland = {
     enable = true;
@@ -103,12 +91,6 @@
 
   # Brightness and volume
   programs.light.enable = true;
-
-  # Configure keymap in X11
-  services.xserver = {
-    xkb.layout = "us";
-    xkb.variant = "";
-  };
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
@@ -137,15 +119,9 @@
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
-    # For Jack programs:
-    #jack.enable = true;
-
-    #media-session.enable = true;
     wireplumber.enable = true;
+    #jack.enable = true;
   };
-
-  # Enable touchpad support.
-  # services.xserver.libinput.enable = true;
 
   ##########################################
   #  _   _   ____    _____   ____    ____  #
@@ -199,7 +175,7 @@
   # |_|     |_| \_\  \___/   \____| |_| \_\ /_/   \_\ |_|  |_| |____/ #
   #####################################################################
   # Programs
-  # Enable insecure Packages
+  # Enable insecure and unfree packages
   nixpkgs.config.permittedInsecurePackages = [ ];
   nixpkgs.config.allowUnfree = true;
 
