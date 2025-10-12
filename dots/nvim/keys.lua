@@ -18,8 +18,6 @@ vim.o.tabstop = 4 -- Number of spaces in a tab character
 vim.o.shiftwidth = 4 -- Number of spaces to use for each step of auto-indent
 -- vim.o.expandtab = true -- Use spaces instead of tabs
 
--- :lua MiniPick.builtin.grep_live({globs={"src/app/layout.tsx"}})
-
 -- mini_pick keymaps
 local mini_pick = {
 	{ "n", "<leader>ti", ":Pick treesitter<CR>", desc = "Treesitter symbols" },
