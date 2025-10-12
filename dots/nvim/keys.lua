@@ -28,7 +28,7 @@ local mini_pick = {
 	{ "n", "<leader>td", ':Pick lsp scope="definition"<CR>', desc = "LSP definitions" },
 	{
 		"n",
-		"<leader>tf",
+		"<C-S>s",
 		function()
 			local current_file = vim.fn.expand("%")
 			if current_file == "" then
