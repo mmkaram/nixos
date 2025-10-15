@@ -87,6 +87,7 @@ let
     docker
     git
     inputs.agenix.packages."${system}".default
+    dasht
   ];
   terminalTools = with pkgs; [
     waybar
