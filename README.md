@@ -25,7 +25,6 @@ Useful lua pages
 
 ## TODOs
 ### QoL
-- [ ] Fix caps lock key
 - [ ] automatically install extensions for chromium(ublock, sponsorblock, bitwarden)
 - [ ] Cloud synced atuin
 - [ ] Add declarative configuration for home EPSON printer
