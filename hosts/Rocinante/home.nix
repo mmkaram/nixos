@@ -16,6 +16,7 @@
   programs.waybar = import ../../dots/hyprland/waybar.nix { };
   services.hyprpaper = import ../../dots/hyprland/hyprpaper.nix { };
   services.hypridle = import ../../dots/hyprland/hypridle.nix { };
+  programs.hyprlock = import ../../dots/hyprland/hyprlock.nix { };
 
   services.dunst.enable = true;
 
