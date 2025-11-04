@@ -32,7 +32,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   services.xserver.videoDrivers = [ "nvidia" ];
-  hardware.nvidia.enable = true;
+  hardware.nvidia.open = true;
 
   # Fingerprint
   services.fprintd = import ../../dots/fprintd/fprintd.nix pkgs;
@@ -88,6 +88,8 @@
     withUWSM = true;
     xwayland.enable = true;
   };
+  services.upower.enable = true;
+  services.dbus.enable = true;
   # enable wayland on electron applications
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
