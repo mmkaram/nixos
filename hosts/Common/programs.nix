@@ -210,8 +210,6 @@ let
     yt-dlp
     pipeline
     element-desktop
-    slack
-    beeper
     discord
   ];
   audioTools = with pkgs; [
