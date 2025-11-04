@@ -28,14 +28,11 @@
   environment.systemPackages = import ../Common/programs.nix { inherit pkgs inputs; };
 
   # Bootloader
-  # boot.loader.systemd-boot.enable = true;
-  boot.loader.grub = {
-    enable = true;
-    efiSupport = true;
-    device = "nodev";
-    useOSProber = true;
-  };
+  boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+
+  services.xserver.videoDrivers = [ "nvidia" ];
+  hardware.nvidia.enable = true;
 
   # Fingerprint
   services.fprintd = import ../../dots/fprintd/fprintd.nix pkgs;
