@@ -1,6 +1,9 @@
-{ }:
+{
+  isDesktop ? false,
+  ...
+}:
 let
-  timeMultiplier = 1.0; # Set to 1.0 for production, 0.1 for testing
+  timeMultiplier = 1.0; # set to 0.1 for testing
 in
 {
   enable = true;
@@ -14,22 +17,37 @@ in
 
     listener = [
       {
-        timeout = builtins.floor (120 * timeMultiplier); # 2 minute - lock
+        timeout = builtins.floor (120 * timeMultiplier); # 2 min - lock
         on-timeout = "loginctl lock-session";
       }
       {
-        timeout = builtins.floor (180 * timeMultiplier); # 3 minutes - screen off
+        timeout = builtins.floor (180 * timeMultiplier); # 3 min - screen off
         on-timeout = "hyprctl dispatch dpms off";
         on-resume = "hyprctl dispatch dpms on";
       }
-      {
-        timeout = builtins.floor (240 * timeMultiplier); # 4 minutes - suspend
-        on-timeout = "systemctl suspend";
-      }
-      # {
-      #   timeout = builtins.floor (300 * timeMultiplier); # 5 minutes - hibernate
-      #   on-timeout = "systemctl hibernate";
-      # }
-    ];
+    ]
+    ++ (
+      if !isDesktop then
+        [
+          {
+            timeout = builtins.floor (240 * timeMultiplier); # 4 min - suspend
+            on-timeout = "systemctl suspend";
+          }
+        ]
+      else
+        [ ]
+    );
+
+    # ++ (
+    #   if !isDesktop then
+    #     [
+    #       {
+    #         timeout = builtins.floor (300 * timeMultiplier); # 5 min - hibernate
+    #         on-timeout = "systemctl hibernate";
+    #       }
+    #     ]
+    #   else
+    #     [ ]
+    # );
   };
 }
