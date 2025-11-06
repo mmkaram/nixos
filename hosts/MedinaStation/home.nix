@@ -18,7 +18,7 @@
   services.hypridle = import ../../dots/hyprland/hypridle.nix {
     lock-time = 10 * 60;
     screen-time = 15 * 60;
-    suspend-time = 20 * 60;
+    suspend-time = 0;
     hibernate-time = 0;
   };
   programs.hyprlock = import ../../dots/hyprland/hyprlock.nix { };
