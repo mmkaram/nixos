@@ -1,12 +1,28 @@
 {
-  isDesktop ? false,
+  lock-time ? 120,
+  screen-time ? 180,
+  suspend-time ? 240,
+  hibernate-time ? 300,
   ...
 }:
 let
   timeMultiplier = 1.0; # set to 0.1 for testing
+
+  makeListener =
+    timeout: attrs:
+    if timeout != 0 then
+      attrs
+      // {
+        timeout = builtins.floor (timeout * timeMultiplier);
+      }
+    else
+      null;
+
+  optionalListener = l: if l == null then [ ] else [ l ];
 in
 {
   enable = true;
+
   settings = {
     general = {
       lock_cmd = "pidof hyprlock || hyprlock";
@@ -15,39 +31,31 @@ in
       ignore_dbus_inhibit = false;
     };
 
-    listener = [
-      {
-        timeout = builtins.floor (120 * timeMultiplier); # 2 min - lock
-        on-timeout = "loginctl lock-session";
-      }
-      {
-        timeout = builtins.floor (180 * timeMultiplier); # 3 min - screen off
-        on-timeout = "hyprctl dispatch dpms off";
-        on-resume = "hyprctl dispatch dpms on";
-      }
-    ]
-    ++ (
-      if !isDesktop then
-        [
-          {
-            timeout = builtins.floor (240 * timeMultiplier); # 4 min - suspend
-            on-timeout = "systemctl suspend";
-          }
-        ]
-      else
-        [ ]
-    );
-
-    # ++ (
-    #   if !isDesktop then
-    #     [
-    #       {
-    #         timeout = builtins.floor (300 * timeMultiplier); # 5 min - hibernate
-    #         on-timeout = "systemctl hibernate";
-    #       }
-    #     ]
-    #   else
-    #     [ ]
-    # );
+    listener =
+      # lock
+      (optionalListener (
+        makeListener lock-time {
+          on-timeout = "loginctl lock-session";
+        }
+      ))
+      # screen
+      ++ (optionalListener (
+        makeListener screen-time {
+          on-timeout = "hyprctl dispatch dpms off";
+          on-resume = "hyprctl dispatch dpms on";
+        }
+      ))
+      # suspend
+      ++ (optionalListener (
+        makeListener suspend-time {
+          on-timeout = "systemctl suspend";
+        }
+      ))
+      # hibernate
+      ++ (optionalListener (
+        makeListener hibernate-time {
+          on-timeout = "systemctl hibernate";
+        }
+      ));
   };
 }

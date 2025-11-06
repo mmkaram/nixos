@@ -15,7 +15,12 @@
   wayland.windowManager.hyprland = import ../../dots/hyprland/hyprland.nix { };
   programs.waybar = import ../../dots/hyprland/waybar.nix { };
   services.hyprpaper = import ../../dots/hyprland/hyprpaper.nix { };
-  services.hypridle = import ../../dots/hyprland/hypridle.nix { isDesktop = true; };
+  services.hypridle = import ../../dots/hyprland/hypridle.nix {
+    lock-time = 10 * 60;
+    screen-time = 15 * 60;
+    suspend-time = 20 * 60;
+    hibernate-time = 0;
+  };
   programs.hyprlock = import ../../dots/hyprland/hyprlock.nix { };
 
   services.dunst.enable = true;
