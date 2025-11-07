@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-cd $USER/.ssh
+cd /home/$USER/.ssh
 ssh-keygen -K
-ls -alh | grep sk
+ls -alh | grep sk || true
 
