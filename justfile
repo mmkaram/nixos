@@ -21,3 +21,6 @@ history:
 
 update-sk:
 	scripts/update-sk.sh
+
+add-sk:
+	scripts/add-yubi-auth.sh
