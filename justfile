@@ -19,8 +19,8 @@ delete:
 history:
 	sudo nixos-rebuild list-generations
 
-update-sk:
-	scripts/update-sk.sh
+add-sk-ssh:
+	scripts/add-sk-ssh.sh
 
-add-sk:
-	scripts/add-yubi-auth.sh
+add-sk-pamu2f:
+	scripts/add-sk-pamu2f.sh
