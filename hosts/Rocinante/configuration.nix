@@ -31,36 +31,4 @@
     cups-brother-dcpt310
   ];
 
-  # yubikey/yubico
-  services.pcscd.enable = true;
-  services.udev.packages = [ pkgs.yubikey-personalization ];
-
-  security.pam.u2f = {
-    enable = true;
-    # control = "required";
-    settings = {
-      interactive = true;
-      cue = true;
-      authFile = "/etc/nixos/secrets/u2f_keys";
-    };
-  };
-
-  security.pam.services = {
-    login = {
-      u2fAuth = true;
-      # unixAuth = false;
-    };
-    sudo = {
-      u2fAuth = true;
-      # unixAuth = false;
-    };
-  };
-
-  programs.gnupg.agent = {
-    enable = true;
-    enableSSHSupport = true;
-    settings = {
-      disable-scdaemon = true;
-    };
-  };
 }
