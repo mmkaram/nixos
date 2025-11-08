@@ -80,14 +80,12 @@ let
     serie # git graph
     qbittorrent
     inetutils
-    popsicle
     caligula
     ffmpeg
     qemu # Virtualizer
     docker
     git
     inputs.agenix.packages."${system}".default
-    dasht
   ];
   terminalTools = with pkgs; [
     waybar
@@ -149,7 +147,6 @@ let
     ifuse
   ];
   games = with pkgs; [
-    tetrio-desktop
     prismlauncher
     steam
   ];
@@ -186,12 +183,10 @@ let
     obs-studio
     audacity
     pcmanfm
-    impression
     xournalpp
     obsidian
     apostrophe
     zotero
-    sublime
     yazi
     brightnessctl
     prusa-slicer
@@ -222,7 +217,6 @@ let
     bitwarden-desktop
     ungoogled-chromium
     wiki-tui
-    wikiman
   ];
 in
 rustTools
