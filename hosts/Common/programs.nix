@@ -185,6 +185,7 @@ let
     pcmanfm
     xournalpp
     obsidian
+    notion-app-enhanced
     apostrophe
     zotero
     yazi
