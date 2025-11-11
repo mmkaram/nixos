@@ -223,6 +223,8 @@
       "$mainMod SHIFT, minus, movetoworkspace, special:minus"
       "$mainMod, equal, togglespecialworkspace, equal"
       "$mainMod SHIFT, equal, movetoworkspace, special:equal"
+      "$mainMod, backspace, togglespecialworkspace, backspace"
+      "$mainMod SHIFT, backspace, movetoworkspace, special:backspace"
 
       # Mouse workspace switching
       "$mainMod, mouse_down, workspace, e+1"
