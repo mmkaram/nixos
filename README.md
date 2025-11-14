@@ -25,12 +25,10 @@ Useful lua pages
 
 ## TODOs
 ### QoL
-- [ ] automatically install extensions for chromium(ublock, sponsorblock, bitwarden)
 - [ ] Cloud synced atuin
 - [ ] Add declarative configuration for home EPSON printer
-- [ ] Change toggle-term with something more native
+- [ ] Replace toggle-term with something more native
 ### Projects
-- [ ] configuration shuffle to allow for multiple hosts
 - [ ] Nix flatpak
 - [ ] Yubikey for agenix
 - [ ] Yubikey for luks
