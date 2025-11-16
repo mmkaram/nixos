@@ -1,6 +1,13 @@
-{ }:
+{ ... }:
 {
   enable = true;
+  enableDefaultConfig = false;
+
+  matchBlocks."*" = {
+    # forwardAgent = false;
+    # serverAliveInterval = 0;
+  };
+
   extraConfig = ''
     Host csuw
         HostName linux.student.cs.uwaterloo.ca
@@ -12,9 +19,9 @@
     Host corn-syrup
         HostName corn-syrup.csclub.uwaterloo.ca
         User mkaram
-    host prod
-        hostname 172.19.134.119
-        proxyjump corn-syrup
-        user ubuntu
+    Host prod
+        HostName 172.19.134.119
+        ProxyJump corn-syrup
+        User ubuntu
   '';
 }
