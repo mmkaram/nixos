@@ -34,5 +34,4 @@ Useful lua pages
 - [ ] Yubikey for luks
 - [ ] Stylix
 ### Other
-- [ ] look into `'programs.ssh' default values will be removed in the future.`
 - [ ] Track my nmconnection file for eduroam: /etc/NetworkManager/system-connections/waterloo-eduroam.nmconnection (look into `ensureProfiles` options)
