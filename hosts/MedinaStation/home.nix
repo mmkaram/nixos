@@ -61,7 +61,7 @@
     enableFishIntegration = true;
   };
 
-  programs.git = import ../../dots/git/git.nix { };
+  programs.git = import ../../dots/git/git.nix { gpgSign = false; };
 
   programs.ssh = import ../../dots/ssh/ssh.nix { };
 
