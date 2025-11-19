@@ -1,4 +1,6 @@
-{ }:
+{
+  gpgSign ? true,
+}:
 {
   enable = true;
   userName = "mmkaram";
@@ -6,7 +8,7 @@
   extraConfig = {
     gpg.format = "ssh";
     user.signingkey = "~/.ssh/id_ed25519_sk";
-    commit.gpgSign = true;
+    commit.gpgSign = gpgSign;
     push.autoSetupRemote = true;
     init = {
       defaultBranch = "main";
