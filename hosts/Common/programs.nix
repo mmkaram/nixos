@@ -211,6 +211,7 @@ let
     pulseaudio
     spotify
     tidal-hifi
+    feishin
   ];
   browsingTools = with pkgs; [
     inputs.zen-browser.packages."${system}".default
