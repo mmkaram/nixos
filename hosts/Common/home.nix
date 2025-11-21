@@ -15,7 +15,6 @@
   wayland.windowManager.hyprland = import ../../dots/hyprland/hyprland.nix { };
   programs.waybar = import ../../dots/hyprland/waybar.nix { };
   services.hyprpaper = import ../../dots/hyprland/hyprpaper.nix { };
-  services.hypridle = import ../../dots/hyprland/hypridle.nix { };
   programs.hyprlock = import ../../dots/hyprland/hyprlock.nix { };
 
   services.dunst.enable = true;
@@ -56,7 +55,6 @@
     enableFishIntegration = true;
   };
 
-  programs.git = import ../../dots/git/git.nix { gpgSign = false; };
 
   programs.ssh = import ../../dots/ssh/ssh.nix { };
 
