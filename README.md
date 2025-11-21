@@ -35,3 +35,4 @@ Useful lua pages
 - [ ] Stylix
 ### Other
 - [ ] Track my nmconnection file for eduroam: /etc/NetworkManager/system-connections/waterloo-eduroam.nmconnection (look into `ensureProfiles` options)
+- [ ] Make hyprland multi monitor use one desktop for all monitors instead of one desktop per
