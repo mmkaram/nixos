@@ -10,7 +10,7 @@ let
     rustfmt
     rust-analyzer
     cargo
-    du-dust
+    dust
   ];
   webTools = with pkgs; [
     wrangler
