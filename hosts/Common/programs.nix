@@ -88,16 +88,6 @@ let
     inputs.agenix.packages."${system}".default
   ];
   terminalTools = with pkgs; [
-    waybar
-    hyprpaper
-    hyprcursor
-    rofi
-    rofimoji
-    rofi-power-menu
-    graphite-cursors
-    flameshot
-    cliphist
-    dmenu
     oh-my-fish
     nitch
     caligula
@@ -159,6 +149,16 @@ let
     libu2f-host
   ];
   desktopTools = with pkgs; [
+    waybar
+    hyprpaper
+    hyprcursor
+    rofi
+    rofimoji
+    rofi-power-menu
+    graphite-cursors
+    flameshot
+    cliphist
+    dmenu
     libappindicator-gtk3
     playerctl
     udiskie
