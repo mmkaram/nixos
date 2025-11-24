@@ -91,11 +91,6 @@ in
     }
 
     {
-      plugin = guess-indent-nvim;
-      config = toLua "require('guess-indent').setup()";
-    }
-
-    {
       plugin = toggleterm-nvim;
       config = toLuaFile ./term.lua;
     }
