@@ -91,7 +91,8 @@ let
     oh-my-fish
     nitch
     caligula
-    charm-freeze
+    charm-freeze # code screenshot
+    presenterm
     sshx
     starship
     p7zip
