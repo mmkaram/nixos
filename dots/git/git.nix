@@ -3,9 +3,9 @@
 }:
 {
   enable = true;
-  userName = "mmkaram";
-  userEmail = "mahdykaram@outlook.com";
-  extraConfig = {
+  settings = {
+    user.name = "mmkaram";
+    user.email = "mahdykaram@outlook.com";
     gpg.format = "ssh";
     user.signingkey = "~/.ssh/id_ed25519_sk";
     commit.gpgSign = gpgSign;
