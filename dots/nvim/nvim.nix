@@ -109,11 +109,6 @@ in
       plugin = codewindow-nvim;
       config = toLuaFile ./codewindow.lua;
     }
-
-    {
-      plugin = zen-mode-nvim;
-      config = toLua "require('zen-mode').setup()";
-    }
     # Git
     lazygit-nvim
     undotree

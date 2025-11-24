@@ -57,7 +57,6 @@ local window_maps = {
 	{ "n", "<leader>sv", ":vsplit<CR>", desc = "Vertical split" },
 	{ "n", "<leader>nh", ":new<CR>", desc = "New horizontal split" },
 	{ "n", "<leader>nv", ":vnew<CR>", desc = "New vertical split" },
-	{ "n", "<leader>z", ":ZenMode<CR>", desc = "Toggle zen mode" },
 	{ "n", "<C-S-k>", ":resize +2<CR>", desc = "Increase window height" },
 	{ "n", "<C-S-j>", ":resize -2<CR>", desc = "Decrease window height" },
 	{ "n", "<C-S-h>", ":vertical resize -2<CR>", desc = "Decrease window width" },
