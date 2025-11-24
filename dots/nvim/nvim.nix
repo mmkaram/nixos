@@ -8,11 +8,6 @@ in
   defaultEditor = true;
 
   plugins = with pkgs.vimPlugins; [
-    # Dependencies
-    plenary-nvim
-    nvim-web-devicons
-    nui-nvim
-
     # Mini
     {
       plugin = mini-pick;
