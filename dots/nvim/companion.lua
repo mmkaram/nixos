@@ -34,6 +34,7 @@ require("codecompanion").setup({
 								"qwen/qwen3-coder",
 								"openai/gpt-5-mini",
 								"google/gemini-2.5-flash",
+								"google/gemini-3-pro-preview",
 								"openai/gpt-4.1",
 							},
 						},
