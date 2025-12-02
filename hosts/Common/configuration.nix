@@ -27,18 +27,6 @@
   i18n.defaultLocale = "en_US.UTF-8";
   # Enable openGL
   hardware.graphics.enable = true;
-  # Enable window manager
-  services.displayManager.sddm.enable = true;
-  services.displayManager.sddm.wayland.enable = true;
-  programs.hyprland = {
-    enable = true;
-    withUWSM = true;
-    xwayland.enable = true;
-  };
-  services.upower.enable = true;
-  services.dbus.enable = true;
-  # enable wayland on electron applications
-  environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
   # Brightness and volume
   programs.light.enable = true;
