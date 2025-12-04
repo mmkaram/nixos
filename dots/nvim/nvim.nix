@@ -8,6 +8,7 @@ in
   defaultEditor = true;
 
   plugins = with pkgs.vimPlugins; [
+    plenary-nvim
     # Mini
     {
       plugin = mini-pick;
@@ -55,10 +56,10 @@ in
       config = toLua "require('tmux').setup()";
     }
 
-    # {
-    #   plugin = obsidian-nvim;
-    #   config = toLuaFile ./obsidian.lua;
-    # }
+    {
+      plugin = obsidian-nvim;
+      config = toLuaFile ./obsidian.lua;
+    }
 
     {
       plugin = neo-tree-nvim;
