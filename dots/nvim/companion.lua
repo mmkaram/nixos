@@ -3,16 +3,6 @@ require("codecompanion").setup({
 	strategies = {
 		chat = {
 			adapter = "openrouter",
-			slash_commands = {
-				["file"] = {
-					callback = "strategies.chat.slash_commands.file",
-					description = "Select a file using mini_pick",
-					opts = {
-						provider = "mini_pick",
-						contains_code = true,
-					},
-				},
-			},
 		},
 		inline = {
 			adapter = "openrouter",
