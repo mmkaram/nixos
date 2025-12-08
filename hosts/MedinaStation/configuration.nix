@@ -1,6 +1,7 @@
 {
   inputs,
   config,
+  pkgs,
   ...
 }:
 {
@@ -8,6 +9,10 @@
     ./hardware-configuration.nix
     inputs.home-manager.nixosModules.default
     ../Common/configuration.nix
+  ];
+
+  environment.systemPackages = with pkgs; [
+    davinci-resolve
   ];
 
   # Enable the COSMIC login manager
@@ -21,7 +26,7 @@
   # hardware.nvidia.open = true;
 
   hardware.nvidia = {
-    open = false; # use proprietary driver (faster)
+    open = true;
     modesetting.enable = true;
     package = config.boot.kernelPackages.nvidiaPackages.latest;
   };
