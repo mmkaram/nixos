@@ -21,7 +21,7 @@
   # hardware.nvidia.open = true;
 
   hardware.nvidia = {
-    open = false; # use proprietary driver (faster)
+    open = true;
     modesetting.enable = true;
     package = config.boot.kernelPackages.nvidiaPackages.latest;
   };
