@@ -12,5 +12,9 @@
   };
   extraConfig = ''
     cursor_trail 9
+    map ctrl+shift+h move_window left
+    map ctrl+shift+j move_window down  
+    map ctrl+shift+k move_window up
+    map ctrl+shift+l move_window right
   '';
 }
