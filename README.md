@@ -25,7 +25,8 @@ Useful lua pages
 
 ## TODOs
 ### nvim
-- [ ] Keybind to build/run code
+- [ ] Keybind to build/run code (in toggleterm?)
+- [ ] See images in obsidian-nvim
 ### QoL
 - [ ] Cloud synced atuin
 - [ ] Add declarative configuration for home EPSON printer
