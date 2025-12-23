@@ -209,9 +209,7 @@ let
   ];
   audioTools = with pkgs; [
     pulseaudio
-    spotify
-    tidal-hifi
-    feishin
+    aonsoku
   ];
   browsingTools = with pkgs; [
     inputs.zen-browser.packages."${system}".default
