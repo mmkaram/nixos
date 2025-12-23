@@ -53,6 +53,8 @@ vim.lsp.config("rust_analyzer", {
 	},
 })
 
+-- arduino-cli core update-index
+-- arduino-cli core install esp32:esp32
 vim.lsp.config("arduino_language_server", {
 	cmd = {
 		"arduino-language-server",
