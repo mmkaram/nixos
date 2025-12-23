@@ -24,6 +24,9 @@ Useful lua pages
 - [lsp.lua](./dots/nvim/lsp.lua) to manage lsps
 
 ## TODOs
+### nvim
+- [ ] Keybind to build/run code (in toggleterm?)
+- [ ] See images in obsidian-nvim
 ### QoL
 - [ ] Cloud synced atuin
 - [ ] Add declarative configuration for home EPSON printer
