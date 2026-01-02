@@ -209,7 +209,7 @@ let
   ];
   audioTools = with pkgs; [
     pulseaudio
-    aonsoku
+  	feishin
   ];
   browsingTools = with pkgs; [
     inputs.zen-browser.packages."${system}".default
