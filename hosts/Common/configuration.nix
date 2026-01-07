@@ -170,16 +170,6 @@
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
-  # Enable tailscale
-  services.tailscale = {
-    enable = true;
-    useRoutingFeatures = "client";
-    openFirewall = true;
-    extraUpFlags = [
-      "--ssh=true"
-    ];
-  };
-
   # Enable localsend
   programs.localsend.enable = true;
   programs.localsend.openFirewall = true;

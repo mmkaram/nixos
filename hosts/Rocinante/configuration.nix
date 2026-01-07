@@ -44,4 +44,13 @@
     cups-brother-dcpt310
   ];
 
+  # Enable tailscale
+  services.tailscale = {
+    enable = true;
+    useRoutingFeatures = "client";
+    openFirewall = true;
+    extraUpFlags = [
+      "--ssh=true"
+    ];
+  };
 }
