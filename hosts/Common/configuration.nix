@@ -11,6 +11,19 @@
     "flakes"
   ];
 
+  # Enable window manager
+  services.displayManager.sddm.enable = true;
+  services.displayManager.sddm.wayland.enable = true;
+  programs.hyprland = {
+    enable = true;
+    withUWSM = true;
+    xwayland.enable = true;
+  };
+  services.upower.enable = true;
+  services.dbus.enable = true;
+  # Enable wayland on electron applications
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
+
   # Programs
   environment.systemPackages = import ../Common/programs.nix { inherit pkgs inputs; };
 
