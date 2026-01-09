@@ -9,4 +9,6 @@
   ];
 
   networking.hostName = "Tycho";
+
+  services.getty.autologinUser = "dd0k";
 }
