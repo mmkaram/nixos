@@ -12,7 +12,7 @@
   ];
 
   # Fingerprint
-  services.fprintd = import ../../dots/fprintd/fprintd.nix pkgs;
+  services.fprintd = import ../../../dots/fprintd/fprintd.nix pkgs;
 
   # Network
   networking.hostName = "Rocinante";

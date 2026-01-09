@@ -138,7 +138,7 @@
     package = pkgs.wireshark;
   };
 
-  services.kanata = import ../../dots/kanata/kanata.nix { };
+  services.kanata = import ../../../dots/kanata/kanata.nix { };
 
   # FONTS
   fonts.packages = with pkgs; [
@@ -173,7 +173,7 @@
   };
 
   # age secrets manager
-  age = import ../../secrets/age.nix;
+  age = import ../../../secrets/age.nix;
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;

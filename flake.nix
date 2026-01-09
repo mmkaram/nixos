@@ -31,7 +31,7 @@
           inherit inputs;
         };
         modules = [
-          ./hosts/Rocinante/configuration.nix
+          ./hosts/Desktop/Rocinante/configuration.nix
           agenix.nixosModules.default
           inputs.home-manager.nixosModules.default
         ];
@@ -42,7 +42,7 @@
           inherit inputs;
         };
         modules = [
-          ./hosts/MedinaStation/configuration.nix
+          ./hosts/Desktop/MedinaStation/configuration.nix
           agenix.nixosModules.default
           inputs.home-manager.nixosModules.default
         ];
