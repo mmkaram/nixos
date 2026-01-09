@@ -1,0 +1,14 @@
+origincert: /etc/cloudflared/cert.pem
+tunnel: omv
+credentials-file: /etc/cloudflared/omv.json
+
+ingress:
+  - hostname: omv.mmkaram.dev
+    service: http://localhost:32400
+  - hostname: navidrome.mmkaram.dev
+    service: http://localhost:4533
+  - hostname: storage.mmkaram.dev
+    service: http://localhost:8080
+  - hostname: vaultwarden.mmkaram.dev
+    service: http://localhost:8080
+  - service: http_status:404

@@ -1,0 +1,26 @@
+# Scan and indexing
+ScanInterval = "1h"
+Scanner.PurgeMissing = "always"
+SessionTimeout = "24h"
+LogLevel = "info"
+
+# Reverse proxy / public URL
+BaseURL = "https://navidrome.mmkaram.dev"
+ReverseProxy.Listen = true
+ReverseProxy.ClientIPHeaders = "CF-Connecting-IP"
+ReverseProxy.TLSTerminated = true
+
+# Library and data paths (match your Docker mounts)
+# Adjust to your actual host paths when running outside Docker.
+MusicFolder = "/srv/mergerfs/cairo_one/library/music"
+DataFolder = "/srv/dev-disk-by-label-data/appdata/navidrome"
+
+# Playlists auto-import
+AutoImportPlaylists = false
+
+# Cover art providers and priority
+CoverArtProviders = "local,embedded,lastfm,fanarttv,coverartarchive"
+TODO: Key
+LastFM.ApiKey = ""
+MusicBrainz.Enabled = true
+CoverArtPriority = "cover.jpg,cover.png,folder.jpg,folder.png,front.jpg,front.png,embedded"
