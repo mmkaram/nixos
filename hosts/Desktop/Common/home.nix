@@ -12,14 +12,14 @@
     inputs.agenix.homeManagerModules.default
   ];
 
-  wayland.windowManager.hyprland = import ../../dots/hyprland/hyprland.nix { };
-  programs.waybar = import ../../dots/hyprland/waybar.nix { };
-  services.hyprpaper = import ../../dots/hyprland/hyprpaper.nix { };
-  programs.hyprlock = import ../../dots/hyprland/hyprlock.nix { };
+  wayland.windowManager.hyprland = import ../../../dots/hyprland/hyprland.nix { };
+  programs.waybar = import ../../../dots/hyprland/waybar.nix { };
+  services.hyprpaper = import ../../../dots/hyprland/hyprpaper.nix { };
+  programs.hyprlock = import ../../../dots/hyprland/hyprlock.nix { };
 
   services.dunst.enable = true;
 
-  programs.fish = import ../../dots/fish/fish.nix;
+  programs.fish = import ../../../dots/fish/fish.nix;
 
   programs.direnv = {
     enable = true;
@@ -32,7 +32,7 @@
     theme = "~/.config/rofi/spotlight-dark.rasi";
     plugins = [ pkgs.rofi-calc ];
   };
-  home.file.".config/rofi/spotlight-dark.rasi".source = ../../dots/rofi/spotlight-dark.rasi;
+  home.file.".config/rofi/spotlight-dark.rasi".source = ../../../dots/rofi/spotlight-dark.rasi;
 
   services.cliphist = {
     enable = true;
@@ -46,17 +46,16 @@
     enableTransience = true;
   };
 
-  programs.kitty = import ../../dots/kitty/kitty.nix { inherit pkgs; };
+  programs.kitty = import ../../../dots/kitty/kitty.nix { inherit pkgs; };
 
-  programs.tmux = import ../../dots/tmux/tmux.nix { inherit pkgs; };
+  programs.tmux = import ../../../dots/tmux/tmux.nix { inherit pkgs; };
 
   programs.zoxide = {
     enable = true;
     enableFishIntegration = true;
   };
 
-
-  programs.ssh = import ../../dots/ssh/ssh.nix { };
+  programs.ssh = import ../../../dots/ssh/ssh.nix { };
 
   programs.vim = {
     enable = true;
@@ -67,7 +66,7 @@
     '';
   };
 
-  programs.neovim = import ../../dots/nvim/nvim.nix { inherit pkgs; };
+  programs.neovim = import ../../../dots/nvim/nvim.nix { inherit pkgs; };
 
   programs.btop = {
     enable = true;
