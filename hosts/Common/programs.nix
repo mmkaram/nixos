@@ -85,7 +85,7 @@ let
     qemu # Virtualizer
     docker
     git
-    inputs.agenix.packages."${system}".default
+    inputs.agenix.packages."${pkgs.stdenv.hostPlatform.system}".default
   ];
   terminalTools = with pkgs; [
     oh-my-fish
@@ -212,7 +212,7 @@ let
   	feishin
   ];
   browsingTools = with pkgs; [
-    inputs.zen-browser.packages."${system}".default
+    inputs.zen-browser.packages."${pkgs.stdenv.hostPlatform.system}".default
     bitwarden-desktop
     ungoogled-chromium
   ];
