@@ -47,5 +47,16 @@
           inputs.home-manager.nixosModules.default
         ];
       };
+      nixosConfigurations.Tycho = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = {
+          inherit inputs;
+        };
+        modules = [
+          ./hosts/Server/Tycho/configuration.nix
+          agenix.nixosModules.default
+          inputs.home-manager.nixosModules.default
+        ];
+      };
     };
 }

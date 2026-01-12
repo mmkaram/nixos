@@ -1,14 +1,8 @@
-origincert: /etc/cloudflared/cert.pem
-tunnel: omv
-credentials-file: /etc/cloudflared/omv.json
+origincert: /etc/nixos/hosts/Server/Tycho/cloudflared/cert.pem
+tunnel: tycho
+credentials-file: /etc/nixos/hosts/Server/Tycho/cloudflared/tycho.json
 
 ingress:
-  - hostname: omv.mmkaram.dev
-    service: http://localhost:32400
-  - hostname: navidrome.mmkaram.dev
-    service: http://localhost:4533
-  - hostname: storage.mmkaram.dev
-    service: http://localhost:8080
-  - hostname: vaultwarden.mmkaram.dev
-    service: http://localhost:8080
+  - hostname: gitea.example.com
+    service: http://127.0.0.1:3000
   - service: http_status:404

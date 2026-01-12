@@ -48,6 +48,8 @@
     packages = with pkgs; [
       firefox
       zoom-us
+      git
+      fish
     ];
   };
   users.defaultUserShell = pkgs.fish;

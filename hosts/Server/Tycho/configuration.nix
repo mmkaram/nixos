@@ -11,6 +11,8 @@
 
   networking.hostName = "Tycho";
 
+  services.openssh.enable = true;
+
   services.getty.autologinUser = "dd0k";
 
   services.tailscale = {
@@ -38,7 +40,7 @@
     environmentFile = "/var/lib/vaultwarden/vaultwarden.env";
     config = {
       # Refer to https://github.com/dani-garcia/vaultwarden/blob/main/.env.template
-      DOMAIN = "https://bitwarden.example.com";
+      DOMAIN = "https://vaultwarden.mmkaram.dev";
       SIGNUPS_ALLOWED = false;
 
       ROCKET_ADDRESS = "127.0.0.1";
@@ -49,12 +51,12 @@
       # thus without transport encryption.
       # If you use an external mail server, follow:
       #   https://github.com/dani-garcia/vaultwarden/wiki/SMTP-configuration
-      SMTP_HOST = "127.0.0.1";
-      SMTP_PORT = 25;
-      SMTP_SSL = false;
-
-      SMTP_FROM = "admin@bitwarden.example.com";
-      SMTP_FROM_NAME = "example.com Bitwarden server";
+      # SMTP_HOST = "127.0.0.1";
+      # SMTP_PORT = 25;
+      # SMTP_SSL = false;
+      #
+      # SMTP_FROM = "admin@bitwarden.example.com";
+      # SMTP_FROM_NAME = "example.com Bitwarden server";
     };
   };
 
@@ -69,17 +71,17 @@
 
     # Bind only locally; put nginx or cloudflared in front
     appName = "Gitea";
-    domain = "gitea.example.com"; # external hostname
-    rootUrl = "https://gitea.example.com/"; # public URL
+    domain = "git.mmkaram.dev"; # external hostname
+    rootUrl = "https://git.mmkaram.dev/"; # public URL
     httpAddress = "127.0.0.1";
     httpPort = 3000;
 
     # Auth + user bootstrap
-    disableRegistration = true; # set to false for first user if needed
+    disableRegistration = false; # set to false for first user if needed
     settings = {
       server = {
         PROTOCOL = "http";
-        SSH_DOMAIN = "gitea.example.com";
+        SSH_DOMAIN = "git.mmkaram.dev";
         SSH_PORT = 22; # host sshd
         START_SSH_SERVER = false; # use host OpenSSH, not Gitea’s internal
         LANDING_PAGE = "explore";
@@ -92,7 +94,7 @@
       # SQLite by default (zero-maintenance)
       database = {
         DB_TYPE = "sqlite3";
-        PATH = "gitea.db";
+        # PATH = "gitea.db";
       };
 
       # Basic email stub (optional; wire real SMTP later)
@@ -105,8 +107,18 @@
     stateDir = "/var/lib/gitea";
   };
 
-  # TODO: Set up reverse proxy
   services.cloudflared = {
     enable = true;
+
+    tunnels.tycho = {
+      credentialsFile =
+        "/etc/nixos/hosts/Server/Tycho/cloudflared/tycho.json";
+
+      ingress = {
+        "git.mmkaram.dev" = "http://127.0.0.1:3000";
+      };
+
+      default = "http_status:404";
+    };
   };
 }
