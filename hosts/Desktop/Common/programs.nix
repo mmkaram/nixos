@@ -85,6 +85,8 @@ let
     qemu # Virtualizer
     docker
     git
+    jujutsu
+    jjui
     inputs.agenix.packages."${pkgs.stdenv.hostPlatform.system}".default
   ];
   terminalTools = with pkgs; [
@@ -209,7 +211,7 @@ let
   ];
   audioTools = with pkgs; [
     pulseaudio
-  	feishin
+    feishin
   ];
   browsingTools = with pkgs; [
     inputs.zen-browser.packages."${pkgs.stdenv.hostPlatform.system}".default
