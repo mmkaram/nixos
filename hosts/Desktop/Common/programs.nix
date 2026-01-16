@@ -152,7 +152,7 @@ let
     libu2f-host
   ];
   desktopTools = with pkgs; [
-  	simple-scan
+    simple-scan
     waybar
     hyprpaper
     hyprcursor
@@ -188,6 +188,7 @@ let
     pcmanfm
     xournalpp
     obsidian
+    gnucash
     apostrophe
     zotero
     yazi
