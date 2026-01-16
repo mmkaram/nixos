@@ -44,6 +44,8 @@
       "dialout"
       "uucp"
       "wireshark"
+      "scanner"
+      "lp"
     ];
     packages = with pkgs; [
       firefox

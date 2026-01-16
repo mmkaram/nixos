@@ -152,6 +152,7 @@ let
     libu2f-host
   ];
   desktopTools = with pkgs; [
+  	simple-scan
     waybar
     hyprpaper
     hyprcursor
