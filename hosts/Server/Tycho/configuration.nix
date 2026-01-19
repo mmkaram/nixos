@@ -81,7 +81,7 @@
     settings = {
       server = {
         PROTOCOL = "http";
-        SSH_DOMAIN = "git.mmkaram.dev";
+        SSH_DOMAIN = "tycho";
         SSH_PORT = 22; # host sshd
         START_SSH_SERVER = false; # use host OpenSSH, not Gitea’s internal
         LANDING_PAGE = "explore";
