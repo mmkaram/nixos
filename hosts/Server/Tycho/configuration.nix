@@ -62,8 +62,44 @@
 
   services.navidrome = {
     enable = true;
-    environmentFile = ./navidrome.toml;
-  };
+    
+    # All your Docker environment variables as settings
+    settings = {
+      MusicFolder = "/srv/library/music";
+      DataFolder = "/srv/appdata/navidrome";
+
+      ScanInterval = "1h";
+      ScannerPurgeMissing = "always";
+      SessionTimeout = "24h";
+      LogLevel = "info";
+      
+      # Reverse proxy settings (for Cloudflare + your domain)
+      BaseURL = "https://navidrome.mmkaram.dev";
+      ReverseProxyListen = true;
+      ReverseProxyClientIPHeaders = [ "CF-Connecting-IP" ];
+      ReverseProxyTLS = true;  # Matches TLS_TERMINATED=true
+      
+      # Disable auto-import playlists
+      AutoImportPlaylists = false;
+      
+      # Cover art configuration
+      CoverArtProviders = [ "local" "embedded" "lastfm" "fanarttv" "coverartarchive" ];
+      LastFM_APIKey = "aa2d579d4c6799e7d2977aca49baefc3";
+      MusicBrainzEnabled = true;
+      CoverArtPriority = "cover.jpg,cover.png,folder.jpg,folder.png,front.jpg,front.png,embedded";
+      
+      # Port (matches Docker)
+      ListenPort = 4533;
+    };
+  
+  # Match Docker user/group (1000:100)
+  user = "1000";
+  group = "100";
+  
+  # Open firewall
+  openFirewall = true;
+};
+
 
   # Gitea
   services.gitea = {
@@ -116,6 +152,7 @@
 
       ingress = {
         "git.mmkaram.dev" = "http://127.0.0.1:3000";
+        "navidrome.mmkaram.dev" = "http://127.0.0.1:4533";
       };
 
       default = "http_status:404";
