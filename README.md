@@ -36,6 +36,14 @@ Useful lua pages
 - [ ] Yubikey for agenix
 - [ ] Yubikey for luks
 - [ ] Stylix
+### Tycho
+- [ ] secret managment for cert.pem, tycho.json, last.fm api key etc.
+- [ ] get vaultwarden working
+- [ ] get jellyfin working
+- [ ] get factorio/minecraft server?
+- [ ] get neovim config
+- [ ] get cloudflared, just, neovim, and other programs
+- [ ] auto boot into latest nixos config from grub to save time on boot
 ### Other
 - [ ] Track my nmconnection file for eduroam: /etc/NetworkManager/system-connections/waterloo-eduroam.nmconnection (look into `ensureProfiles` options)
 - [ ] Make hyprland multi monitor use one desktop for all monitors instead of one desktop per
