@@ -153,6 +153,7 @@
       ingress = {
         "git.mmkaram.dev" = "http://127.0.0.1:3000";
         "navidrome.mmkaram.dev" = "http://127.0.0.1:4533";
+	"jellyfin.mmkaram.dev" = "http://127.0.0.1:8096";
       };
 
       default = "http_status:404";
