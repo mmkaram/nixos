@@ -39,7 +39,6 @@ Useful lua pages
 ### Tycho
 - [ ] secret managment for cert.pem, tycho.json, last.fm api key etc.
 - [ ] get vaultwarden working
-- [ ] get jellyfin working
 - [ ] get factorio/minecraft server?
 - [ ] get neovim config
 - [ ] get cloudflared, just, neovim, and other programs
