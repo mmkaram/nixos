@@ -91,6 +91,16 @@
     settings.disable-scdaemon = true;
   };
 
+  # Enable tailscale
+  services.tailscale = {
+    enable = true;
+    useRoutingFeatures = "client";
+    openFirewall = true;
+    extraUpFlags = [
+      "--ssh=true"
+    ];
+  };
+
   # Fonts
   fonts.packages = with pkgs; [
     nerd-fonts.fira-code

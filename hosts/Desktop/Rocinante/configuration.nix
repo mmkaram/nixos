@@ -37,14 +37,4 @@
       sane-airscan # works if the scanner is on the network
     ];
   };
-
-  # Enable tailscale
-  services.tailscale = {
-    enable = true;
-    useRoutingFeatures = "client";
-    openFirewall = true;
-    extraUpFlags = [
-      "--ssh=true"
-    ];
-  };
 }

@@ -15,10 +15,6 @@
 
   services.getty.autologinUser = "dd0k";
 
-  services.tailscale = {
-    enable = true;
-  };
-
   services.jellyfin = {
     enable = true;
     openFirewall = true;
