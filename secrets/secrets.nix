@@ -7,4 +7,5 @@ in
   "openrouter.age".publicKeys = [ dd0k ];
   "cloudflarecert.age".publicKeys = [ dd0k ];
   "tycho.age".publicKeys = [ dd0k ];
+  "atuin.age".publicKeys = [ dd0k ];
 }

@@ -139,13 +139,13 @@
 
   services.atuin = {
     enable = true;
-  
+
     host = "127.0.0.1";
     port = 8888;
     openFirewall = false;
-  
+
     openRegistration = false;
-  
+
     path = "/var/lib/atuin";
 
     database = {
@@ -163,7 +163,7 @@
         "git.mmkaram.dev" = "http://127.0.0.1:3000";
         "navidrome.mmkaram.dev" = "http://127.0.0.1:4533";
         "jellyfin.mmkaram.dev" = "http://127.0.0.1:8096";
-	"atuin.mmkaram.dev" = "http://127.0.0.1:8888";
+        "atuin.mmkaram.dev" = "http://127.0.0.1:8888";
       };
 
       default = "http_status:404";

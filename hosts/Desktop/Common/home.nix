@@ -1,6 +1,7 @@
 {
   pkgs,
   inputs,
+  config,
   ...
 }:
 {
@@ -75,7 +76,12 @@
     };
   };
 
-  programs.atuin.enable = true;
+  programs.atuin = {
+    enable = true;
+    settings = {
+      key_path = config.age.secrets."atuin".path;
+    };
+  };
 
   services.flameshot = {
     enable = true;

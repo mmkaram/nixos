@@ -28,5 +28,12 @@
       group = "users";
       mode = "600";
     };
+    atuin = {
+      file = ./atuin.age;
+      path = "/run/agenix/atuin";
+      owner = "dd0k";
+      group = "users";
+      mode = "600";
+    };
   };
 }
