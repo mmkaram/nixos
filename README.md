@@ -37,7 +37,7 @@ Useful lua pages
 - [ ] Yubikey for luks
 - [ ] Stylix
 ### Tycho
-- [ ] secret managment for cert.pem, tycho.json, last.fm api key etc.
+- [ ] secret last.fm api key
 - [ ] get vaultwarden working
 - [ ] get factorio/minecraft server?
 - [ ] get neovim config
