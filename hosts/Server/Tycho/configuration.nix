@@ -62,7 +62,7 @@
 
   services.navidrome = {
     enable = true;
-    
+
     # All your Docker environment variables as settings
     settings = {
       MusicFolder = "/srv/library/music";
@@ -72,34 +72,39 @@
       ScannerPurgeMissing = "always";
       SessionTimeout = "24h";
       LogLevel = "info";
-      
+
       # Reverse proxy settings (for Cloudflare + your domain)
       BaseURL = "https://navidrome.mmkaram.dev";
       ReverseProxyListen = true;
       ReverseProxyClientIPHeaders = [ "CF-Connecting-IP" ];
-      ReverseProxyTLS = true;  # Matches TLS_TERMINATED=true
-      
+      ReverseProxyTLS = true; # Matches TLS_TERMINATED=true
+
       # Disable auto-import playlists
       AutoImportPlaylists = false;
-      
+
       # Cover art configuration
-      CoverArtProviders = [ "local" "embedded" "lastfm" "fanarttv" "coverartarchive" ];
+      CoverArtProviders = [
+        "local"
+        "embedded"
+        "lastfm"
+        "fanarttv"
+        "coverartarchive"
+      ];
       LastFM_APIKey = "aa2d579d4c6799e7d2977aca49baefc3";
       MusicBrainzEnabled = true;
       CoverArtPriority = "cover.jpg,cover.png,folder.jpg,folder.png,front.jpg,front.png,embedded";
-      
+
       # Port (matches Docker)
       ListenPort = 4533;
     };
-  
-  # Match Docker user/group (1000:100)
-  user = "1000";
-  group = "100";
-  
-  # Open firewall
-  openFirewall = true;
-};
 
+    # Match Docker user/group (1000:100)
+    user = "1000";
+    group = "100";
+
+    # Open firewall
+    openFirewall = true;
+  };
 
   # Gitea
   services.gitea = {
@@ -113,7 +118,7 @@
     httpPort = 3000;
 
     # Auth + user bootstrap
-    disableRegistration = false; # set to false for first user if needed
+    disableRegistration = true; # set to false for first user if needed
     settings = {
       server = {
         PROTOCOL = "http";
@@ -147,13 +152,12 @@
     enable = true;
 
     tunnels.tycho = {
-      credentialsFile =
-        "/etc/nixos/hosts/Server/Tycho/cloudflared/tycho.json";
+      credentialsFile = "/etc/nixos/hosts/Server/Tycho/cloudflared/tycho.json";
 
       ingress = {
         "git.mmkaram.dev" = "http://127.0.0.1:3000";
         "navidrome.mmkaram.dev" = "http://127.0.0.1:4533";
-	"jellyfin.mmkaram.dev" = "http://127.0.0.1:8096";
+        "jellyfin.mmkaram.dev" = "http://127.0.0.1:8096";
       };
 
       default = "http_status:404";
