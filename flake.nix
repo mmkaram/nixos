@@ -36,13 +36,13 @@
           inputs.home-manager.nixosModules.default
         ];
       };
-      nixosConfigurations.MedinaStation = nixpkgs.lib.nixosSystem {
+      nixosConfigurations.Medina = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         specialArgs = {
           inherit inputs;
         };
         modules = [
-          ./hosts/Desktop/MedinaStation/configuration.nix
+          ./hosts/Desktop/Medina/configuration.nix
           agenix.nixosModules.default
           inputs.home-manager.nixosModules.default
         ];

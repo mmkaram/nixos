@@ -25,7 +25,7 @@
     package = config.boot.kernelPackages.nvidiaPackages.latest;
   };
 
-  networking.hostName = "MedinaStation";
+  networking.hostName = "Medina";
   networking.networkmanager.enable = true;
   hardware.bluetooth.enable = true;
   services.blueman.enable = true;
