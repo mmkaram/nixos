@@ -17,11 +17,8 @@
 
   services.tailscale = {
     enable = true;
-    #authKeyFile = "/run/secrets/tailscale_key";
   };
 
-  # skip intro plugin
-  # https://wiki.nixos.org/wiki/Jellyfin#:~:text=Intro%20Skipper%20plugin,-The
   services.jellyfin = {
     enable = true;
     openFirewall = true;
@@ -63,7 +60,6 @@
   services.navidrome = {
     enable = true;
 
-    # All your Docker environment variables as settings
     settings = {
       MusicFolder = "/srv/library/music";
       DataFolder = "/srv/appdata/navidrome";
@@ -94,11 +90,11 @@
       MusicBrainzEnabled = true;
       CoverArtPriority = "cover.jpg,cover.png,folder.jpg,folder.png,front.jpg,front.png,embedded";
 
-      # Port (matches Docker)
+      # Port
       ListenPort = 4533;
     };
 
-    # Match Docker user/group (1000:100)
+    # ? Match Docker user/group (1000:100)
     user = "1000";
     group = "100";
 
@@ -110,15 +106,13 @@
   services.gitea = {
     enable = true;
 
-    # Bind only locally; put nginx or cloudflared in front
     appName = "Gitea";
     domain = "git.mmkaram.dev"; # external hostname
     rootUrl = "https://git.mmkaram.dev/"; # public URL
     httpAddress = "127.0.0.1";
     httpPort = 3000;
 
-    # Auth + user bootstrap
-    disableRegistration = true; # set to false for first user if needed
+    disableRegistration = true;
     settings = {
       server = {
         PROTOCOL = "http";
@@ -132,13 +126,12 @@
         INSTALL_LOCK = true; # skip installer once configured
       };
 
-      # SQLite by default (zero-maintenance)
       database = {
         DB_TYPE = "sqlite3";
         # PATH = "gitea.db";
       };
 
-      # Basic email stub (optional; wire real SMTP later)
+      # Basic email stub
       email = {
         ENABLED = false;
       };
