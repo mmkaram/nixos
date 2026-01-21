@@ -67,7 +67,7 @@ let
     ns
     nix-prefetch-github
     nil
-    nixfmt-rfc-style
+    nixfmt
   ];
   devTools = with pkgs; [
     typst
