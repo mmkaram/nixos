@@ -80,7 +80,7 @@
     enable = true;
     settings = {
       key_path = config.age.secrets."atuin".path;
-	  sync_address = "https://atuin.mmkaram.dev";
+      sync_address = "https://atuin.mmkaram.dev";
     };
   };
 
