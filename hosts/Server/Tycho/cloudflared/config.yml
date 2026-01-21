@@ -1,6 +1,6 @@
-origincert: /etc/nixos/hosts/Server/Tycho/cloudflared/cert.pem
+origincert: /run/agenix/cloudflaresecret
 tunnel: tycho
-credentials-file: /etc/nixos/hosts/Server/Tycho/cloudflared/tycho.json
+credentials-file: /run/agenix/tycho
 
 ingress:
   - hostname: gitea.example.com

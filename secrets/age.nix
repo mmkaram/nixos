@@ -14,5 +14,19 @@
       group = "users";
       mode = "600";
     };
+    cloudflaresecret = {
+      file = ./cloudflaresecret.age;
+      path = "/run/agenix/cloudflaresecret";
+      owner = "dd0k";
+      group = "users";
+      mode = "600";
+    };
+    tycho = {
+      file = ./tycho.age;
+      path = "/run/agenix/tycho";
+      owner = "dd0k";
+      group = "users";
+      mode = "600";
+    };
   };
 }

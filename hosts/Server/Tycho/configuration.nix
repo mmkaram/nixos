@@ -141,7 +141,7 @@
     enable = true;
 
     tunnels.tycho = {
-      credentialsFile = "/etc/nixos/hosts/Server/Tycho/cloudflared/tycho.json";
+      credentialsFile = "/run/agenix/tycho";
 
       ingress = {
         "git.mmkaram.dev" = "http://127.0.0.1:3000";

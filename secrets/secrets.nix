@@ -5,4 +5,6 @@ in
 {
   "password.age".publicKeys = [ dd0k ];
   "openrouter.age".publicKeys = [ dd0k ];
+  "cloudflarecert.age".publicKeys = [ dd0k ];
+  "tycho.age".publicKeys = [ dd0k ];
 }
