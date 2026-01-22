@@ -103,12 +103,14 @@
     enable = true;
 
     appName = "Gitea";
-    domain = "git.mmkaram.dev"; # external hostname
-    rootUrl = "https://git.mmkaram.dev/"; # public URL
-    httpAddress = "127.0.0.1";
-    httpPort = 3000;
 
-    disableRegistration = true;
+    DOMAIN = "git.mmkaram.dev"; # external hostname
+    ROOT_URL = "https://git.mmkaram.dev/"; # public URL
+    HTTP_ADDR = "127.0.0.1";
+    HTTP_PORT = 3000;
+
+    DISABLE_REGISTRATION = true;
+
     settings = {
       server = {
         PROTOCOL = "http";
