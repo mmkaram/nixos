@@ -104,16 +104,15 @@
 
     appName = "Gitea";
 
-
     settings = {
       service = {
         DISABLE_REGISTRATION = true;
       };
       server = {
-       DOMAIN = "git.mmkaram.dev"; # external hostname
-       ROOT_URL = "https://git.mmkaram.dev/"; # public URL
-       HTTP_ADDR = "127.0.0.1";
-       HTTP_PORT = 3000;
+        DOMAIN = "git.mmkaram.dev"; # external hostname
+        ROOT_URL = "https://git.mmkaram.dev/"; # public URL
+        HTTP_ADDR = "127.0.0.1";
+        HTTP_PORT = 3000;
 
         PROTOCOL = "http";
         SSH_DOMAIN = "tycho";

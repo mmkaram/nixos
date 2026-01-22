@@ -80,7 +80,7 @@
     enable = true;
     settings = {
       sync_address = "https://atuin.mmkaram.dev";
-	  auto_sync = true;
+      auto_sync = true;
     };
   };
 
