@@ -109,9 +109,10 @@
     HTTP_ADDR = "127.0.0.1";
     HTTP_PORT = 3000;
 
-    DISABLE_REGISTRATION = true;
-
     settings = {
+      service = {
+        DISABLE_REGISTRATION = true;
+      };
       server = {
         PROTOCOL = "http";
         SSH_DOMAIN = "tycho";
