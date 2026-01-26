@@ -48,10 +48,11 @@
       "lp"
     ];
     packages = with pkgs; [
-      firefox
-      zoom-us
       git
       fish
+      firefox
+      just
+      neovim
     ];
   };
   users.defaultUserShell = pkgs.fish;
