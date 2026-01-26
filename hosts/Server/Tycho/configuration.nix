@@ -15,7 +15,7 @@
 
   services.getty.autologinUser = "dd0k";
 
-  user.user.mh0 = {
+  users.users.mh0 = {
     isNormalUser = true;
     description = "Mohammed Karam";
     extraGroups = [
