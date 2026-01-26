@@ -74,7 +74,7 @@
     enable = true;
 
     settings = {
-      MusicFolder = "/srv/library/music";
+      MusicFolder = "/srv/library";
       DataFolder = "/srv/appdata/navidrome";
 
       ScanInterval = "1h";
