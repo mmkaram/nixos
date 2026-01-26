@@ -15,6 +15,23 @@
 
   services.getty.autologinUser = "dd0k";
 
+  users.users.mh0 = {
+    isNormalUser = true;
+    description = "Mohammed Karam";
+    extraGroups = [
+      "users"
+      "networkmanager"
+      "docker"
+      "libvirtd"
+    ];
+    packages = with pkgs; [
+      git
+      fish
+      just
+      neovim
+    ];
+  };
+
   services.jellyfin = {
     enable = true;
     openFirewall = true;
