@@ -27,6 +27,7 @@ Useful lua pages
 ### nvim
 - [ ] Keybind to build/run code (in toggleterm?)
 - [ ] See images in obsidian-nvim
+- [ ] Equivalent to vscode dev-containers
 ### QoL
 - [ ] Add declarative configuration for home EPSON printer
 - [ ] Replace toggle-term with something more native
