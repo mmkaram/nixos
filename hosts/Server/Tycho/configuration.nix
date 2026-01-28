@@ -196,7 +196,7 @@
     };
 
     database = {
-      type = "postgres";
+      type = "mysql";
       createLocally = true;
     };
 
