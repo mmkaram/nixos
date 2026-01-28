@@ -180,6 +180,46 @@
     };
   };
 
+  services.mediawiki = {
+    enable = true;
+    name = "Karam Wiki";
+    httpd.virtualHost = {
+      hostName = "wiki.mmkaram.dev";
+      adminAddr = "admin@mmkaram.dev"; # TODO
+      listen = [
+        {
+          ip = "127.0.0.1";
+          port = 8089;
+          ssl = false;
+        }
+      ];
+    };
+
+    database = {
+      type = "mysql";
+      createLocally = true;
+    };
+
+    # Administrator account username is admin.
+    # Set initial password to "cardbotnine" for the account admin.
+    passwordFile = pkgs.writeText "password" "cardbotnine";
+    extraConfig = ''
+      # Disable anonymous editing
+      $wgGroupPermissions['*']['edit'] = false;
+    '';
+
+    extensions = {
+      # some extensions are included and can enabled by passing null
+      VisualEditor = null;
+
+      # https://www.mediawiki.org/wiki/Extension:TemplateStyles
+      TemplateStyles = pkgs.fetchzip {
+        url = "https://extdist.wmflabs.org/dist/extensions/TemplateStyles-REL1_40-5c3234a.tar.gz";
+        hash = "sha256-IygCDgwJ+hZ1d39OXuJMrkaxPhVuxSkHy9bWU5NeM/E=";
+      };
+    };
+  };
+
   services.cloudflared = {
     enable = true;
 
@@ -192,6 +232,7 @@
         "jellyfin.mmkaram.dev" = "http://127.0.0.1:8096";
         "atuin.mmkaram.dev" = "http://127.0.0.1:8888";
         "status.mmkaram.dev" = "http://127.0.0.1:3001";
+        "wiki.mmkaram.dev" = "http://127.0.0.1:8089";
       };
 
       default = "http_status:404";
