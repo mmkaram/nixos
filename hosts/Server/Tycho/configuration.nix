@@ -180,19 +180,6 @@
     };
   };
 
-  programs.msmtp = {
-    enable = true;
-    accounts.default = {
-      host = "smtp.gmail.com"; # or gmail, proton, etc
-      port = 587;
-      auth = true;
-      user = "mahdykaram@gmail.com";
-      from = "mahdykaram@gmail.com";
-      passwordeval = "echo ''";
-      tls = true;
-    };
-  };
-
   services.cloudflared = {
     enable = true;
 
