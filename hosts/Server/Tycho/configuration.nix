@@ -202,7 +202,7 @@
 
     # Administrator account username is admin.
     # Set initial password to "cardbotnine" for the account admin.
-    passwordFile = pkgs.writeText "password" "cardbotnine";
+    passwordFile = /run/agenix/mediawiki;
     extraConfig = ''
       # Disable anonymous editing
       $wgGroupPermissions['*']['edit'] = false;
