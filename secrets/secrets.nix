@@ -8,4 +8,5 @@ in
   "cloudflarecert.age".publicKeys = [ dd0k ];
   "tycho.age".publicKeys = [ dd0k ];
   "atuin.age".publicKeys = [ dd0k ];
+  "mediawiki.age".publicKeys = [ dd0k ];
 }

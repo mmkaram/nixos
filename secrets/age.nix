@@ -35,5 +35,12 @@
       group = "users";
       mode = "600";
     };
+    mediawiki = {
+      file = ./mediawiki.age;
+      path = "/run/agenix/mediawiki";
+      owner = "dd0k";
+      group = "users";
+      mode = "600";
+    };
   };
 }
