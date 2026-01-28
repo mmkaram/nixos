@@ -191,6 +191,7 @@
         "navidrome.mmkaram.dev" = "http://127.0.0.1:4533";
         "jellyfin.mmkaram.dev" = "http://127.0.0.1:8096";
         "atuin.mmkaram.dev" = "http://127.0.0.1:8888";
+	"status.mmkaram.dev" = "http://127.0.0.1:3001";
       };
 
       default = "http_status:404";
