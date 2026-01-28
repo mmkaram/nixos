@@ -180,6 +180,19 @@
     };
   };
 
+  programs.msmtp = {
+    enable = true;
+    accounts.default = {
+      host = "smtp.gmail.com"; # or gmail, proton, etc
+      port = 587;
+      auth = true;
+      user = "mahdykaram@gmail.com";
+      from = "mahdykaram@gmail.com";
+      passwordeval = "echo ''";
+      tls = true;
+    };
+  };
+
   services.cloudflared = {
     enable = true;
 
@@ -191,7 +204,7 @@
         "navidrome.mmkaram.dev" = "http://127.0.0.1:4533";
         "jellyfin.mmkaram.dev" = "http://127.0.0.1:8096";
         "atuin.mmkaram.dev" = "http://127.0.0.1:8888";
-	"status.mmkaram.dev" = "http://127.0.0.1:3001";
+        "status.mmkaram.dev" = "http://127.0.0.1:3001";
       };
 
       default = "http_status:404";
