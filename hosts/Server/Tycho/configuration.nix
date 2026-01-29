@@ -206,6 +206,8 @@
     extraConfig = ''
       # Disable anonymous editing
       $wgGroupPermissions['*']['edit'] = false;
+      # Disable new user registration
+      $wgGroupPermissions['*']['createaccount'] = false;
     '';
 
     extensions = {
