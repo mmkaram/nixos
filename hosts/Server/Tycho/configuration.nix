@@ -222,6 +222,85 @@
     };
   };
 
+  services.homepage-dashboard = {
+    enable = true;
+
+    listenPort = 3002;
+
+    settings = {
+      title = "Tycho";
+      theme = "dark";
+      color = "slate";
+      headerStyle = "clean";
+      hideVersion = true;
+    };
+
+    services = [
+      {
+        Streaming = [
+          {
+            Jellyfin = {
+              href = "https://jellyfin.mmkaram.dev";
+              description = "Movies & TV";
+            };
+          }
+          {
+            Navidrome = {
+              href = "https://navidrome.mmkaram.dev";
+              description = "Music";
+            };
+          }
+        ];
+      }
+      {
+        Dev = [
+          {
+            Gitea = {
+              href = "https://git.mmkaram.dev";
+              description = "Git hosting";
+            };
+          }
+        ];
+      }
+      {
+        Infra = [
+          {
+            "Uptime Kuma" = {
+              href = "https://status.mmkaram.dev";
+              description = "Monitoring";
+            };
+          }
+          {
+            Atuin = {
+              href = "https://atuin.mmkaram.dev";
+              description = "Shell history sync";
+            };
+          }
+        ];
+      }
+      {
+        Security = [
+          {
+            Vaultwarden = {
+              href = "https://vaultwarden.mmkaram.dev";
+              description = "Password manager";
+            };
+          }
+        ];
+      }
+      {
+        Docs = [
+          {
+            Wiki = {
+              href = "https://wiki.mmkaram.dev";
+              description = "MediaWiki";
+            };
+          }
+        ];
+      }
+    ];
+  };
+
   services.cloudflared = {
     enable = true;
 
@@ -229,6 +308,7 @@
       credentialsFile = "/run/agenix/tycho";
 
       ingress = {
+        "home.mmkaram.dev" = "http://127.0.0.1:3002";
         "git.mmkaram.dev" = "http://127.0.0.1:3000";
         "navidrome.mmkaram.dev" = "http://127.0.0.1:4533";
         "jellyfin.mmkaram.dev" = "http://127.0.0.1:8096";
