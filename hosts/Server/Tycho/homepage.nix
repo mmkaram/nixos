@@ -41,6 +41,12 @@
               description = "Music Tracker";
             };
           }
+          {
+            Radarr = {
+              href = "https://radarr.mmkaram.dev";
+              description = "Movie Tracker";
+            };
+          }
         ];
       }
       {
