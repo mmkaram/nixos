@@ -23,6 +23,18 @@
               description = "Torrenting client";
             };
           }
+          {
+            prowlarr = {
+              href = "https://prowlarr.mmkaram.dev";
+              description = "Tracker manager";
+            };
+          }
+          {
+            sonarr = {
+              href = "https://sonarr.mmkaram.dev";
+              description = "TV Tracker";
+            };
+          }
         ];
       }
       {
