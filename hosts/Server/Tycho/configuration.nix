@@ -7,6 +7,7 @@
     ./hardware-configuration.nix
     ../../Common/configuration.nix
     ./torrent.nix
+    ./sonarr.nix
     ./homepage.nix
     # inputs.home-manager.nixosModules.default
   ];
