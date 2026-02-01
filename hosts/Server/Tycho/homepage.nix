@@ -18,7 +18,7 @@
       {
         Arr = [
           {
-            qbit = {
+            qBittorent = {
               href = "https://qbt.mmkaram.dev";
               description = "Torrenting client";
             };
