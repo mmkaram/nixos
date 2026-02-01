@@ -1,8 +1,0 @@
-origincert: /etc/nixos/hosts/Server/Tycho/cloudflared/cert.pem
-tunnel: tycho
-credentials-file: /etc/nixos/hosts/Server/Tycho/cloudflared/tycho.json
-
-ingress:
-  - hostname: gitea.example.com
-    service: http://127.0.0.1:3000
-  - service: http_status:404

@@ -226,7 +226,7 @@
     enable = true;
 
     listenPort = 3002;
-  allowedHosts = "home.mmkaram.dev";
+    allowedHosts = "home.mmkaram.dev";
 
     settings = {
       title = "Tycho";

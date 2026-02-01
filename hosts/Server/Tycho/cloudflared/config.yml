@@ -1,8 +1,0 @@
-origincert: /run/agenix/cloudflaresecret
-tunnel: tycho
-credentials-file: /run/agenix/tycho
-
-ingress:
-  - hostname: gitea.example.com
-    service: http://127.0.0.1:3000
-  - service: http_status:404
