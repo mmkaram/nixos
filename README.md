@@ -37,7 +37,7 @@ Useful lua pages
 - [ ] Yubikey for luks
 - [ ] Stylix
 ### Tycho
-- [ ] lidarr, radarr
+- [ ] radarr
 - [ ] immich
 - [ ] microbin
 - [ ] nextcloud

@@ -24,15 +24,21 @@
             };
           }
           {
-            prowlarr = {
+            Prowlarr = {
               href = "https://prowlarr.mmkaram.dev";
               description = "Tracker manager";
             };
           }
           {
-            sonarr = {
+            Sonarr = {
               href = "https://sonarr.mmkaram.dev";
               description = "TV Tracker";
+            };
+          }
+          {
+            Lidarr = {
+              href = "https://lidarr.mmkaram.dev";
+              description = "Music Tracker";
             };
           }
         ];
