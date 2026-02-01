@@ -8,6 +8,7 @@
     ../../Common/configuration.nix
     ./torrent.nix
     ./sonarr.nix
+    ./radarr.nix
     ./lidarr.nix
     ./prowlarr.nix
     ./homepage.nix
@@ -247,6 +248,7 @@
         "sonarr.mmkaram.dev" = "http://127.0.0.1:8989";
         "prowlarr.mmkaram.dev" = "http://127.0.0.1:9696";
         "lidarr.mmkaram.dev" = "http://127.0.0.1:8686";
+        "radarr.mmkaram.dev" = "http://127.0.0.1:7878";
       };
 
       default = "http_status:404";
