@@ -226,7 +226,6 @@
     enable = true;
 
     listenPort = 3002;
-    listenAddress = "127.0.0.1";
 
     settings = {
       title = "Tycho";
