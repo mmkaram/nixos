@@ -8,6 +8,7 @@
     ../../Common/configuration.nix
     ./torrent.nix
     ./sonarr.nix
+    ./prowlarr.nix
     ./homepage.nix
     # inputs.home-manager.nixosModules.default
   ];
@@ -243,6 +244,7 @@
         "wiki.mmkaram.dev" = "http://127.0.0.1:8089";
         "qbt.mmkaram.dev" = "http://127.0.0.1:8080";
         "sonarr.mmkaram.dev" = "http://127.0.0.1:8989";
+        "prowlarr.mmkaram.dev" = "http://127.0.0.1:9696";
       };
 
       default = "http_status:404";
