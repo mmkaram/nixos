@@ -37,6 +37,11 @@ Useful lua pages
 - [ ] Yubikey for luks
 - [ ] Stylix
 ### Tycho
+- [ ] lidarr, radarr
+- [ ] immich
+- [ ] microbin
+- [ ] nextcloud
+- [ ] Audiobookshelf
 - [ ] secret last.fm api key
 - [ ] get vaultwarden working
 - [ ] get factorio/minecraft server?
