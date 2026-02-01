@@ -6,6 +6,7 @@
   imports = [
     ./hardware-configuration.nix
     ../../Common/configuration.nix
+    ./torrent.nix
     # inputs.home-manager.nixosModules.default
   ];
 
@@ -316,6 +317,7 @@
         "atuin.mmkaram.dev" = "http://127.0.0.1:8888";
         "status.mmkaram.dev" = "http://127.0.0.1:3001";
         "wiki.mmkaram.dev" = "http://127.0.0.1:8089";
+        "qbt.mmkaram.dev" = "http://127.0.0.1:8080";
       };
 
       default = "http_status:404";
