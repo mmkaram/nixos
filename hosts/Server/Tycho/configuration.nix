@@ -39,6 +39,8 @@
     openFirewall = true;
   };
   environment.systemPackages = with pkgs; [
+  	python3
+	# jf
     jellyfin
     jellyfin-web
     jellyfin-ffmpeg
