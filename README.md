@@ -37,7 +37,6 @@ Useful lua pages
 - [ ] Yubikey for luks
 - [ ] Stylix
 ### Tycho
-- [ ] immich
 - [ ] microbin
 - [ ] nextcloud
 - [ ] Audiobookshelf

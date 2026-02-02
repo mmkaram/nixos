@@ -63,6 +63,12 @@
               description = "Music";
             };
           }
+          {
+            Immich = {
+              href = "https://immich.mmkaram.dev";
+              description = "Photos";
+            };
+          }
         ];
       }
       {
