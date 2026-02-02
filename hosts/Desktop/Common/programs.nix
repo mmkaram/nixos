@@ -199,7 +199,7 @@ let
     switcheroo
     ghostscript
     converseen
-    kdePackages.kdenlive
+    # kdePackages.kdenlive
     darktable
     vlc
     mpv
