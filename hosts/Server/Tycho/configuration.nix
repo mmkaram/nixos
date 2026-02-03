@@ -185,6 +185,7 @@
         "lidarr.mmkaram.dev" = "http://127.0.0.1:8686";
         "radarr.mmkaram.dev" = "http://127.0.0.1:7878";
         "immich.mmkaram.dev" = "http://[::1]:2283";
+        "vault.mmkaram.dev" = "http://127.0.0.1:8222";
       };
 
       default = "http_status:404";
