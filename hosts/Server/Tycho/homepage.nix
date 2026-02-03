@@ -101,7 +101,7 @@
         Security = [
           {
             Vaultwarden = {
-              href = "https://vaultwarden.mmkaram.dev";
+              href = "https://vault.mmkaram.dev";
               description = "Password manager";
             };
           }

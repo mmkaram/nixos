@@ -37,6 +37,7 @@ Useful lua pages
 - [ ] Yubikey for luks
 - [ ] Stylix
 ### Tycho
+- [ ] yubikey on vaultwarden is borked
 - [ ] microbin
 - [ ] nextcloud
 - [ ] Audiobookshelf
