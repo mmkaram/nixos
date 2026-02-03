@@ -5,7 +5,7 @@
     backupDir = "/var/local/vaultwarden/backup";
     environmentFile = "/run/agenix/vaultwarden";
     config = {
-      DOMAIN = "https://vaultwarden.mmkaram.dev";
+      DOMAIN = "https://vault.mmkaram.dev";
       SIGNUPS_ALLOWED = false;
 
       ROCKET_ADDRESS = "127.0.0.1";
