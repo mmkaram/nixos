@@ -42,5 +42,12 @@
       group = "users";
       mode = "600";
     };
+    vaultwarden = {
+      file = ./vaultwarden.age;
+      path = "/run/agenix/vaultwarden";
+      owner = "dd0k";
+      group = "users";
+      mode = "600";
+    };
   };
 }

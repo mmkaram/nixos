@@ -41,7 +41,6 @@ Useful lua pages
 - [ ] nextcloud
 - [ ] Audiobookshelf
 - [ ] secret last.fm api key
-- [ ] get vaultwarden working
 - [ ] get factorio/minecraft server?
 - [ ] get neovim config
 - [ ] get cloudflared, just, neovim, and other programs

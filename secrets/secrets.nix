@@ -9,4 +9,5 @@ in
   "tycho.age".publicKeys = [ dd0k ];
   "atuin.age".publicKeys = [ dd0k ];
   "mediawiki.age".publicKeys = [ dd0k ];
+  "vaultwarden.age".publicKeys = [ dd0k ];
 }
