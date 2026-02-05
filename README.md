@@ -24,6 +24,9 @@ Useful lua pages
 - [lsp.lua](./dots/nvim/lsp.lua) to manage lsps
 
 ## TODOs
+### Bugs
+- [ ] simple scan is borked
+- [ ] sddm is borked
 ### nvim
 - [ ] Keybind to build/run code (in toggleterm?)
 - [ ] See images in obsidian-nvim
