@@ -203,6 +203,7 @@ let
     darktable
     vlc
     mpv
+	jellyfin-desktop
     feh
   ];
   communicationTools = with pkgs; [
