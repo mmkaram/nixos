@@ -34,6 +34,7 @@ Useful lua pages
 ### QoL
 - [ ] Add declarative configuration for home EPSON printer
 - [ ] Replace toggle-term with something more native
+- [ ] Use config.age syntax
 ### Projects
 - [ ] Nix flatpak
 - [ ] Yubikey for agenix
