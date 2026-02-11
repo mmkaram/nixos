@@ -77,7 +77,7 @@
     settings = {
       interactive = true;
       cue = true;
-      authFile = "/etc/nixos/secrets/u2f_keys";
+      authFile = "/home/dd0k/.config/Yubico/u2f_keys";
     };
   };
 
