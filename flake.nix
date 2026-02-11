@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -21,6 +22,7 @@
     {
       self,
       nixpkgs,
+      nixos-hardware,
       agenix,
       ...
     }@inputs:
@@ -34,6 +36,7 @@
           ./hosts/Desktop/Rocinante/configuration.nix
           agenix.nixosModules.default
           inputs.home-manager.nixosModules.default
+          nixos-hardware.nixosModules.framework-amd-ai-300-series
         ];
       };
       nixosConfigurations.Medina = nixpkgs.lib.nixosSystem {
