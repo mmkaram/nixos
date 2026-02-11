@@ -201,9 +201,9 @@ let
     converseen
     # kdePackages.kdenlive
     darktable
+    rapidraw
     vlc
     mpv
-	jellyfin-desktop
     feh
   ];
   communicationTools = with pkgs; [
