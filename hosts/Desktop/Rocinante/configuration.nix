@@ -18,6 +18,8 @@
   # Fingerprint
   services.fprintd = import ../../../dots/fprintd/fprintd.nix pkgs;
 
+  services.power-profiles-daemon.enable = true;
+
   # Network
   networking.hostName = "Rocinante";
   networking.networkmanager.enable = true;
