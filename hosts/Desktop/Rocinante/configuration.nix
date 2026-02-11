@@ -11,6 +11,10 @@
     ../Common/configuration.nix
   ];
 
+  # Pass inputs to Home Manager
+  home-manager.extraSpecialArgs = { inherit inputs; };
+  home-manager.users.dd0k.imports = [ ./home.nix ];
+
   # Fingerprint
   services.fprintd = import ../../../dots/fprintd/fprintd.nix pkgs;
 

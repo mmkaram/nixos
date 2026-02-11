@@ -1,6 +1,7 @@
 { }:
 {
   enable = true;
+  systemd.enable = false;
   extraConfig = ''
     # window resize
     bind = SUPER, R, submap, resize
@@ -22,7 +23,7 @@
     "ecosystem:no_update_news" = true;
 
     # Monitor configuration
-    monitor = "eDP-1,1920x1080,auto,1";
+    # monitor = "eDP-1,1920x1080,auto,1";
 
     # Variables
     "$terminal" = "kitty";
@@ -264,8 +265,8 @@
 
     # Window rules
     windowrule = [
-      "suppressevent maximize, class:.*"
-      "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
+      # "suppressevent maximize, class:.*"
+      # "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
     ];
   };
 }

@@ -101,10 +101,10 @@ in
       config = toLuaFile ./presence.lua;
     }
 
-    {
-      plugin = codewindow-nvim;
-      config = toLuaFile ./codewindow.lua;
-    }
+    # {
+    #   plugin = codewindow-nvim;
+    #   config = toLuaFile ./codewindow.lua;
+    # }
     # Git
     lazygit-nvim
     undotree
@@ -169,25 +169,26 @@ in
       # other lua files
       config = toLuaFile ./keys.lua;
     }
-    (nvim-treesitter.withPlugins (p: [
-      p.tree-sitter-nix
-      p.tree-sitter-python
-      p.tree-sitter-bash
-      p.tree-sitter-lua
-      p.tree-sitter-json
-      p.tree-sitter-rust
-      p.tree-sitter-haskell
-      p.tree-sitter-c
-      p.tree-sitter-cpp
-      p.tree-sitter-sql
-      p.tree-sitter-prisma
-      p.tree-sitter-svelte
-      p.tree-sitter-yaml
-      p.tree-sitter-typst
-    ]))
-    vim-svelte
-    vim-prisma
-    cmp_luasnip
+    nvim-treesitter
+    # (nvim-treesitter.withPlugins (p: [
+    #   p.tree-sitter-nix
+    #   p.tree-sitter-python
+    #   p.tree-sitter-bash
+    #   p.tree-sitter-lua
+    #   p.tree-sitter-json
+    #   p.tree-sitter-rust
+    #   p.tree-sitter-haskell
+    #   p.tree-sitter-c
+    #   p.tree-sitter-cpp
+    #   p.tree-sitter-sql
+    #   p.tree-sitter-prisma
+    #   p.tree-sitter-svelte
+    #   p.tree-sitter-yaml
+    #   p.tree-sitter-typst
+    # ]))
+    # vim-svelte
+    # vim-prisma
+    # cmp_luasnip
   ];
   viAlias = true;
   vimAlias = true;
