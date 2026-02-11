@@ -26,7 +26,8 @@
   services.gvfs.enable = true;
 
   # Time/Locale
-  services.automatic-timezoned.enable = true;
+  # services.automatic-timezoned.enable = true;
+  time.timeZone = "America/Los_Angeles";
   i18n.defaultLocale = "en_US.UTF-8";
 
   # Users
