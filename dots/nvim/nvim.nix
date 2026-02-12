@@ -100,11 +100,12 @@ in
       plugin = presence-nvim;
       config = toLuaFile ./presence.lua;
     }
-
+    # Borked due to treesitter mismatch error
     # {
     #   plugin = codewindow-nvim;
     #   config = toLuaFile ./codewindow.lua;
     # }
+
     # Git
     lazygit-nvim
     undotree
@@ -127,6 +128,10 @@ in
     {
       plugin = tokyonight-nvim;
       config = "colorscheme tokyonight-night";
+    }
+    {
+      plugin = nvim-web-devicons;
+      config = toLua "require('nvim-web-devicons').setup({ default = true })";
     }
 
     # Buffer management

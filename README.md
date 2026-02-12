@@ -28,7 +28,6 @@ Useful lua pages
 - [ ] simple scan is borked
 - [ ] sddm is borked
 ### nvim
-- [ ] Icons aren't working anymore
 - [ ] Keybind to build/run code (in toggleterm?)
 - [ ] See images in obsidian-nvim
 - [ ] Equivalent to vscode dev-containers
