@@ -20,8 +20,27 @@
         # "memory"
         # "disk"
         "battery"
+        "custom/powerprofile"
         "clock"
       ];
+
+      "custom/powerprofile" = {
+        exec = "powerprofilesctl get";
+        interval = 5;
+        format = "PWR: {}";
+        tooltip = true;
+        on-click = ''
+          sh -lc '
+            p="$(powerprofilesctl get)"
+            case "$p" in
+              power-saver) powerprofilesctl set balanced ;;
+              balanced) powerprofilesctl set performance ;;
+              performance) powerprofilesctl set power-saver ;;
+              *) powerprofilesctl set balanced ;;
+            esac
+          '
+        '';
+      };
 
       "hyprland/workspaces" = {
         disable-scroll = true;
