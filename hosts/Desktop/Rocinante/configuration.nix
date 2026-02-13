@@ -39,7 +39,6 @@
   hardware.sane = {
     enable = true;
     extraBackends = with pkgs; [
-      brscan4 # most modern Brother scanners
       sane-airscan # works if the scanner is on the network
     ];
   };

@@ -25,7 +25,6 @@ Useful lua pages
 
 ## TODOs
 ### Bugs
-- [ ] simple scan is borked
 - [ ] sddm is borked
 ### nvim
 - [ ] Keybind to build/run code (in toggleterm?)
