@@ -1,5 +1,14 @@
 { ... }:
 {
+  services.homepage-dashboard.widgets = [
+    {
+      resources = {
+        cpu = true;
+        memory = true;
+        disk = "/";
+      };
+    }
+  ];
   services.homepage-dashboard = {
     enable = true;
 
