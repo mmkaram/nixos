@@ -25,7 +25,7 @@ Useful lua pages
 
 ## TODOs
 ### Bugs
-- [ ] sddm is borked
+- [ ] brightness is always at 0 on boot
 ### nvim
 - [ ] Keybind to build/run code (in toggleterm?)
 - [ ] See images in obsidian-nvim
