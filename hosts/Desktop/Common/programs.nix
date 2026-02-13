@@ -160,7 +160,7 @@ let
     rofimoji
     rofi-power-menu
     graphite-cursors
-    flameshot
+    grimblast
     cliphist
     dmenu
     libappindicator-gtk3

@@ -32,7 +32,6 @@ Useful lua pages
 - [ ] See images in obsidian-nvim
 - [ ] Equivalent to vscode dev-containers
 ### QoL
-- [ ] Replace flameshot with grimblast (grimblast --notify copysave area)
 - [ ] Add declarative configuration for home EPSON printer
 - [ ] Replace toggle-term with something more native
 - [ ] Use config.age syntax

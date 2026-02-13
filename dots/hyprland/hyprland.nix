@@ -33,7 +33,7 @@
 
     # Autostart
     exec-once = [
-      "nm-applet & flameshot & udiskie"
+      "nm-applet & udiskie"
       "waybar & hyprpaper"
     ];
 
@@ -162,7 +162,7 @@
       "CTRL ALT SHIFT, F6, exec, /etc/nixos/scripts/focus-or-launch.sh discord discord"
 
       # Screenshots
-      ", Print, exec, flameshot gui"
+      ", Print, exec, grimblast --notify copy area"
 
       # Media controls
       "ALT, Down, exec, playerctl play-pause"
