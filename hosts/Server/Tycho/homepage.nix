@@ -1,5 +1,30 @@
 { ... }:
 {
+  services.glances = {
+    enable = true;
+    openFirewall = false;
+    extraArgs = [
+      "-w"
+      "-B"
+      "127.0.0.1"
+      "-p"
+      "61208"
+    ];
+  };
+  services.homepage-dashboard.widgets = [
+    {
+      resources = {
+        cpu = true;
+        memory = true;
+        disk = "/";
+      };
+    }
+    {
+      glances = {
+        url = "http://127.0.0.1:61208";
+      };
+    }
+  ];
   services.homepage-dashboard = {
     enable = true;
 
