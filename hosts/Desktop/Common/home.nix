@@ -68,13 +68,6 @@
 
   programs.neovim = import ../../../dots/nvim/nvim.nix { inherit pkgs; };
 
-  programs.btop = {
-    enable = true;
-    settings = {
-      color_theme = "tokyo-night";
-    };
-  };
-
   programs.atuin = {
     enable = true;
     settings = {

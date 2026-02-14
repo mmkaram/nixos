@@ -32,7 +32,7 @@ let
     stylua
   ];
   perfTools = with pkgs; [
-    btop
+    (btop.override { cudaSupport = true; })
     htop
     hotspot
     perf
