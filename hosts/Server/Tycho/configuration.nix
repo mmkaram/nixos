@@ -162,8 +162,12 @@
     };
   };
 
-  services.immich.enable = true;
-  services.immich.port = 2283;
+  services.immich = {
+    enable = true;
+    port = 2283;
+  };
+
+  services.audiobookshelf.enable = true;
 
   services.cloudflared = {
     enable = true;
