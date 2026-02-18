@@ -11,6 +11,7 @@
     ./sonarr.nix
     ./radarr.nix
     ./lidarr.nix
+    ./readarr.nix
     ./prowlarr.nix
     ./homepage.nix
     ./vaultwarden.nix
@@ -185,6 +186,7 @@
         "wiki.mmkaram.dev" = "http://127.0.0.1:8089";
         "qbt.mmkaram.dev" = "http://127.0.0.1:8080";
         "sonarr.mmkaram.dev" = "http://127.0.0.1:8989";
+        "readarr.mmkaram.dev" = "http://127.0.0.1:8787";
         "prowlarr.mmkaram.dev" = "http://127.0.0.1:9696";
         "lidarr.mmkaram.dev" = "http://127.0.0.1:8686";
         "radarr.mmkaram.dev" = "http://127.0.0.1:7878";
