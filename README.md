@@ -24,14 +24,11 @@ Useful lua pages
 - [lsp.lua](./dots/nvim/lsp.lua) to manage lsps
 
 ## TODOs
-### Bugs
-- [ ] brightness is always at 0 on boot
 ### nvim
 - [ ] Keybind to build/run code (in toggleterm?)
 - [ ] See images in obsidian-nvim
 - [ ] Equivalent to vscode dev-containers
 ### QoL
-- [ ] Add declarative configuration for home EPSON printer
 - [ ] Replace toggle-term with something more native
 - [ ] Use config.age syntax
 ### Projects
@@ -40,15 +37,10 @@ Useful lua pages
 - [ ] Yubikey for luks
 - [ ] Stylix
 ### Tycho
-- [ ] yubikey on vaultwarden is borked
 - [ ] microbin
 - [ ] nextcloud
-- [ ] Audiobookshelf
 - [ ] secret last.fm api key
-- [ ] get factorio/minecraft server?
+- [ ] run factorio/minecraft server?
 - [ ] get neovim config
 - [ ] get cloudflared, just, neovim, and other programs
 - [ ] auto boot into latest nixos config from grub to save time on boot
-### Other
-- [ ] Track my nmconnection file for eduroam: /etc/NetworkManager/system-connections/waterloo-eduroam.nmconnection (look into `ensureProfiles` options)
-- [ ] Make hyprland multi monitor use one desktop for all monitors instead of one desktop per
