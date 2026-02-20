@@ -73,6 +73,12 @@
             };
           }
           {
+            Audiobookshelf = {
+              href = "https://audiobook.mmkaram.dev";
+              description = "Audiobooks";
+            };
+          }
+          {
             Immich = {
               href = "https://immich.mmkaram.dev";
               description = "Photos";
