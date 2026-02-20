@@ -130,6 +130,7 @@
       follow_mouse = 1;
       sensitivity = 0;
       touchpad = {
+        scroll_factor = 0.2;
         natural_scroll = true;
       };
     };
