@@ -14,7 +14,7 @@
 
   wayland.windowManager.hyprland = import ../../../dots/hyprland/hyprland.nix { };
   programs.waybar = import ../../../dots/hyprland/waybar.nix { };
-  services.hyprpaper = import ../../../dots/hyprland/hyprpaper.nix { };
+  home.file.".config/hypr/hyprpaper.conf".source = ../../../dots/hyprland/hyprpaper.conf;
   programs.hyprlock = import ../../../dots/hyprland/hyprlock.nix { };
 
   services.dunst.enable = true;
