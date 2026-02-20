@@ -70,6 +70,7 @@ let
     nixfmt
   ];
   devTools = with pkgs; [
+    tigervnc
     typst
     typstyle
     tinymist # LSP for typst
