@@ -84,6 +84,16 @@
               description = "Photos";
             };
           }
+          {
+            Microbin = {
+              href = "https://bin.mmkaram.dev";
+              description = "Paste bin";
+              settings = {
+                MICROBIN_HIDE_LOGO = true;
+                MICROBIN_PORT = 9090;
+              };
+            };
+          }
         ];
       }
       {

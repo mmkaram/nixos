@@ -15,6 +15,7 @@
     ./prowlarr.nix
     ./homepage.nix
     ./vaultwarden.nix
+    ./microbin.nix
     # inputs.home-manager.nixosModules.default
   ];
 
@@ -193,6 +194,7 @@
         "immich.mmkaram.dev" = "http://[::1]:2283";
         "vault.mmkaram.dev" = "http://127.0.0.1:8222";
         "audiobook.mmkaram.dev" = "http://127.0.0.1:8000";
+        "bin.mmkaram.dev" = "http://127.0.0.1:9090";
       };
 
       default = "http_status:404";
