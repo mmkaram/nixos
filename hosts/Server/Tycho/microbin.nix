@@ -2,6 +2,6 @@
 {
   services.microbin = {
     enable = true;
-    passwordFile = "";
+    passwordFile = "/run/agenix/microbin";
   };
 }
