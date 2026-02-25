@@ -10,4 +10,5 @@ in
   "atuin.age".publicKeys = [ dd0k ];
   "mediawiki.age".publicKeys = [ dd0k ];
   "vaultwarden.age".publicKeys = [ dd0k ];
+  "microbin.age".publicKeys = [ dd0k ];
 }

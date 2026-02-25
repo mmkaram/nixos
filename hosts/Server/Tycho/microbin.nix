@@ -1,4 +1,4 @@
-{ }:
+{ ... }:
 {
   services.microbin = {
     enable = true;

@@ -49,5 +49,12 @@
       group = "users";
       mode = "600";
     };
+    microbin = {
+      file = ./microbin.age;
+      path = "/run/agenix/microbin";
+      owner = "dd0k";
+      group = "users";
+      mode = "600";
+    };
   };
 }
