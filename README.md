@@ -37,6 +37,7 @@ Useful lua pages
 - [ ] Yubikey for luks
 - [ ] Stylix
 ### Tycho
+- [ ] Linkwarden
 - [ ] microbin
 - [ ] nextcloud
 - [ ] secret last.fm api key
