@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 {
   services.mediawiki = {
     enable = true;
@@ -22,7 +22,7 @@
 
     # Administrator account username is admin.
     # Set initial password to "cardbotnine" for the account admin.
-    passwordFile = /run/agenix/mediawiki;
+    passwordFile = config.age.secrets.mediawiki.path;
     extraConfig = ''
       # Disable anonymous editing
       $wgGroupPermissions['*']['edit'] = false;

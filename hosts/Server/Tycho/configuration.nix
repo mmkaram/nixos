@@ -1,5 +1,6 @@
 {
   pkgs,
+  config,
   ...
 }:
 {
@@ -64,7 +65,7 @@
     enable = true;
 
     tunnels.tycho = {
-      credentialsFile = "/run/agenix/tycho";
+      credentialsFile = config.age.secrets.tycho.path;
 
       ingress = {
         "home.mmkaram.dev" = "http://127.0.0.1:3002";
