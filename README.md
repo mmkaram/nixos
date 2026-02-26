@@ -38,7 +38,6 @@ Useful lua pages
 - [ ] Stylix
 ### Tycho
 - [ ] Linkwarden
-- [ ] microbin
 - [ ] nextcloud
 - [ ] secret last.fm api key
 - [ ] run factorio/minecraft server?
