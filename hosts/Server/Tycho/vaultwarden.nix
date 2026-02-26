@@ -1,9 +1,9 @@
-{ ... }:
+{ config, ... }:
 {
   services.vaultwarden = {
     enable = true;
     backupDir = "/var/local/vaultwarden/backup";
-    environmentFile = "/run/agenix/vaultwarden";
+    environmentFile = config.age.secrets.vaultwarden.path;
     config = {
       DOMAIN = "https://vault.mmkaram.dev";
       SIGNUPS_ALLOWED = false;
