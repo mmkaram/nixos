@@ -1,14 +1,13 @@
 let
-  dd0k = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCeJPSbpRqG6OJ1w0U+uEOnNk4XzR5Yt4050MAZGNqgT5RlVz2652wu6MUEOU+BKGOdPY2kEea+0Y7YLWx7sPQKC0NfX49bDdcP0jN9+vz4CCWlR9WHec40xIeG5HBOGdpUmoY5cooMGtluKEhDvRgto1AJ+9k6SzG7XWzClM6JaEWmrJvozsxXNMyHoUaPbmv0r5qY/12KPXlgi8U1IDEytY0M6YyGDh1Exvaxebr4euaAaTF+Ir5wPiBExnOUl3nJR2xXUDShj72WO9ZIrPH9hwofHr1oOhKsEF1tZZwyN1faShDaB2c9kIgIQjwhqxDSISebqMY9KShzszXo6LKQgUuLLqhAJRA+aiWXzH6jZnCTakZqwAIEqHPe3E/MBVohQ9u0RQsR4pWt/RN5IGjI9SN7nIvBdg2eyzKnOelGNduGOyeBvoAgn5HVa0Je1MdqYdSbYodz6+5JHlL1kOFcjfocfKTaxkkKZqnJG9M+mp21u+o3UVfRbeBruAKRPOEoBQIfzomTKxboc0ZN6XdutjTQxVJdfYw2OtrFZgaXh17uFm45WxsCU3bddLiweDhqbUymSsIoJtgBmOdLxNtwuleoMM5KsWbcPvmlRqOMBsb0Va5xfPrncVDiLkwEPrMHzp10QUxmu0obX9/dsXMnO4CSZ5gUP/8AzvBJdCoINw== mahdykaram@outlook.com
-";
+  dd0k = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCeJPSbpRqG6OJ1w0U+uEOnNk4XzR5Yt4050MAZGNqgT5RlVz2652wu6MUEOU+BKGOdPY2kEea+0Y7YLWx7sPQKC0NfX49bDdcP0jN9+vz4CCWlR9WHec40xIeG5HBOGdpUmoY5cooMGtluKEhDvRgto1AJ+9k6SzG7XWzClM6JaEWmrJvozsxXNMyHoUaPbmv0r5qY/12KPXlgi8U1IDEytY0M6YyGDh1Exvaxebr4euaAaTF+Ir5wPiBExnOUl3nJR2xXUDShj72WO9ZIrPH9hwofHr1oOhKsEF1tZZwyN1faShDaB2c9kIgIQjwhqxDSISebqMY9KShzszXo6LKQgUuLLqhAJRA+aiWXzH6jZnCTakZqwAIEqHPe3E/MBVohQ9u0RQsR4pWt/RN5IGjI9SN7nIvBdg2eyzKnOelGNduGOyeBvoAgn5HVa0Je1MdqYdSbYodz6+5JHlL1kOFcjfocfKTaxkkKZqnJG9M+mp21u+o3UVfRbeBruAKRPOEoBQIfzomTKxboc0ZN6XdutjTQxVJdfYw2OtrFZgaXh17uFm45WxsCU3bddLiweDhqbUymSsIoJtgBmOdLxNtwuleoMM5KsWbcPvmlRqOMBsb0Va5xfPrncVDiLkwEPrMHzp10QUxmu0obX9/dsXMnO4CSZ5gUP/8AzvBJdCoINw== mahdykaram@outlook.com";
+
+  files = builtins.attrNames (builtins.readDir ./.);
+
+  ageFiles = builtins.filter (name: builtins.match ".*\\.age" name != null) files;
 in
-{
-  "password.age".publicKeys = [ dd0k ];
-  "openrouter.age".publicKeys = [ dd0k ];
-  "cloudflarecert.age".publicKeys = [ dd0k ];
-  "tycho.age".publicKeys = [ dd0k ];
-  "atuin.age".publicKeys = [ dd0k ];
-  "mediawiki.age".publicKeys = [ dd0k ];
-  "vaultwarden.age".publicKeys = [ dd0k ];
-  "microbin.age".publicKeys = [ dd0k ];
-}
+builtins.listToAttrs (
+  map (file: {
+    name = file;
+    value.publicKeys = [ dd0k ];
+  }) ageFiles
+)
