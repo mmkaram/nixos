@@ -191,9 +191,9 @@ in
     #   p.tree-sitter-yaml
     #   p.tree-sitter-typst
     # ]))
-    # vim-svelte
-    # vim-prisma
-    # cmp_luasnip
+    vim-svelte
+    vim-prisma
+    cmp_luasnip
   ];
   viAlias = true;
   vimAlias = true;
