@@ -24,9 +24,6 @@
   # Programs
   environment.systemPackages = import ../Common/programs.nix { inherit pkgs inputs; };
 
-  # Brightness and volume
-  programs.light.enable = true;
-
   # Enable CUPS to print documents.
   services.printing.enable = true;
   # printing gui

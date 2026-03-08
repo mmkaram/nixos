@@ -38,10 +38,10 @@ let
     perf
   ];
   pythonTools = with pkgs; [
-    python312
-    python312Packages.pyenchant
-    python312Packages.numpy
-    python312Packages.matplotlib
+    python313
+    python313Packages.pyenchant
+    python313Packages.numpy
+    python313Packages.matplotlib
     pyright
     uv
     black
