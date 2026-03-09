@@ -7,7 +7,6 @@ Ground up [nixos](https://www.nixos.org) configuration. Includes a lot of neovim
 
 - [Home Manager](#Home-Manager)
 - [Nvim](#Nvim)
-- [Packages](#Packages)
 - [TODOs](#TODOs)
 
 <!-- /TOC -->

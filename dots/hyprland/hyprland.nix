@@ -164,6 +164,7 @@
 
       # Screenshots
       ", Print, exec, grimblast --notify copy area"
+      "SHIFT, Print, exec, grimblast --notify save area ~/screenshot-$(date +%Y%m%d-%H%M%S).png"
 
       # Media controls
       "ALT, Down, exec, playerctl play-pause"
