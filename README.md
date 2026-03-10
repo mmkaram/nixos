@@ -36,6 +36,7 @@ Useful lua pages
 - [ ] Yubikey for luks
 - [ ] Stylix
 ### Tycho
+- [ ] Attach drives and use btrfs in RAID
 - [ ] Linkwarden
 - [ ] nextcloud
 - [ ] secret last.fm api key
