@@ -1,6 +1,7 @@
 {
   pkgs,
   inputs,
+  osConfig,
   ...
 }:
 {
@@ -12,7 +13,7 @@
     inputs.agenix.homeManagerModules.default
   ];
 
-  wayland.windowManager.hyprland = import ../../../dots/hyprland/hyprland.nix { };
+  wayland.windowManager.hyprland = import ../../../dots/hyprland/hyprland.nix { inherit osConfig; };
   programs.waybar = import ../../../dots/hyprland/waybar.nix { };
   home.file.".config/hypr/hyprpaper.conf".source = ../../../dots/hyprland/hyprpaper.conf;
   programs.hyprlock = import ../../../dots/hyprland/hyprlock.nix { };

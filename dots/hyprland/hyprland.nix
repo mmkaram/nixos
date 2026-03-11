@@ -1,7 +1,23 @@
-{ }:
+{
+  osConfig,
+  ...
+}:
+let
+  hostname = osConfig.networking.hostName;
+  monitorConfig =
+    if hostname == "Medina" then
+      [
+        "DP-5,1920x1080@60,1321x825,1,transform,1"
+        "DP-4,2560x1440@60,2401x1004,1,transform,0"
+      ]
+    else
+      [
+      ];
+in
 {
   enable = true;
   systemd.enable = false;
+
   extraConfig = ''
     # window resize
     bind = SUPER, R, submap, resize
@@ -18,12 +34,13 @@
     bind = , escape, submap, reset
     submap = reset
   '';
+
   settings = {
     # Ecosystem
     "ecosystem:no_update_news" = true;
 
-    # Monitor configuration
-    # monitor = "eDP-1,1920x1080,auto,1";
+    # Monitor configuration - hostname aware
+    monitor = monitorConfig;
 
     # Variables
     "$terminal" = "kitty";
@@ -31,6 +48,7 @@
     "$menu" = "rofi -show drun -show-icons -icon-theme 'Papirus'";
     "$mainMod" = "SUPER";
 
+    # ... rest of your existing settings unchanged ...
     # Autostart
     exec-once = [
       "nm-applet & udiskie"
@@ -45,7 +63,6 @@
       # "XCURSOR_SIZE,24"
     ];
 
-    # General settings
     general = {
       gaps_in = 3;
       gaps_out = 8;
@@ -57,7 +74,6 @@
       layout = "dwindle";
     };
 
-    # Decoration
     decoration = {
       rounding = 10;
       rounding_power = 0;
@@ -77,7 +93,6 @@
       };
     };
 
-    # Animations
     animations = {
       enabled = false;
       bezier = [
@@ -107,24 +122,20 @@
       ];
     };
 
-    # Dwindle layout
     dwindle = {
       pseudotile = true;
       preserve_split = true;
     };
 
-    # Master layout
     master = {
       new_status = "master";
     };
 
-    # Misc
     misc = {
       force_default_wallpaper = 0;
       disable_hyprland_logo = true;
     };
 
-    # Input
     input = {
       kb_layout = "us";
       follow_mouse = 1;
