@@ -75,7 +75,7 @@
         "atuin.mmkaram.dev" = "http://127.0.0.1:8888";
         "status.mmkaram.dev" = "http://127.0.0.1:3001";
         "wiki.mmkaram.dev" = "http://127.0.0.1:8089";
-        "qbt.mmkaram.dev" = "http://127.0.0.1:8080";
+        "qbt.mmkaram.dev" = "http://10.200.200.2:8080";
         "sonarr.mmkaram.dev" = "http://127.0.0.1:8989";
         "readarr.mmkaram.dev" = "http://127.0.0.1:8787";
         "prowlarr.mmkaram.dev" = "http://127.0.0.1:9696";
