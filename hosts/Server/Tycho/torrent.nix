@@ -75,14 +75,17 @@ in
         ${pkgs.iproute2}/bin/ip netns exec ${nsName} ${pkgs.iproute2}/bin/ip link set lo up
 
         # Enable NAT for namespace to reach Mullvad endpoint via host
-        ${pkgs.iptables}/bin/iptables -t nat -A POSTROUTING -s ${subnet} -o eth0 -j MASQUERADE || true
-        ${pkgs.iptables}/bin/iptables -A FORWARD -i ${vethHost} -o eth0 -j ACCEPT || true
-        ${pkgs.iptables}/bin/iptables -A FORWARD -i eth0 -o ${vethHost} -m state --state RELATED,ESTABLISHED -j ACCEPT || true
+        # Dynamically detect the default interface
+        DEFAULT_IF=$(${pkgs.iproute2}/bin/ip route | ${pkgs.gawk}/bin/awk '/default/ {print $5; exit}')
+        ${pkgs.iptables}/bin/iptables -t nat -A POSTROUTING -s ${subnet} -o "$DEFAULT_IF" -j MASQUERADE || true
+        ${pkgs.iptables}/bin/iptables -A FORWARD -i ${vethHost} -o "$DEFAULT_IF" -j ACCEPT || true
+        ${pkgs.iptables}/bin/iptables -A FORWARD -i "$DEFAULT_IF" -o ${vethHost} -m state --state RELATED,ESTABLISHED -j ACCEPT || true
       '';
       ExecStop = pkgs.writeShellScript "qbt-vpn-netns-down" ''
-        ${pkgs.iptables}/bin/iptables -t nat -D POSTROUTING -s ${subnet} -o eth0 -j MASQUERADE || true
-        ${pkgs.iptables}/bin/iptables -D FORWARD -i ${vethHost} -o eth0 -j ACCEPT || true
-        ${pkgs.iptables}/bin/iptables -D FORWARD -i eth0 -o ${vethHost} -m state --state RELATED,ESTABLISHED -j ACCEPT || true
+        DEFAULT_IF=$(${pkgs.iproute2}/bin/ip route | ${pkgs.gawk}/bin/awk '/default/ {print $5; exit}')
+        ${pkgs.iptables}/bin/iptables -t nat -D POSTROUTING -s ${subnet} -o "$DEFAULT_IF" -j MASQUERADE || true
+        ${pkgs.iptables}/bin/iptables -D FORWARD -i ${vethHost} -o "$DEFAULT_IF" -j ACCEPT || true
+        ${pkgs.iptables}/bin/iptables -D FORWARD -i "$DEFAULT_IF" -o ${vethHost} -m state --state RELATED,ESTABLISHED -j ACCEPT || true
         ${pkgs.iproute2}/bin/ip link del ${vethHost} || true
         ${pkgs.iproute2}/bin/ip netns del ${nsName} || true
       '';
