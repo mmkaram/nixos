@@ -13,9 +13,9 @@ let
   nsIp = "10.200.200.2";
   subnet = "10.200.200.0/24";
 
-  # Mullvad WireGuard server (US NYC)
-  mullvadEndpoint = "146.70.174.2:51820";
-  mullvadPubkey = "CIo1rbwvTjg3xJRsMxDK0bWelKPFMYk1R3JrnPk9iS0=";
+  # Mullvad WireGuard server (US SEA)
+  mullvadEndpoint = "138.199.43.91:51820";
+  mullvadPubkey = "bZQF7VRDRK/JUJ8L6EFzF/zRw2tsqMRk6FesGtTgsC0=";
 in
 {
   # qBittorrent user and group
