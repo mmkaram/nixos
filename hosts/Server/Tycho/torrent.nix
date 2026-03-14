@@ -34,7 +34,7 @@ in
 
   # Download directories
   systemd.tmpfiles.rules = [
-    "d /srv/downloads/torrents 0775 qbt users -"
+    "d /srv/library/downloads 0775 qbt users -"
     "d /var/lib/qbt 0750 qbt qbt -"
   ];
 
@@ -159,7 +159,7 @@ in
       ProtectHome = true;
       ReadWritePaths = [
         "/var/lib/qbt"
-        "/srv/downloads/torrents"
+        "/srv/library/downloads"
       ];
     };
   };
