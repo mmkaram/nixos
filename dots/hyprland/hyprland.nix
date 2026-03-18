@@ -7,8 +7,10 @@ let
   monitorConfig =
     if hostname == "Medina" then
       [
-        "DP-5,1920x1080@60,1321x825,1,transform,1"
-        "DP-4,2560x1440@60,2401x1004,1,transform,0"
+        # Acer XZ322QU V3 on DP-1, 2560x1440 at 180 Hz, position (0,0), scale 1
+        "DP-1,2560x1440@180,1080x282,1"
+        # Dell U2417H on DP-2, 1920x1080 at 60 Hz, position to the right, rotated 90° (transform = 1)
+        "DP-2,1920x1080@60,0x0,1,transform,1"
       ]
     else
       [
