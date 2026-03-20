@@ -75,7 +75,7 @@ let
     typstyle
     tinymist # LSP for typst
     opencode
-	claude-code
+    claude-code
     just
     yaak # api ednpoint client
     atac # TUI api endpoint client
@@ -118,6 +118,7 @@ let
     gh
     gh-dash
     vscode
+    godot
     code-cursor
     zed-editor
     neovim
