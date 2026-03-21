@@ -145,6 +145,7 @@ let
   games = with pkgs; [
     prismlauncher
     steam
+    ryubing
   ];
   yubikeyTools = with pkgs; [
     yubikey-manager
