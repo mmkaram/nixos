@@ -219,6 +219,7 @@ let
   audioTools = with pkgs; [
     pulseaudio
     supersonic-wayland
+    feishin
   ];
   browsingTools = with pkgs; [
     inputs.zen-browser.packages."${pkgs.stdenv.hostPlatform.system}".default
