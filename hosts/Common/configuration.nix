@@ -47,6 +47,7 @@
       "wireshark"
       "scanner"
       "lp"
+      "lpadmin"
     ];
     packages = with pkgs; [
       git

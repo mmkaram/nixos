@@ -218,7 +218,6 @@ let
   ];
   audioTools = with pkgs; [
     pulseaudio
-    supersonic-wayland
     feishin
   ];
   browsingTools = with pkgs; [
