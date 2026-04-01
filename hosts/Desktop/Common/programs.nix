@@ -185,7 +185,9 @@ let
     drawio
     rtorrent
     rsync
-    calibre
+    (calibre.override {
+      unrarSupport = true;
+    })
     localsend
     obs-studio
     audacity
