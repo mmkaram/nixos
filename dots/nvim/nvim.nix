@@ -1,7 +1,7 @@
 { pkgs }:
 let
-  toLua = str: "lua << EOF\n${str}\nEOF\n";
-  toLuaFile = file: "lua << EOF\n${builtins.readFile file}\nEOF\n";
+  toLua = str: "${str}\n";
+  toLuaFile = file: "${builtins.readFile file}\n";
 in
 {
   enable = true;
@@ -127,7 +127,7 @@ in
     git-dashboard-nvim
     {
       plugin = tokyonight-nvim;
-      config = "colorscheme tokyonight-night";
+      config = toLua "vim.cmd('colorscheme tokyonight-night')";
     }
     {
       plugin = nvim-web-devicons;

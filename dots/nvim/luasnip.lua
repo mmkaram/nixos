@@ -110,4 +110,3 @@ vim.keymap.set({ "i", "s" }, "<C-k>", function()
 	end
 end, { silent = true })
 
-return ls

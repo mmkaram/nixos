@@ -7,7 +7,7 @@
 {
   home.username = "dd0k";
   home.homeDirectory = "/home/dd0k";
-  home.stateVersion = "25.11";
+  home.stateVersion = "26.05";
 
   imports = [
     inputs.agenix.homeManagerModules.default
