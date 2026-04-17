@@ -57,6 +57,7 @@
   services.immich = {
     enable = true;
     port = 2283;
+    mediaLocation = "/srv/library/images";
   };
 
   services.audiobookshelf.enable = true;
