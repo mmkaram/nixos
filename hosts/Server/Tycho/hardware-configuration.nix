@@ -23,6 +23,25 @@
       fsType = "vfat";
       options = [ "fmask=0077" "dmask=0077" ];
     };
+  
+  # MEDIA RAID5 BTRFS
+  fileSystems."/srv" = {
+  device = "UUID=a7258f04-8147-4056-88df-cdeffc2d5432";
+  fsType = "btrfs";
+  options = [
+      "subvol=library"
+      "compress=zstd"
+      "noatime"
+    ];
+  };
+  fileSystems."/srv/.snapshots" = {
+    device = "UUID=a7258f04-8147-4056-88df-cdeffc2d5432";
+    fsType = "btrfs";
+    options = [
+      "subvol=snapshots"
+      "noatime"
+    ];
+  };
 
   swapDevices = [ ];
 

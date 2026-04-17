@@ -38,5 +38,5 @@
   ];
 
   # Optional: enforce group-writable creation for Sonarr
-  systemd.services.sonarr.serviceConfig.UMask = "0002";
+  # systemd.services.sonarr.serviceConfig.UMask = "0002";
 }

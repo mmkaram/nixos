@@ -1,0 +1,44 @@
+[0;1;32m●[0m qbt-vpn-netns.service - Create qBittorrent VPN network namespace
+     Loaded: loaded (]8;;file://Tycho/etc/systemd/system/qbt-vpn-netns.service\/etc/systemd/system/qbt-vpn-netns.service]8;;\; [0;1;32menabled[0m; preset: ignored)
+     Active: [0;1;32mactive (exited)[0m since Sat 2026-03-14 11:09:10 PDT; 6min ago
+ Invocation: a6f232ec0a9140ae959a76c1b8705619
+   Main PID: 380891 (code=exited, status=0/SUCCESS)
+         IO: 1.6M read, 0B written
+   Mem peak: 3.3M
+        CPU: 21ms
+
+Mar 14 11:09:10 Tycho systemd[1]: Starting Create qBittorrent VPN network namespace...
+Mar 14 11:09:10 Tycho systemd[1]: Finished Create qBittorrent VPN network namespace.
+
+[0;1;32m●[0m qbt-vpn-wireguard.service - WireGuard VPN in qBittorrent namespace
+     Loaded: loaded (]8;;file://Tycho/etc/systemd/system/qbt-vpn-wireguard.service\/etc/systemd/system/qbt-vpn-wireguard.service]8;;\; [0;1;32menabled[0m; preset: ignored)
+     Active: [0;1;32mactive (exited)[0m since Sat 2026-03-14 11:09:11 PDT; 6min ago
+ Invocation: f9fe341d85f04cd4bf6ca0d75ba3de15
+   Main PID: 380945 (code=exited, status=0/SUCCESS)
+         IO: 0B read, 0B written
+   Mem peak: 2.2M
+        CPU: 23ms
+
+Mar 14 11:09:10 Tycho systemd[1]: Starting WireGuard VPN in qBittorrent namespace...
+Mar 14 11:09:11 Tycho systemd[1]: Finished WireGuard VPN in qBittorrent namespace.
+
+[0;1;32m●[0m qbittorrent-nox.service - qBittorrent-nox (VPN isolated)
+     Loaded: loaded (]8;;file://Tycho/etc/systemd/system/qbittorrent-nox.service\/etc/systemd/system/qbittorrent-nox.service]8;;\; [0;1;32menabled[0m; preset: ignored)
+     Active: [0;1;32mactive (running)[0m since Sat 2026-03-14 11:14:50 PDT; 49s ago
+ Invocation: 31863639c51040368ffee2c5608eac72
+   Main PID: 383390 (.qbittorrent-no)
+         IP: 403K in, 350.9K out
+         IO: 10M read, 0B written
+      Tasks: 11[0;38;5;245m (limit: 18887)[0m
+     Memory: 32.7M (peak: 33.2M)
+        CPU: 321ms
+     CGroup: /system.slice/qbittorrent-nox.service
+             └─[0;38;5;245m383390 /nix/store/hl6hkkpm7dsw8niipgg0b8zhnfc5b513-qbittorrent-nox-5.1.4/bin/qbittorrent-nox --webui-port=8080[0m
+
+Mar 14 11:14:50 Tycho systemd[1]: Started qBittorrent-nox (VPN isolated).
+Mar 14 11:14:50 Tycho qbittorrent-nox[383390]: *** Legal Notice ***
+Mar 14 11:14:50 Tycho qbittorrent-nox[383390]: qBittorrent is a file sharing program. When you run a torrent, its data will be made available to others by means of upload. Any content you share is your sole responsibility.
+Mar 14 11:14:50 Tycho qbittorrent-nox[383390]: If you have read the legal notice, you can use command line option `--confirm-legal-notice` to suppress this message.
+Mar 14 11:14:50 Tycho qbittorrent-nox[383390]: WebUI will be started shortly after internal preparations. Please wait...
+Mar 14 11:14:50 Tycho qbittorrent-nox[383390]: ******** Information ********
+Mar 14 11:14:50 Tycho qbittorrent-nox[383390]: To control qBittorrent, access the WebUI at: http://localhost:8080

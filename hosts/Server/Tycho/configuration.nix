@@ -90,4 +90,22 @@
       default = "http_status:404";
     };
   };
+
+  # RAID/Drive
+  services.btrfs.autoScrub = {
+    enable = true;
+    interval = "monthly";
+    fileSystems = [ "/srv" ];
+  };
+  services.smartd = {
+    enable = true;
+    autodetect = true;
+  };
+  services.snapper = {
+    configs.media = {
+      SUBVOLUME = "/srv";
+      TIMELINE_CREATE = true;
+      TIMELINE_CLEANUP = true;
+    };
+  };
 }
