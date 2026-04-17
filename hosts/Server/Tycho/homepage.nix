@@ -5,7 +5,7 @@
       resources = {
         cpu = true;
         memory = true;
-        disk = "/";
+        disk = "/srv";
       };
     }
   ];
