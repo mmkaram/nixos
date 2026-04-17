@@ -106,6 +106,7 @@ let
     fd
     tree
     kitty
+    st
     lazygit
     lazydocker
     fish

@@ -150,8 +150,8 @@ in
 
     # Key bindings
     bind = [
-      "$mainMod, Return, exec, kitty tmux"
-      "$mainMod SHIFT, Return, exec, kitty"
+      "$mainMod, Return, exec, kitty"
+      "$mainMod SHIFT, Return, exec, st bash"
       "$mainMod SHIFT, Q, killactive"
       "$mainMod, M, exit"
       "$mainMod, A, exec, kitty yazi ."
