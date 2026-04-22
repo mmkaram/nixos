@@ -30,6 +30,24 @@
 
   services.getty.autologinUser = "dd0k";
 
+  environment.systemPackages = with pkgs; [
+    powertop
+    linuxKernel.packages.linux_6_12.turbostat
+    smartmontools
+    tmux
+    lazygit
+    rtorrent
+    neovim
+    just
+    btop
+    duf
+    ffmpeg
+    fzf
+    cloudflared
+    wget
+    eyed3
+  ];
+
   users.users.mh0 = {
     isNormalUser = true;
     description = "Mohammed Karam";
