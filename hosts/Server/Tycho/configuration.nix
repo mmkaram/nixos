@@ -75,7 +75,7 @@
 
     database.passwordFile = "/var/lib/secrets/dokploy-db-password";
 
-    port = "3001:3000";
+    port = "3100:3000";
   };
 
   services.uptime-kuma = {
