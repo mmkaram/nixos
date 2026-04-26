@@ -1,6 +1,7 @@
 {
   pkgs,
   config,
+  inputs,
   ...
 }:
 {
@@ -21,6 +22,7 @@
     ./jellyfin.nix
     ./gitea.nix
     ./atuin.nix
+    inputs.nix-dokploy.nixosModules.dokploy
     # inputs.home-manager.nixosModules.default
   ];
 
@@ -65,6 +67,17 @@
     ];
   };
 
+  services.dokploy = {
+    enable = true;
+    bind = "0.0.0.0";
+    port = 3100;
+    traefik = {
+      enable = false; # built‑in Traefik reverse proxy
+      port = 80; # HTTP
+      httpsPort = 443; # HTTPS
+    };
+  };
+
   services.uptime-kuma = {
     enable = true;
     settings = {
@@ -104,6 +117,7 @@
         "vault.mmkaram.dev" = "http://127.0.0.1:8222";
         "audiobook.mmkaram.dev" = "http://127.0.0.1:8000";
         "bin.mmkaram.dev" = "http://127.0.0.1:9090";
+        "dokploy.mmkaram.dev" = "http://127.0.0.1:3100";
       };
 
       default = "http_status:404";
