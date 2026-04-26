@@ -100,6 +100,12 @@
               description = "Git hosting";
             };
           }
+          {
+            Dokploy = {
+              href = "https://dokploy.mmkaram.dev";
+              description = "PaaS";
+            };
+          }
         ];
       }
       {
