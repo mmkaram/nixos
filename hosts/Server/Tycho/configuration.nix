@@ -67,11 +67,11 @@
     ];
   };
 
-  services.dokploy = {
-    enable = true;
-    # bind = "0.0.0.0";
-    port = 3100;
-  };
+  virtualisation.docker.enable = true;
+  virtualisation.docker.daemon.settings.live-restore = false;
+
+  services.dokploy.enable = true;
+  services.dokploy.database.passwordFile = "/var/lib/secrets/dokploy-db-password";
 
   services.uptime-kuma = {
     enable = true;
