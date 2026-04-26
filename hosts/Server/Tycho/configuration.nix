@@ -70,8 +70,13 @@
   virtualisation.docker.enable = true;
   virtualisation.docker.daemon.settings.live-restore = false;
 
-  services.dokploy.enable = true;
-  services.dokploy.database.passwordFile = "/var/lib/secrets/dokploy-db-password";
+  services.dokploy = {
+    enable = true;
+
+    database.passwordFile = "/var/lib/secrets/dokploy-db-password";
+
+    port = "3001:3000";
+  };
 
   services.uptime-kuma = {
     enable = true;
@@ -112,7 +117,7 @@
         "vault.mmkaram.dev" = "http://127.0.0.1:8222";
         "audiobook.mmkaram.dev" = "http://127.0.0.1:8000";
         "bin.mmkaram.dev" = "http://127.0.0.1:9090";
-        "dokploy.mmkaram.dev" = "http://127.0.0.1:3100";
+        "dokploy.mmkaram.dev" = "http://127.0.0.1:3000";
       };
 
       default = "http_status:404";
