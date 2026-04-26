@@ -69,7 +69,7 @@
 
   services.dokploy = {
     enable = true;
-    bind = "0.0.0.0";
+    # bind = "0.0.0.0";
     port = 3100;
     traefik = {
       enable = false; # built‑in Traefik reverse proxy
