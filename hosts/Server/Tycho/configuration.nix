@@ -75,7 +75,7 @@
 
     database.passwordFile = "/var/lib/secrets/dokploy-db-password";
 
-    port = null;
+    port = "3100:3000";
   };
 
   services.uptime-kuma = {
@@ -118,6 +118,7 @@
         "audiobook.mmkaram.dev" = "http://127.0.0.1:8000";
         "bin.mmkaram.dev" = "http://127.0.0.1:9090";
         "dokploy.mmkaram.dev" = "http://127.0.0.1:3100";
+        "*.mmkaram.dev" = "http://127.0.0.1:80";
       };
 
       default = "http_status:404";
