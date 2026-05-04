@@ -22,6 +22,7 @@
     ./jellyfin.nix
     ./gitea.nix
     ./atuin.nix
+    ./samba.nix
     inputs.nix-dokploy.nixosModules.dokploy
     # inputs.home-manager.nixosModules.default
   ];
