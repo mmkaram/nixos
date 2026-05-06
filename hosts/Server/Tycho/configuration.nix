@@ -94,6 +94,15 @@
 
   services.audiobookshelf.enable = true;
 
+  services.syncthing = {
+    enable = true;
+    openDefaultPorts = true;
+    settings.gui = {
+      user = "dd0k";
+    };
+    guiPasswordFile = config.age.secrets.syncthing.path;
+  };
+
   services.cloudflared = {
     enable = true;
 

@@ -1,9 +1,17 @@
 let
-  files = builtins.attrNames (builtins.readDir ./.);
-
-  ageFiles = builtins.filter (name: builtins.match ".*\\.age" name != null) files;
-
-  secretNames = map (file: builtins.replaceStrings [ ".age" ] [ "" ] file) ageFiles;
+  secretNames = [
+    "atuin"
+    "cloudflaresecret"
+    "mediawiki"
+    "microbin"
+    "mullvad-wg-address"
+    "mullvad-wg-private"
+    "openrouter"
+    "password"
+    "vaultwarden"
+    "tycho"
+    "syncthing"
+  ];
 
   mkSecret = name: {
     file = ./. + "/${name}.age";
