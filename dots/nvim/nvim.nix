@@ -96,10 +96,11 @@ in
       config = toLuaFile ./term.lua;
     }
 
-    {
-      plugin = presence-nvim;
-      config = toLuaFile ./presence.lua;
-    }
+    # Borked due to unfree
+    # {
+    #   plugin = presence-nvim;
+    #   config = toLuaFile ./presence.lua;
+    # }
     # Borked due to treesitter mismatch error
     # {
     #   plugin = codewindow-nvim;
