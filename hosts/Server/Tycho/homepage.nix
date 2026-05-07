@@ -79,15 +79,29 @@
             };
           }
           {
+            Microbin = {
+              href = "https://bin.mmkaram.dev";
+              description = "Paste bin";
+            };
+          }
+        ];
+      }
+      {
+        Photos = [
+          {
             Immich = {
               href = "https://immich.mmkaram.dev";
               description = "Photos";
             };
           }
+        ];
+      }
+      {
+        Sync = [
           {
-            Microbin = {
-              href = "https://bin.mmkaram.dev";
-              description = "Paste bin";
+            Syncthing = {
+              href = "https://sync.mmkaram.dev";
+              description = "File sync";
             };
           }
         ];
@@ -146,5 +160,4 @@
       }
     ];
   };
-
 }
