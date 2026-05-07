@@ -96,6 +96,8 @@
 
   services.syncthing = {
     enable = true;
+    dataDir = "/srv/syncthing";
+    configDir = "/var/lib/syncthing";
     openDefaultPorts = true;
     settings.gui = {
       user = "dd0k";
