@@ -87,21 +87,17 @@
         ];
       }
       {
-        Photos = [
-          {
-            Immich = {
-              href = "https://immich.mmkaram.dev";
-              description = "Photos";
-            };
-          }
-        ];
-      }
-      {
         Sync = [
           {
             Syncthing = {
               href = "https://sync.mmkaram.dev";
               description = "File sync";
+            };
+          }
+          {
+            Immich = {
+              href = "https://immich.mmkaram.dev";
+              description = "Photos";
             };
           }
         ];
