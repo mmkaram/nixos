@@ -128,6 +128,7 @@
         "audiobook.mmkaram.dev" = "http://127.0.0.1:8000";
         "bin.mmkaram.dev" = "http://127.0.0.1:9090";
         "dokploy.mmkaram.dev" = "http://127.0.0.1:3100";
+        "sync.mmkaram.dev" = "http://127.0.0.1:8384";
       };
 
       default = "http_status:404";
