@@ -99,6 +99,7 @@
     openDefaultPorts = true;
     settings.gui = {
       user = "dd0k";
+      insecureSkipHostcheck = true;
     };
     guiPasswordFile = config.age.secrets.syncthing.path;
   };
