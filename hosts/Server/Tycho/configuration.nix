@@ -50,8 +50,6 @@
     cloudflared
     wget
     eyed3
-    mdadm
-    cockpit
   ];
 
   users.users.mh0 = {
