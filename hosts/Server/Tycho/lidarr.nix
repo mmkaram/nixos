@@ -10,5 +10,11 @@
       "LIDARR__BINDADDRESS=127.0.0.1"
       "LIDARR__PORT=8686"
     ];
+    UMask = "0002";
   };
+
+  users.users.lidarr.extraGroups = [
+    "media"
+    "users"
+  ];
 }

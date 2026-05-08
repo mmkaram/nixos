@@ -12,4 +12,9 @@
     ];
     UMask = "0002";
   };
+
+  users.users.readarr.extraGroups = [
+    "media"
+    "users"
+  ];
 }

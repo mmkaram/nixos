@@ -1,4 +1,4 @@
-{ lib, ... }:
+{ ... }:
 {
   services.radarr = {
     enable = true;
@@ -10,5 +10,11 @@
       "RADARR__BINDADDRESS=127.0.0.1"
       "RADARR__PORT=7878"
     ];
+    UMask = "0002";
   };
+
+  users.users.radarr.extraGroups = [
+    "media"
+    "users"
+  ];
 }
