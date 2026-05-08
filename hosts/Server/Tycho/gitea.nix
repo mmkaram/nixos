@@ -1,44 +1,44 @@
 { ... }:
 {
-  services.gitea = {
+  services.forgejo = {
     enable = true;
 
-    appName = "Gitea";
+    stateDir = "/srv/forgejo";
+
+    useWizard = false;
+
+    database.type = "sqlite3";
+
+    lfs.enable = false;
 
     settings = {
+      DEFAULT = {
+        APP_NAME = "Forgejo"; # or rename to "Forgejo"
+      };
+
       service = {
         DISABLE_REGISTRATION = true;
       };
+
       server = {
-        DOMAIN = "git.mmkaram.dev"; # external hostname
-        ROOT_URL = "https://git.mmkaram.dev/"; # public URL
+        DOMAIN = "git.mmkaram.dev";
+        ROOT_URL = "https://git.mmkaram.dev/";
         HTTP_ADDR = "127.0.0.1";
         HTTP_PORT = 3000;
-
         PROTOCOL = "http";
         SSH_DOMAIN = "tycho";
-        SSH_PORT = 22; # host sshd
-        START_SSH_SERVER = false; # use host OpenSSH, not Gitea’s internal
+        SSH_PORT = 22;
+        DISABLE_SSH = false;
         LANDING_PAGE = "explore";
       };
 
       security = {
-        INSTALL_LOCK = true; # skip installer once configured
+        INSTALL_LOCK = true;
       };
 
-      database = {
-        DB_TYPE = "sqlite3";
-        # PATH = "gitea.db";
-      };
-
-      # Basic email stub
-      email = {
+      mailer = {
         ENABLED = false;
       };
     };
-
-    # Data lives here: repos, config, avatars, etc.
-    stateDir = "/var/lib/gitea";
   };
-
 }
