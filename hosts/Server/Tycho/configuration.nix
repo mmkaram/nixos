@@ -20,7 +20,7 @@
     ./microbin.nix
     ./navidrome.nix
     ./jellyfin.nix
-    ./gitea.nix
+    ./forgejo.nix
     ./atuin.nix
     ./samba.nix
     inputs.nix-dokploy.nixosModules.dokploy
