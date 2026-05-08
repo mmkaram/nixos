@@ -23,6 +23,7 @@
     ./forgejo.nix
     ./atuin.nix
     ./samba.nix
+    ./cockpit.nix
     inputs.nix-dokploy.nixosModules.dokploy
     # inputs.home-manager.nixosModules.default
   ];
@@ -132,6 +133,7 @@
         "bin.mmkaram.dev" = "http://127.0.0.1:9090";
         "dokploy.mmkaram.dev" = "http://127.0.0.1:3100";
         "sync.mmkaram.dev" = "http://127.0.0.1:8384";
+        "cockpit.mmkaram.dev" = "http://127.0.0.1:9091";
       };
 
       default = "http_status:404";
