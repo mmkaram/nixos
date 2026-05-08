@@ -5,7 +5,7 @@
 
     stateDir = "/srv/forgejo";
 
-    useWizard = true;
+    useWizard = false;
 
     database.type = "sqlite3";
 
@@ -13,7 +13,7 @@
 
     settings = {
       DEFAULT = {
-        APP_NAME = "Forgejo"; # or rename to "Forgejo"
+        APP_NAME = "Forgejo";
       };
 
       service = {
