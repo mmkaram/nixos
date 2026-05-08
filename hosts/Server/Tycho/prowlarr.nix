@@ -12,9 +12,4 @@
     ];
     UMask = "0002";
   };
-
-  users.users.prowlarr.extraGroups = [
-    "media"
-    "users"
-  ];
 }
