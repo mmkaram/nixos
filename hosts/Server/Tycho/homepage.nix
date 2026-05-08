@@ -105,7 +105,7 @@
       {
         Dev = [
           {
-            Gitea = {
+            Forgejo = {
               href = "https://git.mmkaram.dev";
               description = "Git hosting";
             };

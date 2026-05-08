@@ -5,7 +5,7 @@
 
     stateDir = "/srv/forgejo";
 
-    useWizard = false;
+    useWizard = true;
 
     database.type = "sqlite3";
 
