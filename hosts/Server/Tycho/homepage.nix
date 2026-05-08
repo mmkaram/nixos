@@ -123,7 +123,13 @@
           {
             "Uptime Kuma" = {
               href = "https://status.mmkaram.dev";
-              description = "Monitoring";
+              description = "Uptime monitoring";
+            };
+          }
+          {
+            "Cockpit" = {
+              href = "https://cockpit.mmkaram.dev";
+              description = "System monitoring";
             };
           }
           {
