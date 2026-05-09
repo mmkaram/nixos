@@ -1,9 +1,10 @@
-{ config, ... }:
+{ config, pkgs, ... }:
 {
   services.nextcloud = {
     enable = true;
     hostName = "localhost";
     https = false;
+    package = pkgs.nextcloud32;
 
     config = {
       adminpassFile = config.age.secrets.nextcloud.path;
