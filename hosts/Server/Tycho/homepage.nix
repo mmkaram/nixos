@@ -91,13 +91,19 @@
           {
             Syncthing = {
               href = "https://sync.mmkaram.dev";
-              description = "File sync";
+              description = "P2P file sync";
             };
           }
           {
             Immich = {
               href = "https://immich.mmkaram.dev";
               description = "Photos";
+            };
+          }
+          {
+            Nextcloud = {
+              href = "https://nextcloud.mmkaram.dev";
+              description = "Content Collaboration";
             };
           }
         ];
