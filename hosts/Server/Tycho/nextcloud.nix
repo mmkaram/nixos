@@ -2,7 +2,7 @@
 {
   services.nextcloud = {
     enable = true;
-    hostName = "localhost";
+    hostName = "nextcloud.mmkaram.dev";
     https = false;
     package = pkgs.nextcloud32;
 
@@ -10,6 +10,8 @@
       adminpassFile = config.age.secrets.nextcloud.path;
       dbtype = "sqlite";
     };
+
+    settings.trusted_domains = [ "nextcloud.mmkaram.dev" ];
   };
 
   services.nginx.virtualHosts."${config.services.nextcloud.hostName}".listen = [
