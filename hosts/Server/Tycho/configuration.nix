@@ -24,6 +24,7 @@
     ./atuin.nix
     ./samba.nix
     ./cockpit.nix
+    ./nextcloud.nix
     inputs.nix-dokploy.nixosModules.dokploy
     # inputs.home-manager.nixosModules.default
   ];
@@ -134,6 +135,7 @@
         "dokploy.mmkaram.dev" = "http://127.0.0.1:3100";
         "sync.mmkaram.dev" = "http://127.0.0.1:8384";
         "cockpit.mmkaram.dev" = "http://127.0.0.1:9091";
+        "nextcloud.mmkaram.dev" = "http://127.0.0.1:7645";
       };
 
       default = "http_status:404";

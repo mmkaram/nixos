@@ -13,6 +13,7 @@ let
     "vaultwarden"
     "tycho"
     "syncthing"
+    "nextcloud"
   ];
 in
 builtins.listToAttrs (

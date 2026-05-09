@@ -11,6 +11,7 @@ let
     "vaultwarden"
     "tycho"
     "syncthing"
+    "nextcloud"
   ];
 
   mkSecret = name: {
