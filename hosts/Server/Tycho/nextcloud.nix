@@ -16,6 +16,16 @@
       overwriteprotocol = "https";
       "overwrite.cli.url" = "https://nextcloud.mmkaram.dev";
     };
+
+    extraApps = {
+      inherit (config.services.nextcloud.package.packages.apps)
+        news
+        contacts
+        calendar
+        tasks
+        ;
+    };
+    extraAppsEnable = true;
   };
 
   services.nginx.virtualHosts."${config.services.nextcloud.hostName}".listen = [
