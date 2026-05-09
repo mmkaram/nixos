@@ -11,7 +11,11 @@
       dbtype = "sqlite";
     };
 
-    settings.trusted_domains = [ "nextcloud.mmkaram.dev" ];
+    settings = {
+      trusted_domains = [ "nextcloud.mmkaram.dev" ];
+      overwriteprotocol = "https";
+      "overwrite.cli.url" = "https://nextcloud.mmkaram.dev";
+    };
   };
 
   services.nginx.virtualHosts."${config.services.nextcloud.hostName}".listen = [
