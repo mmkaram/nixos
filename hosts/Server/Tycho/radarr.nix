@@ -16,5 +16,6 @@
   users.users.radarr.extraGroups = [
     "media"
     "users"
+    "qbt"
   ];
 }

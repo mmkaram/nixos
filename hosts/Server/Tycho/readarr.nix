@@ -16,5 +16,6 @@
   users.users.readarr.extraGroups = [
     "media"
     "users"
+    "qbt"
   ];
 }

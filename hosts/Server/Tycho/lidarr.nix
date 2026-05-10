@@ -16,6 +16,6 @@
   users.users.lidarr.extraGroups = [
     "media"
     "users"
-	"qbt"
+    "qbt"
   ];
 }

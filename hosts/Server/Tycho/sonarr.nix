@@ -27,6 +27,7 @@
   users.users.sonarr.extraGroups = [
     "media"
     "users"
+    "qbt"
   ];
   users.users.qbt.extraGroups = [
     "media"
