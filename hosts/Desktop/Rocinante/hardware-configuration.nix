@@ -10,6 +10,7 @@
 }:
 
 {
+  boot.kernelPackages = pkgs.linuxPackages_latest;
   imports = [
     (modulesPath + "/installer/scan/not-detected.nix")
   ];
