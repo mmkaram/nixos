@@ -38,22 +38,20 @@ vim.lsp.config("lua_ls", {
 vim.lsp.config("rust_analyzer", {
 	settings = {
 		["rust-analyzer"] = {
+			cargo = {
+				features = { "ssr" },
+				noDefaultFeatures = true,
+			},
 			diagnostics = {
-				enable = false,
+				disabled = { "proc-macro-disabled" },
 			},
 			inlayHints = {
-				parameterHints = {
-					enable = true,
-				},
-				typeHints = {
-					enable = true,
-				},
+				parameterHints = { enable = true },
+				typeHints = { enable = true },
 			},
-			-- Leptos
 			procMacro = {
 				ignored = {
 					leptos_macro = {
-						-- "component",
 						"server",
 					},
 				},
