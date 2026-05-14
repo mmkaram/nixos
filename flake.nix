@@ -20,6 +20,10 @@
       url = "github:el-kurto/nix-dokploy";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    monocoque = {
+      url = "git+https://git.mmkaram.dev/mmkaram/monocoque.git";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =

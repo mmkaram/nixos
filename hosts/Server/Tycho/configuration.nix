@@ -36,6 +36,7 @@
   services.getty.autologinUser = "dd0k";
 
   environment.systemPackages = with pkgs; [
+    inputs.monocoque.packages.${pkgs.system}.default
     powertop
     linuxKernel.packages.linux_6_12.turbostat
     smartmontools
