@@ -36,7 +36,6 @@
   services.getty.autologinUser = "dd0k";
 
   environment.systemPackages = with pkgs; [
-    inputs.monocoque.packages.${pkgs.system}.default
     powertop
     linuxKernel.packages.linux_6_12.turbostat
     smartmontools
@@ -107,6 +106,13 @@
       insecureSkipHostcheck = true;
     };
     guiPasswordFile = config.age.secrets.syncthing.path;
+  };
+
+  services.monocoque = {
+    enable = true;
+    port = 4002;
+    openFirewall = true;
+    dataDir = "/srv/library";
   };
 
   services.cloudflared = {

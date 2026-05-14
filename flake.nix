@@ -67,6 +67,7 @@
           ./hosts/Server/Tycho/configuration.nix
           agenix.nixosModules.default
           inputs.home-manager.nixosModules.default
+          inputs.monocoque.nixosModules.default
         ];
       };
     };
