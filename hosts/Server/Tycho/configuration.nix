@@ -142,6 +142,7 @@
         "dokploy.mmkaram.dev" = "http://127.0.0.1:3100";
         "sync.mmkaram.dev" = "http://127.0.0.1:8384";
         "cockpit.mmkaram.dev" = "http://127.0.0.1:9091";
+        "monocoque.mmkaram.dev" = "http://0.0.0.0:4002";
         "nextcloud.mmkaram.dev" = "http://127.0.0.1:7645";
       };
 
