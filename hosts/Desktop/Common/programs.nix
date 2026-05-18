@@ -74,7 +74,7 @@ let
     typstyle
     tinymist # LSP for typst
     opencode
-    claude-code
+	codex
     just
     yaak # api ednpoint client
     atac # TUI api endpoint client
