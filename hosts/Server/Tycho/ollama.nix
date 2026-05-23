@@ -8,8 +8,6 @@
     host = "0.0.0.0";
     port = 11434;
 
-    acceleration = "cuda";
-
     loadModels = [
       "llama3.1:8b"
     ];
