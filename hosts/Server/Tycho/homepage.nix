@@ -84,6 +84,12 @@
               description = "Paste bin";
             };
           }
+          {
+            Open-WebUI = {
+              href = "https://ai.mmkaram.dev";
+              description = "AI Chatbot";
+            };
+          }
         ];
       }
       {
