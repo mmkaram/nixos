@@ -148,6 +148,7 @@
         "cockpit.mmkaram.dev" = "http://127.0.0.1:9091";
         "monocoque.mmkaram.dev" = "http://0.0.0.0:4002";
         "nextcloud.mmkaram.dev" = "http://127.0.0.1:7645";
+        "ai.mmkaram.dev" = "http://127.0.0.1:8081";
       };
 
       default = "http_status:404";
