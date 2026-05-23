@@ -29,6 +29,10 @@
     # inputs.home-manager.nixosModules.default
   ];
 
+  hardware.graphics.enable = true;
+  services.xserver.videoDrivers = [ "nvidia" ];
+  hardware.nvidia.open = true;
+
   networking.hostName = "Tycho";
 
   services.openssh.enable = true;

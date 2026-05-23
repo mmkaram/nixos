@@ -155,11 +155,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1779059327,
-        "narHash": "sha256-l3PdcWN1N9Fscc+IGP2U2OuI0oPODq4fFUbQcZeZwy8=",
+        "lastModified": 1779317068,
+        "narHash": "sha256-0aFhhfQOAWkwC86Jqc+SspH7wIVJPPNUeEOX9rZGSfU=",
         "ref": "refs/heads/main",
-        "rev": "c7db478bed5c2d1e4f93ba6748e5da13ca1fa077",
-        "revCount": 57,
+        "rev": "1cce44e084217ad57788526a3f040a4a716d946d",
+        "revCount": 59,
         "type": "git",
         "url": "https://git.mmkaram.dev/mmkaram/monocoque.git"
       },
