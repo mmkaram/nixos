@@ -81,6 +81,7 @@
   services.dokploy = {
     enable = true;
 
+    # TODO: agenix
     database.passwordFile = "/var/lib/secrets/dokploy-db-password";
 
     port = "3100:3000";
