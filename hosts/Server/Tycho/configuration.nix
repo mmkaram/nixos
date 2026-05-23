@@ -49,7 +49,7 @@
     rtorrent
     neovim
     just
-    btop
+    (btop.override { cudaSupport = true; })
     duf
     ffmpeg
     fzf
