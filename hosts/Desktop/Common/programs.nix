@@ -74,7 +74,7 @@ let
     typstyle
     tinymist # LSP for typst
     opencode
-	codex
+    codex
     just
     yaak # api ednpoint client
     atac # TUI api endpoint client
@@ -194,6 +194,8 @@ let
     pcmanfm
     xournalpp
     obsidian
+    joplin-cli
+    joplin-desktop
     gnucash
     apostrophe
     zotero
