@@ -227,7 +227,7 @@ let
   ];
   browsingTools = with pkgs; [
     inputs.zen-browser.packages."${pkgs.stdenv.hostPlatform.system}".default
-    bitwarden-desktop
+    bitwarden-cli
     ungoogled-chromium
   ];
 in
