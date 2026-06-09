@@ -4,6 +4,7 @@
   ...
 }:
 {
+networking.firewall.enable = false;
   # Nix settings
   nix.settings.experimental-features = [
     "nix-command"
