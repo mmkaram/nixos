@@ -57,11 +57,6 @@ in
     }
 
     {
-      plugin = obsidian-nvim;
-      config = toLuaFile ./obsidian.lua;
-    }
-
-    {
       plugin = neo-tree-nvim;
       config = toLuaFile ./neotree.lua;
     }

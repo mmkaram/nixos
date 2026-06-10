@@ -25,7 +25,6 @@ Useful lua pages
 ## TODOs
 ### nvim
 - [ ] Keybind to build/run code (in toggleterm?)
-- [ ] See images in obsidian-nvim
 - [ ] Equivalent to vscode dev-containers
 ### QoL
 - [ ] Replace toggle-term with something more native
