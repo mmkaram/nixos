@@ -35,11 +35,7 @@ Useful lua pages
 - [ ] Yubikey for luks
 - [ ] Stylix
 ### Tycho
-- [ ] Attach drives and use btrfs in RAID
 - [ ] Linkwarden
-- [ ] nextcloud
 - [ ] secret last.fm api key
 - [ ] run factorio/minecraft server?
 - [ ] get neovim config
-- [ ] get cloudflared, just, neovim, and other programs
-- [ ] auto boot into latest nixos config from grub to save time on boot
