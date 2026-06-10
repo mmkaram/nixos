@@ -145,7 +145,7 @@ hl.bind(mainMod .. " + Escape", hl.dsp.exec_cmd("rofi -show p -modi p:'rofi-powe
 hl.bind("CTRL + ALT + SHIFT + F1", hl.dsp.exec_cmd("/etc/nixos/scripts/focus-or-launch.sh kitty kitty"))
 hl.bind("CTRL + ALT + SHIFT + F2", hl.dsp.exec_cmd("/etc/nixos/scripts/focus-or-launch.sh zen-beta zen"))
 hl.bind("CTRL + ALT + SHIFT + F3", hl.dsp.exec_cmd("/etc/nixos/scripts/focus-or-launch.sh thunderbird thunderbird"))
-hl.bind("CTRL + ALT + SHIFT + F4", hl.dsp.exec_cmd("/etc/nixos/scripts/focus-or-launch.sh obsidian obsidian"))
+hl.bind("CTRL + ALT + SHIFT + F4", hl.dsp.exec_cmd("/etc/nixos/scripts/focus-or-launch.sh joplin joplin"))
 hl.bind("CTRL + ALT + SHIFT + F5", hl.dsp.exec_cmd("/etc/nixos/scripts/focus-or-launch.sh tidal-hifi tidal-hifi"))
 hl.bind("CTRL + ALT + SHIFT + F6", hl.dsp.exec_cmd("/etc/nixos/scripts/focus-or-launch.sh discord discord"))
 
@@ -225,5 +225,3 @@ hl.bind("XF86AudioNext", hl.dsp.exec_cmd("playerctl next"), { locked = true })
 hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true })
-
-
