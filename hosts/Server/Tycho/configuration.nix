@@ -81,7 +81,8 @@
   services.dokploy = {
     enable = true;
 
-    # TODO: agenix
+    # TODO: agenix, and fix whatever the insecure part of this is
+    auth.useInsecureHardcodedSecret = true;
     database.passwordFile = "/var/lib/secrets/dokploy-db-password";
 
     port = "3100:3000";

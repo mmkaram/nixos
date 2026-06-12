@@ -11,6 +11,8 @@
     loadModels = [
       "llama3.1:8b"
       "deepseek-r1:14b"
+      "qwen3:14b"
+      "qwen2.5:14b"
     ];
   };
 
