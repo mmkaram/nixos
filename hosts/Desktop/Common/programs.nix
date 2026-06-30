@@ -137,6 +137,7 @@ let
     zsh
   ];
   diskTools = with pkgs; [
+    sound-juicer
     ntfs3g
     gparted # only opens if run from su root
     duf
