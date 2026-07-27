@@ -11,6 +11,8 @@
      loadModels = [
        "deepseek-r1:14b"
        "qwen3:14b"
+       "x/z-image-turbo:fp8"
+       "gemma4:e4b"
      ];
    };
  
