@@ -4,7 +4,7 @@
   ...
 }:
 {
-networking.firewall.enable = false;
+  networking.firewall.enable = false;
   # Nix settings
   nix.settings.experimental-features = [
     "nix-command"
@@ -69,7 +69,6 @@ networking.firewall.enable = false;
 
   services.mullvad-vpn = {
     enable = true;
-    package = pkgs.mullvad-vpn;
   };
 
   services.pcscd.enable = true;

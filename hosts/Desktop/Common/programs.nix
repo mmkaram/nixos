@@ -177,7 +177,8 @@ let
     dunst
     wl-clipboard
     wpa_supplicant_gui
-    fprintd-tod
+    # TODO: Fix fprint
+    # fprintd-tod
     speedcrunch
   ];
   officeTools = with pkgs; [
