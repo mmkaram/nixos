@@ -26,6 +26,7 @@
     ./cockpit.nix
     ./nextcloud.nix
     ./ollama.nix
+    ./beszel.nix
     inputs.nix-dokploy.nixosModules.dokploy
     # inputs.home-manager.nixosModules.default
   ];
@@ -152,6 +153,7 @@
         "monocoque.mmkaram.dev" = "http://0.0.0.0:4002";
         "nextcloud.mmkaram.dev" = "http://127.0.0.1:7645";
         "ai.mmkaram.dev" = "http://127.0.0.1:8081";
+        "beszel.mmkaram.dev" = "http://127.0.0.1:8090";
       };
 
       default = "http_status:404";
