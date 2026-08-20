@@ -226,6 +226,7 @@ let
   audioTools = with pkgs; [
     pulseaudio
     feishin
+	spotify
   ];
   browsingTools = with pkgs; [
     inputs.zen-browser.packages."${pkgs.stdenv.hostPlatform.system}".default
