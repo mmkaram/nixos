@@ -28,8 +28,13 @@
     ./ollama.nix
     ./beszel.nix
     inputs.nix-dokploy.nixosModules.dokploy
-    # inputs.home-manager.nixosModules.default
+    inputs.home-manager.nixosModules.default
   ];
+
+  home-manager.users.dd0k = {
+    home.stateVersion = "26.05";
+    programs.neovim = import ../../../dots/nvim/nvim.nix { inherit pkgs; };
+  };
 
   hardware.graphics.enable = true;
   services.xserver.videoDrivers = [ "nvidia" ];
