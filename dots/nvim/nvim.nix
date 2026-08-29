@@ -2,195 +2,185 @@
 let
   toLua = str: "${str}\n";
   toLuaFile = file: "${builtins.readFile file}\n";
+  treesitter = pkgs.vimPlugins.nvim-treesitter.withPlugins (p: [
+    p.typst
+  ]);
 in
 {
   enable = true;
   defaultEditor = true;
 
-  plugins = with pkgs.vimPlugins; [
-    plenary-nvim
-    # Mini
-    {
-      plugin = mini-pick;
-      config = toLuaFile ./mini.lua;
-    }
-    {
-      plugin = mini-extra;
-      config = toLua "require('mini.extra').setup()";
-    }
+  plugins = (
+    with pkgs.vimPlugins;
+    [
+      plenary-nvim
+      # Mini
+      {
+        plugin = mini-pick;
+        config = toLuaFile ./mini.lua;
+      }
+      {
+        plugin = mini-extra;
+        config = toLua "require('mini.extra').setup()";
+      }
 
-    # Util
-    quickfix-reflector-vim
-    {
-      plugin = flash-nvim;
-      config = toLua "require('flash').setup({})";
-    }
+      # Util
+      quickfix-reflector-vim
+      {
+        plugin = flash-nvim;
+        config = toLua "require('flash').setup({})";
+      }
 
-    {
-      plugin = mini-ai;
-      config = toLua "require('mini.ai').setup()";
-    }
+      {
+        plugin = mini-ai;
+        config = toLua "require('mini.ai').setup()";
+      }
 
-    {
-      plugin = which-key-nvim;
-      config = toLuaFile ./whichkey.lua;
-    }
+      {
+        plugin = which-key-nvim;
+        config = toLuaFile ./whichkey.lua;
+      }
 
-    {
-      plugin = autoclose-nvim;
-      config = toLuaFile ./autoclose.lua;
-    }
+      {
+        plugin = autoclose-nvim;
+        config = toLuaFile ./autoclose.lua;
+      }
 
-    {
-      plugin = mini-surround;
-      config = toLuaFile ./surround.lua;
-    }
+      {
+        plugin = mini-surround;
+        config = toLuaFile ./surround.lua;
+      }
 
-    {
-      plugin = trouble-nvim;
-      config = toLua "require('trouble')";
-    }
+      {
+        plugin = trouble-nvim;
+        config = toLua "require('trouble')";
+      }
 
-    {
-      plugin = tmux-nvim;
-      config = toLua "require('tmux').setup()";
-    }
+      {
+        plugin = tmux-nvim;
+        config = toLua "require('tmux').setup()";
+      }
 
-    {
-      plugin = neo-tree-nvim;
-      config = toLuaFile ./neotree.lua;
-    }
+      {
+        plugin = neo-tree-nvim;
+        config = toLuaFile ./neotree.lua;
+      }
 
-    {
-      plugin = luasnip;
-      config = toLuaFile ./luasnip.lua;
-    }
+      {
+        plugin = luasnip;
+        config = toLuaFile ./luasnip.lua;
+      }
 
-    {
-      plugin = oil-nvim;
-      config = toLua "require('oil').setup()";
-    }
+      {
+        plugin = oil-nvim;
+        config = toLua "require('oil').setup()";
+      }
 
-    {
-      plugin = nvim-notify;
-      config = toLuaFile ./notify.lua;
-    }
+      {
+        plugin = nvim-notify;
+        config = toLuaFile ./notify.lua;
+      }
 
-    {
-      plugin = markview-nvim;
-      config = toLua "require('markview').setup({typst={enable = false}})";
-    }
+      {
+        plugin = markview-nvim;
+        config = toLua "require('markview').setup({typst={enable = false}})";
+      }
 
-    {
-      plugin = typst-preview-nvim;
-      config = toLua "require('typst-preview')";
-    }
+      {
+        plugin = typst-preview-nvim;
+        config = toLua "require('typst-preview')";
+      }
 
-    {
-      plugin = toggleterm-nvim;
-      config = toLuaFile ./term.lua;
-    }
+      {
+        plugin = toggleterm-nvim;
+        config = toLuaFile ./term.lua;
+      }
 
-    # Borked due to unfree
-    # {
-    #   plugin = presence-nvim;
-    #   config = toLuaFile ./presence.lua;
-    # }
-    # Borked due to treesitter mismatch error
-    # {
-    #   plugin = codewindow-nvim;
-    #   config = toLuaFile ./codewindow.lua;
-    # }
+      # Borked due to unfree
+      # {
+      #   plugin = presence-nvim;
+      #   config = toLuaFile ./presence.lua;
+      # }
+      # Borked due to treesitter mismatch error
+      # {
+      #   plugin = codewindow-nvim;
+      #   config = toLuaFile ./codewindow.lua;
+      # }
 
-    # Git
-    lazygit-nvim
-    undotree
-    {
-      plugin = gitsigns-nvim;
-      config = toLua "require('gitsigns').setup()";
-    }
-    # Themeing
-    lualine-nvim
-    vim-tpipeline
-    {
-      plugin = lualine-lsp-progress;
-      config = toLuaFile ./lualine.lua;
-    }
-    {
-      plugin = dashboard-nvim;
-      config = toLuaFile ./dash.lua;
-    }
-    git-dashboard-nvim
-    {
-      plugin = tokyonight-nvim;
-      config = toLua "vim.cmd('colorscheme tokyonight-night')";
-    }
-    {
-      plugin = nvim-web-devicons;
-      config = toLua "require('nvim-web-devicons').setup({ default = true })";
-    }
+      # Git
+      lazygit-nvim
+      undotree
+      {
+        plugin = gitsigns-nvim;
+        config = toLua "require('gitsigns').setup()";
+      }
+      # Themeing
+      lualine-nvim
+      vim-tpipeline
+      {
+        plugin = lualine-lsp-progress;
+        config = toLuaFile ./lualine.lua;
+      }
+      {
+        plugin = dashboard-nvim;
+        config = toLuaFile ./dash.lua;
+      }
+      git-dashboard-nvim
+      {
+        plugin = tokyonight-nvim;
+        config = toLua "vim.cmd('colorscheme tokyonight-night')";
+      }
+      {
+        plugin = nvim-web-devicons;
+        config = toLua "require('nvim-web-devicons').setup({ default = true })";
+      }
 
-    # Buffer management
-    # vim-unimpaired
-    {
-      plugin = bufferline-nvim;
-      config = toLuaFile ./bufferline.lua;
-    }
-    # Formatting
-    {
-      plugin = conform-nvim;
-      config = toLuaFile ./format.lua;
-    }
-    {
-      plugin = comment-nvim;
-      config = toLua "require('Comment').setup()";
-    }
-    {
-      plugin = indent-blankline-nvim;
-      config = toLuaFile ./indent.lua;
-    }
+      # Buffer management
+      # vim-unimpaired
+      {
+        plugin = bufferline-nvim;
+        config = toLuaFile ./bufferline.lua;
+      }
+      # Formatting
+      {
+        plugin = conform-nvim;
+        config = toLuaFile ./format.lua;
+      }
+      {
+        plugin = comment-nvim;
+        config = toLua "require('Comment').setup()";
+      }
+      {
+        plugin = indent-blankline-nvim;
+        config = toLuaFile ./indent.lua;
+      }
 
-    # LSP
-    {
-      plugin = codecompanion-nvim;
-      config = toLuaFile ./companion.lua;
-    }
-    {
-      plugin = nvim-cmp;
-      config = toLuaFile ./completion.lua;
-    }
-    {
-      plugin = nvim-lspconfig;
-      config = toLuaFile ./lsp.lua;
-    }
-    {
-      plugin = cmp-nvim-lsp;
-      # this config isn't realted, it just loads
-      # keybinds because I can't source lua files from
-      # other lua files
-      config = toLuaFile ./keys.lua;
-    }
-    nvim-treesitter
-    # (nvim-treesitter.withPlugins (p: [
-    #   p.tree-sitter-nix
-    #   p.tree-sitter-python
-    #   p.tree-sitter-bash
-    #   p.tree-sitter-lua
-    #   p.tree-sitter-json
-    #   p.tree-sitter-rust
-    #   p.tree-sitter-haskell
-    #   p.tree-sitter-c
-    #   p.tree-sitter-cpp
-    #   p.tree-sitter-sql
-    #   p.tree-sitter-prisma
-    #   p.tree-sitter-svelte
-    #   p.tree-sitter-yaml
-    #   p.tree-sitter-typst
-    # ]))
-    vim-svelte
-    vim-prisma
-    cmp_luasnip
-  ];
+      # LSP
+      {
+        plugin = codecompanion-nvim;
+        config = toLuaFile ./companion.lua;
+      }
+      {
+        plugin = nvim-cmp;
+        config = toLuaFile ./completion.lua;
+      }
+      {
+        plugin = nvim-lspconfig;
+        config = toLuaFile ./lsp.lua;
+      }
+      {
+        plugin = cmp-nvim-lsp;
+        # this config isn't realted, it just loads
+        # keybinds because I can't source lua files from
+        # other lua files
+        config = toLuaFile ./keys.lua;
+      }
+      treesitter
+      vim-svelte
+      vim-prisma
+      cmp_luasnip
+    ]
+  );
   viAlias = true;
   vimAlias = true;
   vimdiffAlias = true;
