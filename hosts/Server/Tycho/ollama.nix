@@ -27,8 +27,8 @@
       OLLAMA_BASE_URL = "http://127.0.0.1:11434";
       WEBUI_AUTH = "true";
       ENABLE_IMAGE_GENERATION = "true";
-      IMAGE_GENERATION_ENGINE = "comfyui";
-      COMFYUI_BASE_URL = "http://127.0.0.1:8188";
+      IMAGE_GENERATION_ENGINE = "automatic1111";
+      AUTOMATIC1111_BASE_URL = "http://127.0.0.1:7860";
     };
 
     stateDir = "/var/lib/open-webui";
