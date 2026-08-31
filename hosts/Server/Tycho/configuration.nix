@@ -26,7 +26,6 @@
     ./cockpit.nix
     ./nextcloud.nix
     ./ollama.nix
-    ./stable-diffusion.nix
     ./beszel.nix
     inputs.nix-dokploy.nixosModules.dokploy
     inputs.home-manager.nixosModules.default
