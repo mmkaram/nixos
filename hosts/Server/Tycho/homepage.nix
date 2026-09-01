@@ -145,6 +145,12 @@
             };
           }
           {
+            "Beszel" = {
+              href = "https://Beszel.mmkaram.dev";
+              description = "Simplified system monitoring";
+            };
+          }
+          {
             Atuin = {
               href = "https://atuin.mmkaram.dev";
               description = "Shell history sync";
