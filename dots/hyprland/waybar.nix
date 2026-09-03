@@ -5,7 +5,10 @@
     {
       layer = "top";
       position = "top";
-      height = 20;
+      height = 22;
+      margin-top = 4;
+      margin-left = 10;
+      margin-right = 10;
       modules-left = [
         "hyprland/workspaces"
         "hyprland/mode"
@@ -109,7 +112,6 @@
   style = ''
     * {
       border: none;
-      border-radius: 0;
       font-family: "Roboto Mono", "Font Awesome 5 Free";
       font-size: 11px;
       min-height: 0;
@@ -118,31 +120,84 @@
     }
 
     window#waybar {
-      background: rgba(43, 48, 59, 0.5);
-      border-bottom: 3px solid rgba(100, 114, 125, 0.5);
+      background: rgba(24, 26, 32, 0.72);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 13px;
       color: white;
+    }
+
+    window#waybar > box {
+      padding: 3px 6px;
+    }
+
+    #workspaces,
+    #mode,
+    #tray,
+    #custom-media,
+    #pulseaudio,
+    #network,
+    #battery,
+    #custom-powerprofile,
+    #clock {
+      border-radius: 10px;
+      margin: 0 4px;
+      padding: 0 10px;
+      color: #ffffff;
+    }
+
+    #workspaces {
+      background: #4f6fad;
+      padding: 0 4px;
     }
 
     #workspaces button {
-      padding: 0 5px;
+      min-width: 20px;
+      padding: 0 6px;
       background: transparent;
-      color: white;
-      border-bottom: 3px solid transparent;
+      color: rgba(255, 255, 255, 0.72);
+      border-radius: 8px;
     }
 
     #workspaces button.active {
-        background: #64727D;
-        border-bottom: 3px solid white;
+      background: rgba(255, 255, 255, 0.22);
+      color: #ffffff;
     }
 
-    #mode, #clock, #battery, #cpu, #memory, #network, #pulseaudio, #custom-spotify, #tray, #mode, #clock, #batery {
-      padding: 0 5px;
-      margin: 0 3px;
+    #workspaces button.urgent {
+      background: #d45d5d;
+      color: #ffffff;
     }
 
     #mode {
-      background: #64727D;
-      border-bottom: 3px solid white;
+      background: #875fa8;
+    }
+
+    #tray {
+      background: #2f8f83;
+    }
+
+    #custom-media {
+      background: #a35f7b;
+    }
+
+    #pulseaudio {
+      background: #3f8fbc;
+    }
+
+    #network {
+      background: #5c8b4a;
+    }
+
+    #battery {
+      background: #b18b3f;
+    }
+
+    #custom-powerprofile {
+      background: #8a6fb8;
+    }
+
+    #clock {
+      background: #b56f42;
     }
 
     @keyframes blink {
@@ -160,10 +215,6 @@
       animation-timing-function: linear;
       animation-iteration-count: infinite;
       animation-direction: alternate;
-    }
-
-    #tray {
-      background-color: #2980b9;
     }
 
     #tray > .passive {
