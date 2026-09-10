@@ -221,12 +221,13 @@ let
     yt-dlp
     pipeline
     element-desktop
+    fractal
     discord
   ];
   audioTools = with pkgs; [
     pulseaudio
     feishin
-	spotify
+    spotify
   ];
   browsingTools = with pkgs; [
     inputs.zen-browser.packages."${pkgs.stdenv.hostPlatform.system}".default
