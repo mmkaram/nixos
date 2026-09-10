@@ -20,4 +20,8 @@
       # turn_secret = "your secret";
     };
   };
+  fileSystems."/var/lib/matrix-conduit" = {
+    device = "/srv/matrix-conduit";
+    options = [ "bind" ];
+  };
 }
