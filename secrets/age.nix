@@ -12,6 +12,7 @@ let
     "tycho"
     "syncthing"
     "nextcloud"
+    "conduit"
   ];
 
   mkSecret = name: {

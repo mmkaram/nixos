@@ -14,6 +14,7 @@ let
     "tycho"
     "syncthing"
     "nextcloud"
+    "conduit"
   ];
 in
 builtins.listToAttrs (
