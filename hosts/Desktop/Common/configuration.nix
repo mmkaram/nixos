@@ -18,6 +18,9 @@
   };
   services.upower.enable = true;
   services.dbus.enable = true;
+  services.gnome.gnome-keyring.enable = true;
+  security.pam.services.sddm.enableGnomeKeyring = true;
+
   # Enable wayland on electron applications
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
