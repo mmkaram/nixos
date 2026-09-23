@@ -205,6 +205,7 @@ let
     yazi
     brightnessctl
     prusa-slicer
+    orca-slicer
     gimp3
     imagemagick
     switcheroo
