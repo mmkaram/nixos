@@ -214,6 +214,8 @@ let
     darktable
     rapidraw
     vlc
+    fladder
+    # moonfin
     mpv
     feh
   ];
