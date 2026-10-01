@@ -22,6 +22,7 @@
   };
   fileSystems."/var/lib/matrix-conduit" = {
     device = "/srv/matrix-conduit";
+	fsType = "none";
     options = [ "bind" ];
   };
 }
