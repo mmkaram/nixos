@@ -103,7 +103,7 @@
       };
 
       "tray" = {
-        spacing = 10;
+        spacing = 4;
       };
     }
   ];
@@ -120,14 +120,14 @@
     }
 
     window#waybar {
-      background: rgba(24, 26, 32, 0.72);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: 13px;
-      color: white;
+      background: rgba(24, 30, 38, 0.72);
+      border: 1px solid rgba(120, 160, 190, 0.22);
+      border-radius: 8px;
+      color: #e8edf2;
     }
 
     window#waybar > box {
-      padding: 3px 6px;
+      padding: 2px 4px;
     }
 
     #workspaces,
@@ -139,27 +139,27 @@
     #battery,
     #custom-powerprofile,
     #clock {
-      border-radius: 10px;
-      margin: 0 4px;
-      padding: 0 10px;
-      color: #ffffff;
+      background: rgba(20, 24, 30, 0.62);
+      border-radius: 4px;
+      margin: 0 1px;
+      padding: 0 7px;
+      color: #e8edf2;
     }
 
     #workspaces {
-      background: #4f6fad;
-      padding: 0 4px;
+      padding: 0 2px;
     }
 
     #workspaces button {
-      min-width: 20px;
-      padding: 0 6px;
+      min-width: 19px;
+      padding: 0 4px;
       background: transparent;
-      color: rgba(255, 255, 255, 0.72);
-      border-radius: 8px;
+      color: rgba(232, 237, 242, 0.72);
+      border-radius: 3px;
     }
 
     #workspaces button.active {
-      background: rgba(255, 255, 255, 0.22);
+      background: rgba(115, 158, 190, 0.34);
       color: #ffffff;
     }
 
@@ -168,42 +168,10 @@
       color: #ffffff;
     }
 
-    #mode {
-      background: #875fa8;
-    }
-
-    #tray {
-      background: #2f8f83;
-    }
-
-    #custom-media {
-      background: #a35f7b;
-    }
-
-    #pulseaudio {
-      background: #3f8fbc;
-    }
-
-    #network {
-      background: #5c8b4a;
-    }
-
-    #battery {
-      background: #b18b3f;
-    }
-
-    #custom-powerprofile {
-      background: #8a6fb8;
-    }
-
-    #clock {
-      background: #b56f42;
-    }
-
     @keyframes blink {
       to {
-        background-color: #ffffff;
-        color: black;
+        background-color: #e8edf2;
+        color: #111318;
       }
     }
 
