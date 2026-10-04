@@ -13,6 +13,10 @@ let
 in
 
 {
+  services.comfyui = {
+    enable = true;
+  };
+
   services.ollama = {
     enable = true;
     package = stablePkgs.ollama-cuda;
@@ -37,6 +41,9 @@ in
     openFirewall = false;
 
     environment = {
+      COMFYUI_BASE_URL = "http://127.0.0.1:8188";
+      ENABLE_IMAGE_GENERATION = "true";
+      IMAGE_GENERATION_ENGINE = "comfyui";
       OLLAMA_BASE_URL = "http://127.0.0.1:11434";
       WEBUI_AUTH = "true";
     };
