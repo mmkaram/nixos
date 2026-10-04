@@ -4,7 +4,7 @@
     enable = true;
     hostName = "nextcloud.mmkaram.dev";
     https = false;
-    package = pkgs.nextcloud32;
+    package = pkgs.nextcloud33;
 
     config = {
       adminpassFile = config.age.secrets.nextcloud.path;

@@ -25,7 +25,7 @@
     ./samba.nix
     ./cockpit.nix
     ./nextcloud.nix
-    ./ollama.nix
+    # ./ollama.nix
     ./beszel.nix
     ./conduit.nix
     inputs.nix-dokploy.nixosModules.dokploy
@@ -86,10 +86,8 @@
   virtualisation.docker.daemon.settings.live-restore = false;
 
   services.dokploy = {
-    enable = true;
+    enable = false;
 
-    # TODO: agenix, and fix whatever the insecure part of this is
-    auth.useInsecureHardcodedSecret = true;
     database.passwordFile = "/var/lib/secrets/dokploy-db-password";
 
     port = "3100:3000";
