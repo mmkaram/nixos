@@ -15,7 +15,9 @@ in
 {
   services.comfyui = {
     enable = true;
-    package = pkgs.pkgsCuda.comfyui;
+    package = pkgs.pkgsCuda.comfyui.override {
+      cudaPackages_13 = pkgs.cudaPackages_13_2;
+    };
   };
 
   services.ollama = {
