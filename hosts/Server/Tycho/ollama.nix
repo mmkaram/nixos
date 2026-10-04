@@ -35,10 +35,12 @@ in
       "/var/lib/comfyui/output:/opt/comfyui/output:rw"
     ];
     environment = {
+      NVIDIA_DRIVER_CAPABILITIES = "compute,utility";
+      NVIDIA_VISIBLE_DEVICES = "all";
       USER_ID = "1000";
       GROUP_ID = "100";
     };
-    extraOptions = [ "--gpus=all" ];
+    extraOptions = [ "--device=nvidia.com/gpu=all" ];
   };
 
   services.ollama = {
