@@ -60,7 +60,7 @@ in
 
   services.open-webui = {
     enable = true;
-    package = stablePkgs.open-webui;
+    package = pkgs.open-webui;
 
     host = "127.0.0.1";
     port = 8081;
