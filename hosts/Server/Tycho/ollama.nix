@@ -13,11 +13,32 @@ let
 in
 
 {
-  services.comfyui = {
-    enable = true;
-    package = pkgs.pkgsCuda.comfyui.override {
-      cudaPackages_13 = pkgs.cudaPackages_13_2;
+  hardware.nvidia-container-toolkit.enable = true;
+
+  systemd.tmpfiles.rules = [
+    "d /var/lib/comfyui 0755 dd0k users -"
+    "d /var/lib/comfyui/models 0755 dd0k users -"
+    "d /var/lib/comfyui/custom_nodes 0755 dd0k users -"
+    "d /var/lib/comfyui/input 0755 dd0k users -"
+    "d /var/lib/comfyui/output 0755 dd0k users -"
+  ];
+
+  virtualisation.oci-containers.backend = "docker";
+  virtualisation.oci-containers.containers.comfyui = {
+    image = "ghcr.io/lecode-official/comfyui-docker:latest";
+    autoStart = true;
+    ports = [ "127.0.0.1:8188:8188" ];
+    volumes = [
+      "/var/lib/comfyui/models:/opt/comfyui/models:rw"
+      "/var/lib/comfyui/custom_nodes:/opt/comfyui/custom_nodes:rw"
+      "/var/lib/comfyui/input:/opt/comfyui/input:rw"
+      "/var/lib/comfyui/output:/opt/comfyui/output:rw"
+    ];
+    environment = {
+      USER_ID = "1000";
+      GROUP_ID = "100";
     };
+    extraOptions = [ "--gpus=all" ];
   };
 
   services.ollama = {
