@@ -25,7 +25,7 @@
     ./samba.nix
     ./cockpit.nix
     ./nextcloud.nix
-    # ./ollama.nix
+    ./ollama.nix
     ./beszel.nix
     ./conduit.nix
     inputs.nix-dokploy.nixosModules.dokploy
