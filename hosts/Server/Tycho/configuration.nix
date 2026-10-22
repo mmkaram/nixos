@@ -102,7 +102,9 @@
 
   services.immich = {
     enable = true;
+	host = "0.0.0.0";
     port = 2283;
+	openFirewall = true;
     mediaLocation = "/srv/library/images";
   };
 
@@ -147,7 +149,7 @@
         "prowlarr.mmkaram.dev" = "http://127.0.0.1:9696";
         "lidarr.mmkaram.dev" = "http://127.0.0.1:8686";
         "radarr.mmkaram.dev" = "http://127.0.0.1:7878";
-        "immich.mmkaram.dev" = "http://[::1]:2283";
+        "immich.mmkaram.dev" = "http://127.0.0.1:2283";
         "vault.mmkaram.dev" = "http://127.0.0.1:8222";
         "audiobook.mmkaram.dev" = "http://127.0.0.1:8000";
         "bin.mmkaram.dev" = "http://127.0.0.1:9090";
