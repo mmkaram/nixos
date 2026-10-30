@@ -57,10 +57,6 @@ let
     arduino-cli
     platformio
   ];
-  haskelTools = with pkgs; [
-    haskellPackages.haskell-language-server
-    ghc
-  ];
   ns = pkgs.writeShellScriptBin "ns" (builtins.readFile "${pkgs.nix-search-tv.src}/nixpkgs.sh");
   nixTools = with pkgs; [
     nix-search-tv
@@ -201,7 +197,7 @@ let
     joplin-desktop
     gnucash
     apostrophe
-    zotero
+    # zotero
     yazi
     brightnessctl
     prusa-slicer
@@ -245,7 +241,6 @@ rustTools
 ++ pythonTools
 ++ CXXTools
 ++ embeddedTools
-++ haskelTools
 ++ nixTools
 ++ devTools
 ++ terminalTools
