@@ -44,7 +44,7 @@ in
   };
 
   services.ollama = {
-    enable = true;
+    enable = false;
     package = stablePkgs.ollama-cuda;
 
     host = "0.0.0.0";
