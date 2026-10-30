@@ -7,7 +7,7 @@
     package = pkgs.nextcloud33;
 
     config = {
-      adminpassFile = config.age.secrets.nextcloud.path;
+      # adminpassFile = config.age.secrets.nextcloud.path;
       dbtype = "sqlite";
     };
 

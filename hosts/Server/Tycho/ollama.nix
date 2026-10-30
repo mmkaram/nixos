@@ -59,7 +59,7 @@ in
   };
 
   services.open-webui = {
-    enable = true;
+    enable = false;
     package = pkgs.open-webui;
 
     host = "127.0.0.1";
